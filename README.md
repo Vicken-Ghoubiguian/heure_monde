@@ -1,5 +1,5 @@
 # heure_monde
-Fonction de calcul et d'affichage de l'heure pour plusieurs villes du monde en temps reel
+Fonction de calcul et d'affichage de l'heure pour plusieurs villes du monde en temps reel à partir de l'heure et de la date courantes dans la tz timezone "Europe/Paris".
 
 Pour compiler le fichier main.c et le fichier heure_monde.c, faire la commande suivante:
 
