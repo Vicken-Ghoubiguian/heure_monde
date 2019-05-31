@@ -753,6 +753,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_kaliningrad = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kaliningrad
 	time_t heure_samara = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samara
 	time_t heure_volgograd = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Volgograd
+	time_t heure_saratov = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Saratov
+	time_t heure_oulianovsk = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Oulianovsk
+	time_t heure_astrakhan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Astrakhan
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
         printf("\n");
@@ -778,6 +781,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_kaliningrad, "Kaliningrad");
 	calcul_et_affichage_horaire(heure_samara, "Samara");
 	calcul_et_affichage_horaire(heure_volgograd, "Volgograd");
+	calcul_et_affichage_horaire(heure_saratov, "Saratov");
+	calcul_et_affichage_horaire(heure_oulianovsk, "Oulianovsk");
+	calcul_et_affichage_horaire(heure_astrakhan, "Astrakhan");
         printf("\n");
 }
 
@@ -1095,6 +1101,36 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date de Volgograd en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_volgograd, "Volgograd");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Saratov"...
+	else if(strcmp(nom_de_la_ville,"Saratov") == 0)
+	{
+		//Calcul de l'heure et de la date à Saratov et stockage de celui-ci dans la variable heure_saratov
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_saratov = temps_heure_de_paris + (décallage_entre_paris_et_saratov_en_temps_reel * 3600)
+		time_t heure_saratov = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Saratov en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_saratov, "Saratov");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Oulianovsk"...
+        else if(strcmp(nom_de_la_ville,"Oulianovsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Oulianovsk et stockage de celui-ci dans la variable heure_oulianovsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_oulianovsk = temps_heure_de_paris + (décallage_entre_paris_et_oulianovsk_en_temps_reel * 3600)
+		time_t heure_oulianovsk = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Saratov en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_oulianovsk, "Oulianovsk");
+	}
+	//
+	else if(strcmp(nom_de_la_ville,"Astrakhan") == 0)
+	{
+		//Calcul de l'heure et de la date à Astrakhan et stockage de celui-ci dans la variable heure_astrakhan
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_astrakhan = temps_heure_de_paris + (décallage_entre_paris_et_astrakhan_en_temps_reel * 3600)
+		time_t heure_astrakhan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date d'Astrakhan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_astrakhan, "Astrakhan");
 	}
 	//Sinon...
 	else
