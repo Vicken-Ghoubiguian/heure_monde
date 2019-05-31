@@ -1141,7 +1141,7 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
                 //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_anadyr = temps_heure_de_paris + (décallage_entre_paris_et_anadyr_en_temps_reel * 3600)
 		time_t heure_anadyr = temps_courant + ((10 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//L'heure et la date d'Astrakhan en temps réel est retournée
+		//L'heure et la date d'Anadyr en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_anadyr, "Anadyr");
 	}
 	//Sinon...
