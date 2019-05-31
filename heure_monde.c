@@ -759,6 +759,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_anadyr = temps_courant + ((10 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Anadyr
 	time_t heure_sakhalin = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Sakhalin
 	time_t heure_omsk = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Omsk
+	time_t heure_tchita = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tchita
+	time_t heure_tomsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tomsk
+	time_t heure_barnaoul = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Barnaoul
+	time_t heure_magadan = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Magadan
+	time_t heure_iekaterinbourg = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Iekaterinbourg
+	time_t heure_yakoutsk = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Yakoutsk
+	time_t heure_irkoutsk = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Irkoutsk
+	time_t heure_khandyga = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Khandyga
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
         printf("\n");
@@ -790,6 +798,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_anadyr, "Anadyr");
 	calcul_et_affichage_horaire(heure_sakhalin, "Sakhalin");
 	calcul_et_affichage_horaire(heure_omsk, "Omsk");
+	calcul_et_affichage_horaire(heure_tchita, "Tchita");
+	calcul_et_affichage_horaire(heure_tomsk, "Tomsk");
+	calcul_et_affichage_horaire(heure_barnaoul, "Barnaoul");
+	calcul_et_affichage_horaire(heure_magadan, "Magadan");
+	calcul_et_affichage_horaire(heure_iekaterinbourg, "Iekaterinbourg");
+	calcul_et_affichage_horaire(heure_yakoutsk, "Yakoutsk");
+	calcul_et_affichage_horaire(heure_irkoutsk, "Irkoutsk");
+	calcul_et_affichage_horaire(heure_khandyga, "Khandyga");
         printf("\n");
 }
 
@@ -1165,8 +1181,88 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
                 //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_omsk = temps_heure_de_paris + (décallage_entre_paris_et_omsk_en_temps_reel * 3600)
 		time_t heure_omsk = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//L'heure et la date de Omsk en temps réel est retournée
+		//L'heure et la date d'Omsk en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_omsk, "Omsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tchita"...
+	else if(strcmp(nom_de_la_ville,"Tchita") == 0)
+	{
+		//Calcul de l'heure et de la date à Tchita et stockage de celui-ci dans la variable heure_tchita
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tchita = temps_heure_de_paris + (décallage_entre_paris_et_tchita_en_temps_reel * 3600)
+		time_t heure_tchita = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Tchita en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_tchita, "Tchita");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tomsk"...
+	else if(strcmp(nom_de_la_ville,"Tomsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Tomsk et stockage de celui-ci dans la variable heure_tomsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tomsk = temps_heure_de_paris + (décallage_entre_paris_et_tomsk_en_temps_reel * 3600)
+		time_t heure_tomsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Tomsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_tomsk, "Tomsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Barnaoul"...
+	else if(strcmp(nom_de_la_ville,"Barnaoul") == 0)
+	{
+		//Calcul de l'heure et de la date à Barnaoul et stockage de celui-ci dans la variable heure_barnaoul
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_barnaoul = temps_heure_de_paris + (décallage_entre_paris_et_barnaoul_en_temps_reel * 3600)
+                time_t heure_barnaoul = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Barnaoul en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_barnaoul, "Barnaoul");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Magadan"...
+	else if(strcmp(nom_de_la_ville,"Magadan") == 0)
+	{
+		//Calcul de l'heure et de la date à Magadan et stockage de celui-ci dans la variable heure_magadan
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_magadan = temps_heure_de_paris + (décallage_entre_paris_et_magadan_en_temps_reel * 3600)
+		time_t heure_magadan = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Magadan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_magadan, "Magadan");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Iekaterinbourg"...
+	else if(strcmp(nom_de_la_ville,"Iekaterinbourg") == 0)
+	{
+		//Calcul de l'heure et de la date à Iekaterinbourg et stockage de celui-ci dans la variable heure_iekaterinbourg
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_iekaterinbourg = temps_heure_de_paris + (décallage_entre_paris_et_iekaterinbourg_en_temps_reel * 3600)
+		time_t heure_iekaterinbourg = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date d'Iekaterinbourg en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_iekaterinbourg, "Iekaterinbourg");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Yakoutsk"...
+	else if(strcmp(nom_de_la_ville,"Yakoutsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Yakoutsk et stockage de celui-ci dans la variable heure_yakoutsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_yakoutsk = temps_heure_de_paris + (décallage_entre_paris_et_yakoutsk_en_temps_reel * 3600)
+		time_t heure_yakoutsk = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date d'Yakoutsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_yakoutsk, "Yakoutsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Irkoutsk"...
+	else if(strcmp(nom_de_la_ville,"Irkoutsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Irkoutsk et stockage de celui-ci dans la variable heure_irkoutsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_irkoutsk = temps_heure_de_paris + (décallage_entre_paris_et_irkoutsk_en_temps_reel * 3600)
+		time_t heure_irkoutsk = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date d'Irkoutsk en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_irkoutsk, "Irkoutsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Khandyga"...
+	else if(strcmp(nom_de_la_ville,"Khandyga") == 0)
+	{
+		//Calcul de l'heure et de la date à Khandyga et stockage de celui-ci dans la variable heure_khandyga
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_khandyga = temps_heure_de_paris + (décallage_entre_paris_et_khandyga_en_temps_reel * 3600)
+		time_t heure_khandyga = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Khandyga en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_khandyga, "Khandyga");
 	}
 	//Sinon...
 	else
