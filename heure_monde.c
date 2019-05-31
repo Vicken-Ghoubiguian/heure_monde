@@ -750,6 +750,9 @@ void affichage_de_l_horloge(time_t temps_courant)
         time_t heure_seoul = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Seoul
         time_t heure_tokyo = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tokyo
         time_t heure_pekin = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Pekin
+	time_t heure_kaliningrad = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kaliningrad
+	time_t heure_samara = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samara
+	time_t heure_volgograd = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Volgograd
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
         printf("\n");
@@ -772,6 +775,9 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(heure_seoul, "Seoul");
         calcul_et_affichage_horaire(heure_tokyo, "Tokyo");
         calcul_et_affichage_horaire(heure_pekin, "Pekin");
+	calcul_et_affichage_horaire(heure_kaliningrad, "Kaliningrad");
+	calcul_et_affichage_horaire(heure_samara, "Samara");
+	calcul_et_affichage_horaire(heure_volgograd, "Volgograd");
         printf("\n");
 }
 
@@ -1060,6 +1066,36 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Pekin en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_pekin, "Pekin");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Kaliningrad"...
+	else if(strcmp(nom_de_la_ville,"Kaliningrad") == 0)
+	{
+		//Calcul de l'heure et de la date à Kaliningrad et stockage de celui-ci dans la variable heure_kaliningrad
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_kaliningrad = temps_heure_de_paris + (décallage_entre_paris_et_kaliningrad_en_temps_reel * 3600)
+		time_t heure_kaliningrad = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Kaliningrad en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_kaliningrad, "Kaliningrad");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Samara"...
+	else if(strcmp(nom_de_la_ville,"Samara") == 0)
+	{
+		//Calcul de l'heure et de la date à Samara et stockage de celui-ci dans la variable heure_kaliningrad
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_samara = temps_heure_de_paris + (décallage_entre_paris_et_samara_en_temps_reel * 3600)
+		time_t heure_samara = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Samara en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_samara, "Samara");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Volgograd"...
+	else if(strcmp(nom_de_la_ville,"Volgograd") == 0)
+	{
+		//Calcul de l'heure et de la date à Samara et stockage de celui-ci dans la variable heure_volgograd
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_volgograd = temps_heure_de_paris + (décallage_entre_paris_et_volgograd_en_temps_reel * 3600)
+		time_t heure_volgograd = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Volgograd en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_volgograd, "Volgograd");
+	}
 	//Sinon...
 	else
 	{
