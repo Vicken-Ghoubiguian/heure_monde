@@ -756,6 +756,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_saratov = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Saratov
 	time_t heure_oulianovsk = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Oulianovsk
 	time_t heure_astrakhan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Astrakhan
+	time_t heure_anadyr = temps_courant + ((10 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Anadyr
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
         printf("\n");
@@ -784,6 +785,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_saratov, "Saratov");
 	calcul_et_affichage_horaire(heure_oulianovsk, "Oulianovsk");
 	calcul_et_affichage_horaire(heure_astrakhan, "Astrakhan");
+	calcul_et_affichage_horaire(heure_anadyr, "Anadyr");
         printf("\n");
 }
 
@@ -1122,7 +1124,7 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Saratov en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_oulianovsk, "Oulianovsk");
 	}
-	//
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Astrakhan"...
 	else if(strcmp(nom_de_la_ville,"Astrakhan") == 0)
 	{
 		//Calcul de l'heure et de la date à Astrakhan et stockage de celui-ci dans la variable heure_astrakhan
@@ -1131,6 +1133,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date d'Astrakhan en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_astrakhan, "Astrakhan");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Anadyr"...
+	else if(strcmp(nom_de_la_ville,"Anadyr") == 0)
+	{
+		//Calcul de l'heure et de la date à Anadyr et stockage de celui-ci dans la variable heure_anadyr
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_anadyr = temps_heure_de_paris + (décallage_entre_paris_et_anadyr_en_temps_reel * 3600)
+		time_t heure_anadyr = temps_courant + ((10 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date d'Astrakhan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_anadyr, "Anadyr");
 	}
 	//Sinon...
 	else
