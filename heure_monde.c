@@ -758,6 +758,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_astrakhan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Astrakhan
 	time_t heure_anadyr = temps_courant + ((10 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Anadyr
 	time_t heure_sakhalin = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Sakhalin
+	time_t heure_omsk = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Omsk
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
         printf("\n");
@@ -788,6 +789,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_astrakhan, "Astrakhan");
 	calcul_et_affichage_horaire(heure_anadyr, "Anadyr");
 	calcul_et_affichage_horaire(heure_sakhalin, "Sakhalin");
+	calcul_et_affichage_horaire(heure_omsk, "Omsk");
         printf("\n");
 }
 
@@ -1155,6 +1157,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date de Sakhalin en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_sakhalin, "Sakhalin");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Omsk"...
+	else if(strcmp(nom_de_la_ville,"Omsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Omsk et stockage de celui-ci dans la variable heure_omsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_omsk = temps_heure_de_paris + (décallage_entre_paris_et_omsk_en_temps_reel * 3600)
+		time_t heure_omsk = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Omsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_omsk, "Omsk");
 	}
 	//Sinon...
 	else
