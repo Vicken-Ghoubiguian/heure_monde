@@ -739,6 +739,15 @@ void affichage_de_l_horloge(time_t temps_courant)
         time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);//Ottawa
         time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);//Phoenix
 
+	/* Confédération suisse */
+	time_t heure_zurich = temps_courant;
+
+	/* Principauté d'Andorre */
+	time_t heure_andorre = temps_courant;
+
+	/* Principauté de Liechtenstein */
+	time_t heure_vaduz = temps_courant;
+
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600); //Londres
 
@@ -753,6 +762,12 @@ void affichage_de_l_horloge(time_t temps_courant)
 
 	/* République de Namibie */
         time_t heure_windhoek = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Windhoek
+
+	/* République démocratique fédérale d’Éthiopie */
+	time_t heure_addis_abeba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Addis-Abeba
+
+	/* République arabe d'Égypte */
+	time_t heure_le_caire = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Le Caire
 
 	/* Nouvelle-Zélande */
 	time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600); //Wellington
@@ -808,6 +823,18 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(temps_courant, "Perpignan");
 
 	printf("\n");
+	printf("Confédération suisse:\n");
+	calcul_et_affichage_horaire(heure_zurich, "Zurich");
+
+	printf("\n");
+	printf("Principauté d'Andorre:\n");
+	calcul_et_affichage_horaire(heure_andorre, "Andorre");
+
+	printf("\n");
+	printf("Principauté de Liechtenstein:\n");
+	calcul_et_affichage_horaire(heure_vaduz, "Vaduz");
+
+	printf("\n");
 	printf("États-Unis d'Amérique:\n");
         calcul_et_affichage_horaire(heure_los_angeles, "Los Angeles");
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
@@ -845,6 +872,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("République de Namibie:\n");
         calcul_et_affichage_horaire(heure_windhoek, "Windhoek");
+
+	printf("\n");
+	printf("République arabe d'Égypte:\n");
+	calcul_et_affichage_horaire(heure_le_caire, "Le Caire");
+
+	printf("\n");
+	printf("République démocratique fédérale d’Éthiopie:\n");
+	calcul_et_affichage_horaire(heure_addis_abeba, "Addis-Abeba");
 
 	printf("\n");
 	printf("République du Pérou:\n");
@@ -1395,6 +1430,56 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date de Srednekolymsk en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_srednekolymsk, "Srednekolymsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Le Caire"...
+	else if(strcmp(nom_de_la_ville,"Le Caire") == 0)
+	{
+		//Calcul de l'heure et de la date au Caire et stockage de celui-ci dans la variable heure_le_caire
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_caire = temps_heure_de_paris + (décallage_entre_paris_et_le_caire_en_temps_reel * 3600)
+		time_t heure_le_caire = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date au Caire en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_le_caire, "Le Caire");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Addis-Abeba"...
+	else if(strcmp(nom_de_la_ville,"Addis-Abeba") == 0)
+	{
+		//Calcul de l'heure et de la date à Addis-Abeba et stockage de celui-ci dans la variable heure_le_caire
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_addis-abeba = temps_heure_de_paris + (décallage_entre_paris_et_addis-abeba_en_temps_reel * 3600)
+		time_t heure_addis_abeba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Addis-Abeba en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_addis_abeba, "Addis-Abeba");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Zurich"...
+	else if(strcmp(nom_de_la_ville,"Zurich") == 0)
+	{
+		//Calcul de l'heure et de la date à Zurich et stockage de celui-ci dans la variable heure_zurich
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_zurich = temps_heure_de_paris + (décallage_entre_paris_et_zurich_en_temps_reel * 3600)
+		time_t heure_zurich = temps_courant;
+
+		//L'heure et la date à Zurich en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_zurich, "Zurich");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Andorre"...
+	else if(strcmp(nom_de_la_ville,"Andorre") == 0)
+	{
+		//Calcul de l'heure et de la date à Andorre et stockage de celui-ci dans la variable heure_andorre
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_andorre = temps_heure_de_paris + (décallage_entre_paris_et_andorre_en_temps_reel * 3600)
+		time_t heure_andorre = temps_courant;
+
+		//L'heure et la date à Andorre en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_andorre, "Andorre");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Vaduz"...
+	else if(strcmp(nom_de_la_ville,"Vaduz") == 0)
+	{
+		//Calcul de l'heure et de la date à Vaduz et stockage de celui-ci dans la variable heure_vaduz
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_vaduz = temps_heure_de_paris + (décallage_entre_paris_et_vaduz_en_temps_reel * 3600)
+		time_t heure_vaduz = temps_courant;
+
+		//L'heure et la date à Vaduz en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_vaduz, "Vaduz");
 	}
 	//Sinon...
 	else
