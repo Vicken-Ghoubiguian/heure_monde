@@ -742,6 +742,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* Confédération suisse */
 	time_t heure_zurich = temps_courant;
 
+	/* République de Malte */
+	time_t heure_malte = temps_courant;
+
 	/* Principauté d'Andorre */
 	time_t heure_andorre = temps_courant;
 
@@ -829,6 +832,10 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("Principauté d'Andorre:\n");
 	calcul_et_affichage_horaire(heure_andorre, "Andorre");
+
+	printf("\n");
+	printf("République de Malte:\n");
+	calcul_et_affichage_horaire(heure_malte, "Malte");
 
 	printf("\n");
 	printf("Principauté de Liechtenstein:\n");
@@ -1480,6 +1487,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date à Vaduz en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_vaduz, "Vaduz");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Malte"...
+	else if(strcmp(nom_de_la_ville,"Malte") == 0)
+	{
+		//Calcul de l'heure et de la date à Malte et stockage de celui-ci dans la variable heure_malte
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_malte = temps_heure_de_paris + (décallage_entre_paris_et_malte_en_temps_reel * 3600)
+		time_t heure_malte = temps_courant;
+
+		//L'heure et la date à Malte en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_malte, "Malte");
 	}
 	//Sinon...
 	else
