@@ -692,6 +692,10 @@ void calcul_et_affichage_horaire(time_t temps, char* ville)
 	struct tm *horaire = localtime(&temps);
 	char* jour_semaine;
 	char* mois;
+	char heure_a_convertir_en_str[5];
+	char minute_a_convertir_en_str[5];
+	char seconde_a_convertir_en_str[5];
+	char jour_dans_le_mois_a_convertir_en_str[5];
 
 	//Definition du mois en court en fonction du champs tm_mon de la structure tm
 	switch(horaire->tm_mon)
@@ -722,10 +726,62 @@ void calcul_et_affichage_horaire(time_t temps, char* ville)
 		case 6: jour_semaine = "Samedi"; break;
 	}
 
+	//
+	if(horaire->tm_hour < 10)
+	{
+		//
+		sprintf(heure_a_convertir_en_str, "%02d", horaire->tm_hour);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(heure_a_convertir_en_str, "%d", horaire->tm_hour);
+	}
+
+	//
+	if(horaire->tm_min < 10)
+	{
+		//
+		sprintf(minute_a_convertir_en_str, "%02d", horaire->tm_min);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(minute_a_convertir_en_str, "%d", horaire->tm_min);
+	}
+
+	//
+	if(horaire->tm_sec < 10)
+	{
+		//
+		sprintf(seconde_a_convertir_en_str, "%02d", horaire->tm_sec);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(seconde_a_convertir_en_str, "%d", horaire->tm_sec);
+	}
+
+	//
+	if(horaire->tm_mday < 10)
+	{
+		//
+		sprintf(jour_dans_le_mois_a_convertir_en_str, "%02d", horaire->tm_mday);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(jour_dans_le_mois_a_convertir_en_str, "%d", horaire->tm_mday);
+	}
+
 	//Affichage de l'horaire
-	printf("%s : %d:%d:%d - %s %d %s %d.\n",
-		ville, horaire->tm_hour, horaire->tm_min, horaire->tm_sec,
-		jour_semaine, horaire->tm_mday, mois, horaire->tm_year + 1900);
+	printf("%s : %s:%s:%s - %s %s %s %d.\n",
+		ville, heure_a_convertir_en_str, minute_a_convertir_en_str, seconde_a_convertir_en_str,
+		jour_semaine, jour_dans_le_mois_a_convertir_en_str, mois, horaire->tm_year + 1900);
 }
 
 //Fonction de test pour les calculs d'horaires mises au point dans le fichier heure_monde.c
@@ -979,21 +1035,57 @@ char* calcul_et_renvoie_horaire(time_t temps, char* ville)
 	strcat(resultat_du_calcul, " : ");
 
 	//
-	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_hour);
+	if(horaire->tm_hour < 10)
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%02d", horaire->tm_hour);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_hour);
+	}
+
+	//
 	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
 
 	//
 	strcat(resultat_du_calcul, ":");
 
 	//
-	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_min);
+	if(horaire->tm_min < 10)
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%02d", horaire->tm_min);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_min);
+	}
+
+	//
 	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
 
 	//
 	strcat(resultat_du_calcul, ":");
 
 	//
-	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_sec);
+	if(horaire->tm_sec < 10)
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%02d", horaire->tm_sec);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_sec);
+	}
+
+	//
 	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
 
 	//
@@ -1006,7 +1098,19 @@ char* calcul_et_renvoie_horaire(time_t temps, char* ville)
 	strcat(resultat_du_calcul, " ");
 
 	//
-	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_mday);
+	if(horaire->tm_mday < 10)
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%02d", horaire->tm_mday);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_mday);
+	}
+
+	//
 	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
 
 	//
