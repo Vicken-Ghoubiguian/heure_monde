@@ -767,6 +767,11 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_yakoutsk = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Yakoutsk
 	time_t heure_irkoutsk = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Irkoutsk
 	time_t heure_khandyga = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Khandyga
+	time_t heure_novokouznetsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Novokouznetsk
+	time_t heure_nobossibirsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Nobossibirsk
+	time_t heure_krasnoyarsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Krasnoyarsk
+	time_t heure_oust_nera = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Oust-Nera
+	time_t heure_srednekolymsk = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Srednekolymsk
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
         printf("\n");
@@ -806,6 +811,11 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_yakoutsk, "Yakoutsk");
 	calcul_et_affichage_horaire(heure_irkoutsk, "Irkoutsk");
 	calcul_et_affichage_horaire(heure_khandyga, "Khandyga");
+	calcul_et_affichage_horaire(heure_novokouznetsk, "Novokouznetsk");
+	calcul_et_affichage_horaire(heure_nobossibirsk, "Nobossibirsk");
+	calcul_et_affichage_horaire(heure_krasnoyarsk, "Krasnoyarsk");
+	calcul_et_affichage_horaire(heure_oust_nera, "Oust-Nera");
+	calcul_et_affichage_horaire(heure_srednekolymsk, "Srednekolymsk");
         printf("\n");
 }
 
@@ -1263,6 +1273,56 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date de Khandyga en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_khandyga, "Khandyga");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Novokouznetsk"...
+	else if(strcmp(nom_de_la_ville,"Novokouznetsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Novokouznetsk et stockage de celui-ci dans la variable heure_novokouznetsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_Novokouznetsk = temps_heure_de_paris + (décallage_entre_paris_et_novokouznetsk_en_temps_reel * 3600)
+		time_t heure_novokouznetsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Novokouznetsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_novokouznetsk, "Novokouznetsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Nobossibirsk"...
+	else if(strcmp(nom_de_la_ville,"Nobossibirsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Nobossibirsk et stockage de celui-ci dans la variable heure_nobossibirsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_Nobossibirsk = temps_heure_de_paris + (décallage_entre_paris_et_nobossibirsk_en_temps_reel * 3600)
+		time_t heure_nobossibirsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Nobossibirsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_nobossibirsk, "Nobossibirsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Krasnoyarsk"...
+	else if(strcmp(nom_de_la_ville,"Krasnoyarsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Krasnoyarsk et stockage de celui-ci dans la variable heure_krasnoyarsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_Krasnoyarsk = temps_heure_de_paris + (décallage_entre_paris_et_krasnoyarsk_en_temps_reel * 3600)
+		time_t heure_krasnoyarsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Krasnoyarsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_krasnoyarsk, "Krasnoyarsk");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Oust-Nera"...
+	else if(strcmp(nom_de_la_ville,"Oust-Nera") == 0)
+	{
+		//Calcul de l'heure et de la date à Oust-Nera et stockage de celui-ci dans la variable heure_oust_nera
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_oust-nera = temps_heure_de_paris + (décallage_entre_paris_et_oust-nera_en_temps_reel * 3600)
+		time_t heure_oust_nera = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date d'Oust-Nera en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_oust_nera, "Oust-Nera");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Srednekolymsk"...
+	else if(strcmp(nom_de_la_ville,"Srednekolymsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Srednekolymsk et stockage de celui-ci dans la variable heure_srednekolymsk
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_srednekolymsk = temps_heure_de_paris + (décallage_entre_paris_et_srednekolymsk_en_temps_reel * 3600)
+		time_t heure_srednekolymsk = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Srednekolymsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_srednekolymsk, "Srednekolymsk");
 	}
 	//Sinon...
 	else
