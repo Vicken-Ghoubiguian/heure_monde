@@ -732,24 +732,52 @@ void calcul_et_affichage_horaire(time_t temps, char* ville)
 void affichage_de_l_horloge(time_t temps_courant)
 {
 	/*Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante*/
+
+	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_courant - ((9 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //Los Angeles
         time_t heure_de_nyc = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //New York City
         time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);//Ottawa
         time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);//Phoenix
+
+	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600); //Londres
-        time_t heure_moscou = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Moscou
-        time_t heure_vladivostok = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Vladivostok
+
+	/* Commonwealth d'Australie */
         time_t heure_canberra = temps_courant + ((10 - calcul_du_decalage_avec_canberra(temps_courant)) * 3600); //Canberra
+
+	/* République du Chili */
         time_t heure_santiago_chili = temps_courant - ((6 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Santiago du Chili
+
+	/* République d'Afrique du Sud */
         time_t heure_johannesburg = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Johannesburg
+
+	/* République de Namibie */
         time_t heure_windhoek = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Windhoek
+
+	/* Nouvelle-Zélande */
 	time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600); //Wellington
+
+	/* République argentine */
         time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Buenos Aires
+
+	/* République de Madagascar */
         time_t heure_antananarivo = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Antananarivo
+
+	/* République du Pérou */
         time_t heure_lima = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lima
+
+	/* République de Corée */
         time_t heure_seoul = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Seoul
+
+	/* Empire du Japon */
         time_t heure_tokyo = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tokyo
+
+	/* République populaire de Chine */
         time_t heure_pekin = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Pekin
+
+	/* Fédération de Russie */
+	time_t heure_moscou = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Moscou
+        time_t heure_vladivostok = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Vladivostok
 	time_t heure_kaliningrad = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kaliningrad
 	time_t heure_samara = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samara
 	time_t heure_volgograd = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Volgograd
@@ -774,26 +802,70 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_srednekolymsk = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Srednekolymsk
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
+
         printf("\n");
+	printf("République française:\n");
         calcul_et_affichage_horaire(temps_courant, "Perpignan");
+
+	printf("\n");
+	printf("États-Unis d'Amérique:\n");
         calcul_et_affichage_horaire(heure_los_angeles, "Los Angeles");
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
         calcul_et_affichage_horaire(heure_d_ottawa, "Ottawa");
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
+
+	printf("\n");
+	printf("Royaume-Uni de Grande-Bretagne et d'Irlande du Nord:\n");
 	calcul_et_affichage_horaire(heure_de_londres, "Londres");
-        calcul_et_affichage_horaire(heure_moscou, "Moscou");
-        calcul_et_affichage_horaire(heure_vladivostok, "Vladivostok");
+
+	printf("\n");
+	printf("Commonwealth d'Australie:\n");
         calcul_et_affichage_horaire(heure_canberra, "Canberra");
+
+	printf("\n");
+	printf("Nouvelle-Zélande:\n");
 	calcul_et_affichage_horaire(heure_wellington, "Wellington");
+
+	printf("\n");
+	printf("République du Chili:\n");
         calcul_et_affichage_horaire(heure_santiago_chili, "Santiago du Chili");
+
+	printf("\n");
+	printf("République d'Afrique du Sud:\n");
         calcul_et_affichage_horaire(heure_johannesburg, "Johannesburg");
+
+	printf("\n");
+	printf("République argentine:\n");
         calcul_et_affichage_horaire(heure_buenos_aires, "Buenos Aires");
+
+	printf("\n");
+	printf("République de Madagascar:\n");
         calcul_et_affichage_horaire(heure_antananarivo, "Antananarivo");
+
+	printf("\n");
+	printf("République de Namibie:\n");
         calcul_et_affichage_horaire(heure_windhoek, "Windhoek");
+
+	printf("\n");
+	printf("République du Pérou:\n");
         calcul_et_affichage_horaire(heure_lima, "Lima");
+
+	printf("\n");
+	printf("République de Corée:\n");
         calcul_et_affichage_horaire(heure_seoul, "Seoul");
+
+	printf("\n");
+	printf("Empire du Japon:\n");
         calcul_et_affichage_horaire(heure_tokyo, "Tokyo");
+
+	printf("\n");
+	printf("République populaire de Chine:\n");
         calcul_et_affichage_horaire(heure_pekin, "Pekin");
+
+	printf("\n");
+	printf("Fédération de Russie:\n");
+	calcul_et_affichage_horaire(heure_moscou, "Moscou");
+        calcul_et_affichage_horaire(heure_vladivostok, "Vladivostok");
 	calcul_et_affichage_horaire(heure_kaliningrad, "Kaliningrad");
 	calcul_et_affichage_horaire(heure_samara, "Samara");
 	calcul_et_affichage_horaire(heure_volgograd, "Volgograd");
