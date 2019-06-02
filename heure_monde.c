@@ -792,8 +792,11 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_courant - ((9 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //Los Angeles
         time_t heure_de_nyc = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //New York City
-        time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);//Ottawa
-        time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);//Phoenix
+        time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //Ottawa
+        time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Phoenix
+
+	/* République du Nicaragua */
+	time_t heure_managua = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Managua
 
 	/* Confédération suisse */
 	time_t heure_zurich = temps_courant;
@@ -822,11 +825,23 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République de Namibie */
         time_t heure_windhoek = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Windhoek
 
+	/* État de Libye */
+	time_t heure_tripoli = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tripoli
+
 	/* République démocratique fédérale d’Éthiopie */
 	time_t heure_addis_abeba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Addis-Abeba
 
+	/* République de Djibouti */
+	time_t heure_djibouti = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Djibouti
+
+	/* République de Zambie */
+	time_t heure_lusaka = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lusaka
+
 	/* République arabe d'Égypte */
 	time_t heure_le_caire = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Le Caire
+
+	/* République de Zimbabwe */
+	time_t heure_harare = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Harare
 
 	/* Nouvelle-Zélande */
 	time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600); //Wellington
@@ -840,14 +855,39 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République du Pérou */
         time_t heure_lima = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lima
 
+	/* République d'Ouzbékistan */
+	time_t heure_a_tachkent = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tachkent
+	time_t heure_a_samarkand = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samarkand
+
+	/* République du Tadjikistan */
+	time_t heure_a_douchanbe = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Douchanbé
+
 	/* République de Corée */
         time_t heure_seoul = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Seoul
 
 	/* Empire du Japon */
         time_t heure_tokyo = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tokyo
 
+	/* Royaume du Bhoutan */
+	time_t heure_a_thimphou = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Thimphou
+
 	/* République populaire de Chine */
         time_t heure_pekin = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Pekin
+
+	/* Région administrative spéciale de Macao de la République populaire de Chine */
+	time_t heure_a_macao = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Macao
+
+	/* Région administrative spéciale de Hong Kong de la République populaire de Chine */
+	time_t heure_a_hong_kong = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Hong Kong
+
+	/* Negara Brunei Darussalam */
+	time_t heure_brunei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Brunei
+
+	/* Mongolie */
+	time_t heure_a_hovd = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Hovd
+
+	/* République de Chine (Taiwan) */
+	time_t heure_a_tapei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tapei
 
 	/* Fédération de Russie */
 	time_t heure_moscou = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Moscou
@@ -875,11 +915,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_oust_nera = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Oust-Nera
 	time_t heure_srednekolymsk = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Srednekolymsk
 
+	/* République d'Arménie */
+	time_t heure_erevan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Erevan
+
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
 
         printf("\n");
 	printf("République française:\n");
-        calcul_et_affichage_horaire(temps_courant, "Perpignan");
+        calcul_et_affichage_horaire(temps_courant, "Paris");
 
 	printf("\n");
 	printf("Confédération suisse:\n");
@@ -903,6 +946,10 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
         calcul_et_affichage_horaire(heure_d_ottawa, "Ottawa");
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
+
+	printf("\n");
+	printf("République du Nicaragua:\n");
+	calcul_et_affichage_horaire(heure_managua, "Managua");
 
 	printf("\n");
 	printf("Royaume-Uni de Grande-Bretagne et d'Irlande du Nord:\n");
@@ -937,6 +984,10 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(heure_windhoek, "Windhoek");
 
 	printf("\n");
+	printf("État de Libye:\n");
+	calcul_et_affichage_horaire(heure_tripoli, "Tripoli");
+
+	printf("\n");
 	printf("République arabe d'Égypte:\n");
 	calcul_et_affichage_horaire(heure_le_caire, "Le Caire");
 
@@ -945,8 +996,29 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_addis_abeba, "Addis-Abeba");
 
 	printf("\n");
+	printf("République de Djibouti:\n");
+	calcul_et_affichage_horaire(heure_djibouti, "Djibouti");
+
+	printf("\n");
+	printf("République de Zambie:\n");
+	calcul_et_affichage_horaire(heure_lusaka, "Lusaka");
+
+	printf("\n");
+	printf("République de Zimbabwe:\n");
+	calcul_et_affichage_horaire(heure_harare, "Harare");
+
+	printf("\n");
 	printf("République du Pérou:\n");
         calcul_et_affichage_horaire(heure_lima, "Lima");
+
+	printf("\n");
+	printf("République d'Ouzbékistan:\n");
+	calcul_et_affichage_horaire(heure_a_tachkent, "Tachkent");
+	calcul_et_affichage_horaire(heure_a_samarkand, "Samarkand");
+
+	printf("\n");
+	printf("République du Tadjikistan:\n");
+	calcul_et_affichage_horaire(heure_a_douchanbe, "Dushanbe");
 
 	printf("\n");
 	printf("République de Corée:\n");
@@ -957,8 +1029,28 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(heure_tokyo, "Tokyo");
 
 	printf("\n");
+	printf("Negara Brunei Darussalam:\n");
+	calcul_et_affichage_horaire(heure_brunei, "Brunei");
+
+	printf("\n");
 	printf("République populaire de Chine:\n");
         calcul_et_affichage_horaire(heure_pekin, "Pekin");
+
+	printf("\n");
+	printf("République de Chine (Taiwan):\n");
+	calcul_et_affichage_horaire(heure_a_tapei, "Tapei");
+
+	printf("\n");
+	printf("Région administrative spéciale de Macao de la République populaire de Chine:\n");
+	calcul_et_affichage_horaire(heure_a_macao, "Macao");
+
+	printf("\n");
+	printf("Région administrative spéciale de Hong Kong de la République populaire de Chine:\n");
+	calcul_et_affichage_horaire(heure_a_hong_kong, "Hong Kong");
+
+	printf("\n");
+	printf("Royaume du Bhoutan:\n");
+	calcul_et_affichage_horaire(heure_a_thimphou, "Thimphou");
 
 	printf("\n");
 	printf("Fédération de Russie:\n");
@@ -986,7 +1078,16 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_krasnoyarsk, "Krasnoyarsk");
 	calcul_et_affichage_horaire(heure_oust_nera, "Oust-Nera");
 	calcul_et_affichage_horaire(heure_srednekolymsk, "Srednekolymsk");
-        printf("\n");
+
+	printf("\n");
+	printf("République d'Arménie:\n");
+	calcul_et_affichage_horaire(heure_erevan, "Erevan");
+
+	printf("\n");
+	printf("Mongolie:\n");
+	calcul_et_affichage_horaire(heure_a_hovd, "Hovd");
+
+	printf("\n");
 }
 
 //Cette fonction permet de calculer et de renvoyer les horaires d'une ville passée en paramétre
@@ -1135,7 +1236,7 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 {
 
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Perpignan"...
-	if(strcmp(nom_de_la_ville,"Perpignan") == 0)
+	if(strcmp(nom_de_la_ville,"Paris") == 0)
 	{
 
 		//L'heure et la date de Perpignan en temps réel est retournée
@@ -1601,6 +1702,156 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date à Malte en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_malte, "Malte");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Djibouti"...
+	else if(strcmp(nom_de_la_ville,"Djibouti") == 0)
+	{
+		//Calcul de l'heure et de la date à Djibouti et stockage de celui-ci dans la variable heure_djibouti
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_djibouti = temps_heure_de_paris + (décallage_entre_paris_et_djibouti_en_temps_reel * 3600)
+		time_t heure_djibouti = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Djibouti en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_djibouti, "Djibouti");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Lusaka"...
+	else if(strcmp(nom_de_la_ville,"Lusaka") == 0)
+	{
+		//Calcul de l'heure et de la date à Lusaka et stockage de celui-ci dans la variable heure_lusaka
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_lusaka = temps_heure_de_paris + (décallage_entre_paris_et_lusaka_en_temps_reel * 3600)
+		time_t heure_lusaka = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Lusaka en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_lusaka, "Lusaka");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tripoli"...
+	else if(strcmp(nom_de_la_ville,"Tripoli") == 0)
+	{
+		//Calcul de l'heure et de la date à Tripoli et stockage de celui-ci dans la variable heure_tripoli
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tripoli = temps_heure_de_paris + (décallage_entre_paris_et_tripoli_en_temps_reel * 3600)
+		time_t heure_tripoli = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Tripoli en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_tripoli, "Tripoli");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Harare"...
+	else if(strcmp(nom_de_la_ville,"Harare") == 0)
+	{
+		//Calcul de l'heure et de la date à Harare et stockage de celui-ci dans la variable heure_harare
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_harare = temps_heure_de_paris + (décallage_entre_paris_et_harare_en_temps_reel * 3600)
+		time_t heure_harare = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Harare en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_harare, "Harare");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Managua"...
+	else if(strcmp(nom_de_la_ville,"Managua") == 0)
+	{
+		//Calcul de l'heure et de la date à Managua et stockage de celui-ci dans la variable heure_managua
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_managua = temps_heure_de_paris + (décallage_entre_paris_et_managua_en_temps_reel * 3600)
+		time_t heure_managua = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Managua en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_managua, "Managua");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Brunei"...
+	else if(strcmp(nom_de_la_ville,"Brunei") == 0)
+	{
+		//Calcul de l'heure et de la date à Brunei et stockage de celui-ci dans la variable heure_brunei
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_brunei = temps_heure_de_paris + (décallage_entre_paris_et_brunei_en_temps_reel * 3600)
+		time_t heure_brunei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Brunei en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_brunei, "Brunei");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Erevan"...
+	else if(strcmp(nom_de_la_ville,"Erevan") == 0)
+	{
+		//Calcul de l'heure et de la date à Erevan et stockage de celui-ci dans la variable heure_erevan
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_erevan = temps_heure_de_paris + (décallage_entre_paris_et_erevan_en_temps_reel * 3600)
+		time_t heure_erevan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Erevan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_erevan, "Erevan");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Hovd"...
+	else if(strcmp(nom_de_la_ville,"Hovd") == 0)
+	{
+		//Calcul de l'heure et de la date à Hovd et stockage de celui-ci dans la variable heure_a_hovd
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_hovd = temps_heure_de_paris + (décallage_entre_paris_et_hovd_en_temps_reel * 3600)
+		time_t heure_a_hovd = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Hovd en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_hovd, "Hovd");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tapei"...
+	else if(strcmp(nom_de_la_ville,"Tapei") == 0)
+	{
+		//Calcul de l'heure et de la date à Tapei et stockage de celui-ci dans la variable heure_a_tapei
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tapei = temps_heure_de_paris + (décallage_entre_paris_et_tapei_en_temps_reel * 3600)
+		time_t heure_a_tapei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Tapei en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_tapei, "Tapei");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Macao"...
+	else if(strcmp(nom_de_la_ville,"Macao") == 0)
+	{
+		//Calcul de l'heure et de la date à Macao et stockage de celui-ci dans la variable heure_a_macao
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_macao = temps_heure_de_paris + (décallage_entre_paris_et_macao_en_temps_reel * 3600)
+		time_t heure_a_macao = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Macao en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_macao, "Macao");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tachkent"...
+	else if(strcmp(nom_de_la_ville,"Tachkent") == 0)
+	{
+		//Calcul de l'heure et de la date à Tachkent et stockage de celui-ci dans la variable heure_a_tachkent
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tachkent = temps_heure_de_tachkent + (décallage_entre_paris_et_tachkent_en_temps_reel * 3600)
+		time_t heure_a_tachkent = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Tachkent en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_tachkent, "Tachkent");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Samarkand"...
+        else if(strcmp(nom_de_la_ville,"Samarkand") == 0)
+        {
+                //Calcul de l'heure et de la date à Samarkand et stockage de celui-ci dans la variable heure_a_samarkand
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_samarkand = temps_heure_de_samarkand + (décallage_entre_paris_et_samarkand_en_temps_reel * 3600)
+                time_t heure_a_samarkand = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+                //L'heure et la date à Samarkand en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_samarkand, "Samarkand");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Dushanbe"...
+	else if(strcmp(nom_de_la_ville,"Dushanbe") == 0)
+	{
+		//Calcul de l'heure et de la date à Douchanbé et stockage de celui-ci dans la variable heure_a_douchanbe
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_douchanbe = temps_heure_de_douchanbe + (décallage_entre_paris_et_douchanbe_en_temps_reel * 3600)
+		time_t heure_a_douchanbe = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Douchanbé en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_douchanbe, "Dushanbe");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Thimphou"...
+	else if(strcmp(nom_de_la_ville,"Thimphou") == 0)
+	{
+		//Calcul de l'heure et de la date à Thimphou et stockage de celui-ci dans la variable heure_a_thimphou
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_thimphou = temps_heure_de_thimphou + (décallage_entre_paris_et_thimphou_en_temps_reel * 3600)
+		time_t heure_a_thimphou = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Thimphou en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_thimphou, "Bhoutan");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Hong Kong"...
+	else if(strcmp(nom_de_la_ville,"Hong Kong") == 0)
+	{
+		//Calcul de l'heure et de la date à Hong Kong et stockage de celui-ci dans la variable heure_a_hong_kong
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_hong_kong = temps_heure_de_paris + (décallage_entre_paris_et_hong_kong_en_temps_reel * 3600)
+		time_t heure_a_hong_kong = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Hong Kong en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_hong_kong, "Hong Kong");
 	}
 	//Sinon...
 	else

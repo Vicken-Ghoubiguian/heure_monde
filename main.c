@@ -19,7 +19,7 @@ int main()
 	printf("%s\n", second_test);
 
 	//
-	char* troisieme_test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Malte");
+	char* troisieme_test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Hong Kong");
 
 	//
 	printf("%s\n", troisieme_test);
