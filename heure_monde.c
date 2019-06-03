@@ -1302,12 +1302,12 @@ char* calcul_et_renvoie_horaire(time_t temps, char* ville)
 char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t temps_courant, char* nom_de_la_ville)
 {
 
-	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Perpignan"...
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Paris"...
 	if(strcmp(nom_de_la_ville,"Paris") == 0)
 	{
 
-		//L'heure et la date de Perpignan en temps réel est retournée
-		return calcul_et_renvoie_horaire(temps_courant, "Perpignan");
+		//L'heure et la date de Paris en temps réel est retournée
+		return calcul_et_renvoie_horaire(temps_courant, "Paris");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Los Angeles"...
 	else if(strcmp(nom_de_la_ville,"Los Angeles") == 0)
