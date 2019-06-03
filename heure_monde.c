@@ -933,6 +933,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République de Chine (Taiwan) */
 	time_t heure_a_tapei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tapei
 
+	/* République des Philippines */
+	time_t heure_a_manille = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Manille
+
 	/* République de Singapour */
 	time_t heure_a_singapour = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Singapour
 
@@ -1152,6 +1155,10 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("Région administrative spéciale de Hong Kong de la République populaire de Chine:\n");
 	calcul_et_affichage_horaire(heure_a_hong_kong, "Hong Kong");
+
+	printf("\n");
+	printf("République des Philippines:\n");
+	calcul_et_affichage_horaire(heure_a_manille, "Manille");
 
 	printf("\n");
 	printf("République de Singapour:\n");
@@ -1582,6 +1589,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Pekin en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_pekin, "Pekin");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Manille"...
+	else if(strcmp(nom_de_la_ville,"Manille") == 0)
+	{
+		//Calcul de l'heure et de la date à Manille et stockage de celui-ci dans la variable heure_a_manille
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_manille = temps_heure_de_paris - (décallage_entre_paris_et_manille_en_temps_reel * 3600)
+		time_t heure_a_manille = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Manille en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_manille, "Manille");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Urumqi"...
 	else if(strcmp(nom_de_la_ville,"Urumqi") == 0)
 	{
