@@ -20,15 +20,15 @@ time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)
 	date_tm->tm_hour = heure;
 	date_tm->tm_min = 0;
 	date_tm->tm_sec = 0;
-	
+
 	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
 	//Puis reconvertie en struct tm grace à la fonction localtime
 	date_timestamp = mktime(date_tm);
 	date_tm = localtime(&date_timestamp);
-	
+
 	//Ici, le programme procéde à une boucle infinie
 	while(1){
-		
+
 		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
 		date_timestamp = date_timestamp - 86400;
 
@@ -70,13 +70,13 @@ time_t date_du_dernier_dimanche_d_octobre(time_t aujourdhui, int heure)
 
 	//Ici, le programme procéde à une boucle infinie
         while(1){
-		
+
 		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 date_timestamp = date_timestamp - 86400;
 
 		//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = localtime(&date_timestamp);
-                
+
 		//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois d'Octobre (tm_mon), on quitte définitivement la boucle
 		if(date_tm->tm_wday == 0 && date_tm->tm_mon == 9)
 		{
@@ -142,7 +142,7 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
 		{
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 	date_timestamp = date_timestamp + 86400;
-			
+
                 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 	date_tm = localtime(&date_timestamp);
 
@@ -213,7 +213,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
 		{
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 	date_timestamp = date_timestamp + 86400;
-			
+
                 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 	date_tm = localtime(&date_timestamp);
 
@@ -284,7 +284,7 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui)
 		{
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 	date_timestamp = date_timestamp + 86400;
-			
+
                 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 	date_tm = localtime(&date_timestamp);
 
@@ -712,7 +712,7 @@ void calcul_et_affichage_horaire(time_t temps, char* ville)
 		case 9: mois = "Octobre"; break;
 		case 10: mois = "Novembre"; break;
 		case 11: mois = "Decembre"; break;
-	}	
+	}
 
 	//Definition du jour de la semaine en fonction du champs tm_wday de la structure tm
 	switch(horaire->tm_wday)
@@ -881,11 +881,17 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_a_guayaquil = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Guayaquil
 	time_t heure_a_galapagos = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Galapagos
 
+	/* État plurinational de Bolivie */
+	time_t heure_a_la_paz = temps_courant - ((6 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //La Paz
+
 	/* République de Madagascar */
         time_t heure_antananarivo = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Antananarivo
 
 	/* République du Pérou */
         time_t heure_lima = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lima
+
+	/* République de Colombie */
+	time_t heure_a_bogota = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bogota
 
 	/* État du Qatar */
 	time_t heure_au_qatar = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Qatar
@@ -1048,6 +1054,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("République de l'Équateur:\n");
 	calcul_et_affichage_horaire(heure_a_guayaquil, "Guayaquil");
 	calcul_et_affichage_horaire(heure_a_galapagos, "Galapagos");
+
+	printf("\n");
+	printf("République de Colombie:\n");
+	calcul_et_affichage_horaire(heure_a_bogota, "Bogota");
+
+	printf("\n");
+	printf("État plurinational de Bolivie:\n");
+	calcul_et_affichage_horaire(heure_a_la_paz, "La Paz");
 
 	printf("\n");
 	printf("République de Madagascar:\n");
@@ -1247,7 +1261,7 @@ char* calcul_et_renvoie_horaire(time_t temps, char* ville)
 		case 9: mois = "Octobre"; break;
 		case 10: mois = "Novembre"; break;
 		case 11: mois = "Decembre"; break;
-	}	
+	}
 
 	//Definition du jour de la semaine en fonction du champs tm_wday de la structure tm
 	switch(horaire->tm_wday)
@@ -1534,6 +1548,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Buenos Aires en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Bogota"...
+	else if(strcmp(nom_de_la_ville,"Bogota") == 0)
+	{
+		//Calcul de l'heure et de la date à Bogota et stockage de celui-ci dans la variable heure_bogota
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_bogota = temps_heure_de_paris - (décallage_entre_paris_et_bogota_en_temps_reel * 3600)
+		time_t heure_a_bogota = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Bogota en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_bogota, "Bogota");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Caracas"...
 	else if(strcmp(nom_de_la_ville,"Caracas") == 0)
 	{
@@ -1563,6 +1587,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date de Galapagos en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_galapagos, "Galapagos");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "La Paz"...
+	else if(strcmp(nom_de_la_ville,"La Paz") == 0)
+	{
+		//Calcul de l'heure et de la date à La Paz et stockage de celui-ci dans la variable heure_a_la_paz
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_la_paz = temps_heure_de_paris - (décallage_entre_paris_et_la_paz_en_temps_reel * 3600)
+		time_t heure_a_la_paz = temps_courant - ((6 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de La Paz en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_la_paz, "La Paz");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Antananarivo"...
         else if(strcmp(nom_de_la_ville,"Antananarivo") == 0)
