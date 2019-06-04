@@ -36,8 +36,8 @@ int application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(time_t date);
 //Cette fonction permet de calculer le decallage horaire d'Auckland (Nouvelle-Zelande) avec l'heure française
 int calcul_du_decalage_avec_auckland(time_t aujourdhui);
 
-//Cette fonction permet de calculer le decallage horaire de Canberra (Australie) avec l'heure française
-int calcul_du_decalage_avec_canberra(time_t aujourdhui);
+//Cette fonction permet de calculer le decallage horaire de l'Australie avec l'heure française
+int calcul_du_decalage_avec_l_australie(time_t aujourdhui);
 
 //Cette fonction permet de calculer le decallage horaire de Santiago du Chili (Chili) avec l'heure française
 int calcul_du_decalage_avec_le_chili(time_t aujourdhui);

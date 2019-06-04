@@ -597,8 +597,8 @@ int calcul_du_decalage_avec_auckland(time_t aujourdhui)
 	}
 }
 
-//Cette fonction permet de calculer le decallage horaire de Canberra (Australie) avec l'heure française
-int calcul_du_decalage_avec_canberra(time_t aujourdhui)
+//Cette fonction permet de calculer le decallage horaire de l'Australie avec l'heure française
+int calcul_du_decalage_avec_l_australie(time_t aujourdhui)
 {
 	//Définition des variables nécessaires au calcul du décalage
 	time_t date_passage_heure_d_ete_europe = date_du_dernier_dimanche_de_mars(aujourdhui, 2);
@@ -799,16 +799,16 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_managua = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Managua
 
 	/* Confédération suisse */
-	time_t heure_zurich = temps_courant;
+	time_t heure_zurich = temps_courant; //Zurich
 
 	/* République de Malte */
-	time_t heure_malte = temps_courant;
+	time_t heure_malte = temps_courant; //Malte
 
 	/* Principauté d'Andorre */
-	time_t heure_andorre = temps_courant;
+	time_t heure_andorre = temps_courant; //Andorre
 
 	/* Principauté de Liechtenstein */
-	time_t heure_vaduz = temps_courant;
+	time_t heure_vaduz = temps_courant; //Vaduz
 
 	/* République hellénique */
 	time_t heure_d_athenes = temps_courant + 3600; //Athènes
@@ -817,7 +817,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600); //Londres
 
 	/* Commonwealth d'Australie */
-        time_t heure_canberra = temps_courant + ((10 - calcul_du_decalage_avec_canberra(temps_courant)) * 3600); //Canberra
+        time_t heure_a_sydney = temps_courant + ((10 - calcul_du_decalage_avec_l_australie(temps_courant)) * 3600); //Sydney
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_courant - ((6 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Santiago du Chili
@@ -1024,7 +1024,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 
 	printf("\n");
 	printf("Commonwealth d'Australie:\n");
-        calcul_et_affichage_horaire(heure_canberra, "Canberra");
+        calcul_et_affichage_horaire(heure_a_sydney, "Sydney");
 
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
@@ -1478,15 +1478,15 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date d'Auckland en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_auckland, "Auckland");
 	}
-	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Canberra"...
-        else if(strcmp(nom_de_la_ville,"Canberra") == 0)
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Sydney"...
+        else if(strcmp(nom_de_la_ville,"Sydney") == 0)
         {
-		//Calcul de l'heure et de la date à Canberra et stockage de celui-ci dans la variable heure_canberra
-                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_canberra = temps_heure_de_paris - (décallage_entre_paris_et_canberra_en_temps_reel * 3600)
-		time_t heure_canberra = temps_courant + ((10 - calcul_du_decalage_avec_canberra(temps_courant)) * 3600);
+		//Calcul de l'heure et de la date à Sydney et stockage de celui-ci dans la variable heure_a_sydney
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_sydney = temps_heure_de_paris - (décallage_entre_paris_et_sydney_en_temps_reel * 3600)
+		time_t heure_a_sydney = temps_courant + ((10 - calcul_du_decalage_avec_l_australie(temps_courant)) * 3600);
 
-		//L'heure et la date de Canberra en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_canberra, "Canberra");
+		//L'heure et la date de Sydney en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_sydney, "Sydney");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Santiago du Chili"...
         else if(strcmp(nom_de_la_ville,"Santiago du Chili") == 0)
