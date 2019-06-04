@@ -573,8 +573,8 @@ int application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(time_t date)
 	}
 }
 
-//Cette fonction permet de calculer le decallage horaire de Wellington (Nouvelle-Zelande) avec l'heure française
-int calcul_du_decalage_avec_wellington(time_t aujourdhui)
+//Cette fonction permet de calculer le decallage horaire d'Auckland (Nouvelle-Zelande) avec l'heure française
+int calcul_du_decalage_avec_auckland(time_t aujourdhui)
 {
 	//Définition des variables nécessaires au calcul du décalage
         time_t date_passage_heure_d_ete_europe = date_du_dernier_dimanche_de_mars(aujourdhui, 2);
@@ -869,7 +869,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_harare = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Harare
 
 	/* Nouvelle-Zélande */
-	time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600); //Wellington
+	time_t heure_a_auckland = temps_courant + ((12 -  calcul_du_decalage_avec_auckland(temps_courant)) * 3600); //Auckland
 
 	/* République argentine */
         time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Buenos Aires
@@ -1028,7 +1028,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
-	calcul_et_affichage_horaire(heure_wellington, "Wellington");
+	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
 
 	printf("\n");
 	printf("République du Chili:\n");
@@ -1468,15 +1468,15 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Vladivostok en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_vladivostok, "Vladivostok");
         }
-	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Wellington"...
-	else if(strcmp(nom_de_la_ville,"Wellington") == 0)
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Auckland"...
+	else if(strcmp(nom_de_la_ville,"Auckland") == 0)
 	{
-		//Calcul de l'heure et de la date à Wellington et stockage de celui-ci dans la variable heure_wellington
-                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_wellington = temps_heure_de_paris - (décallage_entre_paris_et_wellington_en_temps_reel * 3600)
-		time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600);
+		//Calcul de l'heure et de la date à Auckland et stockage de celui-ci dans la variable heure_a_auckland
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_auckland = temps_heure_de_paris - (décallage_entre_paris_et_auckland_en_temps_reel * 3600)
+		time_t heure_a_auckland = temps_courant + ((12 -  calcul_du_decalage_avec_auckland(temps_courant)) * 3600);
 
-		//L'heure et la date de Wellington en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_wellington, "Wellington");
+		//L'heure et la date d'Auckland en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_auckland, "Auckland");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Canberra"...
         else if(strcmp(nom_de_la_ville,"Canberra") == 0)

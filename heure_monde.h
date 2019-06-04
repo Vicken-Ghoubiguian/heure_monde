@@ -33,8 +33,8 @@ time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui);
 //Cette fonction permet de déterminer si il faut (ou non) en fonction du changement d'heure ajouter une heure (ou non) pour le calcul des fuseaux horaires de Pekin, Tokyo, Seoul, Moscou, et Vladivostok
 int application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(time_t date);
 
-//Cette fonction permet de calculer le decallage horaire de Wellington (Nouvelle-Zelande) avec l'heure française
-int calcul_du_decalage_avec_wellington(time_t aujourdhui);
+//Cette fonction permet de calculer le decallage horaire d'Auckland (Nouvelle-Zelande) avec l'heure française
+int calcul_du_decalage_avec_auckland(time_t aujourdhui);
 
 //Cette fonction permet de calculer le decallage horaire de Canberra (Australie) avec l'heure française
 int calcul_du_decalage_avec_canberra(time_t aujourdhui);
