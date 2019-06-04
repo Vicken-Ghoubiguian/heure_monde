@@ -874,6 +874,13 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République argentine */
         time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Buenos Aires
 
+	/* République bolivarienne du Venezuela */
+	time_t heure_a_caracas = temps_courant - ((6 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Caracas
+
+	/* République de l'Équateur */
+	time_t heure_a_guayaquil = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Guayaquil
+	time_t heure_a_galapagos = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Galapagos
+
 	/* République de Madagascar */
         time_t heure_antananarivo = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Antananarivo
 
@@ -1032,6 +1039,15 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("République argentine:\n");
         calcul_et_affichage_horaire(heure_buenos_aires, "Buenos Aires");
+
+	printf("\n");
+	printf("République bolivarienne du Venezuela:\n");
+	calcul_et_affichage_horaire(heure_a_caracas, "Caracas");
+
+	printf("\n");
+	printf("République de l'Équateur:\n");
+	calcul_et_affichage_horaire(heure_a_guayaquil, "Guayaquil");
+	calcul_et_affichage_horaire(heure_a_galapagos, "Galapagos");
 
 	printf("\n");
 	printf("République de Madagascar:\n");
@@ -1518,6 +1534,36 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Buenos Aires en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Caracas"...
+	else if(strcmp(nom_de_la_ville,"Caracas") == 0)
+	{
+		//Calcul de l'heure et de la date à Caracas et stockage de celui-ci dans la variable heure_caracas
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_caracas = temps_heure_de_paris - (décallage_entre_paris_et_caracas_en_temps_reel * 3600)
+		time_t heure_a_caracas = temps_courant - ((6 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Caracas en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_caracas, "Caracas");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Guayaquil"...
+	else if(strcmp(nom_de_la_ville,"Guayaquil") == 0)
+	{
+		//Calcul de l'heure et de la date à Guayaquil et stockage de celui-ci dans la variable heure_a_guayaquil
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_guayaquil = temps_heure_de_paris - (décallage_entre_paris_et_guayaquil_en_temps_reel * 3600)
+		time_t heure_a_guayaquil = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Guayaquil en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_guayaquil, "Guayaquil");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Galapagos"...
+	else if(strcmp(nom_de_la_ville,"Galapagos") == 0)
+	{
+		//Calcul de l'heure et de la date à Galapagos et stockage de celui-ci dans la variable heure_a_galapagos
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_galapagos = temps_heure_de_paris - (décallage_entre_paris_et_galapagos_en_temps_reel * 3600)
+		time_t heure_a_galapagos = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Galapagos en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_galapagos, "Galapagos");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Antananarivo"...
         else if(strcmp(nom_de_la_ville,"Antananarivo") == 0)
         {
@@ -1527,7 +1573,6 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date de Antananarivo en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_antananarivo, "Antananarivo");
-
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Windhoek"...
         else if(strcmp(nom_de_la_ville,"Windhoek") == 0)
