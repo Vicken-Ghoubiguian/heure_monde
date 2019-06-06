@@ -798,6 +798,18 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République du Nicaragua */
 	time_t heure_managua = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Managua
 
+	/* République du Salvador */
+	time_t heure_d_el_salvador = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Salvador
+
+	/* Belize */
+	time_t heure_au_belize = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Belize
+
+	/* République du Costa Rica */
+	time_t heure_au_costa_rica = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Costa Rica
+
+	/* République du Honduras */
+	time_t heure_au_honduras = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tegucigalpa
+
 	/* Confédération suisse */
 	time_t heure_zurich = temps_courant; //Zurich
 
@@ -1020,8 +1032,24 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
 
 	printf("\n");
+	printf("République du Salvador:\n");
+	calcul_et_affichage_horaire(heure_d_el_salvador, "El Salvador");
+
+	printf("\n");
+	printf("République du Honduras:\n");
+	calcul_et_affichage_horaire(heure_au_honduras, "Tegucigalpa");
+
+	printf("\n");
+	printf("Belize:\n");
+	calcul_et_affichage_horaire(heure_au_belize, "Belize");
+
+	printf("\n");
 	printf("République du Nicaragua:\n");
 	calcul_et_affichage_horaire(heure_managua, "Managua");
+
+	printf("\n");
+	printf("République du Costa Rica:\n");
+	calcul_et_affichage_horaire(heure_au_costa_rica, "Costa Rica");
 
 	printf("\n");
 	printf("Royaume-Uni de Grande-Bretagne et d'Irlande du Nord:\n");
@@ -1579,6 +1607,26 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Buenos Aires en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Costa Rica"...
+	else if(strcmp(nom_de_la_ville,"Costa Rica") == 0)
+	{
+		//Calcul de l'heure et de la date au Costa Rica et stockage de celui-ci dans la variable heure_buenos_aires
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_costa_rica = temps_heure_de_paris - (décallage_entre_paris_et_le_costa_rica_en_temps_reel * 3600)
+		time_t heure_au_costa_rica = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date du Costa Rica en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_costa_rica, "Costa Rica");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tegucigalpa"...
+	else if(strcmp(nom_de_la_ville,"Tegucigalpa") == 0)
+	{
+		//Calcul de l'heure et de la date à Tegucigalpa et stockage de celui-ci dans la variable heure_au_honduras
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_honduras = temps_heure_de_paris - (décallage_entre_paris_et_au_honduras_en_temps_reel * 3600)
+		time_t heure_au_honduras = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date du Honduras en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_honduras, "Tegucigalpa");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Panama"...
 	else if(strcmp(nom_de_la_ville,"Panama") == 0)
 	{
@@ -1588,6 +1636,26 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date au Panama en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_panama, "Panama");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "El Salvador"...
+	else if(strcmp(nom_de_la_ville,"El Salvador") == 0)
+	{
+		//Calcul de l'heure et de la date au Panama et stockage de celui-ci dans la variable heure_d_el_salvador
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_el_salvador = temps_heure_de_paris - (décallage_entre_paris_et_el_salvador * 3600)
+		time_t heure_d_el_salvador = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date a El Salvador en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_d_el_salvador, "El Salvador");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale au "Belize"...
+	else if(strcmp(nom_de_la_ville,"Belize") == 0)
+	{
+		//Calcul de l'heure et de la date au Belize et stockage de celui-ci dans la variable heure_au_belize
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_belize = temps_heure_de_paris - (décallage_entre_paris_et_le_belize_en_temps_reel * 3600)
+		time_t heure_au_belize = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date au Belize en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_belize, "Belize");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Bogota"...
 	else if(strcmp(nom_de_la_ville,"Bogota") == 0)
