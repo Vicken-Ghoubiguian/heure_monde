@@ -821,6 +821,8 @@ void affichage_de_l_horloge(time_t temps_courant)
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_courant - ((6 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Santiago du Chili
+	time_t heure_a_puntas_arenas = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Puntas Arenas
+	time_t heure_ile_de_paques = temps_courant - ((8 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Ile de Pâques
 
 	/* République algérienne démocratique et populaire */
 	time_t heure_a_alger = temps_courant - ((1 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Alger
@@ -870,6 +872,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_courant + ((12 -  calcul_du_decalage_avec_auckland(temps_courant)) * 3600); //Auckland
+
+	/* République du Panama */
+	time_t heure_au_panama = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Panama
 
 	/* République argentine */
         time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Buenos Aires
@@ -1033,6 +1038,8 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("République du Chili:\n");
         calcul_et_affichage_horaire(heure_santiago_chili, "Santiago du Chili");
+	calcul_et_affichage_horaire(heure_a_puntas_arenas, "Puntas Arenas");
+	calcul_et_affichage_horaire(heure_ile_de_paques, "Ile de Pâques");
 
 	printf("\n");
 	printf("République algérienne démocratique et populaire:\n");
@@ -1041,6 +1048,10 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("République d'Afrique du Sud:\n");
         calcul_et_affichage_horaire(heure_johannesburg, "Johannesburg");
+
+	printf("\n");
+	printf("République du Panama:\n");
+	calcul_et_affichage_horaire(heure_au_panama, "Panama");
 
 	printf("\n");
 	printf("République argentine:\n");
@@ -1498,6 +1509,26 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Santiago du Chili en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_santiago_chili, "Santiago du Chili");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Puntas Arenas"...
+	else if(strcmp(nom_de_la_ville,"Puntas Arenas") == 0)
+	{
+		//Calcul de l'heure et de la date à Puntas Arenas et stockage de celui-ci dans la variable heure_a_puntas_arenas
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_puntas_arenas = temps_heure_de_paris - (décallage_entre_paris_et_puntas_arenas_en_temps_reel * 3600)
+		time_t heure_a_puntas_arenas = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Puntas Arenas en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_puntas_arenas, "Puntas Arenas");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Ile de Pâques"...
+	else if(strcmp(nom_de_la_ville,"Ile de Pâques") == 0)
+	{
+		//Calcul de l'heure et de la date sur l'île de Pâques et stockage de celui-ci dans la variable heure_
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_sur_l_île_de_Pâques = temps_heure_de_paris - (décallage_entre_paris_et_l_île_de_Pâques_en_temps_reel * 3600)
+		time_t heure_ile_de_paques = temps_courant - ((8 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600);
+
+		//L'heure et la date sur l'île de Pâcques en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_ile_de_paques, "Ile de Pâques");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Johannesburg"...
 	else if(strcmp(nom_de_la_ville,"Johannesburg") == 0)
         {
@@ -1548,6 +1579,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Buenos Aires en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Panama"...
+	else if(strcmp(nom_de_la_ville,"Panama") == 0)
+	{
+		//Calcul de l'heure et de la date au Panama et stockage de celui-ci dans la variable heure_au_panama
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_panama = temps_heure_de_paris - (décallage_entre_paris_et_le_panama_en_temps_reel * 3600)
+		time_t heure_au_panama = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date au Panama en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_panama, "Panama");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Bogota"...
 	else if(strcmp(nom_de_la_ville,"Bogota") == 0)
 	{
