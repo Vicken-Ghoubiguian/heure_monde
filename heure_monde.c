@@ -810,6 +810,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République du Honduras */
 	time_t heure_au_honduras = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tegucigalpa
 
+	/* République du Guatemala */
+	time_t heure_au_guatemala = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Guatemala
+
 	/* Confédération suisse */
 	time_t heure_zurich = temps_courant; //Zurich
 
@@ -1030,6 +1033,10 @@ void affichage_de_l_horloge(time_t temps_courant)
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
         calcul_et_affichage_horaire(heure_d_ottawa, "Ottawa");
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
+
+	printf("\n");
+	printf("République du Guatemala:\n");
+	calcul_et_affichage_horaire(heure_au_guatemala, "Guatemala");
 
 	printf("\n");
 	printf("République du Salvador:\n");
@@ -1607,6 +1614,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Buenos Aires en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Guatemala"...
+	else if(strcmp(nom_de_la_ville,"Guatemala") == 0)
+	{
+		//Calcul de l'heure et de la date au Guatemala et stockage de celui-ci dans la variable heure_au_guatemala
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_guatemala = temps_heure_de_paris - (décallage_entre_paris_et_le_guatemala_en_temps_reel * 3600)
+		time_t heure_au_guatemala = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date au Guatemala en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_guatemala, "Guatemala");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Costa Rica"...
 	else if(strcmp(nom_de_la_ville,"Costa Rica") == 0)
 	{
