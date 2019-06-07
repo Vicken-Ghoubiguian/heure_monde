@@ -919,6 +919,21 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République du Yémen */
 	time_t heure_a_aden = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Aden
 
+	/* Royaume d'Arabie saoudite */
+	time_t heure_a_riyad = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Riyad
+
+	/* Sultanat d'Oman */
+	time_t heure_a_mascate = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Mascate
+
+	/* Émirats arabes unis */
+	time_t heure_a_dubai = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Dubai
+
+	/* Royaume de Bahreïn */
+	time_t heure_au_bahrein = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bahrein
+
+	/* État du Koweït */
+	time_t heure_au_koweit = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Koweit
+
 	/* République d'Ouzbékistan */
 	time_t heure_a_tachkent = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tachkent
 	time_t heure_a_samarkand = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samarkand
@@ -1135,12 +1150,32 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_le_caire, "Le Caire");
 
 	printf("\n");
+	printf("Royaume d'Arabie saoudite:\n");
+	calcul_et_affichage_horaire(heure_a_riyad, "Riyad");
+
+	printf("\n");
 	printf("État du Qatar:\n");
 	calcul_et_affichage_horaire(heure_au_qatar, "Qatar");
 
 	printf("\n");
+	printf("Émirats arabes unis:\n");
+	calcul_et_affichage_horaire(heure_a_dubai, "Dubai");
+
+	printf("\n");
 	printf("République du Yémen:\n");
 	calcul_et_affichage_horaire(heure_a_aden, "Aden");
+
+	printf("\n");
+	printf("Sultanat d'Oman:\n");
+	calcul_et_affichage_horaire(heure_a_mascate, "Mascate");
+
+	printf("\n");
+	printf("Royaume de Bahreïn:\n");
+	calcul_et_affichage_horaire(heure_au_bahrein, "Bahrein");
+
+	printf("\n");
+	printf("État du Koweït:\n");
+	calcul_et_affichage_horaire(heure_au_koweit, "Koweit");
 
 	printf("\n");
 	printf("République démocratique fédérale d’Éthiopie:\n");
@@ -2054,6 +2089,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date à Aden en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_aden, "Aden");
 	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Koweit"...
+	else if(strcmp(nom_de_la_ville,"Koweit") == 0)
+	{
+		//Calcul de l'heure et de la date au Koweit et stockage de celui-ci dans la variable heure_au_koweit
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_koweit = temps_heure_de_paris + (décallage_entre_paris_et_le_koweit_en_temps_reel * 3600)
+		time_t heure_au_koweit = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date au Koweit en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_koweit, "Koweit");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Addis-Abeba"...
 	else if(strcmp(nom_de_la_ville,"Addis-Abeba") == 0)
 	{
@@ -2093,6 +2138,46 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 
 		//L'heure et la date à Lubumbashi en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_lubumbashi, "Lubumbashi");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Riyad"...
+	else if(strcmp(nom_de_la_ville,"Riyad") == 0)
+	{
+		//Calcul de l'heure et de la date à Riyad et stockage de celui-ci dans la variable heure_a_riyad
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_riyad = temps_heure_de_paris + (décallage_entre_paris_et_riyad_en_temps_reel * 3600)
+		time_t heure_a_riyad = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Riyad en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_riyad, "Riyad");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Bahrein"...
+	else if(strcmp(nom_de_la_ville,"Bahrein") == 0)
+	{
+		//Calcul de l'heure et de la date au Bahrein et stockage de celui-ci dans la variable heure_au_bahrein
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_au_bahrein = temps_heure_de_paris + (décallage_entre_paris_et_le_bahrein_en_temps_reel * 3600)
+		time_t heure_au_bahrein = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date au Bahrein en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_au_bahrein, "Bahrein");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Dubai"...
+	else if(strcmp(nom_de_la_ville,"Dubai") == 0)
+	{
+		//Calcul de l'heure et de la date à Dubai et stockage de celui-ci dans la variable heure_a_dubai
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_dubai = temps_heure_de_paris + (décallage_entre_paris_et_dubai_en_temps_reel * 3600)
+		time_t heure_a_dubai = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Dubai en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_dubai, "Dubai");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Mascat"...
+	else if(strcmp(nom_de_la_ville,"Mascate") == 0)
+	{
+		//Calcul de l'heure et de la date à Mascate et stockage de celui-ci dans la variable heure_a_mascate
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_mascate = temps_heure_de_paris + (décallage_entre_paris_et_mascate_en_temps_reel * 3600)
+		time_t heure_a_mascate = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Mascate en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_mascate, "Mascate");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Qatar"...
 	else if(strcmp(nom_de_la_ville,"Qatar") == 0)
