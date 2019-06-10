@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*#include <string.h>*/
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 
