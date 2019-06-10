@@ -1,5 +1,6 @@
-#include "heure_monde.h"
 #include <stdio.h>
+#include "retour_de_la_date_et_de_l_heure.h"
+#include "affichage_de_l_horloge.h"
 
 int main()
 {
