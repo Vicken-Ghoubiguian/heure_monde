@@ -1,14 +1,14 @@
 # heure_monde
-Bibliothèque de fonctions de calcul et d'affichage de l'heure et de la date pour plusieurs villes du monde en temps reel à partir de l'heure et de la date courantes dans la tz timezone "Europe/Paris".
+API écrite en C pour le calcul et l'affichage de l'heure et de la date pour tous les fuseaux horaires du monde en temps reel à partir de l'heure et de la date correspondant au fuseau "Europe/Paris".
 
-Cette bibliothèque évolue pour que l'heure et la date soit affichées pour tous les tz timezones nommées selon la nomenklature de la base d'Olsen.
+Cette API évolue pour que tous les fuseaux horaires nommés selon la nomenclature de la base d'Olson.
 
-Pour compiler le fichier main.c et le fichier heure_monde.c, faire la commande suivante:
+Pour compiler le fichier de test main.c et le fichier heure_monde.c, faire la commande suivante:
 
-$ gcc main.c heure_monde.c
+$ gcc test/main.c src/*.c
 
-Un fichier exécutable a.out est généré, il faut l'éxécuter à l'aide de la commande suivante:
+Un fichier exécutable a.out sera généré dans le répertoire principal de l'API, il faut l'éxécuter à l'aide de la commande suivante:
 
 $ ./a.out
 
-Mais cette bibliothèque peut être intégrée dans votre projet C quelle qu'elle soit.
+Mais cette API peut être intégrée dans n'importe quel projet développé en C.
