@@ -276,6 +276,9 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République islamique d'Afghanistan */
 	time_t heure_a_kaboul = temps_courant + (30 * 60) + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kaboul
 
+	/* République socialiste du Viêt Nam */
+	time_t heure_a_ho_chi_minh_ville = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Hô Chi Minh Ville
+
 	/* République populaire démocratique de Corée */
 	time_t heure_pyongyang = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Pyongyang
 
@@ -567,6 +570,10 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
         printf("République islamique d'Afghanistan:\n");
         calcul_et_affichage_horaire(heure_a_kaboul, "Kaboul");
+
+	printf("\n");
+	printf("République socialiste du Viêt Nam:\n");
+	calcul_et_affichage_horaire(heure_a_ho_chi_minh_ville, "Hô Chi Minh Ville");
 
 	printf("\n");
 	printf("République populaire démocratique de Corée:\n");

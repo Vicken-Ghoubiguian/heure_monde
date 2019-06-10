@@ -497,6 +497,16 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Lima en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_lima, "Lima");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Hô Chi Minh Ville"...
+	else if(strcmp(nom_de_la_ville,"Hô Chi Minh Ville") == 0)
+	{
+		//Calcul de l'heure et de la date à Hô Chi Minh Ville et stockage de celui-ci dans la variable heure_a_ho_chi_minh_ville
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_ho_chi_minh_ville = temps_heure_de_paris - (décallage_entre_paris_et_ho_chi_minh_ville_en_temps_reel * 3600)
+		time_t heure_a_ho_chi_minh_ville = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Hô Chi Minh Ville en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_ho_chi_minh_ville, "Hô Chi Minh Ville");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Pyongyang"...
 	else if(strcmp(nom_de_la_ville,"Pyongyang") == 0)
 	{
