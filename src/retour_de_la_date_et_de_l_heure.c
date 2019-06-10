@@ -297,6 +297,26 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Johannesburg en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_johannesburg, "Johannesburg");
         }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Khartoum"...
+	else if(strcmp(nom_de_la_ville,"Khartoum") == 0)
+	{
+		//Calcul de l'heure et de la date à Khartoum et stockage de celui-ci dans la variable heure_a_khartoum
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_khartoum = temps_heure_de_paris - (décallage_entre_paris_et_khartoum_en_temps_reel * 3600)
+		time_t heure_a_khartoum = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Khartoum en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_khartoum, "Khartoum");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Djouba"...
+	else if(strcmp(nom_de_la_ville,"Djouba") == 0)
+	{
+		//Calcul de l'heure et de la date à Djouba et stockage de celui-ci dans la variable heure_a_djouba
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_djouba = temps_heure_de_paris - (décallage_entre_paris_et_khartoum_en_temps_reel * 3600)
+		time_t heure_a_djouba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date de Djouba en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_djouba, "Djouba");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Alger"...
 	else if(strcmp(nom_de_la_ville,"Alger") == 0)
 	{

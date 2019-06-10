@@ -162,6 +162,12 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République algérienne démocratique et populaire */
 	time_t heure_a_alger = temps_courant - ((1 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Alger
 
+	/* République du Soudan */
+	time_t heure_a_khartoum = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Khartoum
+
+	/* République du Soudan du Sud */
+	time_t heure_a_djouba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Djouba
+
 	/* République d'Afrique du Sud */
         time_t heure_johannesburg = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Johannesburg
 
@@ -414,6 +420,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("République algérienne démocratique et populaire:\n");
 	calcul_et_affichage_horaire(heure_a_alger, "Alger");
+
+	printf("\n");
+	printf("République du Soudan:\n");
+	calcul_et_affichage_horaire(heure_a_khartoum, "Khartoum");
+
+	printf("\n");
+	printf("République du Soudan du Sud:\n");
+	calcul_et_affichage_horaire(heure_a_djouba, "Djouba");
 
 	printf("\n");
 	printf("République d'Afrique du Sud:\n");
