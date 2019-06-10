@@ -897,6 +897,26 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date à Erevan en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_erevan, "Erevan");
 	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tbilissi"...
+	else if(strcmp(nom_de_la_ville,"Tbilissi") == 0)
+	{
+		//Calcul de l'heure et de la date à Tbilissi et stockage de celui-ci dans la variable heure_a_tbilissi
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tbilissi = temps_heure_de_paris + (décallage_entre_paris_et_tbilissi_en_temps_reel * 3600)
+		time_t heure_a_tbilissi = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Tbilissi en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_tbilissi, "Tbilissi");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Bakou"...
+	else if(strcmp(nom_de_la_ville,"Bakou") == 0)
+	{
+		//Calcul de l'heure et de la date à Tbilissi et stockage de celui-ci dans la variable heure_a_bakou
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_bakou = temps_heure_de_paris + (décallage_entre_paris_et_tbilissi_en_temps_reel * 3600)
+		time_t heure_a_bakou = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//L'heure et la date à Bakou en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_bakou, "Bakou");
+	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Mogadiscio"...
 	else if(strcmp(nom_de_la_ville,"Mogadiscio") == 0)
 	{

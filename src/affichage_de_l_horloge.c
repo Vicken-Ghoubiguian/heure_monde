@@ -249,6 +249,12 @@ void affichage_de_l_horloge(time_t temps_courant)
 	/* République d'Arménie */
 	time_t heure_erevan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Erevan
 
+	/* Géorgie */
+	time_t heure_a_tbilissi = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tbilissi
+
+	/* République d'Azerbaïdjan */
+	time_t heure_a_bakou = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bakou
+
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
 
         printf("\n");
@@ -558,6 +564,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("République d'Arménie:\n");
 	calcul_et_affichage_horaire(heure_erevan, "Erevan");
+
+	printf("\n");
+	printf("Géorgie:\n");
+	calcul_et_affichage_horaire(heure_a_tbilissi, "Tbilissi");
+
+	printf("\n");
+	printf("République d'Azerbaïdjan:\n");
+	calcul_et_affichage_horaire(heure_a_bakou, "Bakou");
 
 	printf("\n");
 	printf("Mongolie:\n");
