@@ -13,7 +13,7 @@ $ ./a.out
 
 Mais cette API peut être intégrée dans n'importe quel projet développé en C.
 
-Il y a cinq bibliothéques, et chacune posséde un rôle spécifique dans l'API:
+Il y a six bibliothéques, et chacune posséde un rôle spécifique dans l'API:
 
 * calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement: Cette bibliothéque contient toutes les fonctions de calcul de passage de l'heure d'hiver à l'heure d'été, et réciproquement, pour tous les pays appliquants le changement d'heure.
 
@@ -24,3 +24,5 @@ Il y a cinq bibliothéques, et chacune posséde un rôle spécifique dans l'API:
 * affichage_de_l_horloge: cette bibliothéque contient la fonction affichage_de_l_horloge qui sert à afficher l'heure et la date courante sur tous les fuseaux horaires du monde.
 
 * retour_de_la_date_et_de_l_heure: Cette bibliothéque contient la fonction retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue qui sert à afficher l'heure et la date courante sur un fuseau horaire donné de part le monde.
+
+* bibliotheque_de_fonctions_utiles: Cette bibliothéque contient toutes les fonctions de calcul et de manipulation pour le bon fonctionnement de l'API.
