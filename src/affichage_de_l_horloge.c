@@ -4,11 +4,16 @@
 #include "application_des_decalages_horaires.h"
 #include "affichage_de_l_horloge.h"
 #include "fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
+#include "bibliotheque_de_fonctions_utiles.h"
 
 //Fonction de test pour les calculs d'horaires mises au point dans le fichier heure_monde.c
 void affichage_de_l_horloge(time_t temps_courant)
 {
-	/*Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante*/
+
+	/* Définition de la variable temps_utc et initialisation de celle-ci au temps utc sous forme de timestamp */
+	time_t temps_utc = retour_du_temps_utc_sous_forme_de_timestamp();
+
+	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_courant - ((9 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //Los Angeles
@@ -17,22 +22,22 @@ void affichage_de_l_horloge(time_t temps_courant)
         time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Phoenix
 
 	/* République du Nicaragua */
-	time_t heure_managua = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Managua
+	time_t heure_managua = temps_utc - (6 * 3600); //Managua
 
 	/* République du Salvador */
-	time_t heure_d_el_salvador = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Salvador
+	time_t heure_d_el_salvador = temps_utc - (6 * 3600); //Salvador
 
 	/* Belize */
-	time_t heure_au_belize = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Belize
+	time_t heure_au_belize = temps_utc - (6 * 3600); //Belize
 
 	/* République du Costa Rica */
-	time_t heure_au_costa_rica = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Costa Rica
+	time_t heure_au_costa_rica = temps_utc - (6 * 3600); //Costa Rica
 
 	/* République du Honduras */
-	time_t heure_au_honduras = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tegucigalpa
+	time_t heure_au_honduras = temps_utc - (6 * 3600); //Tegucigalpa
 
 	/* République du Guatemala */
-	time_t heure_au_guatemala = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Guatemala
+	time_t heure_au_guatemala = temps_utc - (6 * 3600); //Guatemala
 
 	/* Confédération suisse */
 	time_t heure_zurich = temps_courant; //Zurich
@@ -61,199 +66,199 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_ile_de_paques = temps_courant - ((8 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Ile de Pâques
 
 	/* République algérienne démocratique et populaire */
-	time_t heure_a_alger = temps_courant - ((1 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Alger
+	time_t heure_a_alger = temps_utc + (1 * 3600); //Alger
 
 	/* République du Soudan */
-	time_t heure_a_khartoum = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Khartoum
+	time_t heure_a_khartoum = temps_utc + (2 * 3600); //Khartoum
 
 	/* République du Soudan du Sud */
-	time_t heure_a_djouba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Djouba
+	time_t heure_a_djouba = temps_utc + (3 * 3600); //Djouba
 
 	/* République d'Afrique du Sud */
-        time_t heure_johannesburg = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Johannesburg
+        time_t heure_johannesburg = temps_utc + (2 * 3600); //Johannesburg
 
 	/* République de Namibie */
-        time_t heure_windhoek = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Windhoek
+        time_t heure_windhoek = temps_utc + (2 * 3600); //Windhoek
 
 	/* État de Libye */
-	time_t heure_tripoli = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tripoli
+	time_t heure_tripoli = temps_utc + (2 * 3600); //Tripoli
 
 	/* État d'Érythrée */
-	time_t heure_a_asmara = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Asmara
+	time_t heure_a_asmara = temps_utc + (3 * 3600); //Asmara
 
 	/* République fédérale de Somalie */
-	time_t heure_a_mogadiscio = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Mogadiscio
+	time_t heure_a_mogadiscio = temps_utc + (3 * 3600); //Mogadiscio
 
 	/* République démocratique fédérale d’Éthiopie */
-	time_t heure_addis_abeba = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Addis-Abeba
+	time_t heure_addis_abeba = temps_utc + (3  * 3600); //Addis-Abeba
 
 	/* République de Djibouti */
-	time_t heure_djibouti = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Djibouti
+	time_t heure_djibouti = temps_utc + (3 * 3600); //Djibouti
 
 	/* République du Congo */
-	time_t heure_a_brazzaville = temps_courant - ((1 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Brazzaville
+	time_t heure_a_brazzaville = temps_utc + (1 * 3600); //Brazzaville
 
 	/* République démocratique du Congo */
-	time_t heure_a_kinshasa = temps_courant - ((1 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kinshasa
-	time_t heure_a_lubumbashi = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lubumbashi
+	time_t heure_a_kinshasa = temps_utc + (1 * 3600); //Kinshasa
+	time_t heure_a_lubumbashi = temps_utc + (2 * 3600); //Lubumbashi
 
 	/* République unie de Tanzanie */
-	time_t heure_a_dar_es_salam = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Dar_es_Salam
+	time_t heure_a_dar_es_salam = temps_utc + (3 * 3600); //Dar_es_Salam
 
 	/* République du Kenya */
-	time_t heure_a_nairobi = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Nairobi
+	time_t heure_a_nairobi = temps_utc + (3 * 3600); //Nairobi
 
 	/* République de Zambie */
-	time_t heure_lusaka = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lusaka
+	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
 
 	/* République arabe d'Égypte */
-	time_t heure_le_caire = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Le Caire
+	time_t heure_le_caire = temps_utc + (2 * 3600); //Le Caire
 
 	/* République de Zimbabwe */
-	time_t heure_harare = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Harare
+	time_t heure_harare = temps_utc + (2 * 3600); //Harare
 
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_courant + ((12 -  calcul_du_decalage_avec_auckland(temps_courant)) * 3600); //Auckland
 
 	/* République du Panama */
-	time_t heure_au_panama = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Panama
+	time_t heure_au_panama = temps_utc - (5 * 3600); //Panama
 
 	/* République argentine */
         time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Buenos Aires
 
 	/* République bolivarienne du Venezuela */
-	time_t heure_a_caracas = temps_courant - ((6 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Caracas
+	time_t heure_a_caracas = temps_utc - (4 * 3600); //Caracas
 
 	/* République de l'Équateur */
-	time_t heure_a_guayaquil = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Guayaquil
-	time_t heure_a_galapagos = temps_courant - ((8 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Galapagos
+	time_t heure_a_guayaquil = temps_utc - (5 * 3600); //Guayaquil
+	time_t heure_a_galapagos = temps_utc - (6 * 3600); //Galapagos
 
 	/* État plurinational de Bolivie */
-	time_t heure_a_la_paz = temps_courant - ((6 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //La Paz
+	time_t heure_a_la_paz = temps_utc - (4 * 3600); //La Paz
 
 	/* République de Madagascar */
-        time_t heure_antananarivo = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Antananarivo
+        time_t heure_antananarivo = temps_utc + (3 * 3600); //Antananarivo
 
 	/* République du Pérou */
-        time_t heure_lima = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Lima
+        time_t heure_lima = temps_utc - (5 * 3600); //Lima
 
 	/* République de Colombie */
-	time_t heure_a_bogota = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bogota
+	time_t heure_a_bogota = temps_utc - (5 * 3600); //Bogota
 
 	/* État du Qatar */
-	time_t heure_au_qatar = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Qatar
+	time_t heure_au_qatar = temps_utc + (3 * 3600); //Qatar
 
 	/* République du Yémen */
-	time_t heure_a_aden = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Aden
+	time_t heure_a_aden = temps_utc + (3 * 3600); //Aden
 
 	/* Royaume d'Arabie saoudite */
-	time_t heure_a_riyad = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Riyad
+	time_t heure_a_riyad = temps_utc + (3 * 3600); //Riyad
 
 	/* Sultanat d'Oman */
-	time_t heure_a_mascate = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Mascate
+	time_t heure_a_mascate = temps_utc + (4 * 3600); //Mascate
 
 	/* Émirats arabes unis */
-	time_t heure_a_dubai = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Dubai
+	time_t heure_a_dubai = temps_utc + (4 * 3600); //Dubai
 
 	/* Royaume de Bahreïn */
-	time_t heure_au_bahrein = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bahrein
+	time_t heure_au_bahrein = temps_utc + (3 * 3600); //Bahrein
 
 	/* État du Koweït */
-	time_t heure_au_koweit = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Koweit
+	time_t heure_au_koweit = temps_utc + (3 * 3600); //Koweit
 
 	/* République d'Ouzbékistan */
-	time_t heure_a_tachkent = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tachkent
-	time_t heure_a_samarkand = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samarkand
+	time_t heure_a_tachkent = temps_utc + (5 * 3600); //Tachkent
+	time_t heure_a_samarkand = temps_utc + (5 * 3600); //Samarkand
 
 	/* République du Tadjikistan */
-	time_t heure_a_douchanbe = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Douchanbé
+	time_t heure_a_douchanbe = temps_utc + (5 * 3600); //Douchanbé
 
 	/* République kirghize */
-	time_t heure_a_bichkek = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bichkek
+	time_t heure_a_bichkek = temps_utc + (6 * 3600); //Bichkek
 
 	/* République démocratique fédérale du Népal */
-	time_t heure_a_katmandou = temps_courant + (45 * 60) + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Katmandou
+	time_t heure_a_katmandou = temps_utc + (45 * 60) + (5 * 3600); //Katmandou
 
 	/* République islamique d'Afghanistan */
-	time_t heure_a_kaboul = temps_courant + (30 * 60) + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kaboul
+	time_t heure_a_kaboul = temps_utc + (30 * 60) + (4 * 3600); //Kaboul
 
 	/* Royaume de Thaïlande */
-	time_t heure_a_bangkok = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bangkok
+	time_t heure_a_bangkok = temps_utc + (7 * 3600); //Bangkok
 
 	/* République socialiste du Viêt Nam */
-	time_t heure_a_ho_chi_minh_ville = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Hô Chi Minh Ville
+	time_t heure_a_ho_chi_minh_ville = temps_utc + (7 * 3600); //Hô Chi Minh Ville
 
 	/* République populaire démocratique de Corée */
-	time_t heure_pyongyang = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Pyongyang
+	time_t heure_pyongyang = temps_utc + (9 * 3600); //Pyongyang
 
 	/* République de Corée */
-        time_t heure_seoul = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Seoul
+        time_t heure_seoul = temps_utc + (9 * 3600); //Seoul
 
 	/* Empire du Japon */
-        time_t heure_tokyo = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tokyo
+	time_t heure_tokyo = temps_utc + (9 * 3600); //Tokyo
 
 	/* Royaume du Bhoutan */
-	time_t heure_a_thimphou = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Thimphou
+	time_t heure_a_thimphou = temps_utc + (6 * 3600); //Thimphou
 
 	/* République populaire de Chine */
-        time_t heure_pekin = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Pekin
-	time_t heure_a_urumqi = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Urumqi
+        time_t heure_pekin = temps_utc + (8 * 3600); //Pekin
+	time_t heure_a_urumqi = temps_utc + (6 * 3600); //Urumqi
 
 	/* Région administrative spéciale de Macao de la République populaire de Chine */
-	time_t heure_a_macao = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Macao
+	time_t heure_a_macao = temps_utc + (8 * 3600); //Macao
 
 	/* Région administrative spéciale de Hong Kong de la République populaire de Chine */
-	time_t heure_a_hong_kong = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Hong Kong
+	time_t heure_a_hong_kong = temps_utc + (8 * 3600); //Hong Kong
 
 	/* Negara Brunei Darussalam */
-	time_t heure_brunei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Brunei
+	time_t heure_brunei = temps_utc + (8 * 3600); //Brunei
 
 	/* Mongolie */
-	time_t heure_a_hovd = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Hovd
+	time_t heure_a_hovd = temps_utc + (8 * 3600); //Hovd
 
 	/* République de Chine (Taiwan) */
-	time_t heure_a_tapei = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tapei
+	time_t heure_a_tapei = temps_utc + (8 * 3600); //Tapei
 
 	/* République des Philippines */
-	time_t heure_a_manille = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Manille
+	time_t heure_a_manille = temps_utc + (8 * 3600); //Manille
 
 	/* République de Singapour */
-	time_t heure_a_singapour = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Singapour
+	time_t heure_a_singapour = temps_utc + (8 * 3600); //Singapour
 
 	/* Fédération de Russie */
-	time_t heure_moscou = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Moscou
-        time_t heure_vladivostok = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Vladivostok
-	time_t heure_kaliningrad = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Kaliningrad
-	time_t heure_samara = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Samara
-	time_t heure_volgograd = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Volgograd
-	time_t heure_saratov = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Saratov
-	time_t heure_oulianovsk = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Oulianovsk
-	time_t heure_astrakhan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Astrakhan
-	time_t heure_anadyr = temps_courant + ((10 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Anadyr
-	time_t heure_sakhalin = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Sakhalin
-	time_t heure_omsk = temps_courant + ((4 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Omsk
-	time_t heure_tchita = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tchita
-	time_t heure_tomsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tomsk
-	time_t heure_barnaoul = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Barnaoul
-	time_t heure_magadan = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Magadan
-	time_t heure_iekaterinbourg = temps_courant + ((3 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Iekaterinbourg
-	time_t heure_yakoutsk = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Yakoutsk
-	time_t heure_irkoutsk = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Irkoutsk
-	time_t heure_khandyga = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Khandyga
-	time_t heure_novokouznetsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Novokouznetsk
-	time_t heure_nobossibirsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Nobossibirsk
-	time_t heure_krasnoyarsk = temps_courant + ((5 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Krasnoyarsk
-	time_t heure_oust_nera = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Oust-Nera
-	time_t heure_srednekolymsk = temps_courant + ((9 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Srednekolymsk
+	time_t heure_moscou = temps_utc + (3 * 3600); //Moscou
+        time_t heure_vladivostok = temps_utc + (10 * 3600); //Vladivostok
+	time_t heure_kaliningrad = temps_utc + (2 * 3600); //Kaliningrad
+	time_t heure_samara = temps_utc + (4 * 3600); //Samara
+	time_t heure_volgograd = temps_utc + (4 * 3600); //Volgograd
+	time_t heure_saratov = temps_utc + (4 * 3600); //Saratov
+	time_t heure_oulianovsk = temps_utc + (4 * 3600); //Oulianovsk
+	time_t heure_astrakhan = temps_utc + (4 * 3600); //Astrakhan
+	time_t heure_anadyr = temps_utc + (12 * 3600); //Anadyr
+	time_t heure_sakhalin = temps_utc + (11 * 3600); //Sakhalin
+	time_t heure_omsk = temps_utc + (6 * 3600); //Omsk
+	time_t heure_tchita = temps_utc + (9 * 3600); //Tchita
+	time_t heure_tomsk = temps_utc + (7 * 3600); //Tomsk
+	time_t heure_barnaoul = temps_utc + (7 * 3600); //Barnaoul
+	time_t heure_magadan = temps_utc + (11 * 3600); //Magadan
+	time_t heure_iekaterinbourg = temps_utc + (5 * 3600); //Iekaterinbourg
+	time_t heure_yakoutsk = temps_utc + (9 * 3600); //Yakoutsk
+	time_t heure_irkoutsk = temps_utc + (8 * 3600); //Irkoutsk
+	time_t heure_khandyga = temps_utc + (9 * 3600); //Khandyga
+	time_t heure_novokouznetsk = temps_utc + (7 * 3600); //Novokouznetsk
+	time_t heure_nobossibirsk = temps_utc + (7 * 3600); //Nobossibirsk
+	time_t heure_krasnoyarsk = temps_utc + (7 * 3600); //Krasnoyarsk
+	time_t heure_oust_nera = temps_utc + (10 * 3600); //Oust-Nera
+	time_t heure_srednekolymsk = temps_utc + (11 * 3600); //Srednekolymsk
 
 	/* République d'Arménie */
-	time_t heure_erevan = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Erevan
+	time_t heure_erevan = temps_utc + (4 * 3600); //Erevan
 
 	/* Géorgie */
-	time_t heure_a_tbilissi = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Tbilissi
+	time_t heure_a_tbilissi = temps_utc + (4 * 3600); //Tbilissi
 
 	/* République d'Azerbaïdjan */
-	time_t heure_a_bakou = temps_courant + ((2 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Bakou
+	time_t heure_a_bakou = temps_utc + (4 * 3600); //Bakou
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
 

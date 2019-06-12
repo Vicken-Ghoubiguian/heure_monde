@@ -148,7 +148,7 @@ char* calcul_et_renvoie_horaire(time_t temps, char* ville)
 void calcul_et_affichage_horaire(time_t temps, char* ville)
 {
 	//Declaration des variables
-	struct tm *horaire = localtime(&temps);
+	struct tm *horaire = gmtime(&temps);
 	char* jour_semaine;
 	char* mois;
 	char heure_a_convertir_en_str[5];
