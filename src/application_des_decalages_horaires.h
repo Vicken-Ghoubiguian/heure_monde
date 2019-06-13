@@ -27,4 +27,10 @@ int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_co
 //
 int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_courant);
 
+//
+int application_du_changement_d_heure_pour_le_chili(time_t temps_courant);
+
+//
+int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_courant);
+
 #endif

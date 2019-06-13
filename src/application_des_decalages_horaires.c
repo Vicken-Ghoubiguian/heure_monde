@@ -5,6 +5,48 @@
 #include "application_des_decalages_horaires.h"
 
 //
+int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_courant)
+{
+	//
+	time_t ete = date_du_dernier_dimanche_de_septembre(temps_courant);
+	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
+
+	//
+	if(temps_courant < ete && temps_courant > hiver)
+	{
+		//
+		return 1;
+	}
+	//
+	else
+	{
+		//
+		return 0;
+	}
+}
+
+//
+int application_du_changement_d_heure_pour_le_chili(time_t temps_courant)
+{
+	//
+	time_t ete = date_du_deuxieme_dimanche_d_aout(temps_courant);
+	time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 3);
+
+	//
+	if(temps_courant < ete && temps_courant > hiver)
+	{
+		//
+		return 1;
+	}
+	//
+	else
+	{
+		//
+		return 0;
+	}
+}
+
+//
 int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_courant)
 {
 	//

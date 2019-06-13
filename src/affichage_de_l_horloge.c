@@ -64,9 +64,9 @@ void affichage_de_l_horloge(time_t temps_courant)
         time_t heure_a_sydney = temps_courant + ((10 - calcul_du_decalage_avec_l_australie(temps_courant)) * 3600); //Sydney
 
 	/* République du Chili */
-        time_t heure_santiago_chili = temps_courant - ((6 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Santiago du Chili
-	time_t heure_a_puntas_arenas = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Puntas Arenas
-	time_t heure_ile_de_paques = temps_courant - ((8 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600); //Ile de Pâques
+        time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
+	time_t heure_a_puntas_arenas = temps_utc - (3 * 3600); //Puntas Arenas
+	time_t heure_ile_de_paques = temps_utc - ((5 * 3600)  + (application_du_changement_d_heure_pour_le_chili(temps_utc) * 3600)); //Ile de Pâques
 
 	/* République algérienne démocratique et populaire */
 	time_t heure_a_alger = temps_utc + (1 * 3600); //Alger
@@ -121,7 +121,8 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_harare = temps_utc + (2 * 3600); //Harare
 
 	/* Nouvelle-Zélande */
-	time_t heure_a_auckland = temps_courant + ((12 -  calcul_du_decalage_avec_auckland(temps_courant)) * 3600); //Auckland
+	time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
+	time_t heure_a_waitangi = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Waitangi
 
 	/* République du Panama */
 	time_t heure_au_panama = temps_utc - (5 * 3600); //Panama
@@ -331,6 +332,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
 	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
+	calcul_et_affichage_horaire(heure_a_waitangi, "Waitangi");
 
 	printf("\n");
 	printf("République du Chili:\n");
