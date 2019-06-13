@@ -127,7 +127,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_au_panama = temps_utc - (5 * 3600); //Panama
 
 	/* République argentine */
-        time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Buenos Aires
+        time_t heure_buenos_aires = temps_utc - (3 * 3600); //Buenos Aires
 
 	/* République bolivarienne du Venezuela */
 	time_t heure_a_caracas = temps_utc - (4 * 3600); //Caracas
