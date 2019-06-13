@@ -68,6 +68,27 @@ int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_coura
 }
 
 //
+int application_du_changement_d_heure_pour_la_grande_bretagne(time_t temps_courant)
+{
+	//
+	time_t ete = date_du_dernier_dimanche_de_mars(temps_courant, 1);
+	time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 2);
+
+	//
+	if(temps_courant >= ete && temps_courant <= hiver)
+	{
+		//
+		return 1;
+	}
+	//
+	else
+	{
+		//
+		return 0;
+	}
+}
+
+//
 int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_courant)
 {
 	//

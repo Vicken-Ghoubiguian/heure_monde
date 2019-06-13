@@ -58,7 +58,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_d_athenes = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Athènes
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
-	time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600); //Londres
+	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
 
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_courant + ((10 - calcul_du_decalage_avec_l_australie(temps_courant)) * 3600); //Sydney
