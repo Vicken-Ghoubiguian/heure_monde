@@ -4,6 +4,48 @@
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 
+//
+int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_courant)
+{
+	//
+	time_t ete = date_du_deuxieme_dimanche_de_mars(temps_courant);
+	time_t hiver = date_du_premier_dimanche_de_novembre(temps_courant);
+
+	//
+	if(temps_courant >= ete && temps_courant <= hiver)
+	{
+		//
+		return 1;
+	}
+	//
+	else
+	{
+		//
+		return 0;
+	}
+}
+
+//
+int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_courant)
+{
+	//
+	time_t ete = date_du_dernier_dimanche_de_mars(temps_courant, 1);
+	time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 1);
+
+	//
+	if(temps_courant >= ete && temps_courant <= hiver)
+	{
+		//
+		return 1;
+	}
+	//
+	else
+	{
+		//
+		return 0;
+	}
+}
+
 //Cette fonction permet de déterminer si il faut (ou non) en fonction du changement d'heure ajouter une heure (ou non) pour le calcul des fuseaux horaires de Pekin, Tokyo, Seoul, Moscou, et Vladivostok
 int application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(time_t date)
 {

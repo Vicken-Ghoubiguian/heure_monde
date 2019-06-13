@@ -15,11 +15,14 @@ void affichage_de_l_horloge(time_t temps_courant)
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
+	/* République française */
+	time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
 	/* États-Unis d'Amérique */
-        time_t heure_los_angeles = temps_courant - ((9 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //Los Angeles
-        time_t heure_de_nyc = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //New York City
-        time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600); //Ottawa
-        time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600); //Phoenix
+        time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
+        time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
+        time_t heure_d_ottawa = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Ottawa
+        time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
 
 	/* République du Nicaragua */
 	time_t heure_managua = temps_utc - (6 * 3600); //Managua
@@ -40,19 +43,19 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_au_guatemala = temps_utc - (6 * 3600); //Guatemala
 
 	/* Confédération suisse */
-	time_t heure_zurich = temps_courant; //Zurich
+	time_t heure_zurich = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zurich
 
 	/* République de Malte */
-	time_t heure_malte = temps_courant; //Malte
+	time_t heure_malte = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Malte
 
 	/* Principauté d'Andorre */
-	time_t heure_andorre = temps_courant; //Andorre
+	time_t heure_andorre = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Andorre
 
 	/* Principauté de Liechtenstein */
-	time_t heure_vaduz = temps_courant; //Vaduz
+	time_t heure_vaduz = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vaduz
 
 	/* République hellénique */
-	time_t heure_d_athenes = temps_courant + 3600; //Athènes
+	time_t heure_d_athenes = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Athènes
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600); //Londres
@@ -264,7 +267,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 
         printf("\n");
 	printf("République française:\n");
-        calcul_et_affichage_horaire(temps_courant, "Paris");
+        calcul_et_affichage_horaire(heure_de_paris, "Paris");
 
 	printf("\n");
 	printf("Confédération suisse:\n");
