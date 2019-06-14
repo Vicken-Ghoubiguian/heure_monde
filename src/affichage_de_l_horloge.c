@@ -23,6 +23,27 @@ void affichage_de_l_horloge()
 	time_t heure_a_ceuta = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ceuta
 	time_t heure_aux_iles_canaries = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //îles Canaries
 
+	/* République portugaise */
+	time_t heure_a_lisbonne = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Lisbonne
+	time_t heure_aux_acores = temps_utc - ((1 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Açores
+	time_t heure_a_madere = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madère
+
+	/* Grand-Duché de Luxembourg */
+	time_t heure_au_luxembourg = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Luxembourg
+
+	/* Royaume de Belgique */
+	time_t heure_a_bruxelles = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bruxelles
+
+	/* République fédérale d'Allemagne */
+	time_t heure_de_berlin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Berlin
+	time_t heure_de_busingen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Busingen
+
+	/* République italienne */
+	time_t heure_de_rome = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Rome
+
+	/* République d'Autriche */
+	time_t heure_de_vienne = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vienne
+
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
@@ -280,6 +301,33 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_madrid, "Madrid");
 	calcul_et_affichage_horaire(heure_a_ceuta, "Ceuta");
 	calcul_et_affichage_horaire(heure_aux_iles_canaries, "îles Canaries");
+
+	printf("\n");
+	printf("République portugaise:\n");
+	calcul_et_affichage_horaire(heure_a_lisbonne, "Lisbonne");
+	calcul_et_affichage_horaire(heure_aux_acores, "Açores");
+	calcul_et_affichage_horaire(heure_a_madere, "Madère");
+
+	printf("\n");
+	printf("Grand-Duché de Luxembourg:\n");
+	calcul_et_affichage_horaire(heure_au_luxembourg, "Luxembourg");
+
+	printf("\n");
+	printf("Royaume de Belgique:\n");
+	calcul_et_affichage_horaire(heure_a_bruxelles, "Bruxelles");
+
+	printf("\n");
+	printf("République fédérale d'Allemagne:\n");
+	calcul_et_affichage_horaire(heure_de_berlin, "Berlin");
+	calcul_et_affichage_horaire(heure_de_busingen, "Busingen");
+
+	printf("\n");
+	printf("République italienne:\n");
+	calcul_et_affichage_horaire(heure_de_rome, "Rome");
+
+	printf("\n");
+	printf("République d'Autriche:\n");
+	calcul_et_affichage_horaire(heure_de_vienne, "Vienne");
 
 	printf("\n");
 	printf("Confédération suisse:\n");
