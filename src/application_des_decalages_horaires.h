@@ -36,4 +36,7 @@ int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_cour
 //
 int application_du_changement_d_heure_pour_la_grande_bretagne(time_t temps_courant);
 
+//
+int application_du_changement_d_heure_pour_l_australie(time_t temps_courant);
+
 #endif

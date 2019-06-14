@@ -5,6 +5,27 @@
 #include "application_des_decalages_horaires.h"
 
 //
+int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
+{
+	//
+	time_t ete = date_du_premier_dimanche_d_octobre(temps_courant);
+	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 2);
+
+	//
+	if(temps_courant < ete && temps_courant > hiver)
+	{
+		//
+		return 1;
+	}
+	//
+	else
+	{
+		//
+		return 0;
+	}
+}
+
+//
 int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_courant)
 {
 	//

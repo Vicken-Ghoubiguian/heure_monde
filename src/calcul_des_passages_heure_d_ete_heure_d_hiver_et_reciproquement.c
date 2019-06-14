@@ -167,7 +167,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
         time_t date_timestamp;
 
         //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
-        date_tm = localtime(&aujourdhui);
+        date_tm = gmtime(&aujourdhui);
 
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) novembre (tm_mon) à 3 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = 1;
@@ -178,8 +178,8 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
 
 	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
         //Puis reconvertie en struct tm grace à la fonction localtime
-        date_timestamp = mktime(date_tm);
-        date_tm = localtime(&date_timestamp);
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
 
         //Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois d'Octobre 
         int i;
@@ -197,8 +197,8 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
 
         //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
         //Puis reconvertie en struct tm grace à la fonction localtime
-        date_timestamp = mktime(date_tm);
-        date_tm = localtime(&date_timestamp);
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
 
         //Ici, le programme procéde à une boucle infinie
         while(1){
@@ -215,7 +215,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
                 	date_timestamp = date_timestamp + 86400;
 
                 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = localtime(&date_timestamp);
+                	date_tm = gmtime(&date_timestamp);
 
 			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au premier dimanche (tm_wday) du mois d'Octobre (tm_mon), la valeur contenue dans la variable i est augmentée de 1
                         if(date_tm->tm_wday == 0 && date_tm->tm_mon == 9)

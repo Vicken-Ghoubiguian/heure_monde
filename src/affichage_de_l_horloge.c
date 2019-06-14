@@ -7,7 +7,7 @@
 #include "bibliotheque_de_fonctions_utiles.h"
 
 //Fonction de test pour les calculs d'horaires mises au point dans le fichier heure_monde.c
-void affichage_de_l_horloge(time_t temps_courant)
+void affichage_de_l_horloge()
 {
 
 	/* Définition de la variable temps_utc et initialisation de celle-ci au temps utc sous forme de timestamp */
@@ -61,7 +61,7 @@ void affichage_de_l_horloge(time_t temps_courant)
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
 
 	/* Commonwealth d'Australie */
-        time_t heure_a_sydney = temps_courant + ((10 - calcul_du_decalage_avec_l_australie(temps_courant)) * 3600); //Sydney
+        time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
