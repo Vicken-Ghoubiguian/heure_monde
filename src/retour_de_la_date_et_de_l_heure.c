@@ -127,15 +127,15 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		//L'heure et la date de Santiago du Chili en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_santiago_chili, "Santiago du Chili");
         }
-	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Puntas Arenas"...
-	else if(strcmp(nom_de_la_ville,"Puntas Arenas") == 0)
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Punta Arenas"...
+	else if(strcmp(nom_de_la_ville,"Punta Arenas") == 0)
 	{
-		//Calcul de l'heure et de la date à Puntas Arenas et stockage de celui-ci dans la variable heure_a_puntas_arenas
-		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_puntas_arenas = temps_heure_de_paris - (décallage_entre_paris_et_puntas_arenas_en_temps_reel * 3600)
-		time_t heure_a_puntas_arenas = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+		//Calcul de l'heure et de la date à Punta Arenas et stockage de celui-ci dans la variable heure_a_punta_arenas
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_punta_arenas = temps_heure_de_paris - (décallage_entre_paris_et_punta_arenas_en_temps_reel * 3600)
+		time_t heure_a_punta_arenas = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//L'heure et la date de Puntas Arenas en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_puntas_arenas, "Puntas Arenas");
+		//L'heure et la date de Punta Arenas en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_punta_arenas, "Punta Arenas");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Ile de Pâques"...
 	else if(strcmp(nom_de_la_ville,"Ile de Pâques") == 0)
