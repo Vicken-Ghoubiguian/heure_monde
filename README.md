@@ -1,5 +1,11 @@
 # heure_monde
-API écrite en C pour le calcul et l'affichage de l'heure et de la date pour tous les fuseaux horaires du monde en temps reel à partir de l'heure et de la date correspondant au fuseau "Europe/Paris".
+API écrite en C pour le calcul et l'affichage de l'heure et de la date pour tous les fuseaux horaires du monde en temps reel.
+
+Deux fonctions permettent d'integrer l'API, ou de l'utiliser: affichage_de_l_horloge et retour_de_la_date_et_de_l_heure.
+
+retour_de_la_date_et_de_l_heure permet de calculer l'heure et la date, pour un fuseau horaire passé en paramétre, à partir de l'heure et de la date correspondant au fuseau "Europe/Paris".
+
+affichage_de_l_horloge permet de calculer l'heure et la date, pour tous les fuseau horaires, à partir du temps UTC (Universal Time Coordinated).
 
 Cette API évolue pour que tous les fuseaux horaires nommés selon la nomenclature de la base d'Olson.
 
