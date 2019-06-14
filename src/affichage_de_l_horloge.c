@@ -16,7 +16,12 @@ void affichage_de_l_horloge()
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
-	time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+	time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Paris
+
+	/* Royaume d'Espagne */
+	time_t heure_a_madrid = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madrid
+	time_t heure_a_ceuta = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ceuta
+	time_t heure_aux_iles_canaries = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //îles Canaries
 
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
@@ -269,6 +274,12 @@ void affichage_de_l_horloge()
         printf("\n");
 	printf("République française:\n");
         calcul_et_affichage_horaire(heure_de_paris, "Paris");
+
+	printf("\n");
+	printf("Royaume d'Espagne:\n");
+	calcul_et_affichage_horaire(heure_a_madrid, "Madrid");
+	calcul_et_affichage_horaire(heure_a_ceuta, "Ceuta");
+	calcul_et_affichage_horaire(heure_aux_iles_canaries, "îles Canaries");
 
 	printf("\n");
 	printf("Confédération suisse:\n");
