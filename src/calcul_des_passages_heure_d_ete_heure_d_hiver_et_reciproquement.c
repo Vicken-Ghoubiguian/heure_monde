@@ -21,7 +21,7 @@ time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)
 	date_tm->tm_min = 0;
 	date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
 	//Puis reconvertie en struct tm grace à la fonction localtime
 	date_timestamp = timegm(date_tm);
 	date_tm = gmtime(&date_timestamp);
@@ -63,7 +63,7 @@ time_t date_du_dernier_dimanche_d_octobre(time_t aujourdhui, int heure)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -105,7 +105,7 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -124,7 +124,7 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
                 i = 0;
         }
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -176,7 +176,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -195,7 +195,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
                 i = 0;
         }
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -247,7 +247,7 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui)
 	date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -266,7 +266,7 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui)
                 i = 0;
         }
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -318,7 +318,7 @@ time_t date_du_deuxieme_dimanche_de_mars(time_t aujourdhui)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
 	date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -337,7 +337,7 @@ time_t date_du_deuxieme_dimanche_de_mars(time_t aujourdhui)
 		i = 0;
 	}
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -388,7 +388,7 @@ time_t date_du_deuxieme_dimanche_de_mai(time_t aujourdhui)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
 	date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -407,7 +407,7 @@ time_t date_du_deuxieme_dimanche_de_mai(time_t aujourdhui)
 		i = 0;
 	}
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -458,7 +458,7 @@ time_t date_du_deuxieme_dimanche_d_aout(time_t aujourdhui)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
 	date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -477,7 +477,7 @@ time_t date_du_deuxieme_dimanche_d_aout(time_t aujourdhui)
 		i = 0;
 	}
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
@@ -528,7 +528,7 @@ time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui)
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction mktime
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
         //Puis reconvertie en struct tm grace à la fonction localtime
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
