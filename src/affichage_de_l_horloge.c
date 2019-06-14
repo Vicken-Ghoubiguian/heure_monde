@@ -65,7 +65,7 @@ void affichage_de_l_horloge()
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
-	time_t heure_a_puntas_arenas = temps_utc - (5 * 3600); //Puntas Arenas
+	time_t heure_a_puntas_arenas = temps_utc - (3 * 3600); //Puntas Arenas
 	time_t heure_ile_de_paques = temps_utc - ((6 * 3600)  - (application_du_changement_d_heure_pour_le_chili(temps_utc) * 3600)); //Ile de Pâques
 
 	/* République algérienne démocratique et populaire */
