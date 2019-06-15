@@ -38,6 +38,17 @@ void affichage_de_l_horloge()
 	time_t heure_de_berlin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Berlin
 	time_t heure_de_busingen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Busingen
 
+	/* Royaume de Danemark */
+	time_t heure_a_copenhague = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Copenhague
+	time_t heure_aux_iles_feroes = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); // Iles Féroé
+	time_t heure_a_scoresbysund = temps_utc - ((1 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Scoresbysund
+	time_t heure_a_godthab = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Godthab
+	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Thule
+	time_t heure_a_danmarkshavn = temps_utc; //Danmarkshavn
+
+	/* République d'Islande */
+	time_t heure_a_reykjavik = temps_utc; //Reykjavik
+
 	/* République italienne */
 	time_t heure_de_rome = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Rome
 
@@ -196,6 +207,12 @@ void affichage_de_l_horloge()
 	/* État du Koweït */
 	time_t heure_au_koweit = temps_utc + (3 * 3600); //Koweit
 
+	/* République de l'Inde */
+	time_t heure_a_calcutta = temps_utc + (30 * 60) + (5 * 3600);
+
+	/* République populaire du Bangladesh */
+	time_t heure_a_dacca = temps_utc + (6 * 3600);
+
 	/* République d'Ouzbékistan */
 	time_t heure_a_tachkent = temps_utc + (5 * 3600); //Tachkent
 	time_t heure_a_samarkand = temps_utc + (5 * 3600); //Samarkand
@@ -320,6 +337,19 @@ void affichage_de_l_horloge()
 	printf("République fédérale d'Allemagne:\n");
 	calcul_et_affichage_horaire(heure_de_berlin, "Berlin");
 	calcul_et_affichage_horaire(heure_de_busingen, "Busingen");
+
+	printf("\n");
+	printf("Royaume du Danemark:\n");
+	calcul_et_affichage_horaire(heure_a_copenhague, "Copenhague");
+	calcul_et_affichage_horaire(heure_aux_iles_feroes, "Iles Féroé");
+	calcul_et_affichage_horaire(heure_a_scoresbysund, "Scoresbysund");
+	calcul_et_affichage_horaire(heure_a_godthab, "Godthab");
+	calcul_et_affichage_horaire(heure_a_thule, "Thule");
+	calcul_et_affichage_horaire(heure_a_danmarkshavn, "Danmarkshavn");
+
+	printf("\n");
+	printf("République d'Islande:\n");
+	calcul_et_affichage_horaire(heure_a_reykjavik, "Reykjavik");
 
 	printf("\n");
 	printf("République italienne:\n");
@@ -528,6 +558,14 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République du Pérou:\n");
         calcul_et_affichage_horaire(heure_lima, "Lima");
+
+	printf("\n");
+	printf("République de l'Inde:\n");
+	calcul_et_affichage_horaire(heure_a_calcutta, "Calcutta");
+
+	printf("\n");
+	printf("République populaire du Bangladesh:\n");
+	calcul_et_affichage_horaire(heure_a_dacca, "Dacca");
 
 	printf("\n");
 	printf("République d'Ouzbékistan:\n");
