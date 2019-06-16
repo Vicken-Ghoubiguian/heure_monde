@@ -295,6 +295,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_bougainville = temps_utc + (11 * 3600); //Bougainville
 	time_t heure_a_port_moresby = temps_utc + (10 * 3600); //Port Moresby
 
+	/* îles Mariannes du Nord */
+	time_t heure_a_saipan = temps_utc + (10 * 3600); //Saipan
+
 	/* Fédération de Russie */
 	time_t heure_moscou = temps_utc + (3 * 3600); //Moscou
         time_t heure_vladivostok = temps_utc + (10 * 3600); //Vladivostok
@@ -689,6 +692,10 @@ void affichage_de_l_horloge()
 	printf("État indépendant de Papouasie-Nouvelle-Guinée:\n");
 	calcul_et_affichage_horaire(heure_a_bougainville, "Bougainville");
 	calcul_et_affichage_horaire(heure_a_port_moresby, "Port Moresby");
+
+	printf("\n");
+	printf("îles Mariannes du Nord:\n");
+	calcul_et_affichage_horaire(heure_a_saipan, "Saipan");
 
 	printf("\n");
 	printf("Royaume du Bhoutan:\n");
