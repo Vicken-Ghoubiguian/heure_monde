@@ -285,11 +285,15 @@ void affichage_de_l_horloge()
 	time_t heure_a_singapour = temps_utc + (8 * 3600); //Singapour
 
 	/* Îles Salomon */
-	time_t heure_a_guadalcanal = temps_utc + (11 * 3600);
+	time_t heure_a_guadalcanal = temps_utc + (11 * 3600); //Guadalcanal
 
 	/* Malaisie */
-	time_t heure_a_kuala_lumpur = temps_utc + (8 * 3600);
-	time_t heure_a_kuching = temps_utc + (8 * 3600);
+	time_t heure_a_kuala_lumpur = temps_utc + (8 * 3600); //Kuala Lumpur
+	time_t heure_a_kuching = temps_utc + (8 * 3600); //Kuching
+
+	/* État indépendant de Papouasie-Nouvelle-Guinée */
+	time_t heure_a_bougainville = temps_utc + (11 * 3600); //Bougainville
+	time_t heure_a_port_moresby = temps_utc + (10 * 3600); //Port Moresby
 
 	/* Fédération de Russie */
 	time_t heure_moscou = temps_utc + (3 * 3600); //Moscou
@@ -680,6 +684,11 @@ void affichage_de_l_horloge()
 	printf("Malaisie:\n");
 	calcul_et_affichage_horaire(heure_a_kuala_lumpur, "Kuala Lumpur");
 	calcul_et_affichage_horaire(heure_a_kuching, "Kuching");
+
+	printf("\n");
+	printf("État indépendant de Papouasie-Nouvelle-Guinée:\n");
+	calcul_et_affichage_horaire(heure_a_bougainville, "Bougainville");
+	calcul_et_affichage_horaire(heure_a_port_moresby, "Port Moresby");
 
 	printf("\n");
 	printf("Royaume du Bhoutan:\n");
