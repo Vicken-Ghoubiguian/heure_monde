@@ -257,6 +257,18 @@ void affichage_de_l_horloge()
 	/* Région administrative spéciale de Hong Kong de la République populaire de Chine */
 	time_t heure_a_hong_kong = temps_utc + (8 * 3600); //Hong Kong
 
+	/* République démocratique populaire lao */
+	time_t heure_a_vientiane = temps_utc + (7 * 3600); //Vientiane
+
+	/* Royaume du Cambodge */
+	time_t heure_a_phnom_penh = temps_utc + (7 * 3600); //Phnom Penh
+
+	/* République de l'Union du Myanmar */
+	time_t heure_a_yagon = temps_utc + (30 * 60) + (6 * 3600); //Yangon
+
+	/* République démocratique du Timor oriental */
+	time_t heure_a_dili = temps_utc + (9 * 3600); //Dili
+
 	/* Negara Brunei Darussalam */
 	time_t heure_brunei = temps_utc + (8 * 3600); //Brunei
 
@@ -636,6 +648,22 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République de Singapour:\n");
 	calcul_et_affichage_horaire(heure_a_singapour, "Singapour");
+
+	printf("\n");
+	printf("République démocratique populaire lao:\n");
+	calcul_et_affichage_horaire(heure_a_vientiane, "Vientiane");
+
+	printf("\n");
+	printf("Royaume du Cambodge:\n");
+	calcul_et_affichage_horaire(heure_a_phnom_penh, "Phnom Penh");
+
+	printf("\n");
+	printf("République de l'Union du Myanmar:\n");
+	calcul_et_affichage_horaire(heure_a_yagon, "Yagon");
+
+	printf("\n");
+	printf("République démocratique du Timor oriental:\n");
+	calcul_et_affichage_horaire(heure_a_dili, "Dili");
 
 	printf("\n");
 	printf("Royaume du Bhoutan:\n");
