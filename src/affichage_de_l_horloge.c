@@ -284,6 +284,13 @@ void affichage_de_l_horloge()
 	/* République de Singapour */
 	time_t heure_a_singapour = temps_utc + (8 * 3600); //Singapour
 
+	/* Îles Salomon */
+	time_t heure_a_guadalcanal = temps_utc + (11 * 3600);
+
+	/* Malaisie */
+	time_t heure_a_kuala_lumpur = temps_utc + (8 * 3600);
+	time_t heure_a_kuching = temps_utc + (8 * 3600);
+
 	/* Fédération de Russie */
 	time_t heure_moscou = temps_utc + (3 * 3600); //Moscou
         time_t heure_vladivostok = temps_utc + (10 * 3600); //Vladivostok
@@ -664,6 +671,15 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République démocratique du Timor oriental:\n");
 	calcul_et_affichage_horaire(heure_a_dili, "Dili");
+
+	printf("\n");
+	printf("Îles Salomon:\n");
+	calcul_et_affichage_horaire(heure_a_guadalcanal, "Guadalcanal");
+
+	printf("\n");
+	printf("Malaisie:\n");
+	calcul_et_affichage_horaire(heure_a_kuala_lumpur, "Kuala Lumpur");
+	calcul_et_affichage_horaire(heure_a_kuching, "Kuching");
 
 	printf("\n");
 	printf("Royaume du Bhoutan:\n");
