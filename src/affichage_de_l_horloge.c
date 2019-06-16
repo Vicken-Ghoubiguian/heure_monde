@@ -298,6 +298,9 @@ void affichage_de_l_horloge()
 	/* îles Mariannes du Nord */
 	time_t heure_a_saipan = temps_utc + (10 * 3600); //Saipan
 
+	/* Porto Rico */
+	time_t heure_a_porto_rico = temps_utc - (4 * 3600); //Porto Rico
+
 	/* Fédération de Russie */
 	time_t heure_moscou = temps_utc + (3 * 3600); //Moscou
         time_t heure_vladivostok = temps_utc + (10 * 3600); //Vladivostok
@@ -696,6 +699,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("îles Mariannes du Nord:\n");
 	calcul_et_affichage_horaire(heure_a_saipan, "Saipan");
+
+	printf("\n");
+	printf("Porto Rico:\n");
+	calcul_et_affichage_horaire(heure_a_porto_rico, "Porto Rico");
 
 	printf("\n");
 	printf("Royaume du Bhoutan:\n");
