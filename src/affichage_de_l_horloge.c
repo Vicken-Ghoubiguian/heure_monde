@@ -46,6 +46,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Thule
 	time_t heure_a_danmarkshavn = temps_utc; //Danmarkshavn
 
+	/* Royaume de Norvège */
+	time_t heure_a_oslo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Oslo
+	time_t heure_a_longyearbyen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Longyearbyen
+
 	/* République d'Islande */
 	time_t heure_a_reykjavik = temps_utc; //Reykjavik
 
@@ -375,6 +379,11 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_godthab, "Godthab");
 	calcul_et_affichage_horaire(heure_a_thule, "Thule");
 	calcul_et_affichage_horaire(heure_a_danmarkshavn, "Danmarkshavn");
+
+	printf("\n");
+	printf("Royaume de Norvège:\n");
+	calcul_et_affichage_horaire(heure_a_oslo, "Oslo");
+	calcul_et_affichage_horaire(heure_a_longyearbyen, "Longyearbyen");
 
 	printf("\n");
 	printf("République d'Islande:\n");
