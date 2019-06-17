@@ -74,6 +74,18 @@ void affichage_de_l_horloge()
 	/* République d'Autriche */
 	time_t heure_de_vienne = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vienne
 
+	/* Hongrie */
+	time_t heure_a_budapest = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Budapest
+
+	/* République tchèque */
+	time_t heure_a_prague = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Prague
+
+	/* République slovaque */
+	time_t heure_a_bratislava = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bratislava
+
+	/* République de Biélorussie */
+	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
+
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
@@ -431,6 +443,22 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République d'Autriche:\n");
 	calcul_et_affichage_horaire(heure_de_vienne, "Vienne");
+
+	printf("\n");
+	printf("Hongrie:\n");
+	calcul_et_affichage_horaire(heure_a_budapest, "Budapest");
+
+	printf("\n");
+	printf("République tchèque:\n");
+	calcul_et_affichage_horaire(heure_a_prague, "Prague");
+
+	printf("\n");
+	printf("République slovaque:\n");
+	calcul_et_affichage_horaire(heure_a_bratislava, "Bratislava");
+
+	printf("\n");
+	printf("République de Biélorussie:\n");
+	calcul_et_affichage_horaire(heure_a_minsk, "Minsk");
 
 	printf("\n");
 	printf("Confédération suisse:\n");
