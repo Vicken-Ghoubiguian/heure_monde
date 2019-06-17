@@ -59,6 +59,15 @@ void affichage_de_l_horloge()
 	/* République d'Islande */
 	time_t heure_a_reykjavik = temps_utc; //Reykjavik
 
+	/* République de Lituanie */
+	time_t heure_a_vilnius = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vilnius
+
+	/* République de Lettonie */
+	time_t heure_a_riga = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Riga
+
+	/* République d’Estonie */
+	time_t heure_a_tallinn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tallinn
+
 	/* République italienne */
 	time_t heure_de_rome = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Rome
 
@@ -402,6 +411,18 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République d'Islande:\n");
 	calcul_et_affichage_horaire(heure_a_reykjavik, "Reykjavik");
+
+	printf("\n");
+	printf("République de Lituanie:\n");
+	calcul_et_affichage_horaire(heure_a_vilnius, "Vilnius");
+
+	printf("\n");
+	printf("République de Lettonie:\n");
+	calcul_et_affichage_horaire(heure_a_riga, "Riga");
+
+	printf("\n");
+	printf("République d’Estonie:\n");
+	calcul_et_affichage_horaire(heure_a_tallinn, "Tallinn");
 
 	printf("\n");
 	printf("République italienne:\n");
