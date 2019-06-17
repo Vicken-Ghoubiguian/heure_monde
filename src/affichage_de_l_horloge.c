@@ -50,6 +50,12 @@ void affichage_de_l_horloge()
 	time_t heure_a_oslo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Oslo
 	time_t heure_a_longyearbyen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Longyearbyen
 
+	/* Royaume de Suède */
+	time_t heure_a_stockholm = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Stockholm
+
+	/* République de Finlande */
+	time_t heure_a_helsinki = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Helsinki
+
 	/* République d'Islande */
 	time_t heure_a_reykjavik = temps_utc; //Reykjavik
 
@@ -384,6 +390,14 @@ void affichage_de_l_horloge()
 	printf("Royaume de Norvège:\n");
 	calcul_et_affichage_horaire(heure_a_oslo, "Oslo");
 	calcul_et_affichage_horaire(heure_a_longyearbyen, "Longyearbyen");
+
+	printf("\n");
+	printf("Royaume de Suède:\n");
+	calcul_et_affichage_horaire(heure_a_stockholm, "Stockholm");
+
+	printf("\n");
+	printf("République de Finlande:\n");
+	calcul_et_affichage_horaire(heure_a_helsinki, "Helsinki");
 
 	printf("\n");
 	printf("République d'Islande:\n");
