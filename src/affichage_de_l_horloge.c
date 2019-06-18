@@ -43,7 +43,7 @@ void affichage_de_l_horloge()
 	time_t heure_aux_iles_feroes = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); // Iles Féroé
 	time_t heure_a_scoresbysund = temps_utc - ((1 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Scoresbysund
 	time_t heure_a_godthab = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Godthab
-	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Thule
+	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Thule
 	time_t heure_a_danmarkshavn = temps_utc; //Danmarkshavn
 
 	/* Royaume de Norvège */
@@ -101,11 +101,16 @@ void affichage_de_l_horloge()
 	/* République de Biélorussie */
 	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
 
+	/* République de Cuba */
+	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
+
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
-        time_t heure_d_ottawa = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Ottawa
         time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
+
+	/* Dominion du Canada */
+	time_t heure_d_ottawa = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Ottawa
 
 	/* République du Nicaragua */
 	time_t heure_managua = temps_utc - (6 * 3600); //Managua
@@ -206,6 +211,14 @@ void affichage_de_l_horloge()
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
 	time_t heure_a_waitangi = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Waitangi
+
+	/* État des Tuvalu */
+	time_t heure_a_funafuti = temps_utc + (12 * 3600); //Funafuti
+
+	/* République des Kiribati */
+	time_t heure_a_tarawa = temps_utc + (12 * 3600); //Tarawa
+	time_t heure_a_kiritimati = temps_utc + (14 * 3600); //Kiritimati
+	time_t heure_a_enderbury = temps_utc + (13 * 3600); //Enderbury
 
 	/* République du Panama */
 	time_t heure_au_panama = temps_utc - (5 * 3600); //Panama
@@ -518,11 +531,18 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_d_athenes, "Athènes");
 
 	printf("\n");
+	printf("République de Cuba:\n");
+	calcul_et_affichage_horaire(heure_a_la_havane, "La Havane");
+
+	printf("\n");
 	printf("États-Unis d'Amérique:\n");
         calcul_et_affichage_horaire(heure_los_angeles, "Los Angeles");
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
-        calcul_et_affichage_horaire(heure_d_ottawa, "Ottawa");
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
+
+	printf("\n");
+	printf("Dominion du Canada:\n");
+	calcul_et_affichage_horaire(heure_d_ottawa, "Ottawa");
 
 	printf("\n");
 	printf("République du Guatemala:\n");
@@ -560,6 +580,16 @@ void affichage_de_l_horloge()
 	printf("Nouvelle-Zélande:\n");
 	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
 	calcul_et_affichage_horaire(heure_a_waitangi, "Waitangi");
+
+	printf("\n");
+	printf("République des Kiribati:\n");
+	calcul_et_affichage_horaire(heure_a_tarawa, "Tarawa");
+	calcul_et_affichage_horaire(heure_a_kiritimati, "Kiritimati");
+	calcul_et_affichage_horaire(heure_a_enderbury, "Enderbury");
+
+	printf("\n");
+	printf("État des Tuvalu:\n");
+	calcul_et_affichage_horaire(heure_a_funafuti, "Funafuti");
 
 	printf("\n");
 	printf("République du Chili:\n");
