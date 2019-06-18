@@ -87,13 +87,13 @@ void affichage_de_l_horloge()
 	time_t heure_a_bucarest = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bucarest
 
 	/* République de Bulgarie */
-	time_t temps_a_sofia = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sofia
+	time_t heure_a_sofia = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sofia
 
 	/* République de Macédoine du Nord */
-	time_t temps_a_skopje = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Skopje
+	time_t heure_a_skopje = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Skopje
 
 	/* République de Slovénie */
-	time_t temps_a_ljuljana = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ljubljana
+	time_t heure_a_ljubljana = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ljubljana
 
 	/* République de Croatie */
 	time_t heure_a_zagreb = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zagreb
@@ -490,6 +490,26 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Principauté de Liechtenstein:\n");
 	calcul_et_affichage_horaire(heure_vaduz, "Vaduz");
+
+	printf("\n");
+	printf("Roumanie:\n");
+	calcul_et_affichage_horaire(heure_a_bucarest, "Bucarest");
+
+	printf("\n");
+	printf("République de Bulgarie:\n");
+	calcul_et_affichage_horaire(heure_a_sofia, "Sofia");
+
+	printf("\n");
+	printf("République de Macédoine du Nord:\n");
+	calcul_et_affichage_horaire(heure_a_skopje, "Skopje");
+
+	printf("\n");
+	printf("République de Slovénie:\n");
+	calcul_et_affichage_horaire(heure_a_ljubljana, "Ljubljana");
+
+	printf("\n");
+	printf("République de Croatie:\n");
+	calcul_et_affichage_horaire(heure_a_zagreb, "Zagreb");
 
 	printf("\n");
 	printf("République hellénique:\n");
