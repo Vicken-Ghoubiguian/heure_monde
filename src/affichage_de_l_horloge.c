@@ -83,6 +83,21 @@ void affichage_de_l_horloge()
 	/* République slovaque */
 	time_t heure_a_bratislava = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bratislava
 
+	/* Roumanie */
+	time_t heure_a_bucarest = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bucarest
+
+	/* République de Bulgarie */
+	time_t temps_a_sofia = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sofia
+
+	/* République de Macédoine du Nord */
+	time_t temps_a_skopje = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Skopje
+
+	/* République de Slovénie */
+	time_t temps_a_ljuljana = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ljubljana
+
+	/* République de Croatie */
+	time_t heure_a_zagreb = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zagreb
+
 	/* République de Biélorussie */
 	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
 
