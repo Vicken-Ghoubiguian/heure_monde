@@ -319,7 +319,9 @@ void affichage_de_l_horloge()
 	time_t heure_brunei = temps_utc + (8 * 3600); //Brunei
 
 	/* Mongolie */
-	time_t heure_a_hovd = temps_utc + (8 * 3600); //Hovd
+	time_t heure_a_choibalsan = temps_utc + (8 * 3600); //Choibalsan
+	time_t heure_a_ulaanbaatar = temps_utc + (8 * 3600); //Ulaanbaatar
+	time_t heure_a_hovd = temps_utc + (7 * 3600); //Hovd
 
 	/* République de Chine (Taiwan) */
 	time_t heure_a_tapei = temps_utc + (8 * 3600); //Tapei
@@ -856,6 +858,8 @@ void affichage_de_l_horloge()
 
 	printf("\n");
 	printf("Mongolie:\n");
+	calcul_et_affichage_horaire(heure_a_choibalsan, "Choibalsan");
+	calcul_et_affichage_horaire(heure_a_ulaanbaatar, "Ulaanbaatar");
 	calcul_et_affichage_horaire(heure_a_hovd, "Hovd");
 
 	printf("\n");
