@@ -98,6 +98,18 @@ void affichage_de_l_horloge()
 	/* République de Croatie */
 	time_t heure_a_zagreb = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zagreb
 
+	/* Bosnie-Herzégovine */
+	time_t heure_a_sarajevo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sarajevo
+
+	/* Monténégro */
+	time_t heure_a_podgorica = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Podgorica
+
+	/* République de Serbie */
+	time_t heure_a_belgrade = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Belgrade
+
+	/* République d'Albanie */
+	time_t heure_a_tirane = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tirane
+
 	/* République de Biélorussie */
 	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
 
@@ -544,6 +556,22 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République de Croatie:\n");
 	calcul_et_affichage_horaire(heure_a_zagreb, "Zagreb");
+
+	printf("\n");
+	printf("Bosnie-Herzégovine:\n");
+	calcul_et_affichage_horaire(heure_a_sarajevo, "Sarajevo");
+
+	printf("\n");
+	printf("Monténégro:\n");
+	calcul_et_affichage_horaire(heure_a_podgorica, "Podgorica");
+
+	printf("\n");
+	printf("République de Serbie:\n");
+	calcul_et_affichage_horaire(heure_a_belgrade, "Belgrade");
+
+	printf("\n");
+	printf("République d'Albanie:\n");
+	calcul_et_affichage_horaire(heure_a_tirane, "Tirane");
 
 	printf("\n");
 	printf("République hellénique:\n");
