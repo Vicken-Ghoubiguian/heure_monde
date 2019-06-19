@@ -645,6 +645,17 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République argentine:\n");
         calcul_et_affichage_horaire(heure_buenos_aires, "Buenos Aires");
+	calcul_et_affichage_horaire(heure_a_catamarca, "Catamarca");
+	calcul_et_affichage_horaire(heure_a_cordoba, "Cordoba");
+	calcul_et_affichage_horaire(heure_a_jujuy, "Jujuy");
+	calcul_et_affichage_horaire(heure_a_la_rioja, "La Rioja");
+	calcul_et_affichage_horaire(heure_a_mendoza, "Mendoza");
+	calcul_et_affichage_horaire(heure_a_rio_gallegos, "Rio Gallegos");
+	calcul_et_affichage_horaire(heure_a_salta, "Salta");
+	calcul_et_affichage_horaire(heure_a_san_juan, "San Juan");
+	calcul_et_affichage_horaire(heure_a_san_luis, "San Luis");
+	calcul_et_affichage_horaire(heure_a_tucuman, "Tucuman");
+	calcul_et_affichage_horaire(heure_a_ushuaia, "Ushuaia");
 
 	printf("\n");
 	printf("République bolivarienne du Venezuela:\n");
