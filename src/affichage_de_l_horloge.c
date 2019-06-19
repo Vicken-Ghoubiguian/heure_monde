@@ -101,6 +101,9 @@ void affichage_de_l_horloge()
 	/* République de Biélorussie */
 	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
 
+	/* Commonwealth des Bahamas */
+	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
+
 	/* République de Cuba */
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
@@ -147,6 +150,8 @@ void affichage_de_l_horloge()
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
+	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
+	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
 
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
@@ -531,6 +536,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_d_athenes, "Athènes");
 
 	printf("\n");
+	printf("Commonwealth des Bahamas:\n");
+	calcul_et_affichage_horaire(heure_a_nassau, "Nassau");
+
+	printf("\n");
 	printf("République de Cuba:\n");
 	calcul_et_affichage_horaire(heure_a_la_havane, "La Havane");
 
@@ -571,6 +580,8 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Royaume-Uni de Grande-Bretagne et d'Irlande du Nord:\n");
 	calcul_et_affichage_horaire(heure_de_londres, "Londres");
+	calcul_et_affichage_horaire(heure_aux_bermudes, "Bermudes");
+	calcul_et_affichage_horaire(heure_a_grand_turk, "Grand Turk");
 
 	printf("\n");
 	printf("Commonwealth d'Australie:\n");
