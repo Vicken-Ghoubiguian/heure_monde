@@ -230,6 +230,17 @@ void affichage_de_l_horloge()
 
 	/* République argentine */
         time_t heure_buenos_aires = temps_utc - (3 * 3600); //Buenos Aires
+	time_t heure_a_catamarca = temps_utc - (3 * 3600); //Catamarca
+	time_t heure_a_cordoba = temps_utc - (3 * 3600); //Cordoba
+	time_t heure_a_jujuy = temps_utc - (3 * 3600); //Jujuy
+	time_t heure_a_la_rioja = temps_utc - (3 * 3600); //La Rioja
+	time_t heure_a_mendoza = temps_utc - (3 * 3600); //Mendoza
+	time_t heure_a_rio_gallegos = temps_utc - (3 * 3600); //Rio Gallegos
+	time_t heure_a_salta = temps_utc - (3 * 3600); //Salta
+	time_t heure_a_san_juan = temps_utc - (3 * 3600); //San Juan
+	time_t heure_a_san_luis = temps_utc - (3 * 3600); //San Luis
+	time_t heure_a_tucuman = temps_utc - (3 * 3600); //Tucuman
+	time_t heure_a_ushuaia = temps_utc - (3 * 3600); //Ushuaia
 
 	/* République bolivarienne du Venezuela */
 	time_t heure_a_caracas = temps_utc - (4 * 3600); //Caracas
