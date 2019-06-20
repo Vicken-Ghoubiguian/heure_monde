@@ -530,6 +530,16 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_minsk, "Minsk");
 
 	printf("\n");
+	printf("Ukraine:\n");
+	calcul_et_affichage_horaire(heure_a_kiev, "Kiev");
+	calcul_et_affichage_horaire(heure_a_uzhgorod, "Uzhgorod");
+	calcul_et_affichage_horaire(heure_a_zaporozhye, "Zaporozhye");
+
+	printf("\n");
+	printf("République de Moldavie:\n");
+	calcul_et_affichage_horaire(heure_a_chisinau, "Chisinau");
+
+	printf("\n");
 	printf("Confédération suisse:\n");
 	calcul_et_affichage_horaire(heure_zurich, "Zurich");
 
