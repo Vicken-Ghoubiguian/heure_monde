@@ -113,6 +113,14 @@ void affichage_de_l_horloge()
 	/* République de Biélorussie */
 	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
 
+	/* Ukraine */
+	time_t heure_a_kiev = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Kiev
+	time_t heure_a_uzhgorod = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Uzhgorod
+	time_t heure_a_zaporozhye = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zaporozhye
+
+	/* République de Moldavie */
+	time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Chisinau
+
 	/* Commonwealth des Bahamas */
 	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
 
