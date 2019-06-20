@@ -827,6 +827,16 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_dacca, "Dacca");
 
 	printf("\n");
+	printf("République du Kazakhstan:\n");
+	calcul_et_affichage_horaire(heure_a_almaty, "Almaty");
+	calcul_et_affichage_horaire(heure_a_qostanay, "Qostanay");
+	calcul_et_affichage_horaire(heure_a_aktaou, "Aktaou");
+	calcul_et_affichage_horaire(heure_a_aktioube, "Aktioube");
+	calcul_et_affichage_horaire(heure_a_atyrau, "Atyrau");
+	calcul_et_affichage_horaire(heure_a_oural, "Oural");
+	calcul_et_affichage_horaire(heure_a_qyzylorda, "Qyzylorda");
+
+	printf("\n");
 	printf("République d'Ouzbékistan:\n");
 	calcul_et_affichage_horaire(heure_a_tachkent, "Tachkent");
 	calcul_et_affichage_horaire(heure_a_samarkand, "Samarkand");
