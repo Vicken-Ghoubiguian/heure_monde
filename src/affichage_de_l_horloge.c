@@ -308,6 +308,15 @@ void affichage_de_l_horloge()
 	/* République populaire du Bangladesh */
 	time_t heure_a_dacca = temps_utc + (6 * 3600);
 
+	/* République du Kazakhstan */
+	time_t heure_a_almaty = temps_utc + (6 * 3600); //Almaty
+	time_t heure_a_qostanay = temps_utc + (6 * 3600); //Qostanay
+	time_t heure_a_aktaou = temps_utc + (5 * 3600); //Aktaou
+	time_t heure_a_aktioube = temps_utc + (5 * 3600); //Aktioubé
+	time_t heure_a_atyrau = temps_utc + (5 * 3600); //Atyrau
+	time_t heure_a_oural = temps_utc + (5 * 3600); //Oural
+	time_t heure_a_qyzylorda = temps_utc + (5 * 3600); //Qyzylorda
+
 	/* République d'Ouzbékistan */
 	time_t heure_a_tachkent = temps_utc + (5 * 3600); //Tachkent
 	time_t heure_a_samarkand = temps_utc + (5 * 3600); //Samarkand
