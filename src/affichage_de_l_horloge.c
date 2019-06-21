@@ -190,11 +190,23 @@ void affichage_de_l_horloge()
 	/* République du Soudan du Sud */
 	time_t heure_a_djouba = temps_utc + (3 * 3600); //Djouba
 
-	/* République d'Afrique du Sud */
-        time_t heure_johannesburg = temps_utc + (2 * 3600); //Johannesburg
+	/* République du Mozambique */
+	time_t heure_a_maputo = temps_utc + (2 * 3600); //Maputo
+
+	/* Royaume du Lesotho */
+	time_t heure_a_maseru = temps_utc + (2 * 3600); //Maseru
+
+	/* Royaume d'Eswatini */
+	time_t heure_a_mbabane = temps_utc + (2 * 3600); //Mbabane
+
+	/* République du Botswana */
+	time_t heure_a_gaborone = temps_utc + (2 * 3600); //Gaborone
 
 	/* République de Namibie */
-        time_t heure_windhoek = temps_utc + (2 * 3600); //Windhoek
+	time_t heure_windhoek = temps_utc + (2 * 3600); //Windhoek
+
+	/* République d'Afrique du Sud */
+        time_t heure_johannesburg = temps_utc + (2 * 3600); //Johannesburg
 
 	/* État de Libye */
 	time_t heure_tripoli = temps_utc + (2 * 3600); //Tripoli
