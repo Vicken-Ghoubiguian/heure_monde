@@ -176,9 +176,6 @@ void affichage_de_l_horloge()
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
 
-	/* État des Tuvalu */
-	time_t heure_a_funafuti = temps_utc + (12 * 3600); //Funafuti
-
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
 	time_t heure_a_punta_arenas = temps_utc - (3 * 3600); //Punta Arenas
@@ -327,7 +324,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_calcutta = temps_utc + (30 * 60) + (5 * 3600); //Calcutta
 
 	/* République démocratique socialiste du Sri Lanka */
-	time_t heurea_a_colombo = temps_utc + (30 * 60) + (5 * 3600); //Colombo
+	time_t heure_a_colombo = temps_utc + (30 * 60) + (5 * 3600); //Colombo
 
 	/* République populaire du Bangladesh */
 	time_t heure_a_dacca = temps_utc + (6 * 3600);
@@ -684,6 +681,18 @@ void affichage_de_l_horloge()
 	printf("Nouvelle-Zélande:\n");
 	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
 	calcul_et_affichage_horaire(heure_a_waitangi, "Waitangi");
+
+	printf("\n");
+	printf("République de Vanuatu:\n");
+	calcul_et_affichage_horaire(heure_a_efate, "Efate");
+
+	printf("\n");
+	printf("République islamique du Pakistan:\n");
+	calcul_et_affichage_horaire(heure_a_karachi, "Karachi");
+
+	printf("\n");
+	printf("République démocratique socialiste du Sri Lanka:\n");
+	calcul_et_affichage_horaire(heure_a_colombo, "Colombo");
 
 	printf("\n");
 	printf("République des Kiribati:\n");
