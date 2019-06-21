@@ -176,6 +176,9 @@ void affichage_de_l_horloge()
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
 
+	/* État des Tuvalu */
+	time_t heure_a_funafuti = temps_utc + (12 * 3600); //Funafuti
+
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
 	time_t heure_a_punta_arenas = temps_utc - (3 * 3600); //Punta Arenas
