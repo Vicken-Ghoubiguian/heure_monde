@@ -759,6 +759,22 @@ void affichage_de_l_horloge()
         calcul_et_affichage_horaire(heure_windhoek, "Windhoek");
 
 	printf("\n");
+	printf("République du Mozambique:\n");
+	calcul_et_affichage_horaire(heure_a_maputo, "Maputo");
+
+	printf("\n");
+	printf("Royaume du Lesotho:\n");
+	calcul_et_affichage_horaire(heure_a_maseru, "Maseru");
+
+	printf("\n");
+	printf("Royaume d'Eswatini:\n");
+	calcul_et_affichage_horaire(heure_a_mbabane, "Mbabane");
+
+	printf("\n");
+	printf("République du Botswana:\n");
+	calcul_et_affichage_horaire(heure_a_gaborone, "Gaborone");
+
+	printf("\n");
 	printf("État de Libye:\n");
 	calcul_et_affichage_horaire(heure_tripoli, "Tripoli");
 
