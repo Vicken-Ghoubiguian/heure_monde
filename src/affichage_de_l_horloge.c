@@ -249,6 +249,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
 	time_t heure_a_waitangi = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Waitangi
 
+	/* République de Vanuatu */
+	time_t heure_a_efate = temps_utc + (11 * 3600); //Efate
+
 	/* État des Tuvalu */
 	time_t heure_a_funafuti = temps_utc + (12 * 3600); //Funafuti
 
@@ -314,8 +317,14 @@ void affichage_de_l_horloge()
 	/* État du Koweït */
 	time_t heure_au_koweit = temps_utc + (3 * 3600); //Koweit
 
+	/* République islamique du Pakistan */
+	time_t heure_a_karachi = temps_utc + (5 * 3600); //Karachi
+
 	/* République de l'Inde */
-	time_t heure_a_calcutta = temps_utc + (30 * 60) + (5 * 3600);
+	time_t heure_a_calcutta = temps_utc + (30 * 60) + (5 * 3600); //Calcutta
+
+	/* République démocratique socialiste du Sri Lanka */
+	time_t heurea_a_colombo = temps_utc + (30 * 60) + (5 * 3600); //Colombo
 
 	/* République populaire du Bangladesh */
 	time_t heure_a_dacca = temps_utc + (6 * 3600);
