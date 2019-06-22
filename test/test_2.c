@@ -1,31 +1,34 @@
 #include <stdio.h>
 #include "../src/retour_de_la_date_et_de_l_heure.h"
 
-int main()
+//Fonction de test de la fonction retour_de_la_date_et_de_l_heure
+int main(int argc, char* argv[])
 {
-        //
-        char* premier_test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Seoul");
+	//
+	int incrementeur;
 
-        //
-        printf("%s\n", premier_test);
+	//
+	char* date_et_heure_du_fuseau_horaire_courant;
 
-        //
-        char* second_test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Addis-Abeba");
+	//
+	if(argc < 2)
+	{
+		//
+		printf("Ecrivez donc le nom des fuseaux hoarires que vous voulez.\n");
+	}
+	//
+	else
+	{
+		//
+		for(incrementeur = 1; incrementeur < argc; incrementeur++)
+		{
+			//
+			date_et_heure_du_fuseau_horaire_courant = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), argv[incrementeur]);
 
-        //
-        printf("%s\n", second_test);
-
-        //
-        char* troisieme_test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Hong Kong");
-
-        //
-        printf("%s\n", troisieme_test);
-
-        //
-        char* quatrieme_test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Enfin le dernier");
-
-        //
-        printf("%s\n", quatrieme_test);
+			//
+			printf("%s\n", date_et_heure_du_fuseau_horaire_courant);
+		}
+	}
 
         //
         return 0;
