@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 		for(incrementeur = 1; incrementeur < argc; incrementeur++)
 		{
 			//
-			date_et_heure_du_fuseau_horaire_courant = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), argv[incrementeur]);
+			date_et_heure_du_fuseau_horaire_courant = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(argv[incrementeur]);
 
 			//
 			printf("%s\n", date_et_heure_du_fuseau_horaire_courant);

@@ -7,7 +7,7 @@
 char* calcul_et_renvoie_horaire(time_t temps, char* ville)
 {
 	//Declaration des variables
-	struct tm *horaire = localtime(&temps);
+	struct tm *horaire = gmtime(&temps);
 	char* jour_semaine;
 	char* mois;
 	char* resultat_du_calcul = malloc(sizeof(char) * 85);
