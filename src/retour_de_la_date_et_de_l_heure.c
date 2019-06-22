@@ -33,8 +33,8 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(char* 
 		//L'heure et la date d'Athènes en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_d_athenes, "Athènes");
 	}
-	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Los Angeles"...
-	else if(strcmp(nom_de_la_ville,"Los Angeles") == 0)
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Los_Angeles"...
+	else if(strcmp(nom_de_la_ville,"Los_Angeles") == 0)
 	{
 		//Calcul de l'heure et de la date à Los Angeles et stockage de celui-ci dans la variable heure_los_angeles
 		time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600));
@@ -42,8 +42,8 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(char* 
 		//L'heure et la date de Los Angeles en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_los_angeles, "Los Angeles");
 	}
-	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "New York City"...
-	else if(strcmp(nom_de_la_ville,"New York City") == 0)
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "New_York"...
+	else if(strcmp(nom_de_la_ville,"New_York") == 0)
 	{
 		//Calcul de l'heure et de la date à New York et stockage de celui-ci dans la variable heure_de_nyc
                 time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600));
