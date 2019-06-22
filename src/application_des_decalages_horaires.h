@@ -39,4 +39,7 @@ int application_du_changement_d_heure_pour_la_grande_bretagne(time_t temps_coura
 ////Cette fonction permet d'appliquer le changement d'heure pour l'Australie
 int application_du_changement_d_heure_pour_l_australie(time_t temps_courant);
 
+//Cette fonction permet d'appliquer le changement d'heure pour le cas particulier de Lord Howe (en Australie)
+int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_t temps_courant);
+
 #endif

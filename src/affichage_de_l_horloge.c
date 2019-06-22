@@ -175,6 +175,18 @@ void affichage_de_l_horloge()
 
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
+	time_t heure_a_macquarie = temps_utc + (11 * 3600); //Macquarie
+	time_t heure_a_adelaide = temps_utc + (30 * 60) + ((10 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Adelaide
+	time_t heure_a_broken_hill = temps_utc + (30 * 60) + ((10 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Broken Hill
+	time_t heure_a_darwin = temps_utc + (30 * 60) + (9 * 3600); //Darwin
+	time_t heure_a_brisbane = temps_utc + (10 * 3600); //Brisbane
+	time_t heure_a_curie = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Curie
+	time_t heure_a_hobart = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Hobart
+	time_t heure_a_lindeman = temps_utc + (10 * 3600); //Lindeman
+	time_t heure_a_melbourne = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Melbourne
+	time_t heure_a_eucla = temps_utc + (45 * 60) + (8 * 3600); //Eucla
+	time_t heure_a_lord_howe = temps_utc + ((11 * 3600) - application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc)); //Lord Howe
+	time_t heure_a_perth = temps_utc + (8 * 3600); //Perth
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
@@ -676,6 +688,18 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Commonwealth d'Australie:\n");
         calcul_et_affichage_horaire(heure_a_sydney, "Sydney");
+	calcul_et_affichage_horaire(heure_a_macquarie, "Macquarie");
+	calcul_et_affichage_horaire(heure_a_adelaide, "Adelaide");
+	calcul_et_affichage_horaire(heure_a_broken_hill, "Broken Hill");
+	calcul_et_affichage_horaire(heure_a_darwin, "Darwin");
+	calcul_et_affichage_horaire(heure_a_brisbane, "Brisbane");
+	calcul_et_affichage_horaire(heure_a_curie, "Curie");
+	calcul_et_affichage_horaire(heure_a_hobart, "Hobart");
+	calcul_et_affichage_horaire(heure_a_lindeman, "Lindeman");
+	calcul_et_affichage_horaire(heure_a_melbourne, "Melbourne");
+	calcul_et_affichage_horaire(heure_a_eucla, "Eucla");
+	calcul_et_affichage_horaire(heure_a_lord_howe, "Lord Howe");
+	calcul_et_affichage_horaire(heure_a_perth, "Perth");
 
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
