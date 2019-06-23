@@ -81,7 +81,7 @@ void affichage_de_l_horloge()
 	time_t heure_du_vatican = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vatican
 
 	/* République de Saint-Marin */
-	time_t heure_a_saint-marin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Saint-Marin
+	time_t heure_a_saint_marin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Saint-Marin
 
 	/* République d'Autriche */
 	time_t heure_de_vienne = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vienne
@@ -500,6 +500,10 @@ void affichage_de_l_horloge()
         calcul_et_affichage_horaire(heure_de_paris, "Paris");
 
 	printf("\n");
+	printf("Principauté de Monaco:\n");
+	calcul_et_affichage_horaire(heure_a_monaco, "Monaco");
+
+	printf("\n");
 	printf("Royaume d'Espagne:\n");
 	calcul_et_affichage_horaire(heure_a_madrid, "Madrid");
 	calcul_et_affichage_horaire(heure_a_ceuta, "Ceuta");
@@ -569,6 +573,14 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République italienne:\n");
 	calcul_et_affichage_horaire(heure_de_rome, "Rome");
+
+	printf("\n");
+	printf("État de la Cité du Vatican:\n");
+	calcul_et_affichage_horaire(heure_du_vatican, "Vatican");
+
+	printf("\n");
+	printf("République de Saint-Marin:\n");
+	calcul_et_affichage_horaire(heure_a_saint_marin, "Saint-Marin");
 
 	printf("\n");
 	printf("République d'Autriche:\n");
