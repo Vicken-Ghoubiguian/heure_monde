@@ -59,6 +59,9 @@ void affichage_de_l_horloge()
 	/* République d'Islande */
 	time_t heure_a_reykjavik = temps_utc; //Reykjavik
 
+	/* République de Pologne */
+	time_t heure_a_varsovie = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Varsovie
+
 	/* République de Lituanie */
 	time_t heure_a_vilnius = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vilnius
 
@@ -172,6 +175,9 @@ void affichage_de_l_horloge()
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
 	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
 	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
+
+	/* République d'Irlande */
+	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
 
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
@@ -536,6 +542,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_reykjavik, "Reykjavik");
 
 	printf("\n");
+	printf("République de Pologne:\n");
+	calcul_et_affichage_horaire(heure_a_varsovie, "Varsovie");
+
+	printf("\n");
 	printf("République de Lituanie:\n");
 	calcul_et_affichage_horaire(heure_a_vilnius, "Vilnius");
 
@@ -684,6 +694,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_de_londres, "Londres");
 	calcul_et_affichage_horaire(heure_aux_bermudes, "Bermudes");
 	calcul_et_affichage_horaire(heure_a_grand_turk, "Grand Turk");
+
+	printf("\n");
+	printf("République d'Irlande:\n");
+	calcul_et_affichage_horaire(heure_a_dublin, "Dublin");
 
 	printf("\n");
 	printf("Commonwealth d'Australie:\n");
