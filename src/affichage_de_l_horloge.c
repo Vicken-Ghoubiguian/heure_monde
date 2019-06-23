@@ -18,6 +18,9 @@ void affichage_de_l_horloge()
 	/* République française */
 	time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Paris
 
+	/* Principauté de Monaco */
+	time_t heure_a_monaco = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Monaco
+
 	/* Royaume d'Espagne */
 	time_t heure_a_madrid = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madrid
 	time_t heure_a_ceuta = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ceuta
@@ -73,6 +76,12 @@ void affichage_de_l_horloge()
 
 	/* République italienne */
 	time_t heure_de_rome = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Rome
+
+	/* État de la Cité du Vatican */
+	time_t heure_du_vatican = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vatican
+
+	/* République de Saint-Marin */
+	time_t heure_a_saint-marin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Saint-Marin
 
 	/* République d'Autriche */
 	time_t heure_de_vienne = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vienne
