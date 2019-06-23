@@ -11,11 +11,11 @@ Cette API évolue pour que tous les fuseaux horaires nommés selon la nomenclatu
 
 Pour compiler le fichier de test de la fonction affichage_de_l_horloge, faire la commande suivante:
 
-$ gcc test/test_1.c src/*.c
+$ gcc test/test_1.c src/*/*.c
 
 Pour compiler le fichier de test de la fonction retour_de_la_date_et_de_l_heure, faire la commande suivante:
 
-$ gcc test/test_2.c src/*.c
+$ gcc test/test_2.c src/*/*.c
 
 Dans les deux cas, un fichier exécutable a.out sera généré dans le répertoire principal de l'API, il faut l'éxécuter à l'aide de la commande suivante:
 
