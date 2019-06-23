@@ -25,6 +25,159 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(char* 
 		//L'heure et la date de Paris en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_paris, "Paris");
 	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Berlin"...
+	else if(strcmp(nom_de_la_ville,"Berlin") == 0)
+	{
+		//
+		time_t heure_de_berlin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+		//L'heure et la date de Berlin en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_berlin, "Berlin");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Busingen"...
+        else if(strcmp(nom_de_la_ville,"Busingen") == 0)
+        {
+                //
+                time_t heure_de_busingen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Busingen en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_de_busingen, "Busingen");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Rome"...
+        else if(strcmp(nom_de_la_ville,"Rome") == 0)
+        {
+                //
+                time_t heure_de_rome = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Rome en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_de_rome, "Rome");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Saint_Marin"...
+        else if(strcmp(nom_de_la_ville,"Saint_Marin") == 0)
+        {
+                //
+                time_t heure_a_saint_marin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Saint Marin en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_saint_marin, "Saint Marin");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Vatican"...
+        else if(strcmp(nom_de_la_ville,"Vatican") == 0)
+        {
+                //
+                time_t heure_du_vatican = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Vatican en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_du_vatican, "Vatican");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Monaco"...
+        else if(strcmp(nom_de_la_ville,"Monaco") == 0)
+        {
+                //
+                time_t heure_a_monaco = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Monaco en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_monaco, "Monaco");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Luxembourg"...
+        else if(strcmp(nom_de_la_ville,"Luxembourg") == 0)
+        {
+                //
+                time_t heure_au_luxembourg = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Luxembourg en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_au_luxembourg, "Luxembourg");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Bruxelles"...
+        else if(strcmp(nom_de_la_ville,"Bruxelles") == 0)
+        {
+                //
+                time_t heure_a_bruxelles = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Bruxelles en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_bruxelles, "Bruxelles");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Helsinki"...
+        else if(strcmp(nom_de_la_ville,"Helsinki") == 0)
+        {
+                //
+                time_t heure_a_helsinki = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Helsinki en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_helsinki, "Helsinki");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Stockholm"...
+        else if(strcmp(nom_de_la_ville,"Stockholm") == 0)
+        {
+                //
+                time_t heure_a_stockholm = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Helsinki en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_stockholm, "Stockholm");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Oslo"...
+        else if(strcmp(nom_de_la_ville,"Oslo") == 0)
+        {
+                //
+                time_t heure_a_oslo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Oslo en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_oslo, "Oslo");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Longyearbyen"...
+        else if(strcmp(nom_de_la_ville,"Longyearbyen") == 0)
+        {
+                //
+                time_t heure_a_longyearbyen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Longyearbyen en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_longyearbyen, "Longyearbyen");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Reykjavik"...
+        else if(strcmp(nom_de_la_ville,"Reykjavik") == 0)
+        {
+                //
+                time_t heure_a_reykjavik = temps_utc;
+
+                //L'heure et la date de Reykjavik en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_reykjavik, "Reykjavik");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Vilnius"...
+        else if(strcmp(nom_de_la_ville,"Vilnius") == 0)
+        {
+                //
+                time_t heure_a_vilnius = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Vilnius en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_vilnius, "Vilnius");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Riga"...
+        else if(strcmp(nom_de_la_ville,"Riga") == 0)
+        {
+                //
+                time_t heure_a_riga = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Riga en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_riga, "Riga");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tallinn"...
+        else if(strcmp(nom_de_la_ville,"Tallinn") == 0)
+        {
+                //
+                time_t heure_a_tallinn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Tallinn en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_tallinn, "Tallinn");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Varsovie"...
+        else if(strcmp(nom_de_la_ville,"Varsovie") == 0)
+        {
+                //
+                time_t heure_a_varsovie = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Varsovie en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_varsovie, "Varsovie");
+        }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Athènes"...
 	else if(strcmp(nom_de_la_ville,"Athènes") == 0)
 	{
@@ -78,6 +231,51 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(char* 
 
 		//L'heure et la date de Londres en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_londres, "Londres");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Chisinau"...
+        else if(strcmp(nom_de_la_ville,"Chisinau") == 0)
+        {
+                //Calcul de l'heure et de la date à Chisinau et stockage de celui-ci dans la variable heure_a_chisinau
+                time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Chisinau en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_chisinau, "Chisinau");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Minsk"...
+        else if(strcmp(nom_de_la_ville,"Minsk") == 0)
+        {
+                //Calcul de l'heure et de la date à Minsk et stockage de celui-ci dans la variable heure_a_minsk
+                time_t heure_a_minsk = temps_utc + (3 * 3600);
+
+                //L'heure et la date de Minsk en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_minsk, "Minsk");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Kiev"...
+        else if(strcmp(nom_de_la_ville,"Kiev") == 0)
+        {
+                //Calcul de l'heure et de la date à Kiev et stockage de celui-ci dans la variable heure_a_kiev
+                time_t heure_a_kiev = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Kiev en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_kiev, "Kiev");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Uzhgorod"...
+        else if(strcmp(nom_de_la_ville,"Uzhgorod") == 0)
+        {
+                //Calcul de l'heure et de la date à Uzhgorod et stockage de celui-ci dans la variable heure_a_uzhgorod
+                time_t heure_a_uzhgorod = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Uzhgorod en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_uzhgorod, "Uzhgorod");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Zaporozhye"...
+        else if(strcmp(nom_de_la_ville,"Zaporozhye") == 0)
+        {
+                //Calcul de l'heure et de la date à Zaporozhye et stockage de celui-ci dans la variable heure_a_zaporozhye
+                time_t heure_a_zaporozhye = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+
+                //L'heure et la date de Uzhgorod en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_zaporozhye, "Zaporozhye");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Moscou"...
         else if(strcmp(nom_de_la_ville,"Moscou") == 0)
