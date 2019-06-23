@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../src/affichage_de_l_horloge.h"
+#include "../src/affichage_de_l_horloge/affichage_de_l_horloge.h"
 
 //Fonction de test de la fonction affichage_de_l_horloge
 int main()

@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include "application_des_decalages_horaires.h"
-#include "affichage_de_l_horloge.h"
-#include "fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
-#include "bibliotheque_de_fonctions_utiles.h"
+#include "retour_de_la_date_et_de_l_heure.h"
+#include "../application_des_decalages_horaires/application_des_decalages_horaires.h"
+#include "../affichage_de_l_horloge/affichage_de_l_horloge.h"
+#include "../fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date/fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
+#include "../bibliotheque_de_fonctions_utiles/bibliotheque_de_fonctions_utiles.h"
 
 //Cette fonction calcule puis retourne l'heure et la date pour une ville déterminée et connue passée en paramétre sous forme d'une chaine de caractères
 char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(char* nom_de_la_ville)

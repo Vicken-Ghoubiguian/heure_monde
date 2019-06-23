@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
+#include "../calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement/calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Australie

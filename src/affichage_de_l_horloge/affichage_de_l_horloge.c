@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "application_des_decalages_horaires.h"
+#include "../application_des_decalages_horaires/application_des_decalages_horaires.h"
 #include "affichage_de_l_horloge.h"
-#include "fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
-#include "bibliotheque_de_fonctions_utiles.h"
+#include "../fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date/fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
+#include "../bibliotheque_de_fonctions_utiles/bibliotheque_de_fonctions_utiles.h"
 
 //Fonction de test pour les calculs d'horaires mises au point dans le fichier heure_monde.c
 void affichage_de_l_horloge()

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../src/retour_de_la_date_et_de_l_heure.h"
+#include "../src/retour_de_la_date_et_de_l_heure/retour_de_la_date_et_de_l_heure.h"
 
 //Fonction de test de la fonction retour_de_la_date_et_de_l_heure
 int main(int argc, char* argv[])
