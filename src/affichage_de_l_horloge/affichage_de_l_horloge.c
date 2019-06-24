@@ -143,6 +143,9 @@ void affichage_de_l_horloge()
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
         time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
+	time_t heure_a_honolulu = temps_utc - (10 * 3600); //Honolulu
+	time_t heure_a_juneau = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Juneau
+	time_t heure_a_yakutat = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yakutat
 
 	/* Dominion du Canada */
 	time_t heure_d_ottawa = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Ottawa
@@ -204,6 +207,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_perth = temps_utc + (8 * 3600); //Perth
 	time_t heure_aux_cocos = temps_utc + (30 * 60) + (6 * 3600); //Cocos
 	time_t heure_a_l_ile_christmas = temps_utc + (7 * 3600); //Christmas
+	time_t heure_a_l_ile_norfolk = temps_utc + (11 * 3600); //ile Norfolk
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
