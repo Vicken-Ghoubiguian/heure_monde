@@ -696,6 +696,9 @@ void affichage_de_l_horloge()
         calcul_et_affichage_horaire(heure_los_angeles, "Los Angeles");
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
+	calcul_et_affichage_horaire(heure_a_honolulu, "Honolulu");
+	calcul_et_affichage_horaire(heure_a_juneau, "Juneau");
+	calcul_et_affichage_horaire(heure_a_yakutat, "Yakutat");
 
 	printf("\n");
 	printf("Dominion du Canada:\n");
@@ -750,6 +753,9 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_eucla, "Eucla");
 	calcul_et_affichage_horaire(heure_a_lord_howe, "Lord Howe");
 	calcul_et_affichage_horaire(heure_a_perth, "Perth");
+	calcul_et_affichage_horaire(heure_aux_cocos, "Cocos");
+	calcul_et_affichage_horaire(heure_a_l_ile_christmas, "îles Christmas");
+	calcul_et_affichage_horaire(heure_a_l_ile_norfolk, "îles Norfolk");
 
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
@@ -856,6 +862,18 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République du Mozambique:\n");
 	calcul_et_affichage_horaire(heure_a_maputo, "Maputo");
+
+	printf("\n");
+	printf("Union des Comores:\n");
+	calcul_et_affichage_horaire(heure_aux_comores, "Comores");
+
+	printf("\n");
+	printf("République des Maldives:\n");
+	calcul_et_affichage_horaire(heure_aux_maldives, "Maldives");
+
+	printf("\n");
+	printf("République de Maurice:\n");
+	calcul_et_affichage_horaire(heure_a_maurice, "Maurice");
 
 	printf("\n");
 	printf("Royaume du Lesotho:\n");
