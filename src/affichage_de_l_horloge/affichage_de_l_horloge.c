@@ -202,6 +202,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_eucla = temps_utc + (45 * 60) + (8 * 3600); //Eucla
 	time_t heure_a_lord_howe = temps_utc + ((11 * 3600) - application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc)); //Lord Howe
 	time_t heure_a_perth = temps_utc + (8 * 3600); //Perth
+	time_t heure_aux_cocos = temps_utc + (30 * 60) + (6 * 3600); //Cocos
+	time_t heure_a_l_ile_christmas = temps_utc + (7 * 3600); //Christmas
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
@@ -219,6 +221,15 @@ void affichage_de_l_horloge()
 
 	/* République du Mozambique */
 	time_t heure_a_maputo = temps_utc + (2 * 3600); //Maputo
+
+	/* Union des Comores */
+	time_t heure_aux_comores = temps_utc + (3 * 3600); //Comores
+
+	/* République des Maldives */
+	time_t heure_aux_maldives = temps_utc + (5 * 3600); //Maldives
+
+	/* République de Maurice */
+	time_t heure_a_maurice = temps_utc + (4 * 3600); //Maurice
 
 	/* Royaume du Lesotho */
 	time_t heure_a_maseru = temps_utc + (2 * 3600); //Maseru
