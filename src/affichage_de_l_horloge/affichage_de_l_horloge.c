@@ -709,6 +709,16 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_honolulu, "Honolulu");
 	calcul_et_affichage_horaire(heure_a_juneau, "Juneau");
 	calcul_et_affichage_horaire(heure_a_yakutat, "Yakutat");
+	calcul_et_affichage_horaire(heure_a_menominee, "Menominee");
+	calcul_et_affichage_horaire(heure_a_chicago, "Chicago");
+	calcul_et_affichage_horaire(heure_a_boise, "Boise");
+	calcul_et_affichage_horaire(heure_a_denver, "Denver");
+	calcul_et_affichage_horaire(heure_a_anchorage, "Anchorage");
+	calcul_et_affichage_horaire(heure_a_detroit, "Detroit");
+	calcul_et_affichage_horaire(heure_a_metlakatla, "Metlakatla");
+	calcul_et_affichage_horaire(heure_a_sitka, "Sikta");
+	calcul_et_affichage_horaire(heure_a_nome, "Nome");
+	calcul_et_affichage_horaire(heure_a_adak, "Adak");
 
 	printf("\n");
 	printf("Dominion du Canada:\n");
