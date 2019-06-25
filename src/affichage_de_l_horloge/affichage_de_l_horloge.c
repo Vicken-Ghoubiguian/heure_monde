@@ -156,6 +156,19 @@ void affichage_de_l_horloge()
 	time_t heure_a_sitka = temps_utc - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Sitka
 	time_t heure_a_nome = temps_utc - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nome
 	time_t heure_a_adak = temps_utc - ((10 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Adak
+	time_t heure_a_kentucky_louiseville = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Kentucky Louiseville
+	time_t heure_a_kentucky_monticello = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Kentucky Monticello
+	time_t heure_a_indiana_winamac = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Winamac
+	time_t heure_a_indiana_vincennes = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Vincennes
+	time_t heure_a_indiana_vevay = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Vevay
+	time_t heure_a_indiana_petersburg = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Petersburg
+	time_t heure_a_indiana_marengo = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Marengo
+	time_t heure_a_indiana_indianapolis = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Indianapolis
+	time_t heure_a_north_dakota_new_salem = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota New Salem
+	time_t heure_a_north_dakota_center = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Center
+	time_t heure_a_north_dakota_beulah = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Beulah
+	time_t heure_a_indiana_tell_city = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Tell City
+	time_t heure_a_indiana_knox = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Knox
 
 	/* Dominion du Canada */
 	time_t heure_d_ottawa = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Ottawa
