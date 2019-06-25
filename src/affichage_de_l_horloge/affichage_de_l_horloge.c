@@ -732,6 +732,19 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_sitka, "Sikta");
 	calcul_et_affichage_horaire(heure_a_nome, "Nome");
 	calcul_et_affichage_horaire(heure_a_adak, "Adak");
+	calcul_et_affichage_horaire(heure_a_kentucky_louiseville, "Louiseville");
+	calcul_et_affichage_horaire(heure_a_kentucky_monticello, "Monticello");
+	calcul_et_affichage_horaire(heure_a_indiana_winamac, "winamac");
+	calcul_et_affichage_horaire(heure_a_indiana_vincennes, "Vincennes");
+	calcul_et_affichage_horaire(heure_a_indiana_vevay, "Vevay");
+	calcul_et_affichage_horaire(heure_a_indiana_petersburg, "Petersburg");
+	calcul_et_affichage_horaire(heure_a_indiana_marengo, "Marengo");
+	calcul_et_affichage_horaire(heure_a_indiana_indianapolis, "Indianapolis");
+	calcul_et_affichage_horaire(heure_a_north_dakota_new_salem, "New Salem");
+	calcul_et_affichage_horaire(heure_a_north_dakota_center, "North Dakota Center");
+	calcul_et_affichage_horaire(heure_a_north_dakota_beulah, "Beulah");
+	calcul_et_affichage_horaire(heure_a_indiana_tell_city, "Tell City");
+	calcul_et_affichage_horaire(heure_a_indiana_knox, "Knox");
 
 	printf("\n");
 	printf("Dominion du Canada:\n");
