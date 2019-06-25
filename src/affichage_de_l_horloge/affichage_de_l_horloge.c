@@ -741,7 +741,7 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_indiana_marengo, "Marengo");
 	calcul_et_affichage_horaire(heure_a_indiana_indianapolis, "Indianapolis");
 	calcul_et_affichage_horaire(heure_a_north_dakota_new_salem, "New Salem");
-	calcul_et_affichage_horaire(heure_a_north_dakota_center, "North Dakota Center");
+	calcul_et_affichage_horaire(heure_a_north_dakota_center, "Center");
 	calcul_et_affichage_horaire(heure_a_north_dakota_beulah, "Beulah");
 	calcul_et_affichage_horaire(heure_a_indiana_tell_city, "Tell City");
 	calcul_et_affichage_horaire(heure_a_indiana_knox, "Knox");
