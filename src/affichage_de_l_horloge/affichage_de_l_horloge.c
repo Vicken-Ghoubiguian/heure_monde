@@ -20,6 +20,17 @@ void affichage_de_l_horloge()
 
 	/* République française */
 	time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Paris
+	time_t heure_de_cayenne = temps_utc - (3 * 3600); //Cayenne
+	time_t heure_de_la_reunion = temps_utc + (4 * 3600); //La Reunion
+	time_t heure_de_la_guadeloupe = temps_utc - (4 * 3600); //Guadeloupe
+	time_t heure_de_noumea = temps_utc + (11 * 3600); //Nouméa
+	time_t heure_de_mayotte = temps_utc + (3 * 3600); //Mayotte_
+	time_t heure_des_iles_kerguelen = temps_utc + (5 * 3600); //ies Kerguelen
+	time_t heure_de_tahiti = temps_utc + (10 * 3600); //Tahiti
+	time_t heure_de_miquelon = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Miquelon
+	time_t heure_de_st_barthelemy = temps_utc - (4 * 3600); //St Barthélemy
+	time_t heure_de_la_martinique = temps_utc - (4 * 3600); //La Martinique
+	time_t heure_de_wallis = temps_utc + (12 * 3600); //Wallis et Futuna
 
 	/* Principauté de Monaco */
 	time_t heure_a_monaco = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Monaco
@@ -39,6 +50,13 @@ void affichage_de_l_horloge()
 
 	/* Royaume de Belgique */
 	time_t heure_a_bruxelles = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bruxelles
+
+	/* Royaume des Pays-Bas */
+	time_t heure_d_amsterdam = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Amsterdam
+	time_t heure_d_aruba = temps_utc - (4 * 3600); //Aruba
+	time_t heure_de_kralendijk = temps_utc - (4 * 3600); //Kralendijk
+	time_t heure_de_curacao = temps_utc - (4 * 3600); //Curaçao
+	time_t heure_a_lower_princes = temps_utc - (4 * 3600); //Lower Princes
 
 	/* République fédérale d'Allemagne */
 	time_t heure_de_berlin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Berlin
