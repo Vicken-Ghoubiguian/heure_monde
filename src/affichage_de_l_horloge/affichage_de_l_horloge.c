@@ -189,10 +189,10 @@ void affichage_de_l_horloge()
 	time_t heure_de_whitehorse = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Whitehorse
 	time_t heure_de_vancouver = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Vancouver
 	time_t heure_de_dawson = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Dawson
-	time_t heure_de_st_johns = temps_utc - (30 * 60) - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //St Johns
+	time_t heure_de_st_johns = temps_utc - (30 * 60) - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //St Johns
 	time_t heure_de_blanc_sablon = temps_utc - (4 * 3600); //Blanc-Sablon
 	time_t heure_de_moncton = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Moncton
-	time_t heure_d_halifax = temps_utc - (4 * 3600); //Halifax
+	time_t heure_d_halifax = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Halifax
 	time_t heure_de_goose_bay = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Goose Bay
 	time_t heure_de_glace_bay = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Glace Bay
 	time_t heure_d_inuvik = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Inuvik
