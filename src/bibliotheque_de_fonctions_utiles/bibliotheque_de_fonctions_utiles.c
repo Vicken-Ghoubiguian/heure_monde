@@ -1,4 +1,7 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <time.h>
+
+/* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
 
 //Cette fonction renvoie le temps actuel (heure et date actuelles) UTC (Coordinated Universal Time), donc le temps universel coordonné

@@ -1,6 +1,9 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+/* Inclusion des bibliothéques internes à l'API */
 #include "../calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement/calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 

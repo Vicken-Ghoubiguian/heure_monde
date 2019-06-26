@@ -1,3 +1,4 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

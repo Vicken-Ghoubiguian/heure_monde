@@ -1,7 +1,10 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+
+/* Inclusion des bibliothéques internes à l'API */
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les pays européens) à l'aide du timestamp et de l'heure (1 pour la Grande Bretagne et 2 pour la France) passé en paramétre

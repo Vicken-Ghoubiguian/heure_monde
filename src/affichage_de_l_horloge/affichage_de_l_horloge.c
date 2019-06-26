@@ -1,6 +1,9 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
+/* Inclusion des bibliothéques internes à l'API */
 #include "../application_des_decalages_horaires/application_des_decalages_horaires.h"
 #include "affichage_de_l_horloge.h"
 #include "../fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date/fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
