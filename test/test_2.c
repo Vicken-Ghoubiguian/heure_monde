@@ -1,4 +1,7 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
+
+/* Inclusion des bibliothéques internes à l'API */
 #include "../src/retour_de_la_date_et_de_l_heure/retour_de_la_date_et_de_l_heure.h"
 
 //Fonction de test de la fonction retour_de_la_date_et_de_l_heure

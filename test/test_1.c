@@ -1,4 +1,7 @@
+/* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
+
+/* Inclusion des bibliothéques internes à l'API */
 #include "../src/affichage_de_l_horloge/affichage_de_l_horloge.h"
 
 //Fonction de test de la fonction affichage_de_l_horloge
