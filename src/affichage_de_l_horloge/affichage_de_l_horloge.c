@@ -970,6 +970,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_ushuaia, "Ushuaia");
 
 	printf("\n");
+	printf("République orientale de l'Uruguay:\n");
+	calcul_et_affichage_horaire(heure_a_montevideo, "Montivideo");
+
+	printf("\n");
 	printf("République bolivarienne du Venezuela:\n");
 	calcul_et_affichage_horaire(heure_a_caracas, "Caracas");
 
