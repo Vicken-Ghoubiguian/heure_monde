@@ -25,8 +25,8 @@ void affichage_de_l_horloge()
 	time_t heure_de_la_guadeloupe = temps_utc - (4 * 3600); //Guadeloupe
 	time_t heure_de_noumea = temps_utc + (11 * 3600); //Nouméa
 	time_t heure_de_mayotte = temps_utc + (3 * 3600); //Mayotte_
-	time_t heure_des_iles_kerguelen = temps_utc + (5 * 3600); //ies Kerguelen
-	time_t heure_de_tahiti = temps_utc + (10 * 3600); //Tahiti
+	time_t heure_des_iles_kerguelen = temps_utc + (5 * 3600); //îles Kerguelen
+	time_t heure_de_tahiti = temps_utc - (10 * 3600); //Tahiti
 	time_t heure_de_miquelon = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Miquelon
 	time_t heure_de_st_barthelemy = temps_utc - (4 * 3600); //St Barthélemy
 	time_t heure_de_la_martinique = temps_utc - (4 * 3600); //La Martinique
@@ -584,6 +584,18 @@ void affichage_de_l_horloge()
         printf("\n");
 	printf("République française:\n");
         calcul_et_affichage_horaire(heure_de_paris, "Paris");
+	calcul_et_affichage_horaire(heure_de_cayenne, "Cayenne");
+	calcul_et_affichage_horaire(heure_de_la_reunion, "La Reunion");
+	calcul_et_affichage_horaire(heure_de_la_guadeloupe, "La guadeloupe");
+	calcul_et_affichage_horaire(heure_de_noumea, "Nouméa");
+	calcul_et_affichage_horaire(heure_de_mayotte, "Mayotte");
+	calcul_et_affichage_horaire(heure_des_iles_kerguelen, "îles Kerguelen");
+	calcul_et_affichage_horaire(heure_de_tahiti, "Tahiti");
+	calcul_et_affichage_horaire(heure_de_miquelon, "Miquelon");
+	calcul_et_affichage_horaire(heure_de_st_barthelemy, "St Barthélemy");
+	calcul_et_affichage_horaire(heure_de_la_martinique, "Martinique");
+	calcul_et_affichage_horaire(heure_de_wallis, "Wallis");
+	calcul_et_affichage_horaire(heure_a_lower_princes, "Saint-Martin");
 
 	printf("\n");
 	printf("Principauté de Monaco:\n");
@@ -608,6 +620,14 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Royaume de Belgique:\n");
 	calcul_et_affichage_horaire(heure_a_bruxelles, "Bruxelles");
+
+	printf("\n");
+	printf("Royaume des Pays-Bas:\n");
+	calcul_et_affichage_horaire(heure_d_amsterdam, "Amsterdam");
+	calcul_et_affichage_horaire(heure_d_aruba, "Aruba");
+	calcul_et_affichage_horaire(heure_de_kralendijk, "Kralendijk");
+	calcul_et_affichage_horaire(heure_de_curacao, "Curacao");
+	calcul_et_affichage_horaire(heure_a_lower_princes, "Sint Maarten");
 
 	printf("\n");
 	printf("République fédérale d'Allemagne:\n");
