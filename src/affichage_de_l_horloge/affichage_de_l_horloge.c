@@ -390,6 +390,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_tucuman = temps_utc - (3 * 3600); //Tucuman
 	time_t heure_a_ushuaia = temps_utc - (3 * 3600); //Ushuaia
 
+	/* République orientale de l'Uruguay */
+	time_t heure_a_montevideo = temps_utc - (3 * 3600); //Montevideo
+
 	/* République bolivarienne du Venezuela */
 	time_t heure_a_caracas = temps_utc - (4 * 3600); //Caracas
 
