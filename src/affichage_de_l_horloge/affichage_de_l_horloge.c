@@ -157,6 +157,15 @@ void affichage_de_l_horloge()
 	/* Commonwealth des Bahamas */
 	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
 
+	/* République du Suriname */
+	time_t heure_a_paramaribo = temps_utc - (3 * 3600); //Paramaribo
+
+	/* République coopérative du Guyana */
+	time_t heure_a_guyana = temps_utc - (4 * 3600); //Guyana
+
+	/* République de Trinité-et-Tobago */
+	time_t heure_a_port_d_espagne = temps_utc - (4 * 3600); //Port d'Espagne
+
 	/* République de Cuba */
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
