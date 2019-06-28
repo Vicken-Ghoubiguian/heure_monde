@@ -275,6 +275,11 @@ void affichage_de_l_horloge()
 	time_t heure_a_stanley = temps_utc - (3 * 3600); //Stanley
 	time_t heure_a_gibraltar = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Gibraltar
 	time_t heure_a_anguilla = temps_utc - (4 * 3600); //Anguilla
+	time_t heure_a_south_georgia = temps_utc - (2 * 3600); //Géorgie du Sud-et-les îles Sandwich du Sud
+	time_t heure_a_cayman = temps_utc - (5 * 3600); //Îles Caïmans
+	time_t heure_a_montserrat = temps_utc - (4 * 3600); //Montserrat
+	time_t heure_a_pitcairn = temps_utc - (8 * 3600); //Îles Pitcairn
+	time_t heure_a_chagos = temps_utc + (6 * 3600); //Territoire britannique de l'océan Indien
 
 	/* République d'Irlande */
 	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
@@ -923,6 +928,11 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_stanley, "Îles Malouines");
 	calcul_et_affichage_horaire(heure_a_gibraltar, "Gibraltar");
 	calcul_et_affichage_horaire(heure_a_anguilla, "Anguilla");
+	calcul_et_affichage_horaire(heure_a_south_georgia, "Géorgie du Sud-et-les îles Sandwich du Sud");
+	calcul_et_affichage_horaire(heure_a_cayman, "Îles Caïmans");
+	calcul_et_affichage_horaire(heure_a_montserrat, "Montserrat");
+	calcul_et_affichage_horaire(heure_d_athenes, "Akrotiri et Dhekelia");
+	calcul_et_affichage_horaire(heure_a_chagos, "Territoire britannique de l'océan Indien");
 
 	printf("\n");
 	printf("République d'Irlande:\n");
