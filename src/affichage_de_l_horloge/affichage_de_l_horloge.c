@@ -578,6 +578,11 @@ void affichage_de_l_horloge()
 	time_t heure_a_bougainville = temps_utc + (11 * 3600); //Bougainville
 	time_t heure_a_port_moresby = temps_utc + (10 * 3600); //Port Moresby
 
+	/* États fédérés de Micronésie */
+	time_t heure_a_pohnpei = temps_utc + (11 * 3600); //Pohnpei
+	time_t heure_a_chuuk = temps_utc + (10 * 3600); //Chuuk
+	time_t heure_a_kosrae = temps_utc + (11 * 3600); //kosrae
+
 	/* République des Palaos */
 	time_t heure_de_palau = temps_utc + (9 * 3600); //Palau
 
