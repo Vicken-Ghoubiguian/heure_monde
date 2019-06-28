@@ -1325,6 +1325,12 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_port_moresby, "Port Moresby");
 
 	printf("\n");
+	printf("États fédérés de Micronésie:\n");
+	calcul_et_affichage_horaire(heure_a_pohnpei, "Pohnpei");
+	calcul_et_affichage_horaire(heure_a_chuuk, "Chuuk");
+	calcul_et_affichage_horaire(heure_a_kosrae, "Kosrae");
+
+	printf("\n");
 	printf("République des Palaos:\n");
 	calcul_et_affichage_horaire(heure_de_palau, "Palau");
 
