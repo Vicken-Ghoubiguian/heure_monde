@@ -202,6 +202,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_north_dakota_beulah = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Beulah
 	time_t heure_a_indiana_tell_city = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Tell City
 	time_t heure_a_indiana_knox = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Knox
+	time_t heure_a_pago_pago = temps_utc - (11 * 3600); //Samoa américaines
 
 	/* Dominion du Canada */
 	time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Toronto
@@ -286,6 +287,9 @@ void affichage_de_l_horloge()
 
 	/* République d'Irlande */
 	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
+
+	/* Niue */
+	time_t heure_de_niue = temps_utc - (11 * 3600); //Niue
 
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
@@ -386,6 +390,11 @@ void affichage_de_l_horloge()
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
 	time_t heure_a_waitangi = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Waitangi
+	time_t heure_a_fakaofo = temps_utc + (13 * 3600); //Fakaofo
+	time_t heure_a_rarotonga = temps_utc - (10 * 3600); //Rarotonga
+
+	/* Royaume de Tonga */
+	time_t heure_a_togatapu = temps_utc + (13 * 3600); //Togatapu
 
 	/* République de Vanuatu */
 	time_t heure_a_efate = temps_utc + (11 * 3600); //Efate
