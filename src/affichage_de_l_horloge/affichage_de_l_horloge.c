@@ -578,6 +578,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_bougainville = temps_utc + (11 * 3600); //Bougainville
 	time_t heure_a_port_moresby = temps_utc + (10 * 3600); //Port Moresby
 
+	/* République des Palaos */
+	time_t heure_de_palau = temps_utc + (9 * 3600); //Palau
+
 	/* îles Mariannes du Nord */
 	time_t heure_a_saipan = temps_utc + (10 * 3600); //Saipan
 
@@ -1315,6 +1318,10 @@ void affichage_de_l_horloge()
 	printf("État indépendant de Papouasie-Nouvelle-Guinée:\n");
 	calcul_et_affichage_horaire(heure_a_bougainville, "Bougainville");
 	calcul_et_affichage_horaire(heure_a_port_moresby, "Port Moresby");
+
+	printf("\n");
+	printf("République des Palaos:\n");
+	calcul_et_affichage_horaire(heure_de_palau, "Palau");
 
 	printf("\n");
 	printf("îles Mariannes du Nord:\n");
