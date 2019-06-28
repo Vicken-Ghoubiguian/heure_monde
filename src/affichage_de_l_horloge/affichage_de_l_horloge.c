@@ -166,6 +166,9 @@ void affichage_de_l_horloge()
 	/* République de Trinité-et-Tobago */
 	time_t heure_a_port_d_espagne = temps_utc - (4 * 3600); //Port d'Espagne
 
+	/* Jamaïque */
+	time_t heure_en_jamaique = temps_utc - (5 * 3600); //Jamaique
+
 	/* République de Cuba */
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
@@ -376,6 +379,9 @@ void affichage_de_l_horloge()
 
 	/* État des Tuvalu */
 	time_t heure_a_funafuti = temps_utc + (12 * 3600); //Funafuti
+
+	/* République de Nauru */
+	time_t heure_de_nauru = temps_utc + (12 * 3600); //Nauru
 
 	/* République des Kiribati */
 	time_t heure_a_tarawa = temps_utc + (12 * 3600); //Tarawa
@@ -794,8 +800,24 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_nassau, "Nassau");
 
 	printf("\n");
+	printf("République du Suriname:\n");
+	calcul_et_affichage_horaire(heure_a_paramaribo, "Paramaribo");
+
+	printf("\n");
+	printf("République coopérative du Guyana:\n");
+	calcul_et_affichage_horaire(heure_a_guyana, "Guyana");
+
+	printf("\n");
+	printf("République de Trinité-et-Tobago:\n");
+	calcul_et_affichage_horaire(heure_a_port_d_espagne, "Port d'Espagne");
+
+	printf("\n");
 	printf("République de Cuba:\n");
 	calcul_et_affichage_horaire(heure_a_la_havane, "La Havane");
+
+	printf("\n");
+	printf("Jamaïque:\n");
+	calcul_et_affichage_horaire(heure_en_jamaique, "Jamaique");
 
 	printf("\n");
 	printf("États-Unis d'Amérique:\n");
@@ -939,6 +961,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("État des Tuvalu:\n");
 	calcul_et_affichage_horaire(heure_a_funafuti, "Funafuti");
+
+	printf("\n");
+	printf("République de Nauru:\n");
+	calcul_et_affichage_horaire(heure_de_nauru, "Nauru");
 
 	printf("\n");
 	printf("République du Chili:\n");
