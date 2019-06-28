@@ -266,6 +266,9 @@ void affichage_de_l_horloge()
 	/* République hellénique */
 	time_t heure_d_athenes = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Athènes
 
+	/* République de Chypre */
+	time_t heure_de_nicosia = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Nicosie
+
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
 	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
@@ -804,6 +807,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République hellénique:\n");
 	calcul_et_affichage_horaire(heure_d_athenes, "Athènes");
+
+	printf("\n");
+	printf("République de Chypre:\n");
+	calcul_et_affichage_horaire(heure_de_nicosia, "Nicosie");
 
 	printf("\n");
 	printf("Commonwealth des Bahamas:\n");
