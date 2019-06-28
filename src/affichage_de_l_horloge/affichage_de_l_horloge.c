@@ -876,6 +876,7 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_north_dakota_beulah, "Beulah");
 	calcul_et_affichage_horaire(heure_a_indiana_tell_city, "Tell City");
 	calcul_et_affichage_horaire(heure_a_indiana_knox, "Knox");
+	calcul_et_affichage_horaire(heure_a_pago_pago, "Samoa américaines");
 
 	printf("\n");
 	printf("Dominion du Canada:\n");
@@ -977,6 +978,16 @@ void affichage_de_l_horloge()
 	printf("Nouvelle-Zélande:\n");
 	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
 	calcul_et_affichage_horaire(heure_a_waitangi, "Waitangi");
+	calcul_et_affichage_horaire(heure_a_fakaofo, "Fakaofo");
+	calcul_et_affichage_horaire(heure_a_rarotonga, "Rarotonga");
+
+	printf("\n");
+	printf("Royaume de Tonga:\n");
+	calcul_et_affichage_horaire(heure_a_togatapu, "Togatapu");
+
+	printf("\n");
+	printf("Niue:\n");
+	calcul_et_affichage_horaire(heure_de_niue, "Niue");
 
 	printf("\n");
 	printf("République de Vanuatu:\n");
