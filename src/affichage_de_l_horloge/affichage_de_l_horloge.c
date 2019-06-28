@@ -267,7 +267,7 @@ void affichage_de_l_horloge()
 	time_t heure_d_athenes = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Athènes
 
 	/* République de Chypre */
-	time_t heure_de_nicosia = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Nicosie
+	time_t heure_de_nicosia = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Nicosie
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
