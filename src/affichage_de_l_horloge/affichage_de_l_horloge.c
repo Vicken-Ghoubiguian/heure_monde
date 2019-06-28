@@ -270,6 +270,11 @@ void affichage_de_l_horloge()
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
 	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
 	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
+	time_t heure_a_tortola = temps_utc - (4 * 3600); //Tortola
+	time_t heure_a_st_helena = temps_utc; //St Hélène
+	time_t heure_a_stanley = temps_utc - (3 * 3600); //Stanley
+	time_t heure_a_gibraltar = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Gibraltar
+	time_t heure_a_anguilla = temps_utc - (4 * 3600); //Anguilla
 
 	/* République d'Irlande */
 	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
@@ -911,6 +916,13 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_de_londres, "Londres");
 	calcul_et_affichage_horaire(heure_aux_bermudes, "Bermudes");
 	calcul_et_affichage_horaire(heure_a_grand_turk, "Grand Turk");
+	calcul_et_affichage_horaire(heure_a_tortola, "Tortola");
+	calcul_et_affichage_horaire(heure_a_st_helena, "St Hélène");
+	calcul_et_affichage_horaire(heure_a_st_helena, "Île de l'Ascension");
+	calcul_et_affichage_horaire(heure_a_st_helena, "Tristan da Cunha");
+	calcul_et_affichage_horaire(heure_a_stanley, "Îles Malouines");
+	calcul_et_affichage_horaire(heure_a_gibraltar, "Gibraltar");
+	calcul_et_affichage_horaire(heure_a_anguilla, "Anguilla");
 
 	printf("\n");
 	printf("République d'Irlande:\n");
