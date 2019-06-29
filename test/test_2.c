@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 		for(incrementeur = 1; incrementeur < argc; incrementeur++)
 		{
 			//On calcul la date et l'heure courante pour le fuseau horaire courant (les arguments de ce programme exécutable sont des fuseaux horaires), pour la stocker dans la variable date_et_heure_du_fuseau_horaire_courant
-			date_et_heure_du_fuseau_horaire_courant = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(argv[incrementeur]);
+			date_et_heure_du_fuseau_horaire_courant = retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(argv[incrementeur]);
 
 			//Puis on affiche la valeur de la variable date_et_heure_du_fuseau_horaire_courant (qui est un char*)
 			printf("%s\n", date_et_heure_du_fuseau_horaire_courant);

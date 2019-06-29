@@ -37,7 +37,7 @@
 
 	application_du_changement_d_heure_pour_le_fuseau_horaire_quelquonque est une fonction qui applique, pour le fuseau zone_quelquonque/fuseau_horaire_quelquonque, le changement d'heure (d'hiver à été et réciproquement) selon les régles établies par le pays, ou la zone géographique, dans lequel est situé le fuseau zone_quelquonque/fuseau_horaire_quelquonque.
 */
-char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(char* nom_du_fuseau_horaire)
+char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(char* nom_du_fuseau_horaire)
 {
 
 	/* Définition de la variable temps_utc et initialisation de celle-ci au temps utc sous forme de timestamp */
