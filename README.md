@@ -25,7 +25,7 @@ Celui-ci se compose de 6 bibliothéques, et chacune posséde un rôle spécifiqu
 
 * affichage_de_l_horloge: cette bibliothéque contient la fonction affichage_de_l_horloge qui sert à afficher l'heure et la date courante sur tous les fuseaux horaires du monde.
 
-* retour_de_la_date_et_de_l_heure: Cette bibliothéque contient la fonction retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue qui sert à afficher l'heure et la date courante sur un fuseau horaire donné de part le monde.
+* retour_de_la_date_et_de_l_heure: Cette bibliothéque contient la fonction retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu qui sert à afficher l'heure et la date courante sur un fuseau horaire donné de part le monde.
 
 * bibliotheque_de_fonctions_utiles: Cette bibliothéque contient toutes les fonctions de calcul et de manipulation pour le bon fonctionnement de l'API.
 
