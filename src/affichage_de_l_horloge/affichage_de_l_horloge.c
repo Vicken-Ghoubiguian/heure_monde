@@ -433,7 +433,7 @@ void affichage_de_l_horloge()
 
 	/* République des Îles Marshall */
 	time_t heure_a_majuro = temps_utc + (12 * 3600); //Majuro
-	time_t heure_a_kwajalein = temps_utc + (10 * 3600); //Kwajalein
+	time_t heure_a_kwajalein = temps_utc + (12 * 3600); //Kwajalein
 
 	/* République de Vanuatu */
 	time_t heure_a_efate = temps_utc + (11 * 3600); //Efate
@@ -681,6 +681,8 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_de_mayotte, "Mayotte");
 	calcul_et_affichage_horaire(heure_des_iles_kerguelen, "îles Kerguelen");
 	calcul_et_affichage_horaire(heure_de_tahiti, "Tahiti");
+	calcul_et_affichage_horaire(heure_a_marquesas, "îles Marquises");
+	calcul_et_affichage_horaire(heure_de_gambier, "Gambier");
 	calcul_et_affichage_horaire(heure_de_miquelon, "Miquelon");
 	calcul_et_affichage_horaire(heure_de_st_barthelemy, "St Barthélemy");
 	calcul_et_affichage_horaire(heure_de_la_martinique, "Martinique");
@@ -924,6 +926,8 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_indiana_tell_city, "Tell City");
 	calcul_et_affichage_horaire(heure_a_indiana_knox, "Knox");
 	calcul_et_affichage_horaire(heure_a_pago_pago, "Samoa américaines");
+	calcul_et_affichage_horaire(heure_a_guam, "Guam");
+	calcul_et_affichage_horaire(heure_a_wake, "Wake");
 
 	printf("\n");
 	printf("Dominion du Canada:\n");
@@ -1038,6 +1042,11 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Royaume de Tonga:\n");
 	calcul_et_affichage_horaire(heure_a_togatapu, "Togatapu");
+
+	printf("\n");
+	printf("République des Îles Marshall:\n");
+	calcul_et_affichage_horaire(heure_a_majuro, "Majuro");
+	calcul_et_affichage_horaire(heure_a_kwajalein, "Kwajalein");
 
 	printf("\n");
 	printf("Niue:\n");
