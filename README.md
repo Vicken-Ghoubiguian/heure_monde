@@ -29,11 +29,13 @@ Celui-ci se compose de 6 bibliothéques, et chacune posséde un rôle spécifiqu
 
 * bibliotheque_de_fonctions_utiles: Cette bibliothéque contient toutes les fonctions de calcul et de manipulation pour le bon fonctionnement de l'API.
 
-Le répertoire test contient deux fichier pour tester chacune des deux fonctions qui permettent d'utiliser l'API:
+Le répertoire test contient tois fichier: 2 pour tester chacune des 2 fonctions qui permettent d'utiliser l'API (affichage_de_l_horloge et retour_de_la_date_et_de_l_heure), et 1 pour tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure:
 
-* le fichier test_1.c permet de tester la fonction affichage_de_l_horloge.
+* le fichier test_1.c permet de tester la fonction affichage_de_l_horloge,
 
-* le fichier test_2.c permet de tester la fonction retour_de_la_date_et_de_l_heure.
+* le fichier test_2.c permet de tester la fonction retour_de_la_date_et_de_l_heure,
+
+* le fichier test_3.c permet de tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure.
 
 Pour compiler le fichier de test de la fonction affichage_de_l_horloge, faire la commande suivante:
 
@@ -43,7 +45,11 @@ Pour compiler le fichier de test de la fonction retour_de_la_date_et_de_l_heure,
 
 $ gcc test/test_2.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c
 
-Dans les deux cas, un fichier exécutable a.out sera généré dans le répertoire principal de l'API, il faut l'éxécuter à l'aide de la commande suivante:
+Pour compiler le fichier pour tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure, faire la commande suivante:
+
+$ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c
+
+Dans les 3 cas, un fichier exécutable a.out sera généré dans le répertoire principal de l'API, il faut l'éxécuter à l'aide de la commande suivante:
 
 $ ./a.out
 
@@ -56,5 +62,9 @@ Cet exemple concerne le fichier de test de la fonction affichage_de_l_horloge.
 Mais la même commande est à appliquer, de la même maniére, pour le fichier de test de la fonction retour_de_la_date_et_de_l_heure:
 
 $ gcc test/test_2.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi
+
+Ainsi que pour le fichier pour tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure:
+
+$ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi
 
 A part cela, cette API peut être intégrée dans n'importe quel projet développé en C.
