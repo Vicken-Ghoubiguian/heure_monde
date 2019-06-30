@@ -232,6 +232,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_pago_pago = temps_utc - (11 * 3600); //Samoa américaines
 	time_t heure_a_guam = temps_utc + (10 * 3600); //Guam
 	time_t heure_a_wake = temps_utc + (12 * 3600); //Wake
+	time_t heure_a_midway = temps_utc - (11 * 3600); //Midway (+ Îles mineures éloignées des États-Unis)
 
 	/* Dominion du Canada */
 	time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Toronto
@@ -338,6 +339,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_l_ile_christmas = temps_utc + (7 * 3600); //Christmas
 	time_t heure_a_l_ile_norfolk = temps_utc + (11 * 3600); //ile Norfolk
 
+	/* État indépendant des Samoa */
+	time_t heure_a_apia = temps_utc + ((14 * 3600) - (application_du_changement_d_heure_pour_les_samoa(temps_utc) * 3600));
+
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
 	time_t heure_a_punta_arenas = temps_utc - (3 * 3600); //Punta Arenas
@@ -428,8 +432,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_togatapu = temps_utc + (13 * 3600); //Togatapu
 
 	/* République des Îles Marshall */
-	heure_a_majuro = temps_utc + (12 * 3600); //Majuro
-	heure_a_kwajalein = temps_utc + (10 * 3600); //Kwajalein
+	time_t heure_a_majuro = temps_utc + (12 * 3600); //Majuro
+	time_t heure_a_kwajalein = temps_utc + (10 * 3600); //Kwajalein
 
 	/* République de Vanuatu */
 	time_t heure_a_efate = temps_utc + (11 * 3600); //Efate
@@ -1016,6 +1020,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_aux_cocos, "Cocos");
 	calcul_et_affichage_horaire(heure_a_l_ile_christmas, "îles Christmas");
 	calcul_et_affichage_horaire(heure_a_l_ile_norfolk, "îles Norfolk");
+
+	printf("\n");
+	printf("État indépendant des Samoa:\n");
+	calcul_et_affichage_horaire(heure_a_apia, "Apia");
 
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
