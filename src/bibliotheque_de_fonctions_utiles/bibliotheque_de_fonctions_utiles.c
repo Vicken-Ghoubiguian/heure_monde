@@ -1,5 +1,6 @@
 /* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <time.h>
+#include <stdio.h>
 
 /* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
@@ -25,5 +26,28 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 
 	//Le temps UTC, sous forme de timestamp, est retourné
 	return temps_utc_sous_forme_de_timestamp;
+
+}
+
+//Cette fonction renvoie le timestamp courant avec plusieurs années de différence (en fonction de l'année passée en paramétre de la fonction)
+time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_courant, int annee_particuliere_voulue)
+{
+
+	//Declaration des variables
+	struct tm *horaire = gmtime(&timestamp_du_temps_courant);
+	time_t timestamp_du_temps_voulu_a_retourner;
+	int annee_particuliere_voulue_mis_sous_format_du_champ_tm_year_du_struct_tm;
+
+	//Calcul de l'année voulu sous format attendu par le struct tm pour le cham:ps tm_year, et afféctation de celui-ci dans la variable annee_particuliere_voulue_mis_sous_format_du_champ_tm_year_du_struct_tm
+	annee_particuliere_voulue_mis_sous_format_du_champ_tm_year_du_struct_tm = annee_particuliere_voulue - 1900;
+
+	//Afféctation au champs tm_year de la structure tm de l'année particuliére passée en paramétre de la fonction fonction_de_precision_de_l_annee_en_cours
+	horaire->tm_year = annee_particuliere_voulue_mis_sous_format_du_champ_tm_year_du_struct_tm;
+
+	//Après cette opération, la structure tm horaire est convertie en timestamp via la fonction timegm, et le résultat est affécté à la variable timestamp_du_temps_voulu_a_retourner
+	timestamp_du_temps_voulu_a_retourner = timegm(horaire);
+
+	//Puis, le résultat est retourné
+	return timestamp_du_temps_voulu_a_retourner;
 
 }
