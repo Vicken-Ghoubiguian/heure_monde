@@ -1,5 +1,6 @@
 /* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <stdio.h>
+#include <stdlib.h>
 
 /* Inclusion des bibliothéques internes à l'API */
 #include "../src/fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date/fonctions_d_affichage_et_de_renvoie_de_l_heure_et_de_la_date.h"
@@ -17,8 +18,8 @@ int main(int argc, char* argv[])
 	//Déclaration de la variable timestamp_courant_avec_annee_voulue qui représente le timestamp sur lequel on afféctera l'année voulue
 	time_t timestamp_courant_avec_annee_voulue;
 
-	//Déclaration de la variable annee_voulue qui contient l'année passée en argument du programme sous forme de int
-	int annee_voulue = 2020;
+	//Déclaration de la variable annee_voulue qui contient l'année passée en argument du programme, convertie sous forme de int grâce à la fonction atoi
+	int annee_voulue = atoi(argv[1]);
 
 	//Déclaration des variables de changement d'heure heure d'été <=> heure d'hiver, pour toutes les zones géographique l'appliquant, sous forme de timestamp
 	time_t horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_timestamp;
