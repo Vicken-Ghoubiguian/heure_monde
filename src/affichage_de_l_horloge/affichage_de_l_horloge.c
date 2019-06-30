@@ -52,6 +52,8 @@ void affichage_de_l_horloge()
 	time_t heure_de_mayotte = temps_utc + (3 * 3600); //Mayotte_
 	time_t heure_des_iles_kerguelen = temps_utc + (5 * 3600); //îles Kerguelen
 	time_t heure_de_tahiti = temps_utc - (10 * 3600); //Tahiti
+	time_t heure_de_gambier = temps_utc - (9 * 3600); //Gambier
+	time_t heure_a_marquesas = temps_utc - (30 * 60) - (9 * 3600); //îles Marquises
 	time_t heure_de_miquelon = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Miquelon
 	time_t heure_de_st_barthelemy = temps_utc - (4 * 3600); //St Barthélemy
 	time_t heure_de_la_martinique = temps_utc - (4 * 3600); //La Martinique
@@ -228,6 +230,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_indiana_tell_city = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Tell City
 	time_t heure_a_indiana_knox = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Knox
 	time_t heure_a_pago_pago = temps_utc - (11 * 3600); //Samoa américaines
+	time_t heure_a_guam = temps_utc + (10 * 3600); //Guam
+	time_t heure_a_wake = temps_utc + (12 * 3600); //Wake
 
 	/* Dominion du Canada */
 	time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Toronto
@@ -416,10 +420,16 @@ void affichage_de_l_horloge()
 	time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
 	time_t heure_a_waitangi = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Waitangi
 	time_t heure_a_fakaofo = temps_utc + (13 * 3600); //Fakaofo
+
+	/* îles Cook */
 	time_t heure_a_rarotonga = temps_utc - (10 * 3600); //Rarotonga
 
 	/* Royaume de Tonga */
 	time_t heure_a_togatapu = temps_utc + (13 * 3600); //Togatapu
+
+	/* République des Îles Marshall */
+	heure_a_majuro = temps_utc + (12 * 3600); //Majuro
+	heure_a_kwajalein = temps_utc + (10 * 3600); //Kwajalein
 
 	/* République de Vanuatu */
 	time_t heure_a_efate = temps_utc + (11 * 3600); //Efate
@@ -1012,6 +1022,9 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
 	calcul_et_affichage_horaire(heure_a_waitangi, "Waitangi");
 	calcul_et_affichage_horaire(heure_a_fakaofo, "Fakaofo");
+
+	printf("\n");
+	printf("îles Cook:\n");
 	calcul_et_affichage_horaire(heure_a_rarotonga, "Rarotonga");
 
 	printf("\n");
