@@ -45,6 +45,44 @@ char* calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_
 	}
 
 	//
+	strcat(resultat_du_calcul, jour_semaine);
+
+	//
+	strcat(resultat_du_calcul, " ");
+
+	//
+	if(horaire->tm_mday < 10)
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%02d", horaire->tm_mday);
+	}
+	//Sinon...
+	else
+	{
+		//
+		sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_mday);
+	}
+
+	//
+	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	strcat(resultat_du_calcul, " ");
+
+	//
+        strcat(resultat_du_calcul, mois);
+
+	//
+	strcat(resultat_du_calcul, " ");
+
+	//
+	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_year + 1900);
+        strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	strcat(resultat_du_calcul, " à ");
+
+	//
 	if(horaire->tm_hour < 10)
 	{
 		//
@@ -97,44 +135,6 @@ char* calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_
 
 	//
 	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
-
-	//
-	strcat(resultat_du_calcul, " - ");
-
-	//
-	strcat(resultat_du_calcul, jour_semaine);
-
-	//
-	strcat(resultat_du_calcul, " ");
-
-	//
-	if(horaire->tm_mday < 10)
-	{
-		//
-		sprintf(chiffre_a_convertir_en_str, "%02d", horaire->tm_mday);
-	}
-	//Sinon...
-	else
-	{
-		//
-		sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_mday);
-	}
-
-	//
-	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
-
-	//
-	strcat(resultat_du_calcul, " ");
-
-	//
-        strcat(resultat_du_calcul, mois);
-
-	//
-	strcat(resultat_du_calcul, " ");
-
-	//
-	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_year + 1900);
-        strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
 
 	//
 	return resultat_du_calcul;
