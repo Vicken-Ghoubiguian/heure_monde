@@ -81,23 +81,26 @@ int main(int argc, char* argv[])
 
 			//Affichage de tous les changements d'heure heure d'été <=> heure d'hiver pour l'année annee_voulue
 
-			/* État indépendant des Samoa */
-			printf("Passage à l'heure d'été en %d pour l'État indépendant des Samoa: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_chaine_de_caracteres);
-			printf("Passage à l'heure d'hiver en %d pour l'État indépendant des Samoa: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_chaine_de_caracteres);
+			//
+			printf("État indépendant des Samoa:\n");
+			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_chaine_de_caracteres);
+			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_chaine_de_caracteres);
 
 			//
 			printf("\n");
 
-			/* Europe continentale */
-			printf("Passage à l'heure d'été en %d pour l'Europe continentale: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
-			printf("Passage à l'heure d'hiver en %d pour l'Europe continentale: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
+			//
+			printf("Europe continentale:\n");
+			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
+			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
 
 			//
 			printf("\n");
 
-			/* Amérique du Nord */
-			printf("Passage à l'heure d'été en %d pour l'Amérique du Nord: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres);
-			printf("Passage à l'heure d'hiver en %d pour l'Amérique du Nord: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres);
+			//
+			printf("Amérique du Nord:\n");
+			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres);
+			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres);
 
 		}
 		//Sinon...
