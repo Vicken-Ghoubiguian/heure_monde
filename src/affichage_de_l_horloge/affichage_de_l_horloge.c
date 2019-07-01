@@ -196,6 +196,21 @@ void affichage_de_l_horloge()
 	/* Jamaïque */
 	time_t heure_en_jamaique = temps_utc - (5 * 3600); //Jamaique
 
+	/* Fédération de Saint-Christophe-et-Niévès, Saint-Christophe-et-Nevis */
+	time_t heure_a_st_kitt = temps_utc - (4 * 3600); //St kitt
+
+	/* Saint-Vincent-et-les-Grenadines */
+	time_t heure_a_st_vincent = temps_utc - (4 * 3600); //Saint-Vincent
+
+	/* Sainte-Lucie */
+	time_t heure_a_sainte_lucie = temps_utc - (4 * 3600); //Sainte-Lucie
+
+	/* République dominicaine */
+	time_t heure_a_st_domingue = temps_utc - (4 * 3600); //St Domingue
+
+	/* République d'Haïti */
+	time_t heure_a_port_au_prince = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Port-au-Prince
+
 	/* République de Cuba */
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
