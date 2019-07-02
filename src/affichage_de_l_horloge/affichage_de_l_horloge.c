@@ -910,6 +910,26 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_en_jamaique, "Jamaique");
 
 	printf("\n");
+	printf("Fédération de Saint-Christophe-et-Niévès, Saint-Christophe-et-Nevis:\n");
+	calcul_et_affichage_horaire(heure_a_st_kitt, "St kitt");
+
+	printf("\n");
+	printf("Saint-Vincent-et-les-Grenadines:\n");
+	calcul_et_affichage_horaire(heure_a_st_vincent, "Saint-Vincent");
+
+	printf("\n");
+	printf("Sainte-Lucie:\n");
+	calcul_et_affichage_horaire(heure_a_sainte_lucie, "Sainte-Lucie");
+
+	printf("\n");
+	printf("République dominicaine:\n");
+	calcul_et_affichage_horaire(heure_a_st_domingue, "St Domingue");
+
+	printf("\n");
+	printf("République d'Haïti:\n");
+	calcul_et_affichage_horaire(heure_a_port_au_prince, "Port-au-Prince");
+
+	printf("\n");
 	printf("États-Unis d'Amérique:\n");
         calcul_et_affichage_horaire(heure_los_angeles, "Los Angeles");
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
