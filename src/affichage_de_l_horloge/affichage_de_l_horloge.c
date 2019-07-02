@@ -1282,6 +1282,34 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_addis_abeba, "Addis-Abeba");
 
 	printf("\n");
+	printf("République gabonaise:\n");
+	calcul_et_affichage_horaire(heure_a_libreville, "Libreville");
+
+	printf("\n");
+	printf("République du Cameroun:\n");
+	calcul_et_affichage_horaire(heure_a_douala, "Douala");
+
+	printf("\n");
+	printf("République de Guinée équatoriale:\n");
+	calcul_et_affichage_horaire(heure_a_malabo, "Malabo");
+
+	printf("\n");
+	printf("République fédérale du Nigeria:\n");
+	calcul_et_affichage_horaire(heure_a_lagos, "Lagos");
+
+	printf("\n");
+	printf("République du Bénin:\n");
+	calcul_et_affichage_horaire(heure_a_porto_novo, "Porto-Novo");
+
+	printf("\n");
+	printf("République togolaise:\n");
+	calcul_et_affichage_horaire(heure_a_lome, "Lome");
+
+	printf("\n");
+	printf("République du Ghana:\n");
+	calcul_et_affichage_horaire(heure_a_accra, "Accra");
+
+	printf("\n");
 	printf("République fédérale de Somalie:\n");
 	calcul_et_affichage_horaire(heure_a_mogadiscio, "Mogadiscio");
 
