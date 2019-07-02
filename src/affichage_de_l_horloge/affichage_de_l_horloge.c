@@ -410,6 +410,27 @@ void affichage_de_l_horloge()
 	/* République démocratique fédérale d’Éthiopie */
 	time_t heure_addis_abeba = temps_utc + (3  * 3600); //Addis-Abeba
 
+	/* République gabonaise */
+	time_t heure_a_libreville = temps_utc + (1 * 3600); //Libreville
+
+	/* République du Cameroun */
+	time_t heure_a_douala = temps_utc + (1 * 3600); //Douala
+
+	/* République de Guinée équatoriale */
+	time_t heure_a_malabo = temps_utc + (1 * 3600); //Malabo
+
+	/* République fédérale du Nigeria */
+	time_t heure_a_lagos = temps_utc + (1 * 3600); //Lagos
+
+	/* République du Bénin */
+	time_t heure_a_porto_novo = temps_utc + (1 * 3600); //Porto-Novo
+
+	/* République togolaise */
+	time_t heure_a_lome = temps_utc; //Lome
+
+	/* République du Ghana */
+	time_t heure_a_accra = temps_utc; //Accra
+
 	/* République de Djibouti */
 	time_t heure_djibouti = temps_utc + (3 * 3600); //Djibouti
 
