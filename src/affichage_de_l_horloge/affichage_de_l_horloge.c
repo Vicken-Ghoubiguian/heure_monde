@@ -471,6 +471,15 @@ void affichage_de_l_horloge()
 	/* République du Liberia */
 	time_t heure_a_morovia = temps_utc; //Morovia
 
+	/* République du Burundi */
+	time_t heure_a_bujumbura = temps_utc + (2 * 3600); //Bujumbura
+
+	/* République du Malawi */
+	time_t heure_a_blantyre = temps_utc + (2 * 3600); //Blantyre
+
+	/* République du Sénégal */
+	heure_a_dakar = temps_utc; //Dakar
+
 	/* République de Zambie */
 	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
 
