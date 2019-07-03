@@ -7,7 +7,7 @@ retour_de_la_date_et_de_l_heure permet de calculer l'heure et la date, pour un f
 
 affichage_de_l_horloge permet de calculer l'heure et la date, pour tous les fuseau horaires, à partir du temps UTC (Universal Time Coordinated).
 
-Cette API évolue pour que tous les fuseaux horaires nommés selon la nomenclature de la base d'Olson.
+Cette API évolue pour que l'heure courante et la date courante soient calculées puis affichées ou retournées pour tous les fuseaux horaires du monde entier, nommés selon la nomenclature de la base d'Olson.
 
 Cette API ne nécessite aucune connexion internet, et peut être utilisée sur n'importe quelle machine (PC, serveur...), quelque soit son heure de référence, dans le monde.
 
