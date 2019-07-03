@@ -478,7 +478,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_blantyre = temps_utc + (2 * 3600); //Blantyre
 
 	/* République du Sénégal */
-	heure_a_dakar = temps_utc; //Dakar
+	time_t heure_a_dakar = temps_utc; //Dakar
 
 	/* République de Zambie */
 	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
@@ -1357,6 +1357,50 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République du Kenya:\n");
 	calcul_et_affichage_horaire(heure_a_nairobi, "Nairobi");
+
+	printf("\n");
+	printf("République d'Ouganda:\n");
+	calcul_et_affichage_horaire(heure_a_kampala, "Kampala");
+
+	printf("\n");
+	printf("République centrafricaine:\n");
+	calcul_et_affichage_horaire(heure_a_bangui, "Bangui");
+
+	printf("\n");
+	printf("République du Mali:\n");
+	calcul_et_affichage_horaire(heure_a_bamako, "Bamako");
+
+	printf("\n");
+	printf("République islamique de Mauritanie:\n");
+	calcul_et_affichage_horaire(heure_a_nouakchott, "Nouakchott");
+
+	printf("\n");
+	printf("République de Côte d'Ivoire:\n");
+	calcul_et_affichage_horaire(heure_a_abidjan, "Abidjan");
+
+	printf("\n");
+	printf("République de Guinée:\n");
+	calcul_et_affichage_horaire(heure_a_conakry, "Conakry");
+
+	printf("\n");
+	printf("République de Sierra Leone:\n");
+	calcul_et_affichage_horaire(heure_a_freetown, "Freetown");
+
+	printf("\n");
+	printf("République du Liberia:\n");
+	calcul_et_affichage_horaire(heure_a_morovia, "Morovia");
+
+	printf("\n");
+	printf("République du Burundi:\n");
+	calcul_et_affichage_horaire(heure_a_bujumbura, "Bujumbura");
+
+	printf("\n");
+	printf("République du Malawi:\n");
+	calcul_et_affichage_horaire(heure_a_blantyre, "Blantyre");
+
+	printf("\n");
+	printf("République du Sénégal:\n");
+	calcul_et_affichage_horaire(heure_a_dakar, "Dakar");
 
 	printf("\n");
 	printf("République unie de Tanzanie:\n");
