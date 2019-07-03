@@ -447,6 +447,30 @@ void affichage_de_l_horloge()
 	/* République du Kenya */
 	time_t heure_a_nairobi = temps_utc + (3 * 3600); //Nairobi
 
+	/* République d'Ouganda */
+	time_t heure_a_kampala = temps_utc + (3 * 3600); //Kampala
+
+	/* République centrafricaine */
+	time_t heure_a_bangui = temps_utc + (1 * 3600); //Bangui
+
+	/* République du Mali */
+	time_t heure_a_bamako = temps_utc; //Bamako
+
+	/* République islamique de Mauritanie */
+	time_t heure_a_nouakchott = temps_utc; //Nouakchott
+
+	/* République de Côte d'Ivoire */
+	time_t heure_a_abidjan = temps_utc; //Abidjan
+
+	/* République de Guinée */
+	time_t heure_a_conakry = temps_utc; //Conakry
+
+	/* République de Sierra Leone */
+	time_t heure_a_freetown = temps_utc; //Freetown
+
+	/* République du Liberia */
+	time_t heure_a_morovia = temps_utc; //Morovia
+
 	/* République de Zambie */
 	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
 
