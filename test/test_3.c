@@ -102,7 +102,7 @@ int main(int argc, char* argv[])
 			printf("\n");
 
 			//
-			printf("Europe continentale:\n");
+			printf("Europe continentale et Base antarctique de Troll:\n");
 			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
 			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
 
