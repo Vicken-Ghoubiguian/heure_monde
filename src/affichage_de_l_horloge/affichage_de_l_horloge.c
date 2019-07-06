@@ -215,7 +215,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
 	/* Antarctique */
-	time_t heure_pour_la_base_antarctique_de_casey = temps_utc + (11 * 3600); //Base antarctique de Casey
+	time_t heure_pour_la_base_antarctique_de_casey = temps_utc + (8 * 3600); //Base antarctique de Casey
 	time_t heure_pour_la_base_antarctique_de_davis = temps_utc + (7 * 3600); //Base antarctique de Davis
 	time_t heure_pour_la_base_antarctique_de_dumontdurville = temps_utc + (10 * 3600); //Base antarctique de Dumont-d'Urville
 	time_t heure_pour_la_base_antarctique_de_mawson = temps_utc + (5 * 3600); //Base antarctique de Mawson
@@ -1646,6 +1646,19 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_choibalsan, "Choibalsan");
 	calcul_et_affichage_horaire(heure_a_ulaanbaatar, "Ulaanbaatar");
 	calcul_et_affichage_horaire(heure_a_hovd, "Hovd");
+
+	printf("\n");
+	printf("Antarctique:\n");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_casey, "Base antarctique de Casey");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_davis, "Base antarctique de Davis");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_dumontdurville, "Base antarctique de Dumont-d'Urville");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_mawson, "Base antarctique de Mawson");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_mcmurdo, "Base antarctique de McMurdo");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_palmer, "Base antarctique de Palmer");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_rothera, "Base antarctique de Rothera");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_syowa, "Base antarctique de Syowa");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_vostok, "Base antarctique de Vostok");
+	calcul_et_affichage_horaire(heure_pour_la_base_antarctique_de_troll, "Base antarctique de Troll");
 
 	printf("\n");
 }
