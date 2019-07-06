@@ -214,6 +214,17 @@ void affichage_de_l_horloge()
 	/* République de Cuba */
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
+	/* Antarctique */
+	time_t heure_a_casey = temps_utc + (11 * 3600); //Casey
+	time_t heure_a_davis = temps_utc + (7 * 3600); //Davis
+	time_t heure_a_dumontdurville = temps_utc + (10 * 3600); //Dumont-d'Urville
+	time_t heure_a_mawson = temps_utc + (5 * 3600); //Mawson
+	time_t heure_a_mcmurdo = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //McMurdo 
+	time_t heure_a_palmer = temps_utc - (3 * 3600); //Palmer
+	time_t heure_a_rothera = temps_utc - (3 * 3600); //Rothera
+	time_t heure_a_syowa = temps_utc + (3 * 3600); //Syowa	
+	time_t heure_a_vostok = temps_utc + (6 * 3600); //Vostok
+
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
