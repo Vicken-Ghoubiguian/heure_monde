@@ -483,6 +483,30 @@ void affichage_de_l_horloge()
 	/* République de Zambie */
 	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
 
+	/* Burkina Faso */
+	time_t heure_a_ouagadougou = temps_utc; //Ouagadougou
+
+	/* République tunisienne */
+	time_t heure_a_tunis = temps_utc + (1 * 3600); //Tunis
+
+	/* République du Cap-Vert */
+	time_t heure_au_cap_vert = temps_utc - (1 * 3600); //Cap-Vert
+
+	/* République de Gambie */
+	time_t heure_a_banjul = temps_utc; //Banjul
+
+	/* République démocratique de Sao Tomé-et-Principe */
+	time_t heure_a_sao_tome = temps_utc; //Sao Tome
+
+	/* République de Guinée-Bissau */
+	time_t heure_a_bissau = temps_utc; //Bissau
+
+	/* République du Tchad */
+	time_t heure_a_ndjamena = temps_utc + (1 * 3600); //Ndjamena
+
+	/* République du Niger */
+	time_t heure_a_niamey = temps_utc + (1 * 3600); //Niamey
+
 	/* République arabe d'Égypte */
 	time_t heure_le_caire = temps_utc + (2 * 3600); //Le Caire
 
