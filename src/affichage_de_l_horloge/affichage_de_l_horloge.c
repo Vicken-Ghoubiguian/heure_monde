@@ -527,7 +527,7 @@ void affichage_de_l_horloge()
 
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
-	time_t heure_a_waitangi = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Waitangi
+	time_t heure_a_chatham = temps_utc + (45 * 60) + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //île Chatham
 	time_t heure_a_fakaofo = temps_utc + (13 * 3600); //Fakaofo
 
 	/* îles Cook */
@@ -1157,7 +1157,7 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Nouvelle-Zélande:\n");
 	calcul_et_affichage_horaire(heure_a_auckland, "Auckland");
-	calcul_et_affichage_horaire(heure_a_waitangi, "Waitangi");
+	calcul_et_affichage_horaire(heure_a_chatham, "Ile Chatham");
 	calcul_et_affichage_horaire(heure_a_fakaofo, "Fakaofo");
 
 	printf("\n");
