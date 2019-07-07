@@ -7,6 +7,48 @@
 /* Inclusion des bibliothéques internes à l'API */
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Nouvelle-Zelande) à l'aide du timestamp passé en paramétre
+time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure)
+{
+        //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
+        struct tm *date_tm;
+        time_t date_timestamp;
+
+        //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm = gmtime(&aujourdhui);
+
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) octobre (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        date_tm->tm_mday = 1;
+        date_tm->tm_mon = 9;
+        date_tm->tm_hour = heure;
+        date_tm->tm_min = 0;
+        date_tm->tm_sec = 0;
+
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+        //Ici, le programme procéde à une boucle infinie
+        while(1){
+
+                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                date_timestamp = date_timestamp - 86400;
+
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                date_tm = gmtime(&date_timestamp);
+
+                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois de Septembre (tm_mon), on sort definitivement de la boucle
+                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 8)
+                {
+                        break;
+                }
+        }
+
+        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        return date_timestamp;
+}
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les pays européens) à l'aide du timestamp et de l'heure (1 pour la Grande Bretagne et 2 pour la France) passé en paramétre
 time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)
 {
@@ -515,7 +557,7 @@ time_t date_du_deuxieme_dimanche_d_aout(time_t aujourdhui)
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Nouvelle-Zelande) à l'aide du timestamp passé en paramétre
-time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui)
+/*time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure)
 {
         //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;
@@ -524,34 +566,4 @@ time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui)
         //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
         date_tm = gmtime(&aujourdhui);
 
-        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) octobre (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
-        date_tm->tm_mday = 1;
-        date_tm->tm_mon = 9;
-        date_tm->tm_hour = 2;
-        date_tm->tm_min = 0;
-        date_tm->tm_sec = 0;
-
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
-        //Puis reconvertie en struct tm grace à la fonction localtime
-        date_timestamp = timegm(date_tm);
-        date_tm = gmtime(&date_timestamp);
-
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
-
-                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                date_timestamp = date_timestamp - 86400;
-
-                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                date_tm = gmtime(&date_timestamp);
-
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois de Septembre (tm_mon), on sort definitivement de la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 8)
-                {
-                        break;
-                }
-        }
-
-        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
-        return date_timestamp;
-}
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) octobre (tm_mon) à 2 heures (tm_hour) 0 minutes */

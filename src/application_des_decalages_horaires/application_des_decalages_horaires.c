@@ -32,8 +32,8 @@ int application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t t
 int application_du_changement_d_heure_pour_les_samoa(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_dimanche_de_septembre(temps_courant);
-	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
+	time_t ete = date_du_dernier_dimanche_de_septembre(temps_courant, 3);
+	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 4);
 
 	//
         if(temps_courant < ete && temps_courant > hiver)
@@ -95,7 +95,7 @@ int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_
 int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_dimanche_de_septembre(temps_courant);
+	time_t ete = date_du_dernier_dimanche_de_septembre(temps_courant, 2);
 	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
 
 	//

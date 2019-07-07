@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_hiver_pour_la_base_antarctique_de_troll_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant, 3);
 
 			/* Nouvelle-Zélande et Base antarctique de McMurdo */
-			horaire_de_passage_a_l_heure_d_ete_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_dernier_dimanche_de_septembre(timestamp_courant);
+			horaire_de_passage_a_l_heure_d_ete_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_dernier_dimanche_de_septembre(timestamp_courant, 2);
 			horaire_de_passage_a_l_heure_d_hiver_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant, 3);
 
 			/*  Commonwealth d'Australie */
@@ -82,8 +82,8 @@ int main(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_hiver_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 2);
 
 			/* État indépendant des Samoa */
-			horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_timestamp = date_du_dernier_dimanche_de_septembre(timestamp_courant_avec_annee_voulue);
-			horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
+			horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_timestamp = date_du_dernier_dimanche_de_septembre(timestamp_courant_avec_annee_voulue, 3);
+			horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 4);
 
 			/* Europe continentale */
 			horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 3);
