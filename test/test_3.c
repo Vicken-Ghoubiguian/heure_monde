@@ -77,9 +77,9 @@ int main(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_timestamp = date_du_dernier_dimanche_de_septembre(timestamp_courant_avec_annee_voulue);
 			horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
 
-			/* Europe continentale et Base antarctique de Troll */
-			horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 1);
-			horaire_de_passage_a_l_heure_d_hiver_pour_l_europe_continentale_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 1);
+			/* Europe continentale */
+			horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 3);
+			horaire_de_passage_a_l_heure_d_hiver_pour_l_europe_continentale_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 2);
 
 			/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 			horaire_de_passage_a_l_heure_d_ete_pour_la_grande_bretagne_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 1);
@@ -145,7 +145,7 @@ int main(int argc, char* argv[])
 			printf("\n");
 
 			//
-			printf("Europe continentale et Base antarctique de Troll:\n");
+			printf("Europe continentale:\n");
 			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
 			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_europe_continentale_sous_forme_de_chaine_de_caracteres);
 

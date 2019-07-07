@@ -179,8 +179,8 @@ int application_du_changement_d_heure_pour_la_grande_bretagne(time_t temps_coura
 int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_dimanche_de_mars(temps_courant, 1);
-	time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 1);
+	time_t ete = date_du_dernier_dimanche_de_mars(temps_courant, 2);
+	time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 3);
 
 	//
 	if(temps_courant >= ete && temps_courant <= hiver)
