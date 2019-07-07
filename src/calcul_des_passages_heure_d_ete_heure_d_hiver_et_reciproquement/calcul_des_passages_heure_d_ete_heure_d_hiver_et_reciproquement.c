@@ -7,7 +7,7 @@
 /* Inclusion des bibliothéques internes à l'API */
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 
-//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Nouvelle-Zelande) à l'aide du timestamp passé en paramétre
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Nouvelle-Zelande et les Samoa) à l'aide du timestamp et de l'heure (2 pour la Nouvelle-Zélande et 3 pour les Samoa) passés en paramétre
 time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure)
 {
         //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
@@ -555,15 +555,3 @@ time_t date_du_deuxieme_dimanche_d_aout(time_t aujourdhui)
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
 }
-
-//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Nouvelle-Zelande) à l'aide du timestamp passé en paramétre
-/*time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure)
-{
-        //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
-        struct tm *date_tm;
-        time_t date_timestamp;
-
-        //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
-        date_tm = gmtime(&aujourdhui);
-
-        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) octobre (tm_mon) à 2 heures (tm_hour) 0 minutes */
