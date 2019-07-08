@@ -1456,6 +1456,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_banjul, "Banjul");
 
 	printf("\n");
+	printf("République démocratique de Sao Tomé-et-Principe:\n");
+	calcul_et_affichage_horaire(heure_a_sao_tome, "Sao Tomé");
+
+	printf("\n");
 	printf("République du Rwanda:\n");
 	calcul_et_affichage_horaire(heure_a_kigali, "Kigali");
 
