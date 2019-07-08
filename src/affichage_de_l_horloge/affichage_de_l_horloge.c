@@ -1444,6 +1444,18 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_dakar, "Dakar");
 
 	printf("\n");
+	printf("République de Guinée-Bissau:\n");
+	calcul_et_affichage_horaire(heure_a_bissau, "Bissau");
+
+	printf("\n");
+	printf("République du Tchad:\n");
+	calcul_et_affichage_horaire(heure_a_ndjamena, "Ndjamena");
+
+	printf("\n");
+	printf("République de Gambie:\n");
+	calcul_et_affichage_horaire(heure_a_banjul, "Banjul");
+
+	printf("\n");
 	printf("République du Rwanda:\n");
 	calcul_et_affichage_horaire(heure_a_kigali, "Kigali");
 
