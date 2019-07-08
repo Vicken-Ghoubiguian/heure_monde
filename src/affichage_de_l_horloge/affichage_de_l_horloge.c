@@ -1444,6 +1444,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_dakar, "Dakar");
 
 	printf("\n");
+	printf("République du Rwanda:\n");
+	calcul_et_affichage_horaire(heure_a_kigali, "Kigali");
+
+	printf("\n");
 	printf("République unie de Tanzanie:\n");
 	calcul_et_affichage_horaire(heure_a_dar_es_salam, "Dar es Salam");
 
