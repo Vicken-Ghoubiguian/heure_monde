@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
 
 			/*  Commonwealth d'Australie */
 			horaire_de_passage_a_l_heure_d_ete_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue);
-			horaire_de_passage_a_l_heure_d_hiver_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 2);
+			horaire_de_passage_a_l_heure_d_hiver_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
 
 			/* État indépendant des Samoa */
 			horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_timestamp = date_du_dernier_dimanche_de_septembre(timestamp_courant_avec_annee_voulue, 3);

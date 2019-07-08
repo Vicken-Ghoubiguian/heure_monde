@@ -256,6 +256,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_north_dakota_beulah = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Beulah
 	time_t heure_a_indiana_tell_city = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Tell City
 	time_t heure_a_indiana_knox = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Knox
+	time_t heure_a_st_thomas = temps_utc - (4 * 3600); //îles Vierges des États-Unis
 	time_t heure_a_pago_pago = temps_utc - (11 * 3600); //Samoa américaines
 	time_t heure_a_guam = temps_utc + (10 * 3600); //Guam
 	time_t heure_a_wake = temps_utc + (12 * 3600); //Wake
@@ -515,6 +516,9 @@ void affichage_de_l_horloge()
 
 	/* République du Tchad */
 	time_t heure_a_ndjamena = temps_utc + (1 * 3600); //Ndjamena
+
+	/* République du Rwanda */
+	time_t heure_a_kigali = temps_utc + (2 * 3600); //Kigali
 
 	/* République du Niger */
 	time_t heure_a_niamey = temps_utc + (1 * 3600); //Niamey
@@ -1050,6 +1054,7 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_north_dakota_beulah, "Beulah");
 	calcul_et_affichage_horaire(heure_a_indiana_tell_city, "Tell City");
 	calcul_et_affichage_horaire(heure_a_indiana_knox, "Knox");
+	calcul_et_affichage_horaire(heure_a_st_thomas, "îles Vierges des États-Unis");
 	calcul_et_affichage_horaire(heure_a_pago_pago, "Samoa américaines");
 	calcul_et_affichage_horaire(heure_a_guam, "Guam");
 	calcul_et_affichage_horaire(heure_a_wake, "Wake");
