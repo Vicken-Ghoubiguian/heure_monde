@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Paraguay) à l'aide du timestamp passé en paramétre
+time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui);
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Nouvelle-Zelande et les Samoa) à l'aide du timestamp et de l'heure (2 pour la Nouvelle-Zélande et 3 pour les Samoa) passés en paramétre
 time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure);
 
