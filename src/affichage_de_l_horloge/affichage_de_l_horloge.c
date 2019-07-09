@@ -375,6 +375,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_punta_arenas = temps_utc - (3 * 3600); //Punta Arenas
 	time_t heure_ile_de_paques = temps_utc - ((6 * 3600)  - (application_du_changement_d_heure_pour_le_chili(temps_utc) * 3600)); //Ile de Pâques
 
+	/* République du Paraguay */
+	time_t heure_a_asuncion = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_paraguay(temps_utc) * 3600)); //Asuncion
+
 	/* République algérienne démocratique et populaire */
 	time_t heure_a_alger = temps_utc + (1 * 3600); //Alger
 
@@ -1213,6 +1216,10 @@ void affichage_de_l_horloge()
         calcul_et_affichage_horaire(heure_santiago_chili, "Santiago du Chili");
 	calcul_et_affichage_horaire(heure_a_punta_arenas, "Punta Arenas");
 	calcul_et_affichage_horaire(heure_ile_de_paques, "Ile de Pâques");
+
+	printf("\n");
+	printf("République du Paraguay:\n");
+	calcul_et_affichage_horaire(heure_a_asuncion, "Asuncion");
 
 	printf("\n");
 	printf("République algérienne démocratique et populaire:\n");

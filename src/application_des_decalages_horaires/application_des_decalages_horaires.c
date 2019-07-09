@@ -7,6 +7,27 @@
 #include "../calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement/calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 
+//Cette fonction permet d'appliquer le changement d'heure pour le Paraguay
+int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant)
+{
+	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
+        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant);
+        time_t hiver = date_du_quatrieme_dimanche_de_mars(temps_courant);
+
+        //
+        if(temps_courant < ete && temps_courant > hiver)
+        {
+                //On retourne 0
+                return 0;
+        }
+        //Sinon...
+        else
+        {
+                //On retourne 1
+                return 1;
+        }
+}
+
 //Cette fonction permet d'appliquer le changement d'heure pour la base antarctique de Troll
 int application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t temps_courant)
 {
