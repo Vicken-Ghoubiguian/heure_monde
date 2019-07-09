@@ -350,16 +350,16 @@ void affichage_de_l_horloge()
 	time_t heure_de_niue = temps_utc - (11 * 3600); //Niue
 
 	/* Commonwealth d'Australie */
-        time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
+        time_t heure_a_sydney = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
 	time_t heure_a_macquarie = temps_utc + (11 * 3600); //Macquarie
-	time_t heure_a_adelaide = temps_utc + (30 * 60) + ((10 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Adelaide
+	time_t heure_a_adelaide = temps_utc + (30 * 60) + ((9 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Adelaide
 	time_t heure_a_broken_hill = temps_utc + (30 * 60) + ((10 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Broken Hill
 	time_t heure_a_darwin = temps_utc + (30 * 60) + (9 * 3600); //Darwin
 	time_t heure_a_brisbane = temps_utc + (10 * 3600); //Brisbane
-	time_t heure_a_curie = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Curie
-	time_t heure_a_hobart = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Hobart
+	time_t heure_a_curie = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Curie
+	time_t heure_a_hobart = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Hobart
 	time_t heure_a_lindeman = temps_utc + (10 * 3600); //Lindeman
-	time_t heure_a_melbourne = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Melbourne
+	time_t heure_a_melbourne = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Melbourne
 	time_t heure_a_eucla = temps_utc + (45 * 60) + (8 * 3600); //Eucla
 	time_t heure_a_lord_howe = temps_utc + ((11 * 3600) - application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc)); //Lord Howe
 	time_t heure_a_perth = temps_utc + (8 * 3600); //Perth

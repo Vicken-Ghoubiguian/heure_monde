@@ -78,16 +78,16 @@ int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
 	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
 
 	//
-	if(temps_courant < ete && temps_courant > hiver)
+	if(temps_courant < ete || temps_courant > hiver)
 	{
-		//On retourne 1
-		return 1;
+		//On retourne 0
+		return 0;
 	}
 	//Sinon...
 	else
 	{
-		//On retourne 0
-		return 0;
+		//On retourne 1
+		return 1;
 	}
 }
 
@@ -99,7 +99,7 @@ int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_
         time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 2);
 
         //
-        if(temps_courant < ete && temps_courant > hiver)
+        if(temps_courant < ete || temps_courant > hiver)
         {
                 //On retourne 1800 (nombre de secondes correspondant à l'application du changement d'heure pour lord howe, ce qui correspond à 30 minutes)
                 return 1800;
