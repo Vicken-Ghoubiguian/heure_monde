@@ -368,7 +368,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_l_ile_norfolk = temps_utc + (11 * 3600); //ile Norfolk
 
 	/* État indépendant des Samoa */
-	time_t heure_a_apia = temps_utc + ((14 * 3600) - (application_du_changement_d_heure_pour_les_samoa(temps_utc) * 3600));
+	time_t heure_a_apia = temps_utc + ((13 * 3600) + (application_du_changement_d_heure_pour_les_samoa(temps_utc) * 3600));
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
