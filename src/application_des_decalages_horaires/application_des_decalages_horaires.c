@@ -120,16 +120,16 @@ int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_cour
 	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
 
 	//
-	if(temps_courant < ete && temps_courant > hiver)
+	if(hiver <= temps_courant && temps_courant < ete)
 	{
-		//On retourne 1
-		return 1;
+		//On retourne 0
+		return 0;
 	}
 	//Sinon...
 	else
 	{
-		//On retourne 0
-		return 0;
+		//On retourne 1
+		return 1;
 	}
 }
 
