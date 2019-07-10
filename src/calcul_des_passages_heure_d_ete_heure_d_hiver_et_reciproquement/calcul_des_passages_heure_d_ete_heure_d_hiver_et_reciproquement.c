@@ -50,7 +50,7 @@ time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui)
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
-time_t date_du_dernier_vendredi_de_mars(time_t aujourdhui)
+time_t date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(time_t aujourdhui)
 {
 	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;

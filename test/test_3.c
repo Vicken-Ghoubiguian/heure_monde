@@ -78,7 +78,7 @@ int main(int argc, char* argv[])
 			//
 
 			/* Royaume hachémite de Jordanie */
-			horaire_de_passage_a_l_heure_d_ete_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars(timestamp_courant_avec_annee_voulue);
+			horaire_de_passage_a_l_heure_d_ete_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(timestamp_courant_avec_annee_voulue);
 			horaire_de_passage_a_l_heure_d_hiver_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_d_octobre(timestamp_courant_avec_annee_voulue);
 
 			/* République du Paraguay */

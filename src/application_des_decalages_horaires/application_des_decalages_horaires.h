@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction permet d'appliquer le changement d'heure pour la Jordanie
+int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant);
+
 //Cette fonction permet d'appliquer le changement d'heure pour le Paraguay
 int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant);
 

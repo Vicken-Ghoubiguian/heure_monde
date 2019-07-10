@@ -600,6 +600,9 @@ void affichage_de_l_horloge()
 	/* République de Colombie */
 	time_t heure_a_bogota = temps_utc - (5 * 3600); //Bogota
 
+	/* Royaume hachémite de Jordanie */
+	time_t heure_a_amman = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_jordanie(temps_utc) * 3600)); //Amman
+
 	/* État du Qatar */
 	time_t heure_au_qatar = temps_utc + (3 * 3600); //Qatar
 

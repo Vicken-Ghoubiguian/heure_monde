@@ -7,6 +7,27 @@
 #include "../calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement/calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 
+//Cette fonction permet d'appliquer le changement d'heure pour la Jordanie
+int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant)
+{
+	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
+	time_t ete = date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(temps_courant);
+	time_t hiver = date_du_dernier_vendredi_d_octobre(temps_courant);
+
+	//
+        if(temps_courant >= ete && temps_courant <= hiver)
+        {
+                //On retourne 1
+                return 1;
+        }
+        //Sinon...
+        else
+        {
+                //On retourne 0
+                return 0;
+        }
+}
+
 //Cette fonction permet d'appliquer le changement d'heure pour le Paraguay
 int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant)
 {
