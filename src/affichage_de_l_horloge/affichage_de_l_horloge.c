@@ -219,7 +219,7 @@ void affichage_de_l_horloge()
 	time_t heure_pour_la_base_antarctique_de_davis = temps_utc + (7 * 3600); //Base antarctique de Davis
 	time_t heure_pour_la_base_antarctique_de_dumontdurville = temps_utc + (10 * 3600); //Base antarctique de Dumont-d'Urville
 	time_t heure_pour_la_base_antarctique_de_mawson = temps_utc + (5 * 3600); //Base antarctique de Mawson
-	time_t heure_pour_la_base_antarctique_de_mcmurdo = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Base antarctique de McMurdo 
+	time_t heure_pour_la_base_antarctique_de_mcmurdo = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Base antarctique de McMurdo 
 	time_t heure_pour_la_base_antarctique_de_palmer = temps_utc - (3 * 3600); //Base antarctique de Palmer
 	time_t heure_pour_la_base_antarctique_de_rothera = temps_utc - (3 * 3600); //Base antarctique de Rothera
 	time_t heure_pour_la_base_antarctique_de_syowa = temps_utc + (3 * 3600); //Base antarctique de Syowa	
@@ -1335,6 +1335,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République arabe d'Égypte:\n");
 	calcul_et_affichage_horaire(heure_le_caire, "Le Caire");
+
+	printf("\n");
+	printf("République d'Irak:\n");
+	calcul_et_affichage_horaire(heure_a_baghdad, "Baghdad");
 
 	printf("\n");
 	printf("Royaume hachémite de Jordanie:\n");
