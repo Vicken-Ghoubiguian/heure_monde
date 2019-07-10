@@ -603,6 +603,9 @@ void affichage_de_l_horloge()
 	/* Royaume hachémite de Jordanie */
 	time_t heure_a_amman = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_jordanie(temps_utc) * 3600)); //Amman
 
+	/* République d'Irak */
+	time_t heure_a_baghdad = temps_utc + (3 * 3600); //Baghdad
+
 	/* État du Qatar */
 	time_t heure_au_qatar = temps_utc + (3 * 3600); //Qatar
 
