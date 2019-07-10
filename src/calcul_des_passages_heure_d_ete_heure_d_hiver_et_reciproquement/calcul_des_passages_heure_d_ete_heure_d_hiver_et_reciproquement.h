@@ -3,6 +3,12 @@
 
 #include <time.h>
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
+time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui);
+
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
+time_t date_du_dernier_vendredi_de_mars(time_t aujourdhui);
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Paraguay) à l'aide du timestamp passé en paramétre
 time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui);
 
