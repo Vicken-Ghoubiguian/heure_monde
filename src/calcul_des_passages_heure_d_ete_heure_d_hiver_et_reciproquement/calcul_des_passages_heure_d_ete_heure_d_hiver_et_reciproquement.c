@@ -7,6 +7,148 @@
 /* Inclusion des bibliothéques internes à l'API */
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour l'Iran) à l'aide du timestamp passé en paramétre
+time_t date_du_quatrieme_dimanche_de_septembre(time_t aujourdhui)
+{
+	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
+        struct tm *date_tm;
+        time_t date_timestamp;
+
+        //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm = gmtime(&aujourdhui);
+
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) septembre (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        date_tm->tm_mday = 1;
+        date_tm->tm_mon = 10;
+        date_tm->tm_hour = 2;
+        date_tm->tm_min = 0;
+        date_tm->tm_sec = 0;
+
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+	date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+	//Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois de mars 
+	int i;
+
+	//Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors, la variable i est initialisée à la valeur 1
+        if(date_tm->tm_wday == 0)
+        {
+                i = 1;
+        }
+        //Dans le cas contraire, la variable i est initialisée à la valeur 0
+        else
+        {
+                i = 0;
+        }
+
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+        //Ici, le programme procéde à une boucle infinie
+        while(1){
+
+                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au quatrieme dimanche (tm_wday) du mois de Septembre (tm_mon) et que i = 3 (deux dimanche du mois de mars est passé), on quitte définitivement la boucle
+                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 10 && i == 4)
+                {
+                        break;
+                }
+		//Dans le cas contraire
+		else
+		{
+
+			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                	date_timestamp = date_timestamp + 86400;
+
+               	 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                	date_tm = gmtime(&date_timestamp);
+
+			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Septembre (tm_mon), la valeur contenue dans la variable i est incrementé de 1
+			if(date_tm->tm_wday == 0 && date_tm->tm_mon == 10)
+			{
+				i = i + 1;
+			}
+		}
+        }
+
+        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        return date_timestamp;
+}
+
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour l'Iran) à l'aide du timestamp passé en paramétre
+time_t date_du_quatrieme_vendredi_de_mars(time_t aujourdhui)
+{
+	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
+        struct tm *date_tm;
+        time_t date_timestamp;
+
+        //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm = gmtime(&aujourdhui);
+
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) mars (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        date_tm->tm_mday = 1;
+        date_tm->tm_mon = 2;
+        date_tm->tm_hour = 2;
+        date_tm->tm_min = 0;
+        date_tm->tm_sec = 0;
+
+	//la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+	date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+	//Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois de mars 
+	int i;
+
+	//Si le jour de la semaine (renseignée par le champ tm_wday) est vendredi (valeur = 0), alors, la variable i est initialisée à la valeur 1
+        if(date_tm->tm_wday == 5)
+        {
+                i = 1;
+        }
+        //Dans le cas contraire, la variable i est initialisée à la valeur 0
+        else
+        {
+                i = 0;
+        }
+
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+        //Ici, le programme procéde à une boucle infinie
+        while(1){
+
+                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au quatrieme vendredi (tm_wday) du mois de Mars (tm_mon) et que i = 3 (deux dimanche du mois de mars est passé), on quitte définitivement la boucle
+                if(date_tm->tm_wday == 5 && date_tm->tm_mon == 2 && i == 4)
+                {
+                        break;
+                }
+		//Dans le cas contraire
+		else
+		{
+
+			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                	date_timestamp = date_timestamp + 86400;
+
+               	 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                	date_tm = gmtime(&date_timestamp);
+
+			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un vendredi (tm_wday) dans le mois de Mars (tm_mon), la valeur contenue dans la variable i est incrementé de 1
+			if(date_tm->tm_wday == 5 && date_tm->tm_mon == 2)
+			{
+				i = i + 1;
+			}
+		}
+        }
+
+        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        return date_timestamp;
+}
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
 time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui)
 {
