@@ -4,10 +4,10 @@
 #include <time.h>
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour l'Iran) à l'aide du timestamp passé en paramétre
-time_t date_du_quatrieme_dimanche_de_septembre(time_t aujourdhui);
+time_t date_du_changement_d_heure_d_hiver_pour_l_iran(time_t aujourdhui);
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour l'Iran) à l'aide du timestamp passé en paramétre
-time_t date_du_quatrieme_vendredi_de_mars(time_t aujourdhui);
+time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui);
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
 time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui);

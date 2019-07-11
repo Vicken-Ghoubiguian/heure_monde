@@ -29,6 +29,28 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 
 }
 
+//Cette fonction détermine si une année passée en paramétre est une année bissextile
+int est_une_annee_bissextile(int annee)
+{
+	//Sisi l'année est divisible par 4 et non divisible par 100, OU si l'année est divisible par 400
+	if(((annee % 4 == 0) && (annee % 100 != 0)) || (annee % 400 == 0))
+	{
+
+		//On retourne 1
+		return 1;
+
+	}
+	//Sinon...
+	else
+	{
+
+		//On retourne 0
+		return 0;
+
+	}
+
+}
+
 //Cette fonction renvoie le timestamp courant avec plusieurs années de différence (en fonction de l'année passée en paramétre de la fonction)
 time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_courant, int annee_particuliere_voulue)
 {
