@@ -361,7 +361,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_lindeman = temps_utc + (10 * 3600); //Lindeman
 	time_t heure_a_melbourne = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Melbourne
 	time_t heure_a_eucla = temps_utc + (45 * 60) + (8 * 3600); //Eucla
-	time_t heure_a_lord_howe = temps_utc + ((11 * 3600) - application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc)); //Lord Howe
+	time_t heure_a_lord_howe = temps_utc + (30 * 60) + ((10 * 3600) + application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc)); //Lord Howe
 	time_t heure_a_perth = temps_utc + (8 * 3600); //Perth
 	time_t heure_aux_cocos = temps_utc + (30 * 60) + (6 * 3600); //Cocos
 	time_t heure_a_l_ile_christmas = temps_utc + (7 * 3600); //Christmas

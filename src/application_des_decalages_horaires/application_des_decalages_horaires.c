@@ -143,14 +143,14 @@ int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_
         //
         if(hiver <= temps_courant && temps_courant < ete)
         {
-                //On retourne 1800 (nombre de secondes correspondant à l'application du changement d'heure pour lord howe, ce qui correspond à 30 minutes)
-                return 1800;
+		//On retourne 0
+                return 0;
         }
         //Sinon...
         else
         {
-                //On retourne 0
-                return 0;
+                //On retourne 1800 (nombre de secondes correspondant à l'application du changement d'heure pour lord howe, ce qui correspond à 30 minutes)
+                return 1800;
         }
 }
 
