@@ -606,6 +606,9 @@ void affichage_de_l_horloge()
 	/* République d'Irak */
 	time_t heure_a_baghdad = temps_utc + (3 * 3600); //Baghdad
 
+	/* République islamique d'Iran */
+	time_t heure_a_teheran = temps_utc + (30 * 60) + ((3 * 3600) + (application_du_changement_d_heure_pour_l_iran(temps_utc) * 3600)); //Téhéran
+
 	/* État du Qatar */
 	time_t heure_au_qatar = temps_utc + (3 * 3600); //Qatar
 
