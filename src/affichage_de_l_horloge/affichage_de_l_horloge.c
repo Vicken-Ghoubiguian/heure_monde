@@ -1344,6 +1344,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_baghdad, "Baghdad");
 
 	printf("\n");
+	printf("République islamique d'Iran:\n");
+	calcul_et_affichage_horaire(heure_a_teheran, "Téhéran");
+
+	printf("\n");
 	printf("Royaume hachémite de Jordanie:\n");
 	calcul_et_affichage_horaire(heure_a_amman, "Amman");
 
