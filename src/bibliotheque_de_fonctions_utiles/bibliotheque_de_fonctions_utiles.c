@@ -5,6 +5,8 @@
 /* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
 
+#include <stdio.h>
+
 //Cette fonction renvoie le temps actuel (heure et date actuelles) UTC (Coordinated Universal Time), donc le temps universel coordonné
 time_t retour_du_temps_utc_sous_forme_de_timestamp()
 {
@@ -29,11 +31,18 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 
 }
 
-//Cette fonction détermine si une année passée en paramétre est une année bissextile
-int est_une_annee_bissextile(int annee)
+//Cette fonction détermine si une année passée en paramétre est une année bissextile selon le calendrier persan
+int est_une_annee_bissextile_selon_le_calendrier_persan(int annee)
 {
-	//Sisi l'année est divisible par 4 et non divisible par 100, OU si l'année est divisible par 400
-	if(((annee % 4 == 0) && (annee % 100 != 0)) || (annee % 400 == 0))
+	//
+	int annee_jalali;
+	int hegire = 622;
+
+	//
+	annee_jalali = (annee - 622) + 1;
+
+	//Si le reste de la division de l'année passée en paramétre (convertie en année jalali) par 33 est égal à 1 OU 5 OU 9 OU 13 OU 17 OU 22 OU 26 OU 30 alors...
+	if((annee_jalali % 33 == 1) || (annee_jalali % 33 == 5) || (annee_jalali % 33 == 9) || (annee_jalali % 33 == 13) || (annee_jalali % 33 == 17) || (annee_jalali % 33 == 22) || (annee_jalali % 33 == 26) || (annee_jalali % 33 == 30))
 	{
 
 		//On retourne 1

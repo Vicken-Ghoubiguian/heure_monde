@@ -21,10 +21,10 @@ time_t date_du_changement_d_heure_d_hiver_pour_l_iran(time_t aujourdhui)
         date_tm = gmtime(&aujourdhui);
 
 	//
-	annee_courante = date_tm->tm_year;
+	annee_courante = date_tm->tm_year + 1900;
 
 	//
-	if(est_une_annee_bissextile(annee_courante))
+	if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante))
 	{
 		//
 		jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
@@ -63,10 +63,10 @@ time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui)
         date_tm = gmtime(&aujourdhui);
 
 	//
-        annee_courante = date_tm->tm_year;
+        annee_courante = date_tm->tm_year + 1900;
 
         //
-        if(est_une_annee_bissextile(annee_courante))
+        if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante))
         {
                 //
                 jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
