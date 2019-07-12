@@ -1,6 +1,5 @@
 /* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <time.h>
-#include <stdio.h>
 
 /* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
