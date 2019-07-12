@@ -184,7 +184,7 @@ time_t date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(time_t au
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Paraguay) à l'aide du timestamp passé en paramétre
-time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui)
+time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui, int heure)
 {
         //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
         struct tm *date_tm;
@@ -196,7 +196,7 @@ time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui)
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) mars (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = 1;
         date_tm->tm_mon = 2;
-        date_tm->tm_hour = 2;
+        date_tm->tm_hour = heure;
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
@@ -453,7 +453,7 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour l'Australie) à l'aide du timestamp passé en paramétre
-time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
+time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui, int heure)
 {
         //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;
@@ -465,7 +465,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui)
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) novembre (tm_mon) à 3 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = 1;
         date_tm->tm_mon = 9;
-        date_tm->tm_hour = 2;
+        date_tm->tm_hour = heure;
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 

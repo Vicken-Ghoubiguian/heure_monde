@@ -90,8 +90,8 @@ int main(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_hiver_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_d_octobre(timestamp_courant_avec_annee_voulue);
 
 			/* République du Paraguay */
-			horaire_de_passage_a_l_heure_d_ete_pour_le_paraguay_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue);
-			horaire_de_passage_a_l_heure_d_hiver_pour_le_paraguay_sous_forme_de_timestamp = date_du_quatrieme_dimanche_de_mars(timestamp_courant_avec_annee_voulue);
+			horaire_de_passage_a_l_heure_d_ete_pour_le_paraguay_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 0);
+			horaire_de_passage_a_l_heure_d_hiver_pour_le_paraguay_sous_forme_de_timestamp = date_du_quatrieme_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 0);
 
 			/* Base antarctique de Troll */
 			horaire_de_passage_a_l_heure_d_ete_pour_la_base_antarctique_de_troll_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 1);
@@ -102,7 +102,7 @@ int main(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_hiver_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
 
 			/*  Commonwealth d'Australie */
-			horaire_de_passage_a_l_heure_d_ete_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue);
+			horaire_de_passage_a_l_heure_d_ete_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 2);
 			horaire_de_passage_a_l_heure_d_hiver_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
 
 			/* État indépendant des Samoa */

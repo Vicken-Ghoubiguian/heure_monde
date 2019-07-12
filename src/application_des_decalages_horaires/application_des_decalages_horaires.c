@@ -53,8 +53,8 @@ int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant)
 int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant);
-        time_t hiver = date_du_quatrieme_dimanche_de_mars(temps_courant);
+        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant, 0);
+        time_t hiver = date_du_quatrieme_dimanche_de_mars(temps_courant, 0);
 
         //
         if(hiver <= temps_courant && temps_courant < ete)
@@ -116,7 +116,7 @@ int application_du_changement_d_heure_pour_les_samoa(time_t temps_courant)
 int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_premier_dimanche_d_octobre(temps_courant);
+	time_t ete = date_du_premier_dimanche_d_octobre(temps_courant, 2);
 	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
 
 	//
@@ -137,7 +137,7 @@ int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
 int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant);
+        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant, 2);
         time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 2);
 
         //
