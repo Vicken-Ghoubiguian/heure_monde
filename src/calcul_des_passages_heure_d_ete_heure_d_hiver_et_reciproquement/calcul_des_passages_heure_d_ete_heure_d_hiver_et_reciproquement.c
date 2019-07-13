@@ -27,13 +27,13 @@ time_t date_du_changement_d_heure_d_hiver_pour_l_iran(time_t aujourdhui)
 	if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante))
 	{
 		//
-		jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
+		jour_dans_le_mois_pour_application_du_changement_d_heure = 20;
 	}
 	//Sinon...
 	else
 	{
 		//
-		jour_dans_le_mois_pour_application_du_changement_d_heure = 22;
+		jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
 	}
 
         //la structure date_tm est modifiée pour correspondre au 22 (tm_mday) septembre (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
