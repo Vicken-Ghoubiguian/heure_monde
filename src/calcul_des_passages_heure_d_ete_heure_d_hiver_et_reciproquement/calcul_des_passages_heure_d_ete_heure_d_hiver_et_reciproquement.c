@@ -27,19 +27,19 @@ time_t date_du_changement_d_heure_d_hiver_pour_l_iran(time_t aujourdhui)
 	if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante))
 	{
 		//
-		jour_dans_le_mois_pour_application_du_changement_d_heure = 20;
+		jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
 	}
 	//Sinon...
 	else
 	{
 		//
-		jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
+		jour_dans_le_mois_pour_application_du_changement_d_heure = 22;
 	}
 
-        //la structure date_tm est modifiée pour correspondre au 22 (tm_mday) septembre (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        //la structure date_tm est modifiée pour correspondre au 22 (tm_mday) septembre (tm_mon) à 0 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = jour_dans_le_mois_pour_application_du_changement_d_heure;
         date_tm->tm_mon = 8;
-        date_tm->tm_hour = 2;
+        date_tm->tm_hour = 0;
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
@@ -78,10 +78,10 @@ time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui)
                 jour_dans_le_mois_pour_application_du_changement_d_heure = 22;
         }
 
-        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) mars (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) mars (tm_mon) à 0 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = jour_dans_le_mois_pour_application_du_changement_d_heure;
         date_tm->tm_mon = 2;
-        date_tm->tm_hour = 2;
+        date_tm->tm_hour = 0;
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
