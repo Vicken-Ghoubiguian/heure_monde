@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//
+int est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(int annee);
+
 //Cette fonction détermine si une année passée en paramétre est une année bissextile selon le calendrier persan
 int est_une_annee_bissextile_selon_le_calendrier_persan(int annee);
 

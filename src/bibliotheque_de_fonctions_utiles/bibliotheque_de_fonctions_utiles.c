@@ -40,7 +40,7 @@ est bissextile si et seulement si le reste de la division de cette année par 33
 */
 int est_une_annee_bissextile_selon_le_calendrier_persan(int annee)
 {
-	//
+	//Déclaration des variables locales utilisées dans la fonction est_une_annee_bissextile_selon_le_calendrier_persan
 	int annee_jalali;
 	int hegire = 622;
 
@@ -64,6 +64,34 @@ int est_une_annee_bissextile_selon_le_calendrier_persan(int annee)
 
 	}
 
+}
+
+//
+int est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(int annee)
+{
+	//Déclaration des variables locales utilisées dans la fonction est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan
+        int annee_jalali;
+        int hegire = 622;
+
+        //
+        annee_jalali = (annee - 622) + 1;
+
+	//
+	if((annee_jalali % 33 == 21) || (annee_jalali % 33 == 25) || (annee_jalali % 33 == 29) || (annee_jalali % 33 == 33))
+	{
+		
+		//On retourne 1
+		return 1;
+
+	}
+	//Sinon...
+	else
+	{
+
+		//On retourne 0
+		return 0;
+
+	}
 }
 
 //Cette fonction renvoie le timestamp courant avec plusieurs années de différence (en fonction de l'année passée en paramétre de la fonction)
