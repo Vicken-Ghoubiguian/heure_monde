@@ -31,6 +31,13 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 }
 
 //Cette fonction détermine si une année passée en paramétre est une année bissextile selon le calendrier persan
+/*
+
+Petite explication: dans le calendrier persan (en vigueur en République islamique d'Iran et en République islamique d'Afghanistan), une année jalali (pas grégorien mais jalali) 
+
+est bissextile si et seulement si le reste de la division de cette année par 33 est égal à 1 OU 5 OU 9 OU 13 OU 17 OU 22 OU 33.
+
+*/
 int est_une_annee_bissextile_selon_le_calendrier_persan(int annee)
 {
 	//
