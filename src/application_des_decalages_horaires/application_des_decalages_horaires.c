@@ -7,6 +7,27 @@
 #include "../calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement/calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "application_des_decalages_horaires.h"
 
+//Cette fonction permet d'appliquer le changement d'heure pour Israel
+int application_du_changement_d_heure_pour_israel(time_t temps_courant)
+{
+	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
+        time_t ete = date_du_dernier_vendredi_de_mars(temps_courant);
+        time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 2);
+
+        //
+        if(temps_courant >= ete && temps_courant <= hiver)
+        {
+                //On retourne 1
+                return 1;
+        }
+        //Sinon...
+        else
+        {
+                //On retourne 0
+                return 0;
+        }
+}
+
 //Cette fonction permet d'appliquer le changement d'heure pour le Liban
 int application_du_changement_d_heure_pour_le_liban(time_t temps_courant)
 {
