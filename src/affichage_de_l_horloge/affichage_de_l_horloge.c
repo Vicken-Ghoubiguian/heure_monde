@@ -1627,6 +1627,13 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_kuching, "Kuching");
 
 	printf("\n");
+	printf("République d'Indonésie:\n");
+	calcul_et_affichage_horaire(heure_a_jakarta, "Jakarta");
+	calcul_et_affichage_horaire(heure_a_pontianak, "Pontianak");
+	calcul_et_affichage_horaire(heure_a_jayapura, "Jayapura");
+	calcul_et_affichage_horaire(heure_a_makassar, "Makassar");
+
+	printf("\n");
 	printf("République des Seychelles:\n");
 	calcul_et_affichage_horaire(heure_a_mahe, "Mahe");
 
