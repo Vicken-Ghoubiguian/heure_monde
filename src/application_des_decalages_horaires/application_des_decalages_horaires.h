@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction permet d'appliquer le changement d'heure pour le Liban
+int application_du_changement_d_heure_pour_le_liban(time_t temps_courant);
+
 //Cette fonction permet d'appliquer le changement d'heure pour l'Iran
 int application_du_changement_d_heure_pour_l_iran(time_t temps_courant);
 

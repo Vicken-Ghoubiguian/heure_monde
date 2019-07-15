@@ -603,6 +603,9 @@ void affichage_de_l_horloge()
 	/* Royaume hachémite de Jordanie */
 	time_t heure_a_amman = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_jordanie(temps_utc) * 3600)); //Amman
 
+	/* République libanaise */
+	time_t heure_a_beyrouth = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_le_liban(temps_utc) * 3600)); //Beyrouth
+
 	/* République d'Irak */
 	time_t heure_a_baghdad = temps_utc + (3 * 3600); //Baghdad
 
@@ -1356,6 +1359,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("Royaume hachémite de Jordanie:\n");
 	calcul_et_affichage_horaire(heure_a_amman, "Amman");
+
+	printf("\n");
+	printf("République libanaise:\n");
+	calcul_et_affichage_horaire(heure_a_beyrouth, "Beyrouth");
 
 	printf("\n");
 	printf("Royaume d'Arabie saoudite:\n");
