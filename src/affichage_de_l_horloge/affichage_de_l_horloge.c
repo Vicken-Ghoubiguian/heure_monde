@@ -731,6 +731,12 @@ void affichage_de_l_horloge()
 	time_t heure_a_kuala_lumpur = temps_utc + (8 * 3600); //Kuala Lumpur
 	time_t heure_a_kuching = temps_utc + (8 * 3600); //Kuching
 
+	/* République d'Indonésie */
+	time_t heure_a_jakarta = temps_utc + (7 * 3600); //Jakarta
+	time_t heure_a_pontianak = temps_utc + (7 * 3600); //Pontianak
+	time_t heure_a_jayapura = temps_utc + (9 * 3600); //Jayapura
+	time_t heure_a_makassar = temps_utc + (8 * 3600); //Makassar
+
 	/* République des Seychelles */
 	time_t heure_a_mahe = temps_utc + (4 * 3600); //Mahe
 
