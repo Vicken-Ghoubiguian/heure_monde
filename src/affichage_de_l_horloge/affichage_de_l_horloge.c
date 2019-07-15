@@ -600,6 +600,9 @@ void affichage_de_l_horloge()
 	/* République de Colombie */
 	time_t heure_a_bogota = temps_utc - (5 * 3600); //Bogota
 
+	/* État d'Israël */
+	time_t heure_a_jerusalem = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_israel(temps_utc) * 3600)); //Jerusalem
+
 	/* Royaume hachémite de Jordanie */
 	time_t heure_a_amman = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_jordanie(temps_utc) * 3600)); //Amman
 
@@ -1355,6 +1358,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République islamique d'Iran:\n");
 	calcul_et_affichage_horaire(heure_a_teheran, "Téhéran");
+
+	printf("\n");
+	printf("État d'Israël:\n");
+	calcul_et_affichage_horaire(heure_a_jerusalem, "Jerusalem");
 
 	printf("\n");
 	printf("Royaume hachémite de Jordanie:\n");
