@@ -603,6 +603,10 @@ void affichage_de_l_horloge()
 	/* État d'Israël */
 	time_t heure_a_jerusalem = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_israel(temps_utc) * 3600)); //Jerusalem
 
+	/* État de Palestine */
+	time_t heure_a_gaza = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_palestine(temps_utc) * 3600)); //Gaza
+	time_t heure_a_hebron = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_palestine(temps_utc) * 3600)); //Hebron
+
 	/* Royaume hachémite de Jordanie */
 	time_t heure_a_amman = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_jordanie(temps_utc) * 3600)); //Amman
 
