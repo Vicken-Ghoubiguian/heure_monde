@@ -105,6 +105,10 @@ int main(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_ete_pour_l_etat_d_israel_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars(timestamp_courant_avec_annee_voulue);
 			horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 3);
 
+			/* État de Palestine */
+			horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_timestamp = date_du_dernier_samedi_de_mars(timestamp_courant_avec_annee_voulue);
+			horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_timestamp = date_du_dernier_samedi_d_octobre(timestamp_courant_avec_annee_voulue);
+
 			/* République libanaise */
 			horaire_de_passage_a_l_heure_d_ete_pour_le_liban_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 2);
 			horaire_de_passage_a_l_heure_d_hiver_pour_le_liban_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 3);
@@ -158,6 +162,10 @@ int main(int argc, char* argv[])
 			/* État d'Israël */
 			horaire_de_passage_a_l_heure_d_ete_pour_l_etat_d_israel_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_l_etat_d_israel_sous_forme_de_timestamp);
 			horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_timestamp);
+
+			/* État de Palestine */
+			horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_timestamp);
+			horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_timestamp);
 
 			/* République libanaise */
 			horaire_de_passage_a_l_heure_d_ete_pour_le_liban_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_le_liban_sous_forme_de_timestamp);
@@ -220,6 +228,14 @@ int main(int argc, char* argv[])
 			printf("État d'Israël:\n");
 			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_etat_d_israel_sous_forme_de_chaine_de_caracteres);
                         printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_chaine_de_caracteres);
+
+			//
+			printf("\n");
+
+			//
+			printf("État de Palestine:\n");
+			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_chaine_de_caracteres);
+			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_chaine_de_caracteres);
 
 			//
 			printf("\n");

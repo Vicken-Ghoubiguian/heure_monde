@@ -21,7 +21,7 @@ time_t date_du_dernier_samedi_d_octobre(time_t aujourdhui)
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) novembre (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = 1;
         date_tm->tm_mon = 10;
-        date_tm->tm_hour = 2;
+        date_tm->tm_hour = 1;
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
@@ -63,7 +63,7 @@ time_t date_du_dernier_samedi_de_mars(time_t aujourdhui)
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) avril (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = 1;
         date_tm->tm_mon = 3;
-        date_tm->tm_hour = 2;
+        date_tm->tm_hour = 1;
         date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
