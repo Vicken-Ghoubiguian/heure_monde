@@ -1299,6 +1299,9 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_bogota, "Bogota");
 
 	printf("\n");
+	printf("");
+
+	printf("\n");
 	printf("État plurinational de Bolivie:\n");
 	calcul_et_affichage_horaire(heure_a_la_paz, "La Paz");
 
@@ -1366,6 +1369,11 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("État d'Israël:\n");
 	calcul_et_affichage_horaire(heure_a_jerusalem, "Jerusalem");
+
+	printf("\n");
+	printf("État de Palestine:\n");
+	calcul_et_affichage_horaire(heure_a_gaza, "Gaza");
+	calcul_et_affichage_horaire(heure_a_hebron, "Hebron");
 
 	printf("\n");
 	printf("Royaume hachémite de Jordanie:\n");
