@@ -59,6 +59,8 @@ int main(int argc, char* argv[])
 			time_t horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_timestamp;
 			time_t horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_timestamp;
                         time_t horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_timestamp;
+			time_t horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_timestamp;
+			time_t horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_timestamp;
 
 			//Déclaration des variables de changement d'heure heure d'été <=> heure d'hiver, pour toutes les zones géographiques l'appliquant, sous forme de char*
 			char* horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_chaine_de_caracteres;
@@ -87,6 +89,8 @@ int main(int argc, char* argv[])
 			char* horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_chaine_de_caracteres;
 			char* horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_chaine_de_caracteres;
                         char* horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_chaine_de_caracteres;
+			char* horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_chaine_de_caracteres;
+			char* horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_chaine_de_caracteres;
 
 			//Affectation de la valeur du timestamp du temps courant à l'année voulue
 			timestamp_courant_avec_annee_voulue = fonction_de_precision_de_l_annee_en_cours(timestamp_courant, annee_voulue);
