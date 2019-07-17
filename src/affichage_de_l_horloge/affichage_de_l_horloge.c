@@ -600,6 +600,9 @@ void affichage_de_l_horloge()
 	/* République de Colombie */
 	time_t heure_a_bogota = temps_utc - (5 * 3600); //Bogota
 
+	/* République arabe syrienne */
+	time_t heure_a_damas = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_syrie(temps_utc) * 3600)); //Damas
+
 	/* État d'Israël */
 	time_t heure_a_jerusalem = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_israel(temps_utc) * 3600)); //Jerusalem
 
@@ -1299,9 +1302,6 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_bogota, "Bogota");
 
 	printf("\n");
-	printf("");
-
-	printf("\n");
 	printf("État plurinational de Bolivie:\n");
 	calcul_et_affichage_horaire(heure_a_la_paz, "La Paz");
 
@@ -1365,6 +1365,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République islamique d'Iran:\n");
 	calcul_et_affichage_horaire(heure_a_teheran, "Téhéran");
+
+	printf("\n");
+	printf("République arabe syrienne:\n");
+	calcul_et_affichage_horaire(heure_a_damas, "Damas");
 
 	printf("\n");
 	printf("État d'Israël:\n");
