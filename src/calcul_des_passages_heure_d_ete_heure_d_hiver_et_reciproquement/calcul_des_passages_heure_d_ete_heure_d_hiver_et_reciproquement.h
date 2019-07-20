@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Brésil) à l'aide du timestamp passé en paramétre
+time_t date_du_troisieme_dimanche_de_fevrier(time_t aujourdhui);
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour la Palestine) à l'aide du timestamp passé en paramétre
 time_t date_du_dernier_samedi_d_octobre(time_t aujourdhui);
 

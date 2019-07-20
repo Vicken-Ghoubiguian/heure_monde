@@ -61,6 +61,8 @@ void fonction_pour_l_affichage_des_changements_d_heures(int argc, char* argv[])
                         time_t horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_timestamp;
 			time_t horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_timestamp;
 			time_t horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_timestamp;
+			time_t horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_timestamp;
+			time_t horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp;
 
 			//Déclaration des variables de changement d'heure heure d'été <=> heure d'hiver, pour toutes les zones géographiques l'appliquant, sous forme de char*
 			char* horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_chaine_de_caracteres;
@@ -91,11 +93,17 @@ void fonction_pour_l_affichage_des_changements_d_heures(int argc, char* argv[])
                         char* horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_chaine_de_caracteres;
 			char* horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_chaine_de_caracteres;
 			char* horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_chaine_de_caracteres;
+			char* horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_chaine_de_caracteres;
+                        char* horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_chaine_de_caracteres;
 
 			//Affectation de la valeur du timestamp du temps courant à l'année voulue
 			timestamp_courant_avec_annee_voulue = fonction_de_precision_de_l_annee_en_cours(timestamp_courant, annee_voulue);
 
 			//
+
+			/* République fédérative du Brésil */
+			horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_timestamp = date_du_premier_dimanche_de_novembre(timestamp_courant_avec_annee_voulue);
+			horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp = date_du_troisieme_dimanche_de_fevrier(timestamp_courant_avec_annee_voulue);
 
 			/* République arabe syrienne */
 			horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars(timestamp_courant_avec_annee_voulue);
@@ -155,6 +163,10 @@ void fonction_pour_l_affichage_des_changements_d_heures(int argc, char* argv[])
 
 			//
 
+			/* République fédérative du Brésil */
+			horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_timestamp);
+			horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp);
+
 			/* République arabe syrienne */
 			horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_timestamp);
 			horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_timestamp);
@@ -212,6 +224,14 @@ void fonction_pour_l_affichage_des_changements_d_heures(int argc, char* argv[])
 			horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_timestamp);
 
 			//Affichage de tous les changements d'heure heure d'été <=> heure d'hiver pour l'année annee_voulue
+
+			//
+			printf("\n");
+			
+			//
+			printf("République fédérative du Brésil:\n");
+			printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_chaine_de_caracteres);
+			printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_chaine_de_caracteres);
 
 			//
 			printf("\n");
