@@ -370,6 +370,24 @@ void affichage_de_l_horloge()
 	/* État indépendant des Samoa */
 	time_t heure_a_apia = temps_utc + ((13 * 3600) + (application_du_changement_d_heure_pour_les_samoa(temps_utc) * 3600));
 
+	/* République fédérative du Brésil */
+	time_t heure_a_sao_paulo = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Sao Paulo
+	time_t heure_a_araguaina = temps_utc - (3 * 3600); //Araguaina
+	time_t heure_a_bahia = temps_utc - (3 * 3600); //Bahia
+	time_t heure_a_belem = temps_utc - (3 * 3600); //Belem
+	time_t heure_a_fortaleza = temps_utc - (3 * 3600); //Fortaleza
+	time_t heure_a_maceio = temps_utc - (3 * 3600); //Maceio
+	time_t heure_a_recife = temps_utc - (3 * 3600); //Recife
+	time_t heure_a_santarem = temps_utc - (3 * 3600); //Santarem
+	time_t heure_a_boa_vista = temps_utc - (4 * 3600); //Boa Vista
+	time_t heure_a_campo_grande = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Campo Grande
+	time_t heure_a_cuiaba = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Cuiaba
+	time_t heure_a_manaus = temps_utc - (4 * 3600); //Manaus
+	time_t heure_a_porto_velho = temps_utc - (4 * 3600); //Porto Velho
+	time_t heure_a_eirunepe = temps_utc - (5 * 3600); //Eirunepe
+	time_t heure_a_rio_branco = temps_utc - (5 * 3600); //Rio Branco
+	time_t heure_a_noronha = temps_utc - (2 * 3600); //Noronha
+
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
 	time_t heure_a_punta_arenas = temps_utc - (3 * 3600); //Punta Arenas
