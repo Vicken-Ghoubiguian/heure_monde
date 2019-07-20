@@ -9,7 +9,7 @@
 #include "fonction_pour_l_affichage_des_changements_d_heures.h"
 
 //Cette fonction permet d'afficher les changements d'heures heure d'été <=> heure d'hiver pour tous les pays et zones géographiques qui l'appliquent
-void fonction_pour_l_affichage_des_changements_d_heures(int argc, char* argv[])
+void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_passes_en_parametre, char* liste_des_arguments_passes_en_parametre[])
 {
 
 	//Déclaration et afféctation de la variable timestamp_courant (grâce à la fonction time, qui prend NULL comme paramétre, indiquant qu'on veut le temps courant)
@@ -22,11 +22,11 @@ void fonction_pour_l_affichage_des_changements_d_heures(int argc, char* argv[])
 	int annee_voulue;
 
 	//Si le nombre d'arguments passé en paramétre est égal à 2, alors...
-	if(argc == 2)
+	if(nombre_d_arguments_passes_en_parametre == 2)
 	{
 
 		//Afféctation de la valeur en argument du programme représentant l'année en cours dans la variable annee_voulue, mais d'abord convertie sous forme de int grâce à la fonction atoi
-		annee_voulue = atoi(argv[1]);
+		annee_voulue = atoi(liste_des_arguments_passes_en_parametre[1]);
 
 		//Si l'année voulue est strictement supérieur à 0, et donc si elle est valide par conséquent, alors...
 		if(0 < annee_voulue)
