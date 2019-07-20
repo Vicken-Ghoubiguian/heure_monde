@@ -1258,6 +1258,25 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_de_nauru, "Nauru");
 
 	printf("\n");
+	printf("République fédérative du Brésil:\n");
+	calcul_et_affichage_horaire(heure_a_sao_paulo, "Sao Paulo");
+	calcul_et_affichage_horaire(heure_a_araguaina, "Araguaina");
+	calcul_et_affichage_horaire(heure_a_bahia, "Bahia");
+	calcul_et_affichage_horaire(heure_a_belem, "Belem");
+	calcul_et_affichage_horaire(heure_a_fortaleza, "Fortaleza");
+	calcul_et_affichage_horaire(heure_a_maceio, "Maceio");
+	calcul_et_affichage_horaire(heure_a_recife, "Recife");
+	calcul_et_affichage_horaire(heure_a_santarem, "Santarem");
+	calcul_et_affichage_horaire(heure_a_boa_vista, "Boa Vista");
+	calcul_et_affichage_horaire(heure_a_campo_grande, "Campo Grande");
+	calcul_et_affichage_horaire(heure_a_cuiaba, "Cuiaba");
+	calcul_et_affichage_horaire(heure_a_manaus, "Manaus");
+	calcul_et_affichage_horaire(heure_a_porto_velho, "Porto Velho");
+	calcul_et_affichage_horaire(heure_a_eirunepe, "Eirunepe");
+	calcul_et_affichage_horaire(heure_a_rio_branco, "Rio Branco");
+	calcul_et_affichage_horaire(heure_a_noronha, "Noronha");
+
+	printf("\n");
 	printf("République du Chili:\n");
         calcul_et_affichage_horaire(heure_santiago_chili, "Santiago du Chili");
 	calcul_et_affichage_horaire(heure_a_punta_arenas, "Punta Arenas");
