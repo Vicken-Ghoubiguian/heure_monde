@@ -106,6 +106,7 @@ void affichage_de_l_horloge()
 
 	/* République de Finlande */
 	time_t heure_a_helsinki = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Helsinki
+	time_t heure_a_mariehamn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Mariehamn
 
 	/* République d'Islande */
 	time_t heure_a_reykjavik = temps_utc; //Reykjavik
@@ -180,6 +181,7 @@ void affichage_de_l_horloge()
 
 	/* République de Moldavie */
 	time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Chisinau
+	time_t heure_a_tiraspol = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tiraspol
 
 	/* Commonwealth des Bahamas */
 	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
@@ -231,6 +233,7 @@ void affichage_de_l_horloge()
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
         time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
 	time_t heure_a_honolulu = temps_utc - (10 * 3600); //Honolulu
+	time_t heure_a_johnston = temps_utc - (10 * 3600); //Johnston
 	time_t heure_a_juneau = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Juneau
 	time_t heure_a_yakutat = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yakutat
 	time_t heure_a_menominee = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Menominee
@@ -345,6 +348,15 @@ void affichage_de_l_horloge()
 
 	/* République d'Irlande */
 	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
+
+	/* île de Man */
+	time_t heure_a_l_ile_de_man = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Île de Man
+
+	/* Jersey */
+	time_t heure_a_jersey = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Jersey
+
+	/* Guernsey */
+	time_t heure_a_gernsey = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Guernsey	
 
 	/* Niue */
 	time_t heure_de_niue = temps_utc - (11 * 3600); //Niue
@@ -777,7 +789,10 @@ void affichage_de_l_horloge()
 
 	/* États fédérés de Micronésie */
 	time_t heure_a_pohnpei = temps_utc + (11 * 3600); //Pohnpei
+	time_t heure_a_ponape = temps_utc + (11 * 3600); //Ponape
 	time_t heure_a_chuuk = temps_utc + (10 * 3600); //Chuuk
+	time_t heure_a_truk = temps_utc + (10 * 3600); //Truk
+	time_t heure_a_yap = temps_utc + (10 * 3600); //Yap
 	time_t heure_a_kosrae = temps_utc + (11 * 3600); //kosrae
 
 	/* République des Palaos */
