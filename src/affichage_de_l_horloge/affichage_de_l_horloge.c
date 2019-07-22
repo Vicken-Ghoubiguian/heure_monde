@@ -920,6 +920,7 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République de Finlande:\n");
 	calcul_et_affichage_horaire(heure_a_helsinki, "Helsinki");
+	calcul_et_affichage_horaire(heure_a_mariehamn, "Mariehamn");
 
 	printf("\n");
 	printf("République d'Islande:\n");
@@ -982,6 +983,7 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République de Moldavie:\n");
 	calcul_et_affichage_horaire(heure_a_chisinau, "Chisinau");
+	calcul_et_affichage_horaire(heure_a_tiraspol, "Tiraspol");
 
 	printf("\n");
 	printf("Confédération suisse:\n");
@@ -1093,6 +1095,7 @@ void affichage_de_l_horloge()
         calcul_et_affichage_horaire(heure_de_nyc, "New York City");
         calcul_et_affichage_horaire(heure_de_phoenix, "Phoenix");
 	calcul_et_affichage_horaire(heure_a_honolulu, "Honolulu");
+	calcul_et_affichage_horaire(heure_a_johnston, "Johnston");
 	calcul_et_affichage_horaire(heure_a_juneau, "Juneau");
 	calcul_et_affichage_horaire(heure_a_yakutat, "Yakutat");
 	calcul_et_affichage_horaire(heure_a_menominee, "Menominee");
@@ -1199,6 +1202,18 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République d'Irlande:\n");
 	calcul_et_affichage_horaire(heure_a_dublin, "Dublin");
+
+	printf("\n");
+	printf("île de Man:\n");
+	calcul_et_affichage_horaire(heure_a_l_ile_de_man, "Île de Man");
+
+	printf("\n");
+	printf("Jersey:\n");
+	calcul_et_affichage_horaire(heure_a_jersey, "Jersey");
+
+	printf("\n");
+	printf("Guernsey:\n");
+	calcul_et_affichage_horaire(heure_a_gernsey, "Guernsey");
 
 	printf("\n");
 	printf("Commonwealth d'Australie:\n");
@@ -1727,7 +1742,10 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("États fédérés de Micronésie:\n");
 	calcul_et_affichage_horaire(heure_a_pohnpei, "Pohnpei");
+	calcul_et_affichage_horaire(heure_a_ponape, "Ponape");
 	calcul_et_affichage_horaire(heure_a_chuuk, "Chuuk");
+	calcul_et_affichage_horaire(heure_a_truk, "Truk");
+	calcul_et_affichage_horaire(heure_a_yap, "Yap");
 	calcul_et_affichage_horaire(heure_a_kosrae, "Kosrae");
 
 	printf("\n");
