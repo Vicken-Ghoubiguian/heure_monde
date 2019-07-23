@@ -379,6 +379,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_l_ile_christmas = temps_utc + (7 * 3600); //Christmas
 	time_t heure_a_l_ile_norfolk = temps_utc + (11 * 3600); //ile Norfolk
 
+	/* République des Fidji */
+	time_t heure_aux_fidji = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_les_fidji(temps_utc) * 3600)); //Fidji
+
 	/* État indépendant des Samoa */
 	time_t heure_a_apia = temps_utc + ((13 * 3600) + (application_du_changement_d_heure_pour_les_samoa(temps_utc) * 3600));
 
