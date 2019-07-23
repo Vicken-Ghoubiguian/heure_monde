@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction permet d'appliquer le changement d'heure pour les Fidji 
+int application_du_changement_d_heure_pour_les_fidji(time_t temps_courant);
+
 //Cette fonction permet d'appliquer le changement d'heure pour le Brésil  
 int application_du_changement_d_heure_pour_le_bresil(time_t temps_courant);
 
