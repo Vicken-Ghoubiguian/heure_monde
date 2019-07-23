@@ -1238,6 +1238,10 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_l_ile_norfolk, "îles Norfolk");
 
 	printf("\n");
+	printf("République des Fidji:\n");
+	calcul_et_affichage_horaire(heure_aux_fidji, "Fidji");
+
+	printf("\n");
 	printf("État indépendant des Samoa:\n");
 	calcul_et_affichage_horaire(heure_a_apia, "Apia");
 

@@ -11,8 +11,8 @@
 int application_du_changement_d_heure_pour_les_fidji(time_t temps_courant)
 {
         //On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_changement_d_heure_d_hiver_pour_les_fidji(temps_courant);
-        time_t hiver = date_du_premier_dimanche_de_novembre(temps_courant, 2);
+        time_t ete = date_du_premier_dimanche_de_novembre(temps_courant, 2);
+	time_t hiver = date_du_changement_d_heure_d_hiver_pour_les_fidji(temps_courant);
 
         //
         if(hiver <= temps_courant && temps_courant < ete)
