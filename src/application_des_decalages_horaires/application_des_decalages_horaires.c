@@ -11,7 +11,7 @@
 int application_du_changement_d_heure_pour_le_bresil(time_t temps_courant)
 {
         //On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_de_novembre(temps_courant);
+        time_t ete = date_du_premier_dimanche_de_novembre(temps_courant, 3);
         time_t hiver = date_du_troisieme_dimanche_de_fevrier(temps_courant);
 
         //
@@ -306,7 +306,7 @@ int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_coura
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
 	time_t ete = date_du_deuxieme_dimanche_de_mars(temps_courant);
-	time_t hiver = date_du_premier_dimanche_de_novembre(temps_courant);
+	time_t hiver = date_du_premier_dimanche_de_novembre(temps_courant, 2);
 
 	//
 	if(temps_courant >= ete && temps_courant <= hiver)

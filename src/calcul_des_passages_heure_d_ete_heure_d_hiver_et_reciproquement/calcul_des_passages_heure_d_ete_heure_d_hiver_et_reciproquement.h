@@ -49,7 +49,7 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure);
 time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui, int heure);
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver pour les USA à l'aide du timestamp
-time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui);
+time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui, int heure);
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les USA) à l'aide du timestamp passé en paramétre
 time_t date_du_deuxieme_dimanche_de_mars(time_t aujourdhui);

@@ -784,7 +784,7 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui, int heure)
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver pour les USA à l'aide du timestamp
-time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui)
+time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui, int heure)
 {
         //Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;
@@ -796,7 +796,7 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui)
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) novembre (tm_mon) à 2 heures (USA) ou 0 (Bresil) (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
         date_tm->tm_mday = 1;
         date_tm->tm_mon = 10;
-	date_tm->tm_hour = 2;
+	date_tm->tm_hour = heure;
 	date_tm->tm_min = 0;
         date_tm->tm_sec = 0;
 
