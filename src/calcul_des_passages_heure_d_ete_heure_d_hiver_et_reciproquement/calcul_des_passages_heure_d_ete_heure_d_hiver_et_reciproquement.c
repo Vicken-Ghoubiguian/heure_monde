@@ -27,7 +27,7 @@ time_t date_du_changement_d_heure_d_hiver_pour_les_fidji(time_t aujourdhui)
 	//
         date_tm_du_20_janvier->tm_mday = 20;
         date_tm_du_20_janvier->tm_mon = 0;
-        date_tm_du_20_janvier->tm_hour = 3;
+        date_tm_du_20_janvier->tm_hour = 2;
         date_tm_du_20_janvier->tm_min = 0;
         date_tm_du_20_janvier->tm_sec = 0;
 
@@ -40,7 +40,7 @@ time_t date_du_changement_d_heure_d_hiver_pour_les_fidji(time_t aujourdhui)
 	//
 	date_tm_du_10_janvier->tm_mday = 10;
         date_tm_du_10_janvier->tm_mon = 0;
-        date_tm_du_10_janvier->tm_hour = 3;
+        date_tm_du_10_janvier->tm_hour = 2;
         date_tm_du_10_janvier->tm_min = 0;
         date_tm_du_10_janvier->tm_sec = 0;
 
