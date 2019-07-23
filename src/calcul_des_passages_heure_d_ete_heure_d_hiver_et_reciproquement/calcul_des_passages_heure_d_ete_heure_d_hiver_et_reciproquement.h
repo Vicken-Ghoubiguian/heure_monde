@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les Fidji) à l'aide du timestamp passé en paramétre
+time_t date_du_changement_d_heure_d_hiver_pour_les_fidji(time_t aujourdhui);
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Brésil) à l'aide du timestamp passé en paramétre
 time_t date_du_troisieme_dimanche_de_fevrier(time_t aujourdhui);
 

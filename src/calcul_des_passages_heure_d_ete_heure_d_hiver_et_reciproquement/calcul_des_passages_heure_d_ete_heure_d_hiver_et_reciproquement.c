@@ -8,10 +8,73 @@
 #include "calcul_des_passages_heure_d_ete_heure_d_hiver_et_reciproquement.h"
 #include "../bibliotheque_de_fonctions_utiles/bibliotheque_de_fonctions_utiles.h"
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les Fidji) à l'aide du timestamp passé en paramétre
+time_t date_du_changement_d_heure_d_hiver_pour_les_fidji(time_t aujourdhui)
+{
+
+	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
+	struct tm *date_tm;
+        struct tm *date_tm_du_20_janvier;
+	struct tm *date_tm_du_10_janvier;
+	time_t date_timestamp;
+        time_t date_timestamp_incrementeur;
+	time_t date_timestamp_du_20_janvier;
+	time_t date_timestamp_du_10_janvier;
+	
+	//la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm_du_20_janvier = gmtime(&aujourdhui);
+
+	//
+        date_tm_du_20_janvier->tm_mday = 20;
+        date_tm_du_20_janvier->tm_mon = 0;
+        date_tm_du_20_janvier->tm_hour = 3;
+        date_tm_du_20_janvier->tm_min = 0;
+        date_tm_du_20_janvier->tm_sec = 0;
+
+	//
+        date_timestamp_du_20_janvier = timegm(date_tm_du_20_janvier);
+
+	//la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm_du_10_janvier = gmtime(&aujourdhui);
+
+	//
+	date_tm_du_10_janvier->tm_mday = 10;
+        date_tm_du_10_janvier->tm_mon = 0;
+        date_tm_du_10_janvier->tm_hour = 3;
+        date_tm_du_10_janvier->tm_min = 0;
+        date_tm_du_10_janvier->tm_sec = 0;
+
+	//
+	date_timestamp_du_10_janvier = timegm(date_tm_du_10_janvier);
+
+	//
+	date_timestamp_incrementeur = date_timestamp_du_10_janvier;
+
+	//
+	while(date_timestamp_incrementeur < date_timestamp_du_20_janvier)
+	{
+		//
+		date_tm = gmtime(&date_timestamp_incrementeur);
+
+		//
+		if(date_tm->tm_wday == 0)
+		{
+			//
+			date_timestamp = date_timestamp_incrementeur;
+		}
+
+		//
+		date_timestamp_incrementeur = date_timestamp_incrementeur + (24 * 3600);
+	}
+
+	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        return date_timestamp;
+}
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Brésil) à l'aide du timestamp passé en paramétre
 time_t date_du_troisieme_dimanche_de_fevrier(time_t aujourdhui)
 {
-	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
+	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;
         time_t date_timestamp;
 
