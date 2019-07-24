@@ -112,31 +112,24 @@ time_t date_du_troisieme_dimanche_de_fevrier(time_t aujourdhui)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
+        //Ici, le programme procéde à une boucle de type do...while
+	do
+	{
+		
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                date_timestamp = date_timestamp + 86400;
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au troisiéme dimanche (tm_wday) du mois de Fevrier (tm_mon) et que i = 3 (deux dimanche du mois de mars est passé), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 1 && i == 3)
-                {
-                        break;
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                date_tm = gmtime(&date_timestamp);
+
+               	//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Fevrier (tm_mon), la valeur contenue dans $
+                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 1)
+              	{
+                	i = i + 1;
                 }
-		//Dans le cas contraire
-		else
-		{
 
-			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
-
-               	 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
-
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Fevrier (tm_mon), la valeur contenue dans la variable i est incrementé de 1
-			if(date_tm->tm_wday == 0 && date_tm->tm_mon == 1)
-			{
-				i = i + 1;
-			}
-		}
-        }
+	//Tant que i est strictement inférieur à 3 (on en est pas encore au 3éme dimanche de février), on revient dans la boucle
+	}while(i < 3);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -484,31 +477,24 @@ time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui, int heure)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
+        //Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au quatrieme dimanche (tm_wday) du mois de Mars (tm_mon) et que i = 3 (deux dimanche du mois de mars est passé), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2 && i == 4)
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                date_timestamp = date_timestamp + 86400;
+
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                date_tm = gmtime(&date_timestamp);
+
+                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Mars (tm_mon), la valeur contenue dans la $
+                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2)
                 {
-                        break;
+                	i = i + 1;
                 }
-		//Dans le cas contraire
-		else
-		{
 
-			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
-
-               	 	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
-
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Mars (tm_mon), la valeur contenue dans la variable i est incrementé de 1
-			if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2)
-			{
-				i = i + 1;
-			}
-		}
-        }
+	//Tant que i est strictement inférieur à 4 (on en est pas encore au 4éme dimanche de dimanche), on revient dans la boucle
+	}while(i < 4);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -895,31 +881,24 @@ time_t date_du_deuxieme_dimanche_de_mars(time_t aujourdhui)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
+        //Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxiéme dimanche (tm_wday) du mois de Mars (tm_mon) et que i = 1 (un dimanche du mois de mars est passé), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2 && i == 2)
-                {
-                        break;
-                }
-		//Dans le cas contraire
-		else
-		{
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                date_timestamp = date_timestamp + 86400;
 
-			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+               	date_tm = gmtime(&date_timestamp);
 
-                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
-
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Mars (tm_mon), la valeur contenue dans la variable i est incrementé de 1
-			if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2)
-			{
-				i = i + 1;
-			}
+                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Mars (tm_mon), la valeur contenue dans la $
+                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2)
+              	{
+                	i = i + 1;
 		}
-        }
+
+	//Tant que i est strictement inférieur à 2 (on en est pas encore au 2éme dimanche de mars), on revient dans la boucle
+	}while(i < 2);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -966,30 +945,24 @@ time_t date_du_deuxieme_dimanche_de_mai(time_t aujourdhui)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
+        //Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxieme dimanche (tm_wday) du mois de Mai (tm_mon) et que i = 1 (un dimanche du mois de Mai est passé), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 4 && i == 2)
-                {
-                        break;
-                }
-		//Dans le cas contraire
-		else
-		{
-			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+        	date_timestamp = date_timestamp + 86400;
 
-                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
+         	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+              	date_tm = gmtime(&date_timestamp);
 
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxieme dimanche (tm_wday) du mois de Mai (tm_mon), la valeur contenue dans la variable i est incrementé de 1
-			if(date_tm->tm_wday == 0 && date_tm->tm_mon == 4)
-			{
-				i = i + 1;
-			}
-		}
-        }
+             	//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxieme dimanche (tm_wday) du mois de Mai (tm_mon), la valeur contenue dans la$
+              	if(date_tm->tm_wday == 0 && date_tm->tm_mon == 4)
+              	{
+              		i = i + 1;
+              	}
+
+	//Tant que i est strictement inférieur à 2 (on en est pas encore au 2éme dimanche de mai), on revient dans la boucle
+	}while(i < 2);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -1036,30 +1009,24 @@ time_t date_du_deuxieme_dimanche_d_aout(time_t aujourdhui)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
+        //Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxieme dimanche (tm_wday) du mois d'Aout (tm_mon) et que i = 1 (un dimanche du mois de mars est passé), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 7 && i == 2)
-                {
-                        break;
-                }
-		//Dans le cas contraire
-		else
-		{
-			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
+		//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+              	date_timestamp = date_timestamp + 86400;
 
-                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
+           	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+             	date_tm = gmtime(&date_timestamp);
 
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxieme dimanche (tm_wday) du mois de Aout (tm_mon), la valeur contenue dans la variable i est incrementé de 1
-			if(date_tm->tm_wday == 0 && date_tm->tm_mon == 7)
-			{
-				i = i + 1;
-			}
-		}
-        }
+           	//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au deuxieme dimanche (tm_wday) du mois de Aout (tm_mon), la valeur contenue dans l$
+              	if(date_tm->tm_wday == 0 && date_tm->tm_mon == 7)
+               	{
+             		i = i + 1;
+             	}
+
+	//Tant que i est strictement inférieur à 2 (on en est pas encore au 2éme dimanche d'aout), on revient dans la boucle
+	}while(i < 2);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
