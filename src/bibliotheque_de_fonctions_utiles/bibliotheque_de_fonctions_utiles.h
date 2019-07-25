@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction renvoie l'année en cours à partir du temps local de la machine d'execution
+int retour_de_l_annee_en_cours();
+
 //
 int est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(int annee);
 

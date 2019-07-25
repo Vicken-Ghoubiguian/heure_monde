@@ -6,6 +6,30 @@
 
 #include <stdio.h>
 
+//Cette fonction renvoie l'année en cours à partir du temps local de la machine d'execution
+int retour_de_l_annee_en_cours()
+{
+
+	//Déclaration de la variable temps_local_sous_forme_de_struct_tm: Cette variable contiendra le temps local (heure et date) sous forme de struct tm
+        struct tm *temps_local_sous_forme_de_struct_tm;
+
+	//
+	int annee_en_cours;
+
+        //Déclaration et initialisation de la variable temps_actuel_sous_forme_de_timestamp: Cette variable contient le temps actuel (heure et date) sous forme de timestamp
+        time_t temps_local_sous_forme_de_timestamp = time(NULL);
+
+	//
+        temps_local_sous_forme_de_struct_tm = localtime(&temps_local_sous_forme_de_timestamp);
+
+	//
+	annee_en_cours = (temps_local_sous_forme_de_struct_tm->tm_year + 1900);
+
+	//
+	return annee_en_cours;
+
+}
+
 //Cette fonction renvoie le temps actuel (heure et date actuelles) UTC (Coordinated Universal Time), donc le temps universel coordonné
 time_t retour_du_temps_utc_sous_forme_de_timestamp()
 {
