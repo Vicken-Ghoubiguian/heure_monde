@@ -245,7 +245,7 @@ time_t date_du_dernier_vendredi_de_mars(time_t aujourdhui)
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-	//
+	//Tant que date_tm->tm_wday est différent de 5 (vendredi), on revient dans la boucle
 	}while(date_tm->tm_wday != 5);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
@@ -368,7 +368,7 @@ time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui)
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-	//
+	//Tant que date_tm->tm_wday est différent de 5 (vendredi), on revient dans la boucle
 	}while(date_tm->tm_wday != 5);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
@@ -414,7 +414,7 @@ time_t date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(time_t au
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-	//
+	//Tant que date_tm->tm_wday est différent de 5 (vendredi), on revient dans la boucle
 	}while(date_tm->tm_wday != 5);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
@@ -518,7 +518,7 @@ time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure)
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-	//
+	//Tant que date_tm->tm_wday est différent de 0 (dimanche), on revient dans la boucle
 	}while(date_tm->tm_wday != 0);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
@@ -557,7 +557,7 @@ time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-	//
+	//Tant que date_tm->tm_wday est différent de 0 (dimanche), on revient dans la boucle
 	}while(date_tm->tm_wday != 0);
 
 	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
@@ -596,7 +596,7 @@ time_t date_du_dernier_dimanche_d_octobre(time_t aujourdhui, int heure)
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-	//
+	//Tant que date_tm->tm_wday est différent de 0 (dimanche), on revient dans la boucle
 	}while(date_tm->tm_wday != 0);
 
 	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
