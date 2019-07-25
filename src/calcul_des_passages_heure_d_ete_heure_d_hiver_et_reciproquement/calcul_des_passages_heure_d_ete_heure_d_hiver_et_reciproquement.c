@@ -235,21 +235,18 @@ time_t date_du_dernier_vendredi_de_mars(time_t aujourdhui)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-	//Ici, le programme procéde à une boucle infinie
-        while(1){
+	//Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 date_timestamp = date_timestamp - 86400;
 
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier vendredi (tm_wday) du mois de Mars (tm_mon), on sort definitivement de la boucle
-                if(date_tm->tm_wday == 5 && date_tm->tm_mon == 2)
-                {
-                        break;
-                }
-        }
+	//
+	}while(date_tm->tm_wday != 5);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -361,21 +358,18 @@ time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-	//Ici, le programme procéde à une boucle infinie
-        while(1){
+	//Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 date_timestamp = date_timestamp - 86400;
 
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier vendredi (tm_wday) du mois de novembre (tm_mon), on sort definitivement de la boucle
-                if(date_tm->tm_wday == 5 && date_tm->tm_mon == 9)
-                {
-                        break;
-                }
-        }
+	//
+	}while(date_tm->tm_wday != 5);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -410,21 +404,18 @@ time_t date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(time_t au
 		return date_timestamp;
 	}
 
-	//Ici, le programme procéde à une boucle infinie
-        while(1){
+	//Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
-                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 date_timestamp = date_timestamp - 86400;
 
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier vendredi (tm_wday) du mois de Mars (tm_mon), on sort definitivement de la boucle
-                if(date_tm->tm_wday == 5 && date_tm->tm_mon == 2)
-                {
-                        break;
-                }
-        }
+	//
+	}while(date_tm->tm_wday != 5);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -517,21 +508,18 @@ time_t date_du_dernier_dimanche_de_septembre(time_t aujourdhui, int heure)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
+        //Ici, le programme procéde à une boucle de type do...while
+       	do
+	{
 
-                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 date_timestamp = date_timestamp - 86400;
 
                 //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois de Septembre (tm_mon), on sort definitivement de la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 8)
-                {
-                        break;
-                }
-        }
+	//
+	}while(date_tm->tm_wday != 0);
 
         //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
         return date_timestamp;
@@ -559,21 +547,18 @@ time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)
 	date_timestamp = timegm(date_tm);
 	date_tm = gmtime(&date_timestamp);
 
-	//Ici, le programme procéde à une boucle infinie
-	while(1){
+	//Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
 		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-		date_timestamp = date_timestamp - 86400;
+                date_timestamp = date_timestamp - 86400;
 
-		//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-		date_tm = gmtime(&date_timestamp);
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                date_tm = gmtime(&date_timestamp);
 
-		//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois de Mars (tm_mon), on quitte définitivement la boucle
-		if(date_tm->tm_wday == 0 && date_tm->tm_mon == 2)
-		{
-			break;
-		}
-	}
+	//
+	}while(date_tm->tm_wday != 0);
 
 	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 	return date_timestamp;
@@ -601,21 +586,18 @@ time_t date_du_dernier_dimanche_d_octobre(time_t aujourdhui, int heure)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-	//Ici, le programme procéde à une boucle infinie
-        while(1){
+	//Ici, le programme procéde à une boucle de type do...while
+	do
+	{
 
 		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
                 date_timestamp = date_timestamp - 86400;
 
-		//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                 date_tm = gmtime(&date_timestamp);
 
-		//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois d'Octobre (tm_mon), on quitte définitivement la boucle
-		if(date_tm->tm_wday == 0 && date_tm->tm_mon == 9)
-		{
-			break;
-		}
-        }
+	//
+	}while(date_tm->tm_wday != 0);
 
 	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 	return date_timestamp;
