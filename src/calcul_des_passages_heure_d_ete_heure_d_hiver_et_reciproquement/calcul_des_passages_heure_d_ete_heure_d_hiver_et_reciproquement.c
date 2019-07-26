@@ -628,10 +628,10 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors
+        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors...
         if(date_tm->tm_wday == 0)
         {
-                //
+                //On retourne la valeur de la variable date_timestamp
 		return date_timestamp;
         }
         //Dans le cas contraire, sinon...
@@ -647,10 +647,10 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
                         //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                         date_tm = gmtime(&date_timestamp);
 
-		//
+		//Tant que date_tm->tm_wday est différent de 0 (dimanche), on revient dans la boucle
 		}while(date_tm->tm_wday != 0);
 
-		//
+		//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 		return date_timestamp;
         }
 }
@@ -683,13 +683,13 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui, int heure)
         //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors, on retourne la valeur contenue dans la variable date_timestamp
         if(date_tm->tm_wday == 0)
         {
-                //
+                //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 		return date_timestamp;
         }
         //Sinon...
         else
         {
-                //
+                //On procéde à une boucle do...while
 		do
 		{
 
@@ -699,10 +699,10 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui, int heure)
                         //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                         date_tm = gmtime(&date_timestamp);
 
-		//
+		//Tant que date_tm->tm_wday est différent de 0 (dimanche), on revient dans la boucle
 		}while(date_tm->tm_wday != 0);
 
-		//
+		//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 		return date_timestamp;
         }
 }
@@ -735,13 +735,13 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui, int heure)
         //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors on retourne la valeur contenue dans la variable date_timestamp
         if(date_tm->tm_wday == 0)
         {
-                //
+                //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 		return date_timestamp;
         }
         //Dans le cas contraire, la variable i est initialisée à la valeur 0
         else
         {
-                //i = 0;
+                //On procéde à une boucle do...while
 		do
 		{
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
@@ -750,10 +750,10 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui, int heure)
                         //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
                         date_tm = gmtime(&date_timestamp);
 
-		//
+		//Tant que date_tm->tm_wday est différent de 0 (dimanche), on revient dans la boucle
 		}while(date_tm->tm_wday != 0);
 
-		//
+		//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 		return date_timestamp;
         }
 }
