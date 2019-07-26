@@ -403,22 +403,25 @@ time_t date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(time_t au
 		//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
 		return date_timestamp;
 	}
-
-	//Ici, le programme procéde à une boucle de type do...while
-	do
+	//Sinon...
+	else
 	{
+		//Ici, le programme procéde à une boucle de type do...while
+		do
+		{
 
-		//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                date_timestamp = date_timestamp - 86400;
+			//On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                	date_timestamp = date_timestamp - 86400;
 
-                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                date_tm = gmtime(&date_timestamp);
+                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                	date_tm = gmtime(&date_timestamp);
 
-	//Tant que date_tm->tm_wday est différent de 5 (vendredi), on revient dans la boucle
-	}while(date_tm->tm_wday != 5);
+		//Tant que date_tm->tm_wday est différent de 5 (vendredi), on revient dans la boucle
+		}while(date_tm->tm_wday != 5);
 
-        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
-        return date_timestamp;
+        	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        	return date_timestamp;
+	}
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Paraguay) à l'aide du timestamp passé en paramétre
@@ -625,53 +628,31 @@ time_t date_du_premier_dimanche_d_avril(time_t aujourdhui, int heure)
         date_timestamp = timegm(date_tm);
         date_tm = gmtime(&date_timestamp);
 
-        //Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois d'Avril
-        int i;
-
-        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors, la variable i est initialisée à la valeur 1
+        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors
         if(date_tm->tm_wday == 0)
         {
-                i = 1;
+                //
+		return date_timestamp;
         }
-        //Dans le cas contraire, la variable i est initialisée à la valeur 0
+        //Dans le cas contraire, sinon...
         else
         {
-                i = 0;
-        }
-
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
-        //Puis reconvertie en struct tm grace à la fonction localtime
-        date_timestamp = timegm(date_tm);
-        date_tm = gmtime(&date_timestamp);
-
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
-
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois d'Octobre (tm_mon), et que i est égal à 1 (on est au premier dimanche du mois d'Avril), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 3 && i == 1)
-                {
-                        break;
-
-		}
-		else
+                //On procéde à une boucle do...while
+		do
 		{
+
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
+                        date_timestamp = date_timestamp + 86400;
 
-                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
+                        //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                        date_tm = gmtime(&date_timestamp);
 
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au premier dimanche (tm_wday) du mois d'Avril (tm_mon), la valeur contenue dans la variable i est augmentée de 1
-                        if(date_tm->tm_wday == 0 && date_tm->tm_mon == 3)
-                        {
-                                i = i + 1;
-                        }
+		//
+		}while(date_tm->tm_wday != 0);
 
-                }
+		//
+		return date_timestamp;
         }
-
-        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
-        return date_timestamp;
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour l'Australie) à l'aide du timestamp passé en paramétre
@@ -697,52 +678,33 @@ time_t date_du_premier_dimanche_d_octobre(time_t aujourdhui, int heure)
         date_tm = gmtime(&date_timestamp);
 
         //Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois d'Octobre 
-        int i;
+        //int i;
 
-        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors, la variable i est initialisée à la valeur 1
+        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors, on retourne la valeur contenue dans la variable date_timestamp
         if(date_tm->tm_wday == 0)
         {
-                i = 1;
+                //
+		return date_timestamp;
         }
-        //Dans le cas contraire, la variable i est initialisée à la valeur 0
+        //Sinon...
         else
         {
-                i = 0;
-        }
-
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
-        //Puis reconvertie en struct tm grace à la fonction localtime
-        date_timestamp = timegm(date_tm);
-        date_tm = gmtime(&date_timestamp);
-
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
-
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois d'Octobre (tm_mon), et que i est égal à 1 (on est au premier dimanche du mois d'Octobre ), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 9 && i == 1)
-                {
-                        break;
-
-		}
-		else
+                //
+		do
 		{
+
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
+                        date_timestamp = date_timestamp + 86400;
 
-                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
+                        //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                        date_tm = gmtime(&date_timestamp);
 
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au premier dimanche (tm_wday) du mois d'Octobre (tm_mon), la valeur contenue dans la variable i est augmentée de 1
-                        if(date_tm->tm_wday == 0 && date_tm->tm_mon == 9)
-                        {
-                                i = i + 1;
-                        }
+		//
+		}while(date_tm->tm_wday != 0);
 
-                }
+		//
+		return date_timestamp;
         }
-
-        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
-        return date_timestamp;
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver pour les USA à l'aide du timestamp
@@ -770,50 +732,30 @@ time_t date_du_premier_dimanche_de_novembre(time_t aujourdhui, int heure)
         //Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois de novembre 
         int i;
 
-        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors, la variable i est initialisée à la valeur 1
+        //Si le jour de la semaine (renseignée par le champ tm_wday) est dimanche (valeur = 0), alors on retourne la valeur contenue dans la variable date_timestamp
         if(date_tm->tm_wday == 0)
         {
-                i = 1;
+                //
+		return date_timestamp;
         }
         //Dans le cas contraire, la variable i est initialisée à la valeur 0
         else
         {
-                i = 0;
-        }
-
-        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
-        //Puis reconvertie en struct tm grace à la fonction localtime
-        date_timestamp = timegm(date_tm);
-        date_tm = gmtime(&date_timestamp);
-
-        //Ici, le programme procéde à une boucle infinie
-        while(1){
-
-                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au dernier dimanche (tm_wday) du mois d'Octobre (tm_mon), et que i est égal à 1 (on est au premier dimanche du mois de Novembre), on quitte définitivement la boucle
-                if(date_tm->tm_wday == 0 && date_tm->tm_mon == 10 && i == 1)
-                {
-                        break;
-
-		}
-		else
+                //i = 0;
+		do
 		{
 			//On affecte à la variable date_timestamp la somme entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
-                	date_timestamp = date_timestamp + 86400;
+                        date_timestamp = date_timestamp + 86400;
 
-                	//La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
-                	date_tm = gmtime(&date_timestamp);
+                        //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                        date_tm = gmtime(&date_timestamp);
 
-			//Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond au premier dimanche (tm_wday) du mois de Novembre (tm_mon), la valeur contenue dans la variable i est augmentée de 1
-                        if(date_tm->tm_wday == 0 && date_tm->tm_mon == 10)
-                        {
-                                i = i + 1;
-                        }
+		//
+		}while(date_tm->tm_wday != 0);
 
-                }
+		//
+		return date_timestamp;
         }
-
-        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
-        return date_timestamp;
 }
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les USA) à l'aide du timestamp passé en paramétre
