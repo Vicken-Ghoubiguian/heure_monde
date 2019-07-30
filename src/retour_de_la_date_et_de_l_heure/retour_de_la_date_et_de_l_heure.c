@@ -171,139 +171,139 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 return calcul_et_renvoie_horaire(heure_a_reykjavik, "Atlantic/Reykjavik");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vilnius"...
-        else if(strcmp(nom_du_fuseau_horaire,"Vilnius") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Vilnius") == 0)
         {
                 //
                 time_t heure_a_vilnius = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Vilnius en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_vilnius, "Vilnius");
+                return calcul_et_renvoie_horaire(heure_a_vilnius, "Europe/Vilnius");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Riga"...
-        else if(strcmp(nom_du_fuseau_horaire,"Riga") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Riga") == 0)
         {
                 //
                 time_t heure_a_riga = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Riga en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_riga, "Riga");
+                return calcul_et_renvoie_horaire(heure_a_riga, "Europe/Riga");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tallinn"...
-        else if(strcmp(nom_du_fuseau_horaire,"Tallinn") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Tallinn") == 0)
         {
                 //
                 time_t heure_a_tallinn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Tallinn en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_tallinn, "Tallinn");
+                return calcul_et_renvoie_horaire(heure_a_tallinn, "Europe/Tallinn");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Varsovie"...
-        else if(strcmp(nom_du_fuseau_horaire,"Varsovie") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Warsaw") == 0)
         {
                 //
                 time_t heure_a_varsovie = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Varsovie en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_varsovie, "Varsovie");
+                return calcul_et_renvoie_horaire(heure_a_varsovie, "Europe/Warsaw");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Athènes"...
-	else if(strcmp(nom_du_fuseau_horaire,"Athènes") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Athens") == 0)
 	{
 		//Calcul de l'heure et de la date à Athènes et stockage de celui-ci dans la variable heure_d_athenes
 		time_t heure_d_athenes = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
 		//L'heure et la date d'Athènes en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_d_athenes, "Athènes");
+		return calcul_et_renvoie_horaire(heure_d_athenes, "Europe/Athens");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Los_Angeles"...
-	else if(strcmp(nom_du_fuseau_horaire,"Los_Angeles") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/Los_Angeles") == 0)
 	{
 		//Calcul de l'heure et de la date à Los Angeles et stockage de celui-ci dans la variable heure_los_angeles
 		time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600));
 
 		//L'heure et la date de Los Angeles en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_los_angeles, "Los Angeles");
+		return calcul_et_renvoie_horaire(heure_los_angeles, "America/Los Angeles");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "New_York"...
-	else if(strcmp(nom_du_fuseau_horaire,"New_York") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/New_York") == 0)
 	{
 		//Calcul de l'heure et de la date à New York et stockage de celui-ci dans la variable heure_de_nyc
                 time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600));
 
 		//L'heure et la date de New York City en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_de_nyc, "New York City");
+		return calcul_et_renvoie_horaire(heure_de_nyc, "America/New_York");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Ottawa"...
-	else if(strcmp(nom_du_fuseau_horaire,"Ottawa") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/Toronto") == 0)
 	{
 		//Calcul de l'heure et de la date à Ottawa et stockage de celui-ci dans la variable heure_d_ottawa
-                time_t heure_d_ottawa = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600));
+                time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600));
 
 		//L'heure et la date de Ottawa en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_d_ottawa, "Ottawa");
+		return calcul_et_renvoie_horaire(heure_de_toronto, "America/Toronto");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Phoenix"...
-	else if(strcmp(nom_du_fuseau_horaire,"Phoenix") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/Phoenix") == 0)
 	{
 		//Calcul de l'heure et de la date à Phoenix et stockage de celui-ci dans la variable heure_de_phoenix
                 time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
 
 		//L'heure et la date de Phoenix en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_de_phoenix, "Phoenix");
+		return calcul_et_renvoie_horaire(heure_de_phoenix, "America/Phoenix");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Londres"...
-	else if(strcmp(nom_du_fuseau_horaire,"Londres") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/London") == 0)
         {
 		//Calcul de l'heure et de la date à Londres et stockage de celui-ci dans la variable heure_de_londres
                 time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600);
 
 		//L'heure et la date de Londres en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_de_londres, "Londres");
+		return calcul_et_renvoie_horaire(heure_de_londres, "Europe/London");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Chisinau"...
-        else if(strcmp(nom_du_fuseau_horaire,"Chisinau") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Chisinau") == 0)
         {
                 //Calcul de l'heure et de la date à Chisinau et stockage de celui-ci dans la variable heure_a_chisinau
                 time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Chisinau en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_chisinau, "Chisinau");
+                return calcul_et_renvoie_horaire(heure_a_chisinau, "Europe/Chisinau");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Minsk"...
-        else if(strcmp(nom_du_fuseau_horaire,"Minsk") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Minsk") == 0)
         {
                 //Calcul de l'heure et de la date à Minsk et stockage de celui-ci dans la variable heure_a_minsk
                 time_t heure_a_minsk = temps_utc + (3 * 3600);
 
                 //L'heure et la date de Minsk en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_minsk, "Minsk");
+                return calcul_et_renvoie_horaire(heure_a_minsk, "Europe/Minsk");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kiev"...
-        else if(strcmp(nom_du_fuseau_horaire,"Kiev") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Kiev") == 0)
         {
                 //Calcul de l'heure et de la date à Kiev et stockage de celui-ci dans la variable heure_a_kiev
                 time_t heure_a_kiev = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Kiev en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_kiev, "Kiev");
+                return calcul_et_renvoie_horaire(heure_a_kiev, "Europe/Kiev");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Uzhgorod"...
-        else if(strcmp(nom_du_fuseau_horaire,"Uzhgorod") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Uzhgorod") == 0)
         {
                 //Calcul de l'heure et de la date à Uzhgorod et stockage de celui-ci dans la variable heure_a_uzhgorod
                 time_t heure_a_uzhgorod = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Uzhgorod en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_uzhgorod, "Uzhgorod");
+                return calcul_et_renvoie_horaire(heure_a_uzhgorod, "Europe/Uzhgorod");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Zaporozhye"...
-        else if(strcmp(nom_du_fuseau_horaire,"Zaporozhye") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Europe/Zaporozhye") == 0)
         {
                 //Calcul de l'heure et de la date à Zaporozhye et stockage de celui-ci dans la variable heure_a_zaporozhye
                 time_t heure_a_zaporozhye = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
 
                 //L'heure et la date de Uzhgorod en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_zaporozhye, "Zaporozhye");
+                return calcul_et_renvoie_horaire(heure_a_zaporozhye, "Europe/Zaporozhye");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Moscou"...
         else if(strcmp(nom_du_fuseau_horaire,"Moscou") == 0)
