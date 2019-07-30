@@ -135,6 +135,112 @@ time_t date_du_troisieme_dimanche_de_fevrier(time_t aujourdhui)
         return date_timestamp;
 }
 
+//Cette fonction retourne le niéme jour de la semaine dans un mois donnés en paramétre, calibré à l'heure passée en paramétre
+time_t date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(time_t aujourdhui, int numero_voulu, int heure, int jour_de_la_semaine, int mois)
+{
+	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
+        struct tm *date_tm;
+        time_t date_timestamp;
+
+        //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm = gmtime(&aujourdhui);
+
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) fevrier (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        date_tm->tm_mday = 1;
+        date_tm->tm_mon = mois;
+        date_tm->tm_hour = heure;
+        date_tm->tm_min = 0;
+        date_tm->tm_sec = 0;
+
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+        //Définition d'une variable i qui va contenir le nombre de dimanche comptabilisé dans notre parcours du mois passé en paramétre
+        int i;
+
+        //Si le jour de la semaine (renseignée par le champ tm_wday) correspond au jour de la semaine contenu dans la variable jour_de_la_semaine, alors, la variable i est initialisée à la valeur 1
+        if(date_tm->tm_wday == jour_de_la_semaine)
+        {
+                i = 1;
+        }
+        //Dans le cas contraire, la variable i est initialisée à la valeur 0
+        else
+        {
+                i = 0;
+        }
+
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+	//Ici, le programme procéde à une boucle de type do...while
+        do
+        {
+
+                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                date_timestamp = date_timestamp + 86400;
+
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                date_tm = gmtime(&date_timestamp);
+
+                //Si la date contenue dans la variable date_tm (struct tm) et date_timestamp (time_t) correspond à un dimanche (tm_wday) dans le mois de Fevrier (tm_mon), la valeur contenue dans $
+                if(date_tm->tm_wday == jour_de_la_semaine && date_tm->tm_mon == mois)
+                {
+                        i = i + 1;
+                }
+
+        //Tant que i est strictement inférieur au numéro voulu (on en est pas encore au numéro voulu-iéme jour de la semaine du mois donné), on revient dans la boucle
+        }while(i < numero_voulu);
+
+        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        return date_timestamp;
+}
+
+//Cette fonction retourne le dernier jour de la semaine dans un mois donnés en paramétre, calibré à l'heure passée en paramétre
+time_t date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(time_t aujourdhui, int heure, int jour_de_la_semaine, int mois)
+{
+	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
+        struct tm *date_tm;
+        time_t date_timestamp;
+
+        //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
+        date_tm = gmtime(&aujourdhui);
+
+	//
+	int mois_suivant = mois + 1;
+
+        //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) mois + 1 (tm_mon) à 2 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
+        date_tm->tm_mday = 1;
+        date_tm->tm_mon = mois_suivant;
+        date_tm->tm_hour = heure;
+        date_tm->tm_min = 0;
+        date_tm->tm_sec = 0;
+
+        //la valeur contenue dans la structure date_tm (de type struct tm) est reconvertie en timestamp (time_t) grace à la fonction timegm
+        //Puis reconvertie en struct tm grace à la fonction localtime
+        date_timestamp = timegm(date_tm);
+        date_tm = gmtime(&date_timestamp);
+
+	//Ici, le programme procéde à une boucle de type do...while
+        do
+        {
+
+                //On affecte à la variable date_timestamp la différence entre la précédente valeur contenue dans date_timestamp et le nombre de secondes dans une journée (86400)
+                date_timestamp = date_timestamp - 86400;
+
+                //La valeur contenue dans la variable date_timestamp (time_t) est affectée à la variable date_tm (struct tm) par une conversion grace à la fonction localtime
+                date_tm = gmtime(&date_timestamp);
+
+        //Tant que date_tm->tm_wday est différent de la valeur contenue dans la variable jour_de_la_semaine, on revient dans la boucle
+        }while(date_tm->tm_wday != jour_de_la_semaine);
+
+        //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+        return date_timestamp;
+}
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour la Palestine) à l'aide du timestamp passé en paramétre
 time_t date_du_dernier_samedi_d_octobre(time_t aujourdhui)
 {
