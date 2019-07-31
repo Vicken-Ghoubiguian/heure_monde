@@ -121,23 +121,23 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 
 		/* République fédérative du Brésil */
 		horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_timestamp = date_du_premier_dimanche_de_novembre(timestamp_courant_avec_annee_voulue, 3);
-		horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp = date_du_troisieme_dimanche_de_fevrier(timestamp_courant_avec_annee_voulue);
+		horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 3, 0, 1);
 
 		/* République arabe syrienne */
-		horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars(timestamp_courant_avec_annee_voulue);
-		horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_timestamp = date_du_dernier_vendredi_d_octobre(timestamp_courant_avec_annee_voulue);
+		horaire_de_passage_a_l_heure_d_ete_pour_la_syrie_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 2, 5, 2);
+		horaire_de_passage_a_l_heure_d_hiver_pour_la_syrie_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 5, 9);
 
 		/* État d'Israël */
-		horaire_de_passage_a_l_heure_d_ete_pour_l_etat_d_israel_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars(timestamp_courant_avec_annee_voulue);
-		horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_ete_pour_l_etat_d_israel_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 2, 5, 2);
+		horaire_de_passage_a_l_heure_d_hiver_pour_l_etat_d_israel_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 0, 9);
 
 		/* État de Palestine */
-		horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_timestamp = date_du_dernier_samedi_de_mars(timestamp_courant_avec_annee_voulue);
-		horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_timestamp = date_du_dernier_samedi_d_octobre(timestamp_courant_avec_annee_voulue);
+		horaire_de_passage_a_l_heure_d_ete_pour_la_palestine_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 1, 6, 2);
+		horaire_de_passage_a_l_heure_d_hiver_pour_la_palestine_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 1, 6, 9);
 
 		/* République libanaise */
-		horaire_de_passage_a_l_heure_d_ete_pour_le_liban_sous_forme_de_timestamp = date_du_dernier_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 2);
-		horaire_de_passage_a_l_heure_d_hiver_pour_le_liban_sous_forme_de_timestamp = date_du_dernier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_ete_pour_le_liban_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 2, 0, 2);
+		horaire_de_passage_a_l_heure_d_hiver_pour_le_liban_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 0, 9);
 
 		/* République islamique d'Iran */
 		horaire_de_passage_a_l_heure_d_ete_pour_l_iran_sous_forme_de_timestamp = date_du_changement_d_heure_d_ete_pour_l_iran(timestamp_courant_avec_annee_voulue);
@@ -145,11 +145,11 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 
 		/* Royaume hachémite de Jordanie */
 		horaire_de_passage_a_l_heure_d_ete_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(timestamp_courant_avec_annee_voulue);
-		horaire_de_passage_a_l_heure_d_hiver_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_d_octobre(timestamp_courant_avec_annee_voulue);
+		horaire_de_passage_a_l_heure_d_hiver_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 5, 9); 
 
 		/* République du Paraguay */
 		horaire_de_passage_a_l_heure_d_ete_pour_le_paraguay_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 0);
-		horaire_de_passage_a_l_heure_d_hiver_pour_le_paraguay_sous_forme_de_timestamp = date_du_quatrieme_dimanche_de_mars(timestamp_courant_avec_annee_voulue, 0);
+		horaire_de_passage_a_l_heure_d_hiver_pour_le_paraguay_sous_forme_de_timestamp = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 4, 0, 0, 2);
 
 		/* Base antarctique de Troll */
 		horaire_de_passage_a_l_heure_d_ete_pour_la_base_antarctique_de_troll_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 1, 0, 2);
