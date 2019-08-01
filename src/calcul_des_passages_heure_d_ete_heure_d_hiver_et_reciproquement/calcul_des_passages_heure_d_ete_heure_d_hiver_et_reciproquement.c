@@ -737,8 +737,6 @@ time_t date_du_premier_jour_de_la_semaine_donne_du_mois_donne(time_t aujourdhui,
 	//Si le jour de la semaine (renseignée par le champ tm_wday) correspond au jour de la semaine donné (valeur = jour_de_la_semaine), alors...
         if(date_tm->tm_wday == jour_de_la_semaine)
         {
-		printf("%ld.\n", date_timestamp);
-
                 //On retourne la valeur de la variable date_timestamp
                 return date_timestamp;
         }
@@ -757,8 +755,6 @@ time_t date_du_premier_jour_de_la_semaine_donne_du_mois_donne(time_t aujourdhui,
 
                 //Tant que date_tm->tm_wday est différent de la valeur contenue dans la variable jour_de_la_semaine, on revient dans la boucle
                 }while(date_tm->tm_wday != jour_de_la_semaine);
-
-		printf("%ld.\n", date_timestamp);
 
                 //On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
                 return date_timestamp;
