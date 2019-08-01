@@ -116,11 +116,11 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		//
 
 		/* République des Fidji */
-		horaire_de_passage_a_l_heure_d_ete_pour_les_fidji_sous_forme_de_timestamp = date_du_premier_dimanche_de_novembre(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_ete_pour_les_fidji_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 3, 0, 10);
 		horaire_de_passage_a_l_heure_d_hiver_pour_les_fidji_sous_forme_de_timestamp = date_du_changement_d_heure_d_hiver_pour_les_fidji(timestamp_courant_avec_annee_voulue);
 
 		/* République fédérative du Brésil */
-		horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_timestamp = date_du_premier_dimanche_de_novembre(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_ete_pour_le_bresil_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 3, 0, 10);
 		horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 3, 0, 1);
 
 		/* République arabe syrienne */
@@ -148,7 +148,7 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		horaire_de_passage_a_l_heure_d_hiver_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 5, 9); 
 
 		/* République du Paraguay */
-		horaire_de_passage_a_l_heure_d_ete_pour_le_paraguay_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 0);
+		horaire_de_passage_a_l_heure_d_ete_pour_le_paraguay_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 0, 0, 9);
 		horaire_de_passage_a_l_heure_d_hiver_pour_le_paraguay_sous_forme_de_timestamp = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 4, 0, 0, 2);
 
 		/* Base antarctique de Troll */
@@ -157,15 +157,15 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 
 		/* Nouvelle-Zélande et Base antarctique de McMurdo */
 		horaire_de_passage_a_l_heure_d_ete_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 2, 0, 8);
-		horaire_de_passage_a_l_heure_d_hiver_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_hiver_pour_la_nouvelle_zelande_et_la_base_antarctique_de_mcmurdo_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 3, 0, 3);
 
 		/*  Commonwealth d'Australie */
-		horaire_de_passage_a_l_heure_d_ete_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_octobre(timestamp_courant_avec_annee_voulue, 2);
-		horaire_de_passage_a_l_heure_d_hiver_pour_l_australie_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_ete_pour_l_australie_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 2, 0, 9);
+		horaire_de_passage_a_l_heure_d_hiver_pour_l_australie_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 3, 0, 3);
 
 		/* État indépendant des Samoa */
 		horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 4, 0, 8);
-		horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_timestamp = date_du_premier_dimanche_d_avril(timestamp_courant_avec_annee_voulue, 3);
+		horaire_de_passage_a_l_heure_d_hiver_pour_les_samoa_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 3, 0, 3);
 
 		/* Europe continentale */
 		horaire_de_passage_a_l_heure_d_ete_pour_l_europe_continentale_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 0, 2);
@@ -177,7 +177,7 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 
 		/* Amérique du Nord */
 		horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_timestamp = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 2, 2, 0, 2);
-		horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_timestamp = date_du_premier_dimanche_de_novembre(timestamp_courant_avec_annee_voulue, 2);
+		horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 2, 0, 10);
 
 		//
 
