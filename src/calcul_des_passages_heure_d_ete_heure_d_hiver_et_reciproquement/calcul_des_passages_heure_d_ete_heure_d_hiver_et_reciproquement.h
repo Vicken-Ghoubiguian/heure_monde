@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Chili) à l'aide du timestamp passé en paramétre
+time_t date_du_changement_d_heure_d_ete_pour_le_chili(time_t aujourdhui);
+
 //Cette fonction retourne le premier jour de la semaine dans un mois donnés en paramétre, calibré à l'heure passée en paramétre
 time_t date_du_premier_jour_de_la_semaine_donne_du_mois_donne(time_t aujourdhui, int heure, int jour_de_la_semaine, int mois);
 
@@ -36,8 +39,8 @@ time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui);
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
 time_t date_du_dernier_vendredi_d_octobre(time_t aujourdhui);
 
-//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour le Moyen-Orient) à l'aide du timestamp passé en paramétre
-time_t date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(time_t aujourdhui);
+//Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour la Jordanie) à l'aide du timestamp passé en paramétre
+time_t date_du_changement_d_heure_d_hiver_pour_la_jordanie(time_t aujourdhui);
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'hiver (pour le Paraguay) à l'aide du timestamp passé en paramétre
 time_t date_du_quatrieme_dimanche_de_mars(time_t aujourdhui, int heure);

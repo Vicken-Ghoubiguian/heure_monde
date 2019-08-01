@@ -158,7 +158,7 @@ int application_du_changement_d_heure_pour_l_iran(time_t temps_courant)
 int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(temps_courant);
+	time_t ete = date_du_changement_d_heure_d_hiver_pour_la_jordanie(temps_courant);
 	time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 3, 5, 9);
 
 	//
@@ -305,21 +305,21 @@ int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_cour
 int application_du_changement_d_heure_pour_le_chili(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 8);
-	time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 3, 0, 9);
+	time_t ete = date_du_changement_d_heure_d_ete_pour_le_chili(temps_courant);
+	time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 2, 2, 0, 3);
 
 	//
-	if(temps_courant < ete && temps_courant > hiver)
-	{
-		//On retourne 1
-		return 1;
-	}
-	//Sinon...
-	else
-	{
-		//On retourne 0
-		return 0;
-	}
+        if(hiver <= temps_courant && temps_courant < ete)
+        {
+                //On retourne 0
+                return 0;
+        }
+        //Sinon...
+        else
+        {
+                //On retourne 1
+                return 1;
+        }
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Amérique du Nord

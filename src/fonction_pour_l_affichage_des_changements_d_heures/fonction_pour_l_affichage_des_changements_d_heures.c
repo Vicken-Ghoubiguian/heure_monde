@@ -75,6 +75,8 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		time_t horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_timestamp;
 		time_t horaire_de_passage_a_l_heure_d_ete_pour_les_fidji_sous_forme_de_timestamp;
 		time_t horaire_de_passage_a_l_heure_d_hiver_pour_les_fidji_sous_forme_de_timestamp;
+		time_t horaire_de_passage_a_l_heure_d_ete_pour_le_chili_sous_forme_de_timestamp;
+		time_t horaire_de_passage_a_l_heure_d_hiver_pour_le_chili_sous_forme_de_timestamp;
 
 		//Déclaration des variables de changement d'heure heure d'été <=> heure d'hiver, pour toutes les zones géographiques l'appliquant, sous forme de char*
 		char* horaire_de_passage_a_l_heure_d_ete_pour_les_samoa_sous_forme_de_chaine_de_caracteres;
@@ -109,6 +111,8 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
                 char* horaire_de_passage_a_l_heure_d_hiver_pour_le_bresil_sous_forme_de_chaine_de_caracteres;
 		char* horaire_de_passage_a_l_heure_d_ete_pour_les_fidji_sous_forme_de_chaine_de_caracteres;
 		char* horaire_de_passage_a_l_heure_d_hiver_pour_les_fidji_sous_forme_de_chaine_de_caracteres;
+		char* horaire_de_passage_a_l_heure_d_ete_pour_le_chili_sous_forme_de_chaine_de_caracteres;
+		char* horaire_de_passage_a_l_heure_d_hiver_pour_le_chili_sous_forme_de_chaine_de_caracteres;
 
 		//Affectation de la valeur du timestamp du temps courant à l'année voulue
 		timestamp_courant_avec_annee_voulue = fonction_de_precision_de_l_annee_en_cours(timestamp_courant, annee_voulue);
@@ -144,7 +148,7 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		horaire_de_passage_a_l_heure_d_hiver_pour_l_iran_sous_forme_de_timestamp = date_du_changement_d_heure_d_hiver_pour_l_iran(timestamp_courant_avec_annee_voulue);
 
 		/* Royaume hachémite de Jordanie */
-		horaire_de_passage_a_l_heure_d_ete_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_vendredi_de_mars_ou_du_premier_vendredi_d_avril(timestamp_courant_avec_annee_voulue);
+		horaire_de_passage_a_l_heure_d_ete_pour_la_jordanie_sous_forme_de_timestamp = date_du_changement_d_heure_d_hiver_pour_la_jordanie(timestamp_courant_avec_annee_voulue);
 		horaire_de_passage_a_l_heure_d_hiver_pour_la_jordanie_sous_forme_de_timestamp = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 3, 5, 9); 
 
 		/* République du Paraguay */
@@ -178,6 +182,10 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		/* Amérique du Nord */
 		horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_timestamp = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(timestamp_courant_avec_annee_voulue, 2, 2, 0, 2);
 		horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 2, 0, 10);
+
+		/* République du Chili */
+		horaire_de_passage_a_l_heure_d_ete_pour_le_chili_sous_forme_de_timestamp = date_du_changement_d_heure_d_ete_pour_le_chili(timestamp_courant_avec_annee_voulue);
+		horaire_de_passage_a_l_heure_d_hiver_pour_le_chili_sous_forme_de_timestamp = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(timestamp_courant_avec_annee_voulue, 2, 0, 3);
 
 		//
 
@@ -244,6 +252,10 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		/* Amérique du Nord */
 		horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_timestamp);
 		horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_timestamp);
+
+		/* République du Chili */
+		horaire_de_passage_a_l_heure_d_ete_pour_le_chili_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_ete_pour_le_chili_sous_forme_de_timestamp);
+		horaire_de_passage_a_l_heure_d_hiver_pour_le_chili_sous_forme_de_chaine_de_caracteres = calcul_et_renvoie_de_l_heure_et_de_la_date_en_fonction_du_timestamp_passe_en_parametre(horaire_de_passage_a_l_heure_d_hiver_pour_le_chili_sous_forme_de_timestamp);
 
 		//Affichage de tous les changements d'heure heure d'été <=> heure d'hiver pour l'année annee_voulue
 
@@ -372,6 +384,14 @@ void fonction_pour_l_affichage_des_changements_d_heures(int nombre_d_arguments_p
 		printf("Amérique du Nord:\n");
 		printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres);
 		printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_l_amerique_du_nord_sous_forme_de_chaine_de_caracteres);
+
+		//
+		printf("\n");
+
+		//
+		printf("République du Chili:\n");
+		printf("Passage à l'heure d'été en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_ete_pour_le_chili_sous_forme_de_chaine_de_caracteres);
+		printf("Passage à l'heure d'hiver en %d: %s\n", annee_voulue, horaire_de_passage_a_l_heure_d_hiver_pour_le_chili_sous_forme_de_chaine_de_caracteres);
 
 		//
 		printf("\n");
