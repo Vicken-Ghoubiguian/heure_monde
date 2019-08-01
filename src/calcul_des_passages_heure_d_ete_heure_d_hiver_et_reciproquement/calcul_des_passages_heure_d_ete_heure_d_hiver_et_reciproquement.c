@@ -72,7 +72,7 @@ time_t date_du_changement_d_heure_d_hiver_pour_les_fidji(time_t aujourdhui)
 }
 
 //Cette fonction retourne le niéme jour de la semaine dans un mois donnés en paramétre, calibré à l'heure passée en paramétre
-time_t date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(time_t aujourdhui, int numero_voulu, int heure, int jour_de_la_semaine, int mois)
+time_t date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donne(time_t aujourdhui, int numero_voulu, int heure, int jour_de_la_semaine, int mois)
 {
 	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;
@@ -136,7 +136,7 @@ time_t date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(time_t aujourdhui,
 }
 
 //Cette fonction retourne le dernier jour de la semaine dans un mois donnés en paramétre, calibré à l'heure passée en paramétre
-time_t date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(time_t aujourdhui, int heure, int jour_de_la_semaine, int mois)
+time_t date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(time_t aujourdhui, int heure, int jour_de_la_semaine, int mois)
 {
 	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'été
         struct tm *date_tm;
