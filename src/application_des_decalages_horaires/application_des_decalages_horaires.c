@@ -11,7 +11,7 @@
 int application_du_changement_d_heure_pour_les_fidji(time_t temps_courant)
 {
         //On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_de_novembre(temps_courant, 2);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 10);
 	time_t hiver = date_du_changement_d_heure_d_hiver_pour_les_fidji(temps_courant);
 
         //
@@ -32,7 +32,7 @@ int application_du_changement_d_heure_pour_les_fidji(time_t temps_courant)
 int application_du_changement_d_heure_pour_le_bresil(time_t temps_courant)
 {
         //On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_de_novembre(temps_courant, 3);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 10);
         time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 3, 3, 0, 1);
 
         //
@@ -179,7 +179,7 @@ int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant)
 int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant, 0);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 0, 0, 9);
         time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 4, 0, 0, 2);
 
         //
@@ -222,7 +222,7 @@ int application_du_changement_d_heure_pour_les_samoa(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
 	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 4, 0, 8);
-	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 4);
+	time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 3);
 
 	//
         if(hiver <= temps_courant && temps_courant < ete)
@@ -242,8 +242,8 @@ int application_du_changement_d_heure_pour_les_samoa(time_t temps_courant)
 int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_premier_dimanche_d_octobre(temps_courant, 2);
-	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
+	time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 9);
+	time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 3);
 
 	//
 	if(hiver <= temps_courant && temps_courant < ete)
@@ -263,8 +263,8 @@ int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
 int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_dimanche_d_octobre(temps_courant, 2);
-        time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 2);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 9);
+        time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 2);
 
         //
         if(hiver <= temps_courant && temps_courant < ete)
@@ -285,7 +285,7 @@ int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_cour
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
 	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 2, 0, 8);
-	time_t hiver = date_du_premier_dimanche_d_avril(temps_courant, 3);
+	time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 3);
 
 	//
 	if(hiver <= temps_courant && temps_courant < ete)
@@ -305,8 +305,8 @@ int application_du_changement_d_heure_pour_la_nouvelle_zelande(time_t temps_cour
 int application_du_changement_d_heure_pour_le_chili(time_t temps_courant)
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_deuxieme_dimanche_d_aout(temps_courant);
-	time_t hiver = date_du_dernier_dimanche_d_octobre(temps_courant, 3);
+	time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 8);
+	time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 3, 0, 9);
 
 	//
 	if(temps_courant < ete && temps_courant > hiver)
@@ -327,7 +327,7 @@ int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_coura
 {
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
 	time_t ete = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donnee(temps_courant, 2, 2, 0, 2);
-	time_t hiver = date_du_premier_dimanche_de_novembre(temps_courant, 2);
+	time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 10);
 
 	//
 	if(temps_courant >= ete && temps_courant <= hiver)
