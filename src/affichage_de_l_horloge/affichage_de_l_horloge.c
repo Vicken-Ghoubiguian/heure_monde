@@ -411,6 +411,10 @@ void affichage_de_l_horloge()
 	/* République du Paraguay */
 	time_t heure_a_asuncion = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_paraguay(temps_utc) * 3600)); //Asuncion
 
+	/* Royaume du Maroc */
+	time_t heure_a_casablanca = temps_utc + (1 * 3600); //Casablanca
+	time_t heure_a_laayoune = temps_utc + (1 * 3600); //Laayoune
+
 	/* République algérienne démocratique et populaire */
 	time_t heure_a_alger = temps_utc + (1 * 3600); //Alger
 
@@ -1322,6 +1326,11 @@ void affichage_de_l_horloge()
 	printf("\n");
 	printf("République du Paraguay:\n");
 	calcul_et_affichage_horaire(heure_a_asuncion, "Asuncion");
+
+	printf("\n");
+	printf("Royaume du Maroc:\n");
+	calcul_et_affichage_horaire(heure_a_casablanca, "Casablanca");
+	calcul_et_affichage_horaire(heure_a_laayoune, "Laayoune");
 
 	printf("\n");
 	printf("République algérienne démocratique et populaire:\n");
