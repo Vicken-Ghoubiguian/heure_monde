@@ -1,10 +1,10 @@
 /* Inclusion des bibliothéques standards du C utilisées dans cette bibliothéque-ci */
 #include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
-
-#include <stdio.h>
 
 //Cette fonction renvoie l'année en cours à partir du temps local de la machine d'execution
 int retour_de_l_annee_en_cours()
@@ -139,4 +139,114 @@ time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_coura
 	//Puis, le résultat est retourné
 	return timestamp_du_temps_voulu_a_retourner;
 
+}
+
+//Cette fonction permet de compter le nombre total de lignes dans le fichier des decalages horaires
+int fonction_de_comptage_du_nombre_de_lignes_dans_le_fichier_des_decalages_horaires()
+{
+	//Déclaration des variables utilisées dans la fonction fonction_de_comptage_du_nombre_de_lignes_dans_le_fichier_des_decalages_horaires
+        FILE* fichier_des_decalages_horaires;
+        int nombre_de_lignes_comptabilisees_dans_le_fichier_des_decalages_horaires = 0;
+        char caractere_courant;
+
+	//Ouverture du fichier fichier_des_decalages_horaires.txt et enregistrement du résultat de celui-ci dans la variable de type FILE* fichier_des_decalages_horaires
+        fichier_des_decalages_horaires = fopen("fichier_des_decalages_horaires.txt", "r");
+
+	//Si la variable contenant le résultat de l'opération d'ouverture du fichier fichier_des_decalages_horaires.txt est différent de NULL (opération reussie), alors...
+        if(fichier_des_decalages_horaires != NULL)
+        {
+		//
+                while((caractere_courant = fgetc(fichier_des_decalages_horaires)) != EOF)
+                {
+			//Si le caractére courant est égal au caractére spécial du saut de ligne ('\n'), alors...
+                        if(caractere_courant == '\n')
+                        {
+				//
+                                nombre_de_lignes_comptabilisees_dans_le_fichier_des_decalages_horaires = nombre_de_lignes_comptabilisees_dans_le_fichier_des_decalages_horaires + 1;
+                        }
+                }
+
+		//On ferme le descripteur du fichier des décalages horaires, ouvert (la variable fichier_des_decalages_horaires)
+                fclose(fichier_des_decalages_horaires);
+        }
+	//Sinon...
+        else
+        {
+		//Un message d'erreur est affiché
+                printf("Erreur: impossible d'ouvrir le fichier des decalages horaires.\n");
+
+		//On quite le processus avec une erreur
+                exit(1);
+        }
+
+	//Le résultat de la fonction (le nombre de lignes stocké dans la variable nombre_de_lignes_comptabilisees_dans_le_fichier_des_decalages_horaires) est retournée
+        return nombre_de_lignes_comptabilisees_dans_le_fichier_des_decalages_horaires;
+}
+
+//Cette fonction permet de lire une ligne identifiée par un numéro passé en paramétre dans le fichier des décalages horaires
+char* fonction_de_lecture_du_fichier_des_decalages_horaires_a_la_ligne_passee_en_parametre(int numero_de_la_ligne_demandee)
+{
+	//Déclaration des variables utilisées dans la fonction fonction_de_comptage_du_nombre_de_lignes_dans_le_fichier_des_decalages_horaires
+        FILE* fichier_des_decalages_horaires;
+        char* ligne_courante;
+        char* ligne_demandee = "";
+        int numero_de_la_ligne_courante = 1;
+        int nombre_de_lignes_au_total_dans_le_fichier_des_decalages_horaires = fonction_de_comptage_du_nombre_de_lignes_dans_le_fichier_des_decalages_horaires();
+        size_t longueur_de_la_ligne = 0;
+        ssize_t lecture;
+
+	//Ouverture du fichier fichier_des_decalages_horaires.txt et enregistrement du résultat de celui-ci dans la variable de type FILE* fichier_des_decalages_horaires
+        fichier_des_decalages_horaires = fopen("fichier_des_decalages_horaires.txt", "r");
+
+	//Si la variable contenant le résultat de l'opération d'ouverture du fichier fichier_des_decalages_horaires.txt est différent de NULL (opération reussie), alors...
+        if(fichier_des_decalages_horaires != NULL)
+        {
+		//
+                if(numero_de_la_ligne_demandee > 0 && numero_de_la_ligne_demandee <= nombre_de_lignes_au_total_dans_le_fichier_des_decalages_horaires)
+                {
+			//
+                        while((lecture = getline(&ligne_courante, &longueur_de_la_ligne, fichier_des_decalages_horaires)) != -1)
+                        {
+				//Si le numéro de la ligne courante correspond au numéro de la ligne demandée en paramétre, alors...
+                                if(numero_de_la_ligne_courante == numero_de_la_ligne_demandee)
+                                {
+					//La valeur contenue dans la variable ligne_courante est affectée à la variable ligne_demandee 
+                                        ligne_demandee = ligne_courante;
+
+					//On quite la boucle grace à l'instruction break
+                                        break;
+                                }
+
+				//
+                                numero_de_la_ligne_courante = numero_de_la_ligne_courante + 1;
+                        }
+
+			//
+                        free(ligne_courante);
+
+			//On ferme le descripteur du fichier des décalages horaires, ouvert (la variable fichier_des_decalages_horaires)
+                        fclose(fichier_des_decalages_horaires);
+                }
+		//Sinon...
+                else
+                {
+			//Un message d'erreur est affiché
+                        printf("Erreur: le nombre de lignes passé en paramétre n'est pas valide (soit inférieur à 0 ou égal, soit supérieur au nombre exact de lignes dans le fichier des décalages horaires).\n");
+
+			//On quite le processus avec une erreur
+                        exit(1);
+                }
+        }
+	//Sinon...
+	else
+        {
+		//Un message d'erreur est affiché
+                printf("Erreur: impossible d'ouvrir le fichier des decalages horaires.\n");
+
+		//On quite le processus avec une erreur
+                exit(1);
+        }
+
+	//Le résultat de la fonction (la ligne demandée stocké dans la variable ligne_demandee) est retournée
+        return ligne_demandee;
 }

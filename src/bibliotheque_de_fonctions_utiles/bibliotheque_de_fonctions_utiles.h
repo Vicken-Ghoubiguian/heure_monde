@@ -18,4 +18,10 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp();
 //Cette fonction renvoie le timestamp courant avec plusieurs années de différence (en fonction de l'année passée en paramétre de la fonction)
 time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_courant, int annee_particuliere_voulue);
 
+//Cette fonction permet de compter le nombre total de lignes dans le fichier des decalages horaires
+int fonction_de_comptage_du_nombre_de_lignes_dans_le_fichier_des_decalages_horaires();
+
+//Cette fonction permet de lire une ligne identifiée par un numéro passé en paramétre dans le fichier des décalages horaires
+char* fonction_de_lecture_du_fichier_des_decalages_horaires_a_la_ligne_passee_en_parametre(int numero_de_la_ligne_demandee);
+
 #endif
