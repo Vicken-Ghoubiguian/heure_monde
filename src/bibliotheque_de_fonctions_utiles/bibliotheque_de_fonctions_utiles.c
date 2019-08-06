@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
