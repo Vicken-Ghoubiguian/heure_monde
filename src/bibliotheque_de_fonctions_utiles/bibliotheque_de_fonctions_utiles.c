@@ -250,3 +250,20 @@ char* fonction_de_lecture_du_fichier_des_decalages_horaires_a_la_ligne_passee_en
 	//Le résultat de la fonction (la ligne demandée stocké dans la variable ligne_demandee) est retournée
         return ligne_demandee;
 }
+
+//Cette fonction permet de retourner le nombre correspondant au décalage horaire pour le fuseau situé dans la chaine de caractéres passée en paramétre
+int retour_du_nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC_depuis_le_fichier_des_decalages_horaires(char* chaine_de_caracteres_demandee)
+{
+        //Déclaration des variables utilisées dans la fonction retour_du_nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC_depuis_le_fichier_des_decalages_horaires
+        char* resultat_du_decoupage_de_la_chaine;
+        int nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC;
+
+        //
+        resultat_du_decoupage_de_la_chaine = strstr(chaine_de_caracteres_demandee, ";");
+
+        //
+        nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC = atoi(&resultat_du_decoupage_de_la_chaine[1]);
+
+        //La valeur contenue dans la variable nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC est retournée
+        return nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC;
+}
