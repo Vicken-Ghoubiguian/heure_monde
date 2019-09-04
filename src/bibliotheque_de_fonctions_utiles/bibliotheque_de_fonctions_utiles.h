@@ -3,9 +3,6 @@
 
 #include <time.h>
 
-//Cette fonction permet de retourner le nombre correspondant au décalage horaire pour le fuseau situé dans la chaine de caractéres passée en paramétre
-int retour_du_nombre_correspondant_au_decalage_du_fuseau_horaire_par_rapport_a_l_UTC_depuis_le_fichier_des_decalages_horaires(char* chaine_de_caracteres_demandee);
-
 //Cette fonction renvoie l'année en cours à partir du temps local de la machine d'execution
 int retour_de_l_annee_en_cours();
 
