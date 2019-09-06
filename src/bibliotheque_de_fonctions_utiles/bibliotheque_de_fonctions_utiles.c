@@ -156,28 +156,36 @@ int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_ti
 	if(sqlite3_open("heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
 	{
 		//
-		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "SELECT decalage_par_rapport_a_UTC WHERE nom_de_la_timezone = ?1;",  -1, &declaration_pour_sqlite3, NULL);
+		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "SELECT decalage_par_rapport_a_UTC FROM table_des_decalages_horaires WHERE nom_de_la_timezone = ?;",  -1, &declaration_pour_sqlite3, NULL);
 
 		//
-		sqlite3_bind_text(declaration_pour_sqlite3, 1, nom_de_la_timezone, 20, SQLITE_STATIC);
+		sqlite3_bind_text(declaration_pour_sqlite3, 1, "Asia/Anadyr", -1, SQLITE_STATIC);
 
 		//
 		if(sqlite3_column_count(declaration_pour_sqlite3) == 1)
 		{
-			//
-			decalage_par_rapport_a_UTC = sqlite3_column_int(declaration_pour_sqlite3, 1);
+			while(sqlite3_step(declaration_pour_sqlite3) == SQLITE_ROW)
+			{
+
+				//
+				decalage_par_rapport_a_UTC = sqlite3_column_int(declaration_pour_sqlite3, 0);
+
+			}
 
 			//
                         sqlite3_finalize(declaration_pour_sqlite3);
 
                         //
                         sqlite3_close(connecteur_de_la_base_heure_monde);
+
+			//
+			printf("Valeur: %d.\n", decalage_par_rapport_a_UTC);
 		}
 		//Sinon...
 		else
 		{
 			//
-			printf("Erreur: il ne peut avoir qu'un seul décalage horaire enregistré par timezone. Quelquechose ne va pas dans votre base de données heure_monde.\n");
+			printf("Erreur: il ne peut avoir qu'un seul décalage horaire enregistré par timezone. Quelquechose ne va pas dans votre base de données heure_monde: %d.\n", sqlite3_column_count(declaration_pour_sqlite3));
 
 			//
 			sqlite3_finalize(declaration_pour_sqlite3);
