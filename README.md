@@ -39,15 +39,15 @@ Le répertoire test contient tois fichier: 2 pour tester chacune des 2 fonctions
 
 Pour compiler le fichier de test de la fonction affichage_de_l_horloge, faire la commande suivante:
 
-$ gcc test/test_1.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c
+$ gcc test/test_1.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -lsqlite3
 
 Pour compiler le fichier de test de la fonction retour_de_la_date_et_de_l_heure, faire la commande suivante:
 
-$ gcc test/test_2.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c
+$ gcc test/test_2.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -lsqlite3
 
 Pour compiler le fichier pour tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure, faire la commande suivante:
 
-$ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c
+$ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -lsqlite3
 
 Dans les 3 cas, un fichier exécutable a.out sera généré dans le répertoire principal de l'API, il faut l'éxécuter à l'aide de la commande suivante:
 
@@ -55,16 +55,16 @@ $ ./a.out
 
 Si vous souhaitez nommer le fichier exécutable à générer sous un autre nom, faire la commande suivante:
 
-$ gcc test/test_1.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi
+$ gcc test/test_1.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi -lsqlite3
 
 Cet exemple concerne le fichier de test de la fonction affichage_de_l_horloge.
 
 Mais la même commande est à appliquer, de la même maniére, pour le fichier de test de la fonction retour_de_la_date_et_de_l_heure:
 
-$ gcc test/test_2.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi
+$ gcc test/test_2.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi -lsqlite3
 
 Ainsi que pour le fichier pour tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure:
 
-$ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi
+$ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi -lsqlite3
 
 A part cela, cette API peut être intégrée dans n'importe quel projet développé en C.
