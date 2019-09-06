@@ -815,39 +815,39 @@ void affichage_de_l_horloge()
 	time_t heure_a_istanbul = temps_utc + (3 * 3600); //Istanbul
 
 	/* Fédération de Russie */
-	time_t heure_moscou = temps_utc + (3 * 3600); //Moscou
-        time_t heure_vladivostok = temps_utc + (10 * 3600); //Vladivostok
-	time_t heure_kaliningrad = temps_utc + (2 * 3600); //Kaliningrad
-	time_t heure_samara = temps_utc + (4 * 3600); //Samara
-	time_t heure_volgograd = temps_utc + (4 * 3600); //Volgograd
-	time_t heure_saratov = temps_utc + (4 * 3600); //Saratov
-	time_t heure_oulianovsk = temps_utc + (4 * 3600); //Oulianovsk
-	time_t heure_astrakhan = temps_utc + (4 * 3600); //Astrakhan
+	time_t heure_moscou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Moscow"); //Moscou
+        time_t heure_vladivostok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Vladivostok"); //Vladivostok
+	time_t heure_kaliningrad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kaliningrad"); //Kaliningrad
+	time_t heure_samara = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Samara"); //Samara
+	time_t heure_volgograd = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Volgograd"); //Volgograd
+	time_t heure_saratov = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Saratov"); //Saratov
+	time_t heure_oulianovsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Ulyanovsk"); //Oulianovsk
+	time_t heure_astrakhan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Astrakhan"); //Astrakhan
 	time_t heure_anadyr = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Anadyr"); //Anadyr
-	time_t heure_sakhalin = temps_utc + (11 * 3600); //Sakhalin
-	time_t heure_omsk = temps_utc + (6 * 3600); //Omsk
-	time_t heure_tchita = temps_utc + (9 * 3600); //Tchita
-	time_t heure_tomsk = temps_utc + (7 * 3600); //Tomsk
-	time_t heure_barnaoul = temps_utc + (7 * 3600); //Barnaoul
-	time_t heure_magadan = temps_utc + (11 * 3600); //Magadan
-	time_t heure_iekaterinbourg = temps_utc + (5 * 3600); //Iekaterinbourg
-	time_t heure_yakoutsk = temps_utc + (9 * 3600); //Yakoutsk
-	time_t heure_irkoutsk = temps_utc + (8 * 3600); //Irkoutsk
-	time_t heure_khandyga = temps_utc + (9 * 3600); //Khandyga
-	time_t heure_novokouznetsk = temps_utc + (7 * 3600); //Novokouznetsk
-	time_t heure_nobossibirsk = temps_utc + (7 * 3600); //Nobossibirsk
-	time_t heure_krasnoyarsk = temps_utc + (7 * 3600); //Krasnoyarsk
-	time_t heure_oust_nera = temps_utc + (10 * 3600); //Oust-Nera
-	time_t heure_srednekolymsk = temps_utc + (11 * 3600); //Srednekolymsk
+	time_t heure_sakhalin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Sakhalin"); //Sakhalin
+	time_t heure_omsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Omsk"); //Omsk
+	time_t heure_tchita = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Chita"); //Tchita
+	time_t heure_tomsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tomsk"); //Tomsk
+	time_t heure_barnaoul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Barnaul"); //Barnaoul
+	time_t heure_magadan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Magadan"); //Magadan
+	time_t heure_iekaterinbourg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yekaterinburg"); //Iekaterinbourg
+	time_t heure_yakoutsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yakutsk"); //Yakoutsk
+	time_t heure_irkoutsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Irkutsk"); //Irkoutsk
+	time_t heure_khandyga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Khandyga"); //Khandyga
+	time_t heure_novokouznetsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Novokuznetsk"); //Novokouznetsk
+	time_t heure_nobossibirsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Novosibirsk"); //Nobossibirsk
+	time_t heure_krasnoyarsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Krasnoyarsk"); //Krasnoyarsk
+	time_t heure_oust_nera = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Ust-Nera"); //Oust-Nera
+	time_t heure_srednekolymsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Srednekolymsk"); //Srednekolymsk
 
 	/* République d'Arménie */
-	time_t heure_erevan = temps_utc + (4 * 3600); //Erevan
+	time_t heure_erevan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yerevan"); //Erevan
 
 	/* Géorgie */
-	time_t heure_a_tbilissi = temps_utc + (4 * 3600); //Tbilissi
+	time_t heure_a_tbilissi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tbilisi"); //Tbilissi
 
 	/* République d'Azerbaïdjan */
-	time_t heure_a_bakou = temps_utc + (4 * 3600); //Bakou
+	time_t heure_a_bakou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Baku"); //Bakou
 
 	/*Affichage des différents horiares calculés à coté des villes correspondantes*/
 
