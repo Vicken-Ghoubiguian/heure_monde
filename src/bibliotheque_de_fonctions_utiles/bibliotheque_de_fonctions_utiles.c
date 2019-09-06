@@ -105,7 +105,7 @@ int est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(int anne
 	//
 	if(annee_jalali % 4 == 3)
 	{
-		
+
 		//On retourne 1
 		return 1;
 
@@ -153,7 +153,7 @@ int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_ti
 	int decalage_par_rapport_a_UTC;
 
 	//
-	if(sqlite3_open("heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
+	if(sqlite3_open("src/bibliotheque_de_fonctions_utiles/heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
 	{
 		//
 		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "SELECT decalage_par_rapport_a_UTC FROM table_des_decalages_horaires WHERE nom_de_la_timezone = ?;",  -1, &declaration_pour_sqlite3, NULL);

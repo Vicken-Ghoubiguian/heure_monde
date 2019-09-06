@@ -67,4 +67,18 @@ Ainsi que pour le fichier pour tester les dates et heures lors d'un changement d
 
 $ gcc test/test_3.c src/(étoile_sur_le_clavier)/(étoile_sur_le_clavier).c -o nom_du_fichier_executable_que_vous_aurez_au_prealable_choisi -lsqlite3
 
+L'option -lsqlite3 sert à inclure la librairie <sqlite3.h> dans le projet en cours. Celle-ci permet d'effectuer les opérations SQL sur des bases SQLite.
+
+La base de données heure_monde.db doit être créee dans le répertoire src/bibliotheque_de_fonctions_utiles.
+
+Elle est crée grace à la commande suivante: 
+
+$ sqlite3 heure_monde.db
+
+Une fois créee, il faut créer la table table_des_decalages_horaires puis la remplir, toutes ces opérations éffectuées depuis le fichier heure_monde.sql.
+
+Pour cela éffectuer la commande suivante tout de suite après la commande de création de la base SQLITE heure_monde (ci-dessus):
+
+sqlite> .read heure_monde.sql
+
 A part cela, cette API peut être intégrée dans n'importe quel projet développé en C.
