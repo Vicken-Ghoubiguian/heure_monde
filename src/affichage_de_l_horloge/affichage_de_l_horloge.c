@@ -788,25 +788,25 @@ void affichage_de_l_horloge()
 	time_t heure_a_makassar = temps_utc + (8 * 3600); //Makassar
 
 	/* République des Seychelles */
-	time_t heure_a_mahe = temps_utc + (4 * 3600); //Mahe
+	time_t heure_a_mahe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Mahe"); //Mahe
 
 	/* État indépendant de Papouasie-Nouvelle-Guinée */
-	time_t heure_a_bougainville = temps_utc + (11 * 3600); //Bougainville
-	time_t heure_a_port_moresby = temps_utc + (10 * 3600); //Port Moresby
+	time_t heure_a_bougainville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Bougainville"); //Bougainville
+	time_t heure_a_port_moresby = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Port_Moresby"); //Port Moresby
 
 	/* États fédérés de Micronésie */
-	time_t heure_a_pohnpei = temps_utc + (11 * 3600); //Pohnpei
-	time_t heure_a_ponape = temps_utc + (11 * 3600); //Ponape
-	time_t heure_a_chuuk = temps_utc + (10 * 3600); //Chuuk
-	time_t heure_a_truk = temps_utc + (10 * 3600); //Truk
-	time_t heure_a_yap = temps_utc + (10 * 3600); //Yap
-	time_t heure_a_kosrae = temps_utc + (11 * 3600); //kosrae
+	time_t heure_a_pohnpei = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Pohnpei"); //Pohnpei
+	time_t heure_a_ponape = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Ponape"); //Ponape
+	time_t heure_a_chuuk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Chuuk"); //Chuuk
+	time_t heure_a_truk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Truk"); //Truk
+	time_t heure_a_yap = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Yap"); //Yap
+	time_t heure_a_kosrae = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Kosrae"); //kosrae
 
 	/* République des Palaos */
-	time_t heure_de_palau = temps_utc + (9 * 3600); //Palau
+	time_t heure_de_palau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Palau"); //Palau
 
 	/* îles Mariannes du Nord */
-	time_t heure_a_saipan = temps_utc + (10 * 3600); //Saipan
+	time_t heure_a_saipan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Saipan"); //Saipan
 
 	/* Porto Rico */
 	time_t heure_a_porto_rico = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Puerto_Rico"); //Porto Rico

@@ -7,6 +7,27 @@ CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 
 -- Insertion des décalages horaires relatives à chaque timezone --
 
+-- États fédérés de Micronésie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Pohnpei", 39600);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Ponape", 39600);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Chuuk", 36000);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Kosrae", 39600);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Yap", 36000);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Truk", 36000);
+
+-- République des Seychelles --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Indian/Mahe", 14400);
+
+-- État indépendant de Papouasie-Nouvelle-Guinée --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Bougainville", 39600);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Port_Moresby", 36000);
+
+-- République des Palaos --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Palau", 32400);
+
+-- îles Mariannes du Nord --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Saipan", 36000);
+
 -- Porto Rico --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Puerto_Rico", -14400);
 
