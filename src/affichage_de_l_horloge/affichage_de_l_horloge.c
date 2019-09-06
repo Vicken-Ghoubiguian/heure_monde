@@ -823,7 +823,7 @@ void affichage_de_l_horloge()
 	time_t heure_saratov = temps_utc + (4 * 3600); //Saratov
 	time_t heure_oulianovsk = temps_utc + (4 * 3600); //Oulianovsk
 	time_t heure_astrakhan = temps_utc + (4 * 3600); //Astrakhan
-	time_t heure_anadyr = temps_utc + (12 * 3600); //Anadyr
+	time_t heure_anadyr = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Anadyr"); //Anadyr
 	time_t heure_sakhalin = temps_utc + (11 * 3600); //Sakhalin
 	time_t heure_omsk = temps_utc + (6 * 3600); //Omsk
 	time_t heure_tchita = temps_utc + (9 * 3600); //Tchita
