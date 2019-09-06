@@ -809,10 +809,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_saipan = temps_utc + (10 * 3600); //Saipan
 
 	/* Porto Rico */
-	time_t heure_a_porto_rico = temps_utc - (4 * 3600); //Porto Rico
+	time_t heure_a_porto_rico = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Puerto_Rico"); //Porto Rico
 
 	/* République de Turquie */
-	time_t heure_a_istanbul = temps_utc + (3 * 3600); //Istanbul
+	time_t heure_a_istanbul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Istanbul"); //Istanbul
 
 	/* Fédération de Russie */
 	time_t heure_moscou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Moscow"); //Moscou
