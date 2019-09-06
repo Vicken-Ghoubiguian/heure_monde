@@ -159,7 +159,7 @@ int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_ti
 		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "SELECT decalage_par_rapport_a_UTC FROM table_des_decalages_horaires WHERE nom_de_la_timezone = ?;",  -1, &declaration_pour_sqlite3, NULL);
 
 		//
-		sqlite3_bind_text(declaration_pour_sqlite3, 1, "Asia/Anadyr", -1, SQLITE_STATIC);
+		sqlite3_bind_text(declaration_pour_sqlite3, 1, nom_de_la_timezone, -1, SQLITE_STATIC);
 
 		//
 		if(sqlite3_column_count(declaration_pour_sqlite3) == 1)
@@ -177,9 +177,6 @@ int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_ti
 
                         //
                         sqlite3_close(connecteur_de_la_base_heure_monde);
-
-			//
-			printf("Valeur: %d.\n", decalage_par_rapport_a_UTC);
 		}
 		//Sinon...
 		else
