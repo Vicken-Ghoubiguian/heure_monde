@@ -18,4 +18,7 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp();
 //Cette fonction renvoie le timestamp courant avec plusieurs années de différence (en fonction de l'année passée en paramétre de la fonction)
 time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_courant, int annee_particuliere_voulue);
 
+//
+int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_timezone);
+
 #endif

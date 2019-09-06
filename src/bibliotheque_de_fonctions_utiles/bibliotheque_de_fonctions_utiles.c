@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sqlite3.h>
 
 /* Inclusion des bibliothéques internes à l'API */
 #include "bibliotheque_de_fonctions_utiles.h"
@@ -140,4 +141,69 @@ time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_coura
 	//Puis, le résultat est retourné
 	return timestamp_du_temps_voulu_a_retourner;
 
+}
+
+//
+int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_timezone)
+{
+	//
+	sqlite3 *connecteur_de_la_base_heure_monde;
+	sqlite3_stmt *declaration_pour_sqlite3;
+	int resultat_de_la_requete;
+	int decalage_par_rapport_a_UTC;
+
+	//
+	if(sqlite3_open("heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
+	{
+		//
+		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "SELECT decalage_par_rapport_a_UTC WHERE nom_de_la_timezone = ?1;",  -1, &declaration_pour_sqlite3, NULL);
+
+		//
+		sqlite3_bind_text(declaration_pour_sqlite3, 1, nom_de_la_timezone, 20, SQLITE_STATIC);
+
+		//
+		if(sqlite3_column_count(declaration_pour_sqlite3) == 1)
+		{
+			//
+			decalage_par_rapport_a_UTC = sqlite3_column_int(declaration_pour_sqlite3, 1);
+
+			//
+                        sqlite3_finalize(declaration_pour_sqlite3);
+
+                        //
+                        sqlite3_close(connecteur_de_la_base_heure_monde);
+		}
+		//Sinon...
+		else
+		{
+			//
+			printf("Erreur: il ne peut avoir qu'un seul décalage horaire enregistré par timezone. Quelquechose ne va pas dans votre base de données heure_monde.\n");
+
+			//
+			sqlite3_finalize(declaration_pour_sqlite3);
+
+			//
+			sqlite3_close(connecteur_de_la_base_heure_monde);
+
+			//
+			exit(1);
+		}
+	}
+	//Sinon...
+	else
+	{
+		//
+		printf("Erreur lors de l'ouverture de la base de données heure_monde. Pourquoi ? Eh bien: %s\n", sqlite3_errmsg(connecteur_de_la_base_heure_monde));
+
+		//
+		sqlite3_finalize(declaration_pour_sqlite3);
+
+		//
+		sqlite3_close(connecteur_de_la_base_heure_monde);
+
+		//
+		exit(1);
+	}
+
+	return decalage_par_rapport_a_UTC;
 }
