@@ -7,6 +7,54 @@ CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 
 -- Insertion des décalages horaires relatives à chaque timezone --
 
+-- Groenland --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Danmarkshavn", 0);
+
+-- République d'Islande --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Atlantic/Reykjavik", 0);
+
+-- Royaume-Uni de Grande-Bretagne et d'Irlande du Nord --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Atlantic/St_Helena", 0);
+
+-- République togolaise --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Lome", 0);
+
+-- République du Ghana --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Accra", 0);
+
+-- République du Mali --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Bamako", 0);
+
+-- République islamique de Mauritanie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Nouakchott", 0);
+
+-- République de Côte d'Ivoire --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Abidjan", 0);
+
+-- République de Guinée --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Conakry", 0);
+
+-- République de Sierra Leone --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Freetown", 0);
+
+-- République du Liberia --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Monrovia", 0);
+
+-- République du Sénégal --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Dakar", 0);
+
+-- Burkina Faso --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Ouagadougou", 0);
+
+-- République de Gambie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Banjul", 0);
+
+-- République démocratique de Sao Tomé-et-Principe --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Sao_Tome", 0);
+
+-- République de Guinée-Bissau --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Bissau", 0);
+
 -- Niue --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Pacific/Niue", -39600);
 

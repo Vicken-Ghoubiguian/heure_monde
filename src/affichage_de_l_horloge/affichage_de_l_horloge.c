@@ -95,7 +95,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_scoresbysund = temps_utc - ((1 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Scoresbysund
 	time_t heure_a_godthab = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Godthab
 	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Thule
-	time_t heure_a_danmarkshavn = temps_utc; //Danmarkshavn
+	time_t heure_a_danmarkshavn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Danmarkshavn"); //Danmarkshavn
 
 	/* Royaume de Norvège */
 	time_t heure_a_oslo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Oslo
@@ -109,7 +109,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_mariehamn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Mariehamn
 
 	/* République d'Islande */
-	time_t heure_a_reykjavik = temps_utc; //Reykjavik
+	time_t heure_a_reykjavik = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Reykjavik"); //Reykjavik
 
 	/* République de Pologne */
 	time_t heure_a_varsovie = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Varsovie
@@ -336,7 +336,7 @@ void affichage_de_l_horloge()
 	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
 	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
 	time_t heure_a_tortola = temps_utc - (4 * 3600); //Tortola
-	time_t heure_a_st_helena = temps_utc; //St Hélène
+	time_t heure_a_st_helena = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/St_Helena"); //St Hélène
 	time_t heure_a_stanley = temps_utc - (3 * 3600); //Stanley
 	time_t heure_a_gibraltar = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Gibraltar
 	time_t heure_a_anguilla = temps_utc - (4 * 3600); //Anguilla
@@ -479,10 +479,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_porto_novo = temps_utc + (1 * 3600); //Porto-Novo
 
 	/* République togolaise */
-	time_t heure_a_lome = temps_utc; //Lome
+	time_t heure_a_lome = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Lome"); //Lome
 
 	/* République du Ghana */
-	time_t heure_a_accra = temps_utc; //Accra
+	time_t heure_a_accra = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Accra"); //Accra
 
 	/* République de Djibouti */
 	time_t heure_djibouti = temps_utc + (3 * 3600); //Djibouti
@@ -507,22 +507,22 @@ void affichage_de_l_horloge()
 	time_t heure_a_bangui = temps_utc + (1 * 3600); //Bangui
 
 	/* République du Mali */
-	time_t heure_a_bamako = temps_utc; //Bamako
+	time_t heure_a_bamako = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Bamako"); //Bamako
 
 	/* République islamique de Mauritanie */
-	time_t heure_a_nouakchott = temps_utc; //Nouakchott
+	time_t heure_a_nouakchott = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Nouakchott"); //Nouakchott
 
 	/* République de Côte d'Ivoire */
-	time_t heure_a_abidjan = temps_utc; //Abidjan
+	time_t heure_a_abidjan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Abidjan"); //Abidjan
 
 	/* République de Guinée */
-	time_t heure_a_conakry = temps_utc; //Conakry
+	time_t heure_a_conakry = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Conakry"); //Conakry
 
 	/* République de Sierra Leone */
-	time_t heure_a_freetown = temps_utc; //Freetown
+	time_t heure_a_freetown = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Freetown"); //Freetown
 
 	/* République du Liberia */
-	time_t heure_a_morovia = temps_utc; //Morovia
+	time_t heure_a_morovia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Monrovia"); //Morovia
 
 	/* République du Burundi */
 	time_t heure_a_bujumbura = temps_utc + (2 * 3600); //Bujumbura
@@ -531,13 +531,13 @@ void affichage_de_l_horloge()
 	time_t heure_a_blantyre = temps_utc + (2 * 3600); //Blantyre
 
 	/* République du Sénégal */
-	time_t heure_a_dakar = temps_utc; //Dakar
+	time_t heure_a_dakar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Dakar"); //Dakar
 
 	/* République de Zambie */
 	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
 
 	/* Burkina Faso */
-	time_t heure_a_ouagadougou = temps_utc; //Ouagadougou
+	time_t heure_a_ouagadougou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Ouagadougou"); //Ouagadougou
 
 	/* République tunisienne */
 	time_t heure_a_tunis = temps_utc + (1 * 3600); //Tunis
@@ -546,13 +546,13 @@ void affichage_de_l_horloge()
 	time_t heure_au_cap_vert = temps_utc - (1 * 3600); //Cap-Vert
 
 	/* République de Gambie */
-	time_t heure_a_banjul = temps_utc; //Banjul
+	time_t heure_a_banjul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Banjul"); //Banjul
 
 	/* République démocratique de Sao Tomé-et-Principe */
-	time_t heure_a_sao_tome = temps_utc; //Sao Tome
+	time_t heure_a_sao_tome = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Sao_Tome"); //Sao Tome
 
 	/* République de Guinée-Bissau */
-	time_t heure_a_bissau = temps_utc; //Bissau
+	time_t heure_a_bissau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Bissau"); //Bissau
 
 	/* République du Tchad */
 	time_t heure_a_ndjamena = temps_utc + (1 * 3600); //Ndjamena
