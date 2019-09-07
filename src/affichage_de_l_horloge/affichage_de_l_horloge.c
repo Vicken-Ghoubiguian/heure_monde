@@ -172,7 +172,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_tirane = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tirane
 
 	/* République de Biélorussie */
-	time_t heure_a_minsk = temps_utc + (3 * 3600); //Minsk
+	time_t heure_a_minsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Minsk"); //Minsk
 
 	/* Ukraine */
 	time_t heure_a_kiev = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Kiev
@@ -359,7 +359,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_gernsey = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Guernsey	
 
 	/* Niue */
-	time_t heure_de_niue = temps_utc - (11 * 3600); //Niue
+	time_t heure_de_niue = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Niue"); //Niue
 
 	/* Commonwealth d'Australie */
         time_t heure_a_sydney = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
@@ -575,67 +575,67 @@ void affichage_de_l_horloge()
 	time_t heure_a_fakaofo = temps_utc + (13 * 3600); //Fakaofo
 
 	/* îles Cook */
-	time_t heure_a_rarotonga = temps_utc - (10 * 3600); //Rarotonga
+	time_t heure_a_rarotonga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Rarotonga"); //Rarotonga
 
 	/* Royaume de Tonga */
-	time_t heure_a_togatapu = temps_utc + (13 * 3600); //Togatapu
+	time_t heure_a_togatapu = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Tongatapu"); //Togatapu
 
 	/* République des Îles Marshall */
-	time_t heure_a_majuro = temps_utc + (12 * 3600); //Majuro
-	time_t heure_a_kwajalein = temps_utc + (12 * 3600); //Kwajalein
+	time_t heure_a_majuro = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Majuro"); //Majuro
+	time_t heure_a_kwajalein = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Kwajalein"); //Kwajalein
 
 	/* République de Vanuatu */
-	time_t heure_a_efate = temps_utc + (11 * 3600); //Efate
+	time_t heure_a_efate = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Efate"); //Efate
 
 	/* État des Tuvalu */
-	time_t heure_a_funafuti = temps_utc + (12 * 3600); //Funafuti
+	time_t heure_a_funafuti = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Funafuti"); //Funafuti
 
 	/* République de Nauru */
-	time_t heure_de_nauru = temps_utc + (12 * 3600); //Nauru
+	time_t heure_de_nauru = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Nauru"); //Nauru
 
 	/* République des Kiribati */
-	time_t heure_a_tarawa = temps_utc + (12 * 3600); //Tarawa
-	time_t heure_a_kiritimati = temps_utc + (14 * 3600); //Kiritimati
-	time_t heure_a_enderbury = temps_utc + (13 * 3600); //Enderbury
+	time_t heure_a_tarawa = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Tarawa"); //Tarawa
+	time_t heure_a_kiritimati = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Kiritimati"); //Kiritimati
+	time_t heure_a_enderbury = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Enderbury"); //Enderbury
 
 	/* République du Panama */
-	time_t heure_au_panama = temps_utc - (5 * 3600); //Panama
+	time_t heure_au_panama = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Panama"); //Panama
 
 	/* République argentine */
-        time_t heure_buenos_aires = temps_utc - (3 * 3600); //Buenos Aires
-	time_t heure_a_catamarca = temps_utc - (3 * 3600); //Catamarca
-	time_t heure_a_cordoba = temps_utc - (3 * 3600); //Cordoba
-	time_t heure_a_jujuy = temps_utc - (3 * 3600); //Jujuy
-	time_t heure_a_la_rioja = temps_utc - (3 * 3600); //La Rioja
-	time_t heure_a_mendoza = temps_utc - (3 * 3600); //Mendoza
-	time_t heure_a_rio_gallegos = temps_utc - (3 * 3600); //Rio Gallegos
-	time_t heure_a_salta = temps_utc - (3 * 3600); //Salta
-	time_t heure_a_san_juan = temps_utc - (3 * 3600); //San Juan
-	time_t heure_a_san_luis = temps_utc - (3 * 3600); //San Luis
-	time_t heure_a_tucuman = temps_utc - (3 * 3600); //Tucuman
-	time_t heure_a_ushuaia = temps_utc - (3 * 3600); //Ushuaia
+        time_t heure_buenos_aires = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Buenos_Aires"); //Buenos Aires
+	time_t heure_a_catamarca = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Catamarca"); //Catamarca
+	time_t heure_a_cordoba = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Cordoba"); //Cordoba
+	time_t heure_a_jujuy = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Jujuy"); //Jujuy
+	time_t heure_a_la_rioja = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/La_Rioja"); //La Rioja
+	time_t heure_a_mendoza = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Mendoza"); //Mendoza
+	time_t heure_a_rio_gallegos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Rio_Gallegos"); //Rio Gallegos
+	time_t heure_a_salta = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Salta"); //Salta
+	time_t heure_a_san_juan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/San_Juan"); //San Juan
+	time_t heure_a_san_luis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/San_Luis"); //San Luis
+	time_t heure_a_tucuman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Tucuman"); //Tucuman
+	time_t heure_a_ushuaia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Argentina/Ushuaia"); //Ushuaia
 
 	/* République orientale de l'Uruguay */
-	time_t heure_a_montevideo = temps_utc - (3 * 3600); //Montevideo
+	time_t heure_a_montevideo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Montevideo"); //Montevideo
 
 	/* République bolivarienne du Venezuela */
-	time_t heure_a_caracas = temps_utc - (4 * 3600); //Caracas
+	time_t heure_a_caracas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Caracas"); //Caracas
 
 	/* République de l'Équateur */
-	time_t heure_a_guayaquil = temps_utc - (5 * 3600); //Guayaquil
-	time_t heure_a_galapagos = temps_utc - (6 * 3600); //Galapagos
+	time_t heure_a_guayaquil = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guayaquil"); //Guayaquil
+	time_t heure_a_galapagos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Galapagos"); //Galapagos
 
 	/* État plurinational de Bolivie */
-	time_t heure_a_la_paz = temps_utc - (4 * 3600); //La Paz
+	time_t heure_a_la_paz = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/La_Paz"); //La Paz
 
 	/* République de Madagascar */
-        time_t heure_antananarivo = temps_utc + (3 * 3600); //Antananarivo
+        time_t heure_antananarivo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Antananarivo"); //Antananarivo
 
 	/* République du Pérou */
-        time_t heure_lima = temps_utc - (5 * 3600); //Lima
+        time_t heure_lima = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Lima"); //Lima
 
 	/* République de Colombie */
-	time_t heure_a_bogota = temps_utc - (5 * 3600); //Bogota
+	time_t heure_a_bogota = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Bogota"); //Bogota
 
 	/* République arabe syrienne */
 	time_t heure_a_damas = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_syrie(temps_utc) * 3600)); //Damas
@@ -730,7 +730,7 @@ void affichage_de_l_horloge()
         time_t heure_seoul = temps_utc + (9 * 3600); //Seoul
 
 	/* Empire du Japon */
-	time_t heure_tokyo = temps_utc + (9 * 3600); //Tokyo
+	time_t heure_tokyo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tokyo"); //Tokyo
 
 	/* Royaume du Bhoutan */
 	time_t heure_a_thimphou = temps_utc + (6 * 3600); //Thimphou
