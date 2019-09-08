@@ -724,68 +724,68 @@ void affichage_de_l_horloge()
 	time_t heure_a_ho_chi_minh_ville = temps_utc + (7 * 3600); //Hô Chi Minh Ville
 
 	/* République populaire démocratique de Corée */
-	time_t heure_pyongyang = temps_utc + (9 * 3600); //Pyongyang
+	time_t heure_pyongyang = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Pyongyang"); //Pyongyang
 
 	/* République de Corée */
-        time_t heure_seoul = temps_utc + (9 * 3600); //Seoul
+        time_t heure_seoul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Seoul"); //Seoul
 
 	/* Empire du Japon */
 	time_t heure_tokyo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tokyo"); //Tokyo
 
 	/* Royaume du Bhoutan */
-	time_t heure_a_thimphou = temps_utc + (6 * 3600); //Thimphou
+	time_t heure_a_thimphou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Thimphu"); //Thimphou
 
 	/* République populaire de Chine */
-        time_t heure_pekin = temps_utc + (8 * 3600); //Pekin
-	time_t heure_a_urumqi = temps_utc + (6 * 3600); //Urumqi
+        time_t heure_shanghai = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Shanghai"); //Pekin
+	time_t heure_a_urumqi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Urumqi"); //Urumqi
 
 	/* Région administrative spéciale de Macao de la République populaire de Chine */
-	time_t heure_a_macao = temps_utc + (8 * 3600); //Macao
+	time_t heure_a_macao = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Macau"); //Macao
 
 	/* Région administrative spéciale de Hong Kong de la République populaire de Chine */
-	time_t heure_a_hong_kong = temps_utc + (8 * 3600); //Hong Kong
+	time_t heure_a_hong_kong = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Hong_Kong"); //Hong Kong
 
 	/* République démocratique populaire lao */
-	time_t heure_a_vientiane = temps_utc + (7 * 3600); //Vientiane
+	time_t heure_a_vientiane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Vientiane"); //Vientiane
 
 	/* Royaume du Cambodge */
-	time_t heure_a_phnom_penh = temps_utc + (7 * 3600); //Phnom Penh
+	time_t heure_a_phnom_penh = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Phnom_Penh"); //Phnom Penh
 
 	/* République de l'Union du Myanmar */
-	time_t heure_a_yagon = temps_utc + (30 * 60) + (6 * 3600); //Yangon
+	time_t heure_a_yagon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yangon"); //Yangon
 
 	/* République démocratique du Timor oriental */
-	time_t heure_a_dili = temps_utc + (9 * 3600); //Dili
+	time_t heure_a_dili = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dili"); //Dili
 
 	/* Negara Brunei Darussalam */
-	time_t heure_brunei = temps_utc + (8 * 3600); //Brunei
+	time_t heure_brunei = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Brunei"); //Brunei
 
 	/* Mongolie */
-	time_t heure_a_choibalsan = temps_utc + (8 * 3600); //Choibalsan
-	time_t heure_a_ulaanbaatar = temps_utc + (8 * 3600); //Ulaanbaatar
-	time_t heure_a_hovd = temps_utc + (7 * 3600); //Hovd
+	time_t heure_a_choibalsan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Choibalsan"); //Choibalsan
+	time_t heure_a_ulaanbaatar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Ulaanbaatar"); //Ulaanbaatar
+	time_t heure_a_hovd = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Hovd"); //Hovd
 
 	/* République de Chine (Taiwan) */
-	time_t heure_a_tapei = temps_utc + (8 * 3600); //Tapei
+	time_t heure_a_tapei = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Taipei"); //Tapei
 
 	/* République des Philippines */
-	time_t heure_a_manille = temps_utc + (8 * 3600); //Manille
+	time_t heure_a_manille = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Manila"); //Manille
 
 	/* République de Singapour */
-	time_t heure_a_singapour = temps_utc + (8 * 3600); //Singapour
+	time_t heure_a_singapour = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Singapore"); //Singapour
 
 	/* Îles Salomon */
-	time_t heure_a_guadalcanal = temps_utc + (11 * 3600); //Guadalcanal
+	time_t heure_a_guadalcanal = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Guadalcanal"); //Guadalcanal
 
-	/* Malaisie */
-	time_t heure_a_kuala_lumpur = temps_utc + (8 * 3600); //Kuala Lumpur
-	time_t heure_a_kuching = temps_utc + (8 * 3600); //Kuching
+	/* Fédération de Malaisie */
+	time_t heure_a_kuala_lumpur = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kuala_Lumpur"); //Kuala Lumpur
+	time_t heure_a_kuching = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kuching"); //Kuching
 
 	/* République d'Indonésie */
-	time_t heure_a_jakarta = temps_utc + (7 * 3600); //Jakarta
-	time_t heure_a_pontianak = temps_utc + (7 * 3600); //Pontianak
-	time_t heure_a_jayapura = temps_utc + (9 * 3600); //Jayapura
-	time_t heure_a_makassar = temps_utc + (8 * 3600); //Makassar
+	time_t heure_a_jakarta = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Jakarta"); //Jakarta
+	time_t heure_a_pontianak = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Pontianak"); //Pontianak
+	time_t heure_a_jayapura = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Jayapura"); //Jayapura
+	time_t heure_a_makassar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Makassar"); //Makassar
 
 	/* République des Seychelles */
 	time_t heure_a_mahe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Mahe"); //Mahe
@@ -1691,7 +1691,7 @@ void affichage_de_l_horloge()
 
 	printf("\n");
 	printf("République populaire de Chine:\n");
-        calcul_et_affichage_horaire(heure_pekin, "Pekin");
+        calcul_et_affichage_horaire(heure_shanghai, "Shanghai");
 	calcul_et_affichage_horaire(heure_a_urumqi, "Urumqi");
 
 	printf("\n");
