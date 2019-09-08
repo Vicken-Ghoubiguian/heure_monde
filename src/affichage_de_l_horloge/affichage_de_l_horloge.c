@@ -485,10 +485,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_accra = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Accra"); //Accra
 
 	/* République de Djibouti */
-	time_t heure_djibouti = temps_utc + (3 * 3600); //Djibouti
+	time_t heure_djibouti = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Djibouti"); //Djibouti
 
 	/* République du Congo */
-	time_t heure_a_brazzaville = temps_utc + (1 * 3600); //Brazzaville
+	time_t heure_a_brazzaville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Brazzaville"); //Brazzaville
 
 	/* République démocratique du Congo */
 	time_t heure_a_kinshasa = temps_utc + (1 * 3600); //Kinshasa
@@ -525,25 +525,25 @@ void affichage_de_l_horloge()
 	time_t heure_a_morovia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Monrovia"); //Morovia
 
 	/* République du Burundi */
-	time_t heure_a_bujumbura = temps_utc + (2 * 3600); //Bujumbura
+	time_t heure_a_bujumbura = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Bujumbura"); //Bujumbura
 
 	/* République du Malawi */
-	time_t heure_a_blantyre = temps_utc + (2 * 3600); //Blantyre
+	time_t heure_a_blantyre = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Blantyre"); //Blantyre
 
 	/* République du Sénégal */
 	time_t heure_a_dakar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Dakar"); //Dakar
 
 	/* République de Zambie */
-	time_t heure_lusaka = temps_utc + (2 * 3600); //Lusaka
+	time_t heure_lusaka = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Lusaka"); //Lusaka
 
 	/* Burkina Faso */
 	time_t heure_a_ouagadougou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Ouagadougou"); //Ouagadougou
 
 	/* République tunisienne */
-	time_t heure_a_tunis = temps_utc + (1 * 3600); //Tunis
+	time_t heure_a_tunis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Tunis"); //Tunis
 
 	/* République du Cap-Vert */
-	time_t heure_au_cap_vert = temps_utc - (1 * 3600); //Cap-Vert
+	time_t heure_au_cap_vert = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Cape_Verde"); //Cap-Vert
 
 	/* République de Gambie */
 	time_t heure_a_banjul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Banjul"); //Banjul
@@ -555,19 +555,19 @@ void affichage_de_l_horloge()
 	time_t heure_a_bissau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Bissau"); //Bissau
 
 	/* République du Tchad */
-	time_t heure_a_ndjamena = temps_utc + (1 * 3600); //Ndjamena
+	time_t heure_a_ndjamena = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Ndjamena"); //Ndjamena
 
 	/* République du Rwanda */
-	time_t heure_a_kigali = temps_utc + (2 * 3600); //Kigali
+	time_t heure_a_kigali = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Kigali"); //Kigali
 
 	/* République du Niger */
-	time_t heure_a_niamey = temps_utc + (1 * 3600); //Niamey
+	time_t heure_a_niamey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Niamey"); //Niamey
 
 	/* République arabe d'Égypte */
-	time_t heure_le_caire = temps_utc + (2 * 3600); //Le Caire
+	time_t heure_le_caire = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Cairo"); //Le Caire
 
 	/* République de Zimbabwe */
-	time_t heure_harare = temps_utc + (2 * 3600); //Harare
+	time_t heure_harare = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Harare"); //Harare
 
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
