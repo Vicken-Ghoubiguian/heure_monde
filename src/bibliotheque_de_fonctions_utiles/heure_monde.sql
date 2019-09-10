@@ -7,6 +7,30 @@ CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 
 -- Insertion des décalages horaires relatives à chaque timezone --
 
+-- Sainte-Lucie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/St_Lucia", -14400);
+
+-- Saint-Vincent-et-les-Grenadines --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/St_Vincent", -14400);
+
+-- République dominicaine --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Santo_Domingo", -14400);
+
+-- Fédération de Saint-Christophe-et-Niévès, Saint-Christophe-et-Nevis --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/St_Kitts", -14400);
+
+-- République du Suriname --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Paramaribo", -10800);
+
+-- République coopérative du Guyana --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Guyana", -14400);
+
+-- République de Trinité-et-Tobago --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Port_of_Spain", -14400);
+
+-- Jamaïque --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Jamaica", -18000);
+
 -- République de Namibie --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Windhoek", 7200);
 

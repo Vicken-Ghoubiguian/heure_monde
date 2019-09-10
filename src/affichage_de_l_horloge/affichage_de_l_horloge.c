@@ -187,28 +187,28 @@ void affichage_de_l_horloge()
 	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
 
 	/* République du Suriname */
-	time_t heure_a_paramaribo = temps_utc - (3 * 3600); //Paramaribo
+	time_t heure_a_paramaribo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Paramaribo"); //Paramaribo
 
 	/* République coopérative du Guyana */
-	time_t heure_a_guyana = temps_utc - (4 * 3600); //Guyana
+	time_t heure_a_guyana = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guyana"); //Guyana
 
 	/* République de Trinité-et-Tobago */
-	time_t heure_a_port_d_espagne = temps_utc - (4 * 3600); //Port d'Espagne
+	time_t heure_a_port_d_espagne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Port_of_Spain"); //Port d'Espagne
 
 	/* Jamaïque */
-	time_t heure_en_jamaique = temps_utc - (5 * 3600); //Jamaique
+	time_t heure_en_jamaique = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Jamaica"); //Jamaique
 
 	/* Fédération de Saint-Christophe-et-Niévès, Saint-Christophe-et-Nevis */
-	time_t heure_a_st_kitt = temps_utc - (4 * 3600); //St kitt
+	time_t heure_a_st_kitt = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Kitts"); //St kitt
 
 	/* Saint-Vincent-et-les-Grenadines */
-	time_t heure_a_st_vincent = temps_utc - (4 * 3600); //Saint-Vincent
+	time_t heure_a_st_vincent = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Vincent"); //Saint-Vincent
 
 	/* Sainte-Lucie */
-	time_t heure_a_sainte_lucie = temps_utc - (4 * 3600); //Sainte-Lucie
+	time_t heure_a_sainte_lucie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Lucia"); //Sainte-Lucie
 
 	/* République dominicaine */
-	time_t heure_a_st_domingue = temps_utc - (4 * 3600); //St Domingue
+	time_t heure_a_st_domingue = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Santo_Domingo"); //St Domingue
 
 	/* République d'Haïti */
 	time_t heure_a_port_au_prince = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Port-au-Prince
