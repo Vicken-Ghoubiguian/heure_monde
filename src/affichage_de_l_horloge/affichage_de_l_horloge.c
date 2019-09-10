@@ -491,20 +491,20 @@ void affichage_de_l_horloge()
 	time_t heure_a_brazzaville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Brazzaville"); //Brazzaville
 
 	/* République démocratique du Congo */
-	time_t heure_a_kinshasa = temps_utc + (1 * 3600); //Kinshasa
-	time_t heure_a_lubumbashi = temps_utc + (2 * 3600); //Lubumbashi
+	time_t heure_a_kinshasa = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Kinshasa"); //Kinshasa
+	time_t heure_a_lubumbashi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Lubumbashi"); //Lubumbashi
 
 	/* République unie de Tanzanie */
-	time_t heure_a_dar_es_salam = temps_utc + (3 * 3600); //Dar_es_Salam
+	time_t heure_a_dar_es_salam = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Dar_es_Salaam"); //Dar_es_Salam
 
 	/* République du Kenya */
-	time_t heure_a_nairobi = temps_utc + (3 * 3600); //Nairobi
+	time_t heure_a_nairobi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Nairobi"); //Nairobi
 
 	/* République d'Ouganda */
-	time_t heure_a_kampala = temps_utc + (3 * 3600); //Kampala
+	time_t heure_a_kampala = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Kampala"); //Kampala
 
 	/* République centrafricaine */
-	time_t heure_a_bangui = temps_utc + (1 * 3600); //Bangui
+	time_t heure_a_bangui = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Bangui"); //Bangui
 
 	/* République du Mali */
 	time_t heure_a_bamako = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Bamako"); //Bamako
