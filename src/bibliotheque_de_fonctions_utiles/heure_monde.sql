@@ -7,6 +7,39 @@ CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 
 -- Insertion des décalages horaires relatives à chaque timezone --
 
+-- République de Namibie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Windhoek", 7200);
+
+-- République d'Afrique du Sud --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Johannesburg", 7200);
+
+-- État de Libye --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Tripoli", 7200);
+
+-- État d'Érythrée --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Asmara", 10800);
+
+-- République gabonaise --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Libreville", 3600);
+
+-- République démocratique fédérale d’Éthiopie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Addis_Ababa", 10800);
+
+-- République fédérale de Somalie --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Mogadishu", 10800);
+
+-- République du Bénin --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Porto-Novo", 3600);
+
+-- République du Cameroun --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Douala", 3600);
+
+-- République de Guinée équatoriale --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Malabo", 3600);
+
+-- République fédérale du Nigeria --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Lagos", 3600);
+
 -- République démocratique du Congo --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Kinshasa", 3600);
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Africa/Lubumbashi", 7200);
@@ -223,7 +256,6 @@ INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rappor
 
 -- République du Pérou --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Lima", -18000);
-
 -- République de Colombie --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("America/Bogota", -18000);
 

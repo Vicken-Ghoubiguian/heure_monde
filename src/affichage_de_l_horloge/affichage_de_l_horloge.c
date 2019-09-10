@@ -446,37 +446,37 @@ void affichage_de_l_horloge()
 	time_t heure_a_gaborone = temps_utc + (2 * 3600); //Gaborone
 
 	/* République de Namibie */
-	time_t heure_windhoek = temps_utc + (2 * 3600); //Windhoek
+	time_t heure_windhoek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Windhoek"); //Windhoek
 
 	/* République d'Afrique du Sud */
-        time_t heure_johannesburg = temps_utc + (2 * 3600); //Johannesburg
+        time_t heure_johannesburg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Johannesburg"); //Johannesburg
 
 	/* État de Libye */
-	time_t heure_tripoli = temps_utc + (2 * 3600); //Tripoli
+	time_t heure_tripoli = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Tripoli"); //Tripoli
 
 	/* État d'Érythrée */
-	time_t heure_a_asmara = temps_utc + (3 * 3600); //Asmara
+	time_t heure_a_asmara = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Asmara"); //Asmara
 
 	/* République fédérale de Somalie */
-	time_t heure_a_mogadiscio = temps_utc + (3 * 3600); //Mogadiscio
+	time_t heure_a_mogadiscio = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Mogadishu"); //Mogadiscio
 
 	/* République démocratique fédérale d’Éthiopie */
-	time_t heure_addis_abeba = temps_utc + (3  * 3600); //Addis-Abeba
+	time_t heure_addis_abeba = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Addis_Ababa"); //Addis-Abeba
 
 	/* République gabonaise */
-	time_t heure_a_libreville = temps_utc + (1 * 3600); //Libreville
+	time_t heure_a_libreville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Libreville"); //Libreville
 
 	/* République du Cameroun */
-	time_t heure_a_douala = temps_utc + (1 * 3600); //Douala
+	time_t heure_a_douala = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Douala"); //Douala
 
 	/* République de Guinée équatoriale */
-	time_t heure_a_malabo = temps_utc + (1 * 3600); //Malabo
+	time_t heure_a_malabo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Malabo"); //Malabo
 
 	/* République fédérale du Nigeria */
-	time_t heure_a_lagos = temps_utc + (1 * 3600); //Lagos
+	time_t heure_a_lagos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Lagos"); //Lagos
 
 	/* République du Bénin */
-	time_t heure_a_porto_novo = temps_utc + (1 * 3600); //Porto-Novo
+	time_t heure_a_porto_novo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Porto-Novo"); //Porto-Novo
 
 	/* République togolaise */
 	time_t heure_a_lome = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Lome"); //Lome
