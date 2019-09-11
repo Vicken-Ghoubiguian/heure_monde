@@ -296,22 +296,22 @@ void affichage_de_l_horloge()
 	time_t heure_d_yellowknife = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yellowknife
 
 	/* République du Nicaragua */
-	time_t heure_managua = temps_utc - (6 * 3600); //Managua
+	time_t heure_managua = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Managua"); //Managua
 
 	/* République du Salvador */
-	time_t heure_d_el_salvador = temps_utc - (6 * 3600); //Salvador
+	time_t heure_d_el_salvador = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/El_Salvador"); //Salvador
 
 	/* Belize */
-	time_t heure_au_belize = temps_utc - (6 * 3600); //Belize
+	time_t heure_au_belize = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Belize"); //Belize
 
 	/* République du Costa Rica */
-	time_t heure_au_costa_rica = temps_utc - (6 * 3600); //Costa Rica
+	time_t heure_au_costa_rica = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Costa_Rica"); //Costa Rica
 
 	/* République du Honduras */
-	time_t heure_au_honduras = temps_utc - (6 * 3600); //Tegucigalpa
+	time_t heure_au_honduras = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tegucigalpa"); //Tegucigalpa
 
 	/* République du Guatemala */
-	time_t heure_au_guatemala = temps_utc - (6 * 3600); //Guatemala
+	time_t heure_au_guatemala = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guatemala"); //Guatemala
 
 	/* Confédération suisse */
 	time_t heure_zurich = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zurich
