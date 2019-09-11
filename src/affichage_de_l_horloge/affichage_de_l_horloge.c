@@ -416,34 +416,34 @@ void affichage_de_l_horloge()
 	time_t heure_a_laayoune = temps_utc + (1 * 3600); //Laayoune
 
 	/* République algérienne démocratique et populaire */
-	time_t heure_a_alger = temps_utc + (1 * 3600); //Alger
+	time_t heure_a_alger = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Algiers"); //Alger
 
 	/* République du Soudan */
-	time_t heure_a_khartoum = temps_utc + (2 * 3600); //Khartoum
+	time_t heure_a_khartoum = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Khartoum"); //Khartoum
 
 	/* République du Soudan du Sud */
-	time_t heure_a_djouba = temps_utc + (3 * 3600); //Djouba
+	time_t heure_a_djouba = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Juba"); //Djouba
 
 	/* République du Mozambique */
-	time_t heure_a_maputo = temps_utc + (2 * 3600); //Maputo
+	time_t heure_a_maputo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Maputo"); //Maputo
 
 	/* Union des Comores */
-	time_t heure_aux_comores = temps_utc + (3 * 3600); //Comores
+	time_t heure_aux_comores = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Comoro"); //Comores
 
 	/* République des Maldives */
-	time_t heure_aux_maldives = temps_utc + (5 * 3600); //Maldives
+	time_t heure_aux_maldives = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Maldives"); //Maldives
 
 	/* République de Maurice */
-	time_t heure_a_maurice = temps_utc + (4 * 3600); //Maurice
+	time_t heure_a_maurice = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Mauritius"); //Maurice
 
 	/* Royaume du Lesotho */
-	time_t heure_a_maseru = temps_utc + (2 * 3600); //Maseru
+	time_t heure_a_maseru = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Maseru"); //Maseru
 
 	/* Royaume d'Eswatini */
-	time_t heure_a_mbabane = temps_utc + (2 * 3600); //Mbabane
+	time_t heure_a_mbabane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Mbabane"); //Mbabane
 
 	/* République du Botswana */
-	time_t heure_a_gaborone = temps_utc + (2 * 3600); //Gaborone
+	time_t heure_a_gaborone = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Gaborone"); //Gaborone
 
 	/* République de Namibie */
 	time_t heure_windhoek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Windhoek"); //Windhoek
