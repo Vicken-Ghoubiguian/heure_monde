@@ -27,7 +27,7 @@ Celui-ci se compose de 6 bibliothéques, et chacune posséde un rôle spécifiqu
 
 * retour_de_la_date_et_de_l_heure: Cette bibliothéque contient la fonction retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu qui sert à afficher l'heure et la date courante sur un fuseau horaire donné de part le monde.
 
-* bibliotheque_de_fonctions_utiles: Cette bibliothéque contient toutes les fonctions de calcul et de manipulation pour le bon fonctionnement de l'API.
+* bibliotheque_de_fonctions_utiles: Cette bibliothéque contient toutes les fonctions de calcul et de manipulation pour le bon fonctionnement de l'API. Elle contient également la base heure_monde.db et le script SQL de création de celle-ci, avec la création de la table table_des_decalages_horaires et l'insertion des données dans celle-ci.
 
 Le répertoire test contient tois fichier: 2 pour tester chacune des 2 fonctions qui permettent d'utiliser l'API (affichage_de_l_horloge et retour_de_la_date_et_de_l_heure), et 1 pour tester les dates et heures lors d'un changement d'heure pour une année donnée pour toutes les zones géographiques appliquant le changement d'heure:
 
