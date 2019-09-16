@@ -654,31 +654,31 @@ void affichage_de_l_horloge()
 	time_t heure_a_beyrouth = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_le_liban(temps_utc) * 3600)); //Beyrouth
 
 	/* République d'Irak */
-	time_t heure_a_baghdad = temps_utc + (3 * 3600); //Baghdad
+	time_t heure_a_baghdad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Baghdad"); //Baghdad
 
 	/* République islamique d'Iran */
 	time_t heure_a_teheran = temps_utc + (30 * 60) + ((3 * 3600) + (application_du_changement_d_heure_pour_l_iran(temps_utc) * 3600)); //Téhéran
 
 	/* État du Qatar */
-	time_t heure_au_qatar = temps_utc + (3 * 3600); //Qatar
+	time_t heure_au_qatar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Qatar"); //Qatar
 
 	/* République du Yémen */
-	time_t heure_a_aden = temps_utc + (3 * 3600); //Aden
+	time_t heure_a_aden = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Aden"); //Aden
 
 	/* Royaume d'Arabie saoudite */
-	time_t heure_a_riyad = temps_utc + (3 * 3600); //Riyad
+	time_t heure_a_riyad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Riyadh"); //Riyad
 
 	/* Sultanat d'Oman */
-	time_t heure_a_mascate = temps_utc + (4 * 3600); //Mascate
+	time_t heure_a_mascate = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Muscat"); //Mascate
 
 	/* Émirats arabes unis */
-	time_t heure_a_dubai = temps_utc + (4 * 3600); //Dubai
+	time_t heure_a_dubai = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dubai"); //Dubai
 
 	/* Royaume de Bahreïn */
-	time_t heure_au_bahrein = temps_utc + (3 * 3600); //Bahrein
+	time_t heure_au_bahrein = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bahrain"); //Bahrein
 
 	/* État du Koweït */
-	time_t heure_au_koweit = temps_utc + (3 * 3600); //Koweit
+	time_t heure_au_koweit = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kuwait"); //Koweit
 
 	/* République islamique du Pakistan */
 	time_t heure_a_karachi = temps_utc + (5 * 3600); //Karachi
