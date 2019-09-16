@@ -684,10 +684,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_karachi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Karachi"); //Karachi
 
 	/* République de l'Inde */
-	time_t heure_a_calcutta = temps_utc + (30 * 60) + (5 * 3600); //Calcutta
+	time_t heure_a_calcutta = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kolkata"); //Calcutta
 
 	/* République démocratique socialiste du Sri Lanka */
-	time_t heure_a_colombo = temps_utc + (30 * 60) + (5 * 3600); //Colombo
+	time_t heure_a_colombo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Colombo"); //Colombo
 
 	/* République populaire du Bangladesh */
 	time_t heure_a_dacca = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dhaka");
@@ -702,14 +702,14 @@ void affichage_de_l_horloge()
 	time_t heure_a_qyzylorda = temps_utc + (5 * 3600); //Qyzylorda
 
 	/* République d'Ouzbékistan */
-	time_t heure_a_tachkent = temps_utc + (5 * 3600); //Tachkent
-	time_t heure_a_samarkand = temps_utc + (5 * 3600); //Samarkand
+	time_t heure_a_tachkent = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tashkent"); //Tachkent
+	time_t heure_a_samarkand = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Samarkand"); //Samarkand
 
 	/* République du Tadjikistan */
-	time_t heure_a_douchanbe = temps_utc + (5 * 3600); //Douchanbé
+	time_t heure_a_douchanbe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dushanbe"); //Douchanbé
 
 	/* République kirghize */
-	time_t heure_a_bichkek = temps_utc + (6 * 3600); //Bichkek
+	time_t heure_a_bichkek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bishkek"); //Bichkek
 
 	/* République démocratique fédérale du Népal */
 	time_t heure_a_katmandou = temps_utc + (45 * 60) + (5 * 3600); //Katmandou
@@ -718,10 +718,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_kaboul = temps_utc + (30 * 60) + (4 * 3600); //Kaboul
 
 	/* Royaume de Thaïlande */
-	time_t heure_a_bangkok = temps_utc + (7 * 3600); //Bangkok
+	time_t heure_a_bangkok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bangkok"); //Bangkok
 
 	/* République socialiste du Viêt Nam */
-	time_t heure_a_ho_chi_minh_ville = temps_utc + (7 * 3600); //Hô Chi Minh Ville
+	time_t heure_a_ho_chi_minh_ville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Ho_Chi_Minh"); //Hô Chi Minh Ville
 
 	/* République populaire démocratique de Corée */
 	time_t heure_pyongyang = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Pyongyang"); //Pyongyang
