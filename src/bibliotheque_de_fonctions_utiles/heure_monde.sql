@@ -7,6 +7,12 @@ CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 
 -- Insertion des décalages horaires relatives à chaque timezone --
 
+-- République islamique d'Afghanistan --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Asia/Kabul", 16200);
+
+-- République démocratique fédérale du Népal --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Asia/Kathmandu", 20700);
+
 -- Royaume de Thaïlande --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC) VALUES("Asia/Bangkok", 25200);
 

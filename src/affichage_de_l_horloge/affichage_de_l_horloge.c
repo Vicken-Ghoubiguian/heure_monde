@@ -712,10 +712,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_bichkek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bishkek"); //Bichkek
 
 	/* République démocratique fédérale du Népal */
-	time_t heure_a_katmandou = temps_utc + (45 * 60) + (5 * 3600); //Katmandou
+	time_t heure_a_katmandou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kathmandu"); //Katmandou
 
 	/* République islamique d'Afghanistan */
-	time_t heure_a_kaboul = temps_utc + (30 * 60) + (4 * 3600); //Kaboul
+	time_t heure_a_kaboul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kabul"); //Kaboul
 
 	/* Royaume de Thaïlande */
 	time_t heure_a_bangkok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bangkok"); //Bangkok
