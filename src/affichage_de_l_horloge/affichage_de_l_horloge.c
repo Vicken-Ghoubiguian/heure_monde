@@ -681,7 +681,7 @@ void affichage_de_l_horloge()
 	time_t heure_au_koweit = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Kuwait"); //Koweit
 
 	/* République islamique du Pakistan */
-	time_t heure_a_karachi = temps_utc + (5 * 3600); //Karachi
+	time_t heure_a_karachi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Karachi"); //Karachi
 
 	/* République de l'Inde */
 	time_t heure_a_calcutta = temps_utc + (30 * 60) + (5 * 3600); //Calcutta
@@ -690,7 +690,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_colombo = temps_utc + (30 * 60) + (5 * 3600); //Colombo
 
 	/* République populaire du Bangladesh */
-	time_t heure_a_dacca = temps_utc + (6 * 3600);
+	time_t heure_a_dacca = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dhaka");
 
 	/* République du Kazakhstan */
 	time_t heure_a_almaty = temps_utc + (6 * 3600); //Almaty
