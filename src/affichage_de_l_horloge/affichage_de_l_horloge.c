@@ -693,13 +693,13 @@ void affichage_de_l_horloge()
 	time_t heure_a_dacca = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dhaka");
 
 	/* République du Kazakhstan */
-	time_t heure_a_almaty = temps_utc + (6 * 3600); //Almaty
-	time_t heure_a_qostanay = temps_utc + (6 * 3600); //Qostanay
-	time_t heure_a_aktaou = temps_utc + (5 * 3600); //Aktaou
-	time_t heure_a_aktioube = temps_utc + (5 * 3600); //Aktioubé
-	time_t heure_a_atyrau = temps_utc + (5 * 3600); //Atyrau
-	time_t heure_a_oural = temps_utc + (5 * 3600); //Oural
-	time_t heure_a_qyzylorda = temps_utc + (5 * 3600); //Qyzylorda
+	time_t heure_a_almaty = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Almaty"); //Almaty
+	time_t heure_a_qostanay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Qostanay"); //Qostanay
+	time_t heure_a_aktaou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Aqtau"); //Aktaou
+	time_t heure_a_aktioube = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Aqtobe"); //Aktioubé
+	time_t heure_a_atyrau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Atyrau"); //Atyrau
+	time_t heure_a_oural = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Oral"); //Oural
+	time_t heure_a_qyzylorda = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Qyzylorda"); //Qyzylorda
 
 	/* République d'Ouzbékistan */
 	time_t heure_a_tachkent = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tashkent"); //Tachkent
