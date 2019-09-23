@@ -45,19 +45,19 @@ void affichage_de_l_horloge()
 
 	/* République française */
 	time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Paris
-	time_t heure_de_cayenne = temps_utc - (3 * 3600); //Cayenne
-	time_t heure_de_la_reunion = temps_utc + (4 * 3600); //La Reunion
-	time_t heure_de_la_guadeloupe = temps_utc - (4 * 3600); //Guadeloupe
-	time_t heure_de_noumea = temps_utc + (11 * 3600); //Nouméa
-	time_t heure_de_mayotte = temps_utc + (3 * 3600); //Mayotte_
-	time_t heure_des_iles_kerguelen = temps_utc + (5 * 3600); //îles Kerguelen
-	time_t heure_de_tahiti = temps_utc - (10 * 3600); //Tahiti
-	time_t heure_de_gambier = temps_utc - (9 * 3600); //Gambier
-	time_t heure_a_marquesas = temps_utc - (30 * 60) - (9 * 3600); //îles Marquises
+	time_t heure_de_cayenne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cayenne"); //Cayenne
+	time_t heure_de_la_reunion = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Reunion"); //La Reunion
+	time_t heure_de_la_guadeloupe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guadeloupe"); //Guadeloupe
+	time_t heure_de_noumea = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Noumea"); //Nouméa
+	time_t heure_de_mayotte = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Mayotte"); //Mayotte
+	time_t heure_des_iles_kerguelen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Kerguelen"); //îles Kerguelen
+	time_t heure_de_tahiti = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Tahiti"); //Tahiti
+	time_t heure_de_gambier = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Gambier"); //Gambier
+	time_t heure_a_marquesas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Marquesas"); //îles Marquises
 	time_t heure_de_miquelon = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Miquelon
-	time_t heure_de_st_barthelemy = temps_utc - (4 * 3600); //St Barthélemy
-	time_t heure_de_la_martinique = temps_utc - (4 * 3600); //La Martinique
-	time_t heure_de_wallis = temps_utc + (12 * 3600); //Wallis et Futuna
+	time_t heure_de_st_barthelemy = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Barthelemy"); //St Barthélemy
+	time_t heure_de_la_martinique = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Martinique"); //La Martinique
+	time_t heure_de_wallis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Wallis"); //Wallis et Futuna
 
 	/* Principauté de Monaco */
 	time_t heure_a_monaco = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Monaco
