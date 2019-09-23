@@ -80,10 +80,10 @@ void affichage_de_l_horloge()
 
 	/* Royaume des Pays-Bas */
 	time_t heure_d_amsterdam = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Amsterdam
-	time_t heure_d_aruba = temps_utc - (4 * 3600); //Aruba
-	time_t heure_de_kralendijk = temps_utc - (4 * 3600); //Kralendijk
-	time_t heure_de_curacao = temps_utc - (4 * 3600); //Curaçao
-	time_t heure_a_lower_princes = temps_utc - (4 * 3600); //Lower Princes
+	time_t heure_d_aruba = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Aruba"); //Aruba
+	time_t heure_de_kralendijk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Kralendijk"); //Kralendijk
+	time_t heure_de_curacao = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Curacao"); //Curaçao
+	time_t heure_a_lower_princes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Lower_Princes"); //Lower Princes
 
 	/* République fédérale d'Allemagne */
 	time_t heure_de_berlin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Berlin
