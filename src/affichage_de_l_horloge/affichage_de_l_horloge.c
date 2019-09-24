@@ -217,15 +217,15 @@ void affichage_de_l_horloge()
 	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
 
 	/* Antarctique */
-	time_t heure_pour_la_base_antarctique_de_casey = temps_utc + (8 * 3600); //Base antarctique de Casey
-	time_t heure_pour_la_base_antarctique_de_davis = temps_utc + (7 * 3600); //Base antarctique de Davis
-	time_t heure_pour_la_base_antarctique_de_dumontdurville = temps_utc + (10 * 3600); //Base antarctique de Dumont-d'Urville
-	time_t heure_pour_la_base_antarctique_de_mawson = temps_utc + (5 * 3600); //Base antarctique de Mawson
+	time_t heure_pour_la_base_antarctique_de_casey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Casey"); //Base antarctique de Casey
+	time_t heure_pour_la_base_antarctique_de_davis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Davis"); //Base antarctique de Davis
+	time_t heure_pour_la_base_antarctique_de_dumontdurville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/DumontDUrville"); //Base antarctique de Dumont-d'Urville
+	time_t heure_pour_la_base_antarctique_de_mawson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Mawson"); //Base antarctique de Mawson
 	time_t heure_pour_la_base_antarctique_de_mcmurdo = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Base antarctique de McMurdo 
-	time_t heure_pour_la_base_antarctique_de_palmer = temps_utc - (3 * 3600); //Base antarctique de Palmer
-	time_t heure_pour_la_base_antarctique_de_rothera = temps_utc - (3 * 3600); //Base antarctique de Rothera
-	time_t heure_pour_la_base_antarctique_de_syowa = temps_utc + (3 * 3600); //Base antarctique de Syowa	
-	time_t heure_pour_la_base_antarctique_de_vostok = temps_utc + (6 * 3600); //Base antarctique de Vostok
+	time_t heure_pour_la_base_antarctique_de_palmer = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Palmer"); //Base antarctique de Palmer
+	time_t heure_pour_la_base_antarctique_de_rothera = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Rothera"); //Base antarctique de Rothera
+	time_t heure_pour_la_base_antarctique_de_syowa = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Syowa"); //Base antarctique de Syowa	
+	time_t heure_pour_la_base_antarctique_de_vostok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Vostok"); //Base antarctique de Vostok
 	time_t heure_pour_la_base_antarctique_de_troll = temps_utc + (application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc) * 3600); //Base antarctique de Troll
 
 	/* États-Unis d'Amérique */
