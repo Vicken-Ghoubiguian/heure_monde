@@ -335,16 +335,16 @@ void affichage_de_l_horloge()
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
 	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
 	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
-	time_t heure_a_tortola = temps_utc - (4 * 3600); //Tortola
+	time_t heure_a_tortola = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tortola"); //Tortola
 	time_t heure_a_st_helena = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/St_Helena"); //St Hélène
-	time_t heure_a_stanley = temps_utc - (3 * 3600); //Stanley
+	time_t heure_a_stanley = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Stanley"); //Stanley
 	time_t heure_a_gibraltar = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Gibraltar
-	time_t heure_a_anguilla = temps_utc - (4 * 3600); //Anguilla
-	time_t heure_a_south_georgia = temps_utc - (2 * 3600); //Géorgie du Sud-et-les îles Sandwich du Sud
-	time_t heure_a_cayman = temps_utc - (5 * 3600); //Îles Caïmans
-	time_t heure_a_montserrat = temps_utc - (4 * 3600); //Montserrat
-	time_t heure_a_pitcairn = temps_utc - (8 * 3600); //Îles Pitcairn
-	time_t heure_a_chagos = temps_utc + (6 * 3600); //Territoire britannique de l'océan Indien
+	time_t heure_a_anguilla = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Anguilla"); //Anguilla
+	time_t heure_a_south_georgia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/South_Georgia"); //Géorgie du Sud-et-les îles Sandwich du Sud
+	time_t heure_a_cayman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cayman"); //Îles Caïmans
+	time_t heure_a_montserrat = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Montserrat"); //Montserrat
+	time_t heure_a_pitcairn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Pitcairn"); //Îles Pitcairn
+	time_t heure_a_chagos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Chagos"); //Territoire britannique de l'océan Indien
 
 	/* République d'Irlande */
 	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
