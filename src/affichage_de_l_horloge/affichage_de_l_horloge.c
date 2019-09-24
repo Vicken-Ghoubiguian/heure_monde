@@ -572,7 +572,7 @@ void affichage_de_l_horloge()
 	/* Nouvelle-Zélande */
 	time_t heure_a_auckland = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
 	time_t heure_a_chatham = temps_utc + (45 * 60) + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //île Chatham
-	time_t heure_a_fakaofo = temps_utc + (13 * 3600); //Fakaofo
+	time_t heure_a_fakaofo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Fakaofo"); //Fakaofo
 
 	/* îles Cook */
 	time_t heure_a_rarotonga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Rarotonga"); //Rarotonga
