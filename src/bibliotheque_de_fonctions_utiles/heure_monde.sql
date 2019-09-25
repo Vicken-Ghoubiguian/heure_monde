@@ -2,7 +2,9 @@
 CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 	id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 	nom_de_la_timezone VARCHAR(100) NOT NULL,
-	decalage_par_rapport_a_UTC INTEGER NOT NULL
+	decalage_par_rapport_a_UTC INTEGER NOT NULL,
+	decalage_par_rapport_a_UTC_durant_l_heure_ete INTEGER,
+	indicateur_d_application_de_l_heure_d_ete INTEGER
 );
 
 -- Insertion des décalages horaires relatives à chaque timezone --
