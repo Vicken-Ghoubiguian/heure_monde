@@ -143,6 +143,36 @@ time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_coura
 
 }
 
+//Cette fonction permet de récupérer pour un timezone passé en paramétre son indicateur pour déterminer si l'heure d'été s'applique ou non pour cette timezone
+int recuperation_de_l_indicateur_d_application_de_l_heure_d_ete_pour_une_timezone_donnee(char* nom_de_la_timezone)
+{
+	//Déclaration des variables
+	sqlite3 *connecteur_de_la_base_heure_monde;
+	int resultat_de_la_requete = 0;
+
+	//
+        if(sqlite3_open("src/bibliotheque_de_fonctions_utiles/heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
+        {
+		//Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
+                sqlite3_close(connecteur_de_la_base_heure_monde);
+	}
+	//Sinon...
+        else
+        {
+                //Affichage du message d'erreur
+                printf("Erreur lors de l'ouverture de la base de données heure_monde. Pourquoi ? Eh bien: %s\n", sqlite3_errmsg(connecteur_de_la_base_heure_monde));
+
+                //Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
+                sqlite3_close(connecteur_de_la_base_heure_monde);
+
+                //Le programme courant se termine avec la fonction exit à qui on passe le paramétre 1 (EXIT_FAILURE)
+                exit(1);
+        }
+
+	//L'indicateur d'application de l'heure d'été est retourné
+	return resultat_de_la_requete;
+}
+
 //Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire par rapport à l'UTC comme nombre de secondes
 int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_timezone)
 {
@@ -151,6 +181,7 @@ int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_ti
 	sqlite3_stmt *declaration_pour_sqlite3;
 	int resultat_de_la_requete;
 	int decalage_par_rapport_a_UTC;
+	int indicateur_d_application_de_l_heure_d_ete;
 
 	//
 	if(sqlite3_open("src/bibliotheque_de_fonctions_utiles/heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
