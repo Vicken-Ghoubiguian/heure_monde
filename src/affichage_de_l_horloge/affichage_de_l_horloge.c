@@ -267,31 +267,31 @@ void affichage_de_l_horloge()
 
 	/* Dominion du Canada */
 	time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Toronto
-	time_t heure_d_atikokan = temps_utc - (5 * 3600); //Atikokan
+	time_t heure_d_atikokan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Atikokan"); //Atikokan
 	time_t heure_de_pangnirtung = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Pangnirtung
 	time_t heure_de_thunder_bay = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Thunder Bay
 	time_t heure_de_nipigon = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nipigon
 	time_t heure_d_iqaluit = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Iqaluit
 	time_t heure_de_winnipeg = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Winnipeg
-	time_t heure_de_swift_current = temps_utc - (6 * 3600); //Swift Current
+	time_t heure_de_swift_current = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Swift_Current"); //Swift Current
 	time_t heure_de_resolute = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Resolute
-	time_t heure_de_regina = temps_utc - (6 * 3600); //Regina
+	time_t heure_de_regina = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Regina"); //Regina
 	time_t heure_de_rankin_inlet = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Rankin Inlet
 	time_t heure_de_rainy_river = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Rainy River
 	time_t heure_de_whitehorse = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Whitehorse
 	time_t heure_de_vancouver = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Vancouver
 	time_t heure_de_dawson = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Dawson
 	time_t heure_de_st_johns = temps_utc - (30 * 60) - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //St Johns
-	time_t heure_de_blanc_sablon = temps_utc - (4 * 3600); //Blanc-Sablon
+	time_t heure_de_blanc_sablon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Blanc-Sablon"); //Blanc-Sablon
 	time_t heure_de_moncton = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Moncton
 	time_t heure_d_halifax = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Halifax
 	time_t heure_de_goose_bay = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Goose Bay
 	time_t heure_de_glace_bay = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Glace Bay
 	time_t heure_d_inuvik = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Inuvik
-	time_t heure_de_fort_nelson = temps_utc - (7 * 3600); //Fort Nelson
+	time_t heure_de_fort_nelson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Fort_Nelson"); //Fort Nelson
 	time_t heure_d_edmonton = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Edmonton
-	time_t heure_de_dawson_creek = temps_utc - (7 * 3600); //Dawson Creek
-	time_t heure_de_creston = temps_utc - (7 * 3600); //Creston
+	time_t heure_de_dawson_creek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Dawson_Creek"); //Dawson Creek
+	time_t heure_de_creston = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Creston"); //Creston
 	time_t heure_de_cambridge_bay = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Cambridge Bay
 	time_t heure_d_yellowknife = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yellowknife
 
