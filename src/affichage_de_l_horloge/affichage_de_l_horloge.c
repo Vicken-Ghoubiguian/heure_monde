@@ -231,9 +231,9 @@ void affichage_de_l_horloge()
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
         time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
-        time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
-	time_t heure_a_honolulu = temps_utc - (10 * 3600); //Honolulu
-	time_t heure_a_johnston = temps_utc - (10 * 3600); //Johnston
+        time_t heure_de_phoenix = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Phoenix"); //Phoenix
+	time_t heure_a_honolulu = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Honolulu"); //Honolulu
+	time_t heure_a_johnston = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Johnston"); //Johnston
 	time_t heure_a_juneau = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Juneau
 	time_t heure_a_yakutat = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yakutat
 	time_t heure_a_menominee = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Menominee
@@ -259,11 +259,11 @@ void affichage_de_l_horloge()
 	time_t heure_a_north_dakota_beulah = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Beulah
 	time_t heure_a_indiana_tell_city = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Tell City
 	time_t heure_a_indiana_knox = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Knox
-	time_t heure_a_st_thomas = temps_utc - (4 * 3600); //îles Vierges des États-Unis
-	time_t heure_a_pago_pago = temps_utc - (11 * 3600); //Samoa américaines
-	time_t heure_a_guam = temps_utc + (10 * 3600); //Guam
-	time_t heure_a_wake = temps_utc + (12 * 3600); //Wake
-	time_t heure_a_midway = temps_utc - (11 * 3600); //Midway (+ Îles mineures éloignées des États-Unis)
+	time_t heure_a_st_thomas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Thomas"); //îles Vierges des États-Unis
+	time_t heure_a_pago_pago = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Pago_Pago"); //Samoa américaines
+	time_t heure_a_guam = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Guam"); //Guam
+	time_t heure_a_wake = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Wake"); //Wake
+	time_t heure_a_midway = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Midway"); //Midway + Îles mineures éloignées des États-Unis
 
 	/* Dominion du Canada */
 	time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Toronto
@@ -1132,6 +1132,7 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_pago_pago, "Samoa américaines");
 	calcul_et_affichage_horaire(heure_a_guam, "Guam");
 	calcul_et_affichage_horaire(heure_a_wake, "Wake");
+	calcul_et_affichage_horaire(heure_a_midway, "Îles mineures éloignées des États-Unis");
 
 	printf("\n");
 	printf("Dominion du Canada:\n");
