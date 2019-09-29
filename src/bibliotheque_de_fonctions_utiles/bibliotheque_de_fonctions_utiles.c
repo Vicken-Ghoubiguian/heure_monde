@@ -217,7 +217,6 @@ int recuperation_du_decalage_horaire_courant_sous_DST_pour_une_timezone_donnee(c
 	//Déclaration des variables
         sqlite3 *connecteur_de_la_base_heure_monde;
         sqlite3_stmt *declaration_pour_sqlite3;
-        int resultat_de_la_requete;
         int decalage_par_rapport_a_UTC;
 
 	//
@@ -286,7 +285,6 @@ int recuperation_du_decalage_horaire_courant_hors_DST_pour_une_timezone_donnee(c
 	//Déclaration des variables
         sqlite3 *connecteur_de_la_base_heure_monde;
         sqlite3_stmt *declaration_pour_sqlite3;
-        int resultat_de_la_requete;
         int decalage_par_rapport_a_UTC;
 
 	//
@@ -333,6 +331,7 @@ int recuperation_du_decalage_horaire_courant_hors_DST_pour_une_timezone_donnee(c
 			exit(1);
 		}
 	}
+	//Sinon...
 	else
 	{
 		//Affichage du message d'erreur
