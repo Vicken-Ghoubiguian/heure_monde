@@ -143,6 +143,69 @@ time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_coura
 
 }
 
+//Cette fonction permet de mettre à jour la valeur de l'indicateur d'application de l'heure d'été pour une timezone donnée
+void mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(char* nom_de_la_timezone, int nouvelle_valeur_pour_l_indicateur_d_application_de_l_heure_d_ete_pour_la_timezone_donnee)
+{
+	//Déclaration des variables
+        sqlite3 *connecteur_de_la_base_heure_monde;
+        sqlite3_stmt *declaration_pour_sqlite3;
+	int resultat_de_la_requete;
+
+	//
+	if(sqlite3_open("src/bibliotheque_de_fonctions_utiles/heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
+	{
+
+		//
+		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "UPDATE table_des_decalages_horaires SET indicateur_d_application_de_l_heure_d_ete = ? WHERE nom_de_la_timezone = ?;",  -1, &declaration_pour_sqlite3, NULL);
+
+		//
+		sqlite3_bind_int(declaration_pour_sqlite3, 1, nouvelle_valeur_pour_l_indicateur_d_application_de_l_heure_d_ete_pour_la_timezone_donnee);
+
+		//
+		sqlite3_bind_text(declaration_pour_sqlite3, 2, nom_de_la_timezone, -1, SQLITE_STATIC);
+
+		//
+		resultat_de_la_requete = sqlite3_step(declaration_pour_sqlite3);
+
+		//Si le resultat de la requete est différent de la valeur SQLITE_DONE (traduisant le fait que la requete ne s'est pas executée avec succès), alors...
+		if(resultat_de_la_requete != SQLITE_DONE)
+		{
+			//Affichage du message d'erreur
+			printf("Erreur: il ne peut avoir qu'un seul décalage horaire enregistré par timezone. Quelquechose ne va pas dans votre base de données heure_monde: %d.\n", sqlite3_column_count(declaration_pour_sqlite3));
+
+			//Destruction de la requête préparée contenue dans la variable declaration_pour_sqlite3
+			sqlite3_finalize(declaration_pour_sqlite3);
+
+			//Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
+			sqlite3_close(connecteur_de_la_base_heure_monde);
+
+			//Le programme courant se termine avec la fonction exit à qui on passe le paramétre 1 (EXIT_FAILURE)
+			exit(1);
+		}
+		//Sinon...
+		else
+		{
+			//Destruction de la requête préparée contenue dans la variable declaration_pour_sqlite3
+                        sqlite3_finalize(declaration_pour_sqlite3);
+
+                        //Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
+                        sqlite3_close(connecteur_de_la_base_heure_monde);
+		}
+	}
+	//Sinon...
+	else
+	{
+		//Affichage du message d'erreur
+		printf("Erreur lors de l'ouverture de la base de données heure_monde. Pourquoi ? Eh bien: %s\n", sqlite3_errmsg(connecteur_de_la_base_heure_monde));
+
+		//Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
+		sqlite3_close(connecteur_de_la_base_heure_monde);
+
+		//Le programme courant se termine avec la fonction exit à qui on passe le paramétre 1 (EXIT_FAILURE)
+		exit(1);
+	}
+}
+
 //Cette fonction permet de récupérer pour un timezone passé en paramétre son indicateur pour déterminer si l'heure d'été s'applique ou non pour cette timezone
 int recuperation_de_l_indicateur_d_application_de_l_heure_d_ete_pour_une_timezone_donnee(char* nom_de_la_timezone)
 {

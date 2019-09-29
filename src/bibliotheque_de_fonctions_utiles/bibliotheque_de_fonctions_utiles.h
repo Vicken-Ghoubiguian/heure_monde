@@ -18,6 +18,9 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp();
 //Cette fonction renvoie le timestamp courant avec plusieurs années de différence (en fonction de l'année passée en paramétre de la fonction)
 time_t fonction_de_precision_de_l_annee_en_cours(time_t timestamp_du_temps_courant, int annee_particuliere_voulue);
 
+//Cette fonction permet de mettre à jour la valeur de l'indicateur d'application de l'heure d'été pour une timezone donnée
+void mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(char* nom_de_la_timezone, int nouvelle_valeur_pour_l_indicateur_d_application_de_l_heure_d_ete_pour_la_timezone_donnee);
+
 //Cette fonction permet de récupérer pour un timezone passé en paramétre son indicateur pour déterminer si l'heure d'été s'applique ou non pour cette timezone
 int recuperation_de_l_indicateur_d_application_de_l_heure_d_ete_pour_une_timezone_donnee(char* nom_de_la_timezone);
 
