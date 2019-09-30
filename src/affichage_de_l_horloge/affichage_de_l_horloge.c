@@ -82,10 +82,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_madere = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madère
 
 	/* Grand-Duché de Luxembourg */
-	time_t heure_au_luxembourg = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Luxembourg
+	time_t heure_au_luxembourg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Luxembourg"); //Luxembourg
 
 	/* Royaume de Belgique */
-	time_t heure_a_bruxelles = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bruxelles
+	time_t heure_a_bruxelles = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Brussels"); //Bruxelles
 
 	/* Royaume des Pays-Bas */
 	time_t heure_d_amsterdam = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Amsterdam
