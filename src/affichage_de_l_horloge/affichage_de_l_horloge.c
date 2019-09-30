@@ -44,6 +44,9 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Paris", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Madrid", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Africa/Ceuta", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Canary", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -67,9 +70,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_monaco = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Monaco"); //Monaco
 
 	/* Royaume d'Espagne */
-	time_t heure_a_madrid = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madrid
-	time_t heure_a_ceuta = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ceuta
-	time_t heure_aux_iles_canaries = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //îles Canaries
+	time_t heure_a_madrid = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Madrid"); //Madrid
+	time_t heure_a_ceuta = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Ceuta"); //Ceuta
+	time_t heure_aux_iles_canaries = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Canary"); //îles Canaries
 
 	/* République portugaise */
 	time_t heure_a_lisbonne = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Lisbonne
