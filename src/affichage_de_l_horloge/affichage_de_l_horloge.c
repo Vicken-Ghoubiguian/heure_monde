@@ -42,11 +42,11 @@ void affichage_de_l_horloge()
 	time_t temps_utc = retour_du_temps_utc_sous_forme_de_timestamp();
 
 	/**/
-	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Paris", temps_utc);
-	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc);
-	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Madrid", temps_utc);
-	application_du_changement_d_heure_pour_l_europe_continentale_R("Africa/Ceuta", temps_utc);
-	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Canary", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Paris", temps_utc, 3600);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc, 3600);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Madrid", temps_utc, 3600);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Africa/Ceuta", temps_utc, 3600);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Canary", temps_utc, 3600);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 

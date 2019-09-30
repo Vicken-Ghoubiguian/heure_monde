@@ -387,7 +387,7 @@ int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_co
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Europe continentale
-void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de_la_timezone, time_t temps_utc)
+void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de_la_timezone, time_t temps_utc, int indicateur_d_application_de_l_heure_d_ete_pour_la_timezone_donnee)
 {
 	//On calcul le temps courant hypothétique pour la timezone donnée
 	time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee(nom_de_la_timezone);
@@ -400,7 +400,7 @@ void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de
 	if(temps_courant_pour_la_timezone_donnee >= ete && temps_courant_pour_la_timezone_donnee <= hiver)
         {
                 //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
-                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(nom_de_la_timezone, 3600);
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(nom_de_la_timezone, indicateur_d_application_de_l_heure_d_ete_pour_la_timezone_donnee);
         }
         //Sinon...
         else
