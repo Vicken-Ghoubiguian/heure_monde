@@ -274,76 +274,8 @@ int recuperation_de_l_indicateur_d_application_de_l_heure_d_ete_pour_une_timezon
 	return indicateur_d_application_de_l_heure_d_ete_pour_la_timezone_donnee;
 }
 
-//Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire courant (sous DST) par rapport à l'UTC comme nombre de secondes
-int recuperation_du_decalage_horaire_courant_sous_DST_pour_une_timezone_donnee(char* nom_de_la_timezone)
-{
-	//Déclaration des variables
-        sqlite3 *connecteur_de_la_base_heure_monde;
-        sqlite3_stmt *declaration_pour_sqlite3;
-        int decalage_par_rapport_a_UTC;
-
-	//
-	if(sqlite3_open("src/bibliotheque_de_fonctions_utiles/heure_monde.db", &connecteur_de_la_base_heure_monde) == SQLITE_OK)
-	{
-
-		//
-		sqlite3_prepare_v2(connecteur_de_la_base_heure_monde, "SELECT decalage_par_rapport_a_UTC_durant_l_heure_ete FROM table_des_decalages_horaires WHERE nom_de_la_timezone = ?;",  -1, &declaration_pour_sqlite3, NULL);
-
-		//
-		sqlite3_bind_text(declaration_pour_sqlite3, 1, nom_de_la_timezone, -1, SQLITE_STATIC);
-
-		//Si le nombre de colonnes contenue dans le résultat de la requête préparée declaration_pour_sqlite3 est égale à 1 (la requête ne contient qu'un seul résultat), alors...
-		if(sqlite3_column_count(declaration_pour_sqlite3) == 1)
-		{
-			//
-			while(sqlite3_step(declaration_pour_sqlite3) == SQLITE_ROW)
-			{
-
-				//
-				decalage_par_rapport_a_UTC = sqlite3_column_int(declaration_pour_sqlite3, 0);
-
-			}
-
-			//Destruction de la requête préparée contenue dans la variable declaration_pour_sqlite3
-                        sqlite3_finalize(declaration_pour_sqlite3);
-
-                        //Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
-                        sqlite3_close(connecteur_de_la_base_heure_monde);
-		}
-		//Sinon...
-		else
-		{
-			//Affichage du message d'erreur
-			printf("Erreur: il ne peut avoir qu'un seul décalage horaire enregistré par timezone. Quelquechose ne va pas dans votre base de données heure_monde: %d.\n", sqlite3_column_count(declaration_pour_sqlite3));
-
-			//Destruction de la requête préparée contenue dans la variable declaration_pour_sqlite3
-			sqlite3_finalize(declaration_pour_sqlite3);
-
-			//Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
-			sqlite3_close(connecteur_de_la_base_heure_monde);
-
-			//Le programme courant se termine avec la fonction exit à qui on passe le paramétre 1 (EXIT_FAILURE)
-			exit(1);
-		}
-	}
-	else
-	{
-		//Affichage du message d'erreur
-		printf("Erreur lors de l'ouverture de la base de données heure_monde. Pourquoi ? Eh bien: %s\n", sqlite3_errmsg(connecteur_de_la_base_heure_monde));
-
-		//Destruction de la connexion SQLITE courante (contenue dans la variable connecteur_de_la_base_heure_monde)
-		sqlite3_close(connecteur_de_la_base_heure_monde);
-
-		//Le programme courant se termine avec la fonction exit à qui on passe le paramétre 1 (EXIT_FAILURE)
-		exit(1);
-	}
-
-	//Le décalage horaire par rapport à l'UTC comme nombre de secondes est retournée
-	return decalage_par_rapport_a_UTC;
-}
-
-//Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire courant (pas DST) par rapport à l'UTC comme nombre de secondes
-int recuperation_du_decalage_horaire_courant_hors_DST_pour_une_timezone_donnee(char* nom_de_la_timezone)
+//Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire par rapport à l'UTC comme nombre de secondes
+int recuperation_du_decalage_horaire_courant_pour_une_timezone_donnee(char* nom_de_la_timezone)
 {
 	//Déclaration des variables
         sqlite3 *connecteur_de_la_base_heure_monde;
@@ -415,24 +347,18 @@ int recuperation_du_decalage_horaire_courant_hors_DST_pour_une_timezone_donnee(c
 int recuperation_du_decalage_horaire_pour_une_timezone_donnee(char* nom_de_la_timezone)
 {
 	//Déclaration des variables
+	int decalage_par_rapport_a_UTC_enregistre_dans_la_base_heure_monde;
 	int decalage_par_rapport_a_UTC;
 	int indicateur_d_application_de_l_heure_d_ete;
+
+	//
+	decalage_par_rapport_a_UTC_enregistre_dans_la_base_heure_monde = recuperation_du_decalage_horaire_courant_pour_une_timezone_donnee(nom_de_la_timezone);
 
 	//
 	indicateur_d_application_de_l_heure_d_ete = recuperation_de_l_indicateur_d_application_de_l_heure_d_ete_pour_une_timezone_donnee(nom_de_la_timezone);
 
 	//
-	if(indicateur_d_application_de_l_heure_d_ete)
-	{
-		//
-		decalage_par_rapport_a_UTC = recuperation_du_decalage_horaire_courant_sous_DST_pour_une_timezone_donnee(nom_de_la_timezone);
-	}
-	//Sinon...
-	else
-	{
-		//
-		decalage_par_rapport_a_UTC = recuperation_du_decalage_horaire_courant_hors_DST_pour_une_timezone_donnee(nom_de_la_timezone);
-	}
+	decalage_par_rapport_a_UTC = decalage_par_rapport_a_UTC_enregistre_dans_la_base_heure_monde + indicateur_d_application_de_l_heure_d_ete;
 
 	//Le décalage horaire par rapport à l'UTC comme nombre de secondes est retournée
 	return decalage_par_rapport_a_UTC;

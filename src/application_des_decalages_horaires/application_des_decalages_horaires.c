@@ -400,7 +400,7 @@ void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de
 	if(temps_courant_pour_la_timezone_donnee >= ete && temps_courant_pour_la_timezone_donnee <= hiver)
         {
                 //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
-                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(nom_de_la_timezone, 1);
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(nom_de_la_timezone, 3600);
         }
         //Sinon...
         else

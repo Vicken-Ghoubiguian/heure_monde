@@ -24,10 +24,7 @@ void mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(char* nom_de_la_
 //Cette fonction permet de récupérer pour un timezone passé en paramétre son indicateur pour déterminer si l'heure d'été s'applique ou non pour cette timezone
 int recuperation_de_l_indicateur_d_application_de_l_heure_d_ete_pour_une_timezone_donnee(char* nom_de_la_timezone);
 
-//Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire courant (sous DST) par rapport à l'UTC comme nombre de secondes
-int recuperation_du_decalage_horaire_courant_sous_DST_pour_une_timezone_donnee(char* nom_de_la_timezone);
-
-//Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire courant (pas DST) par rapport à l'UTC comme nombre de secondes
+//Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire par rapport à l'UTC comme nombre de secondes
 int recuperation_du_decalage_horaire_courant_hors_DST_pour_une_timezone_donnee(char* nom_de_la_timezone);
 
 //Cette fonction permet de récupérer pour un timezone passé en paramétre son décalage horaire par rapport à l'UTC comme nombre de secondes 

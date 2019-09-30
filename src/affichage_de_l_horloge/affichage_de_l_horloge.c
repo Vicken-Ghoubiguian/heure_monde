@@ -41,13 +41,14 @@ void affichage_de_l_horloge()
 	/* Définition de la variable temps_utc et initialisation de celle-ci au temps utc sous forme de timestamp */
 	time_t temps_utc = retour_du_temps_utc_sous_forme_de_timestamp();
 
+	/**/
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Paris", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
-	//time_t heure_de_paris = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Paris
-	time_t heure_de_paris = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Paris");
+	time_t heure_de_paris = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Paris"); //Paris
 	time_t heure_de_cayenne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cayenne"); //Cayenne
 	time_t heure_de_la_reunion = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Reunion"); //La Reunion
 	time_t heure_de_la_guadeloupe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guadeloupe"); //Guadeloupe
@@ -63,7 +64,7 @@ void affichage_de_l_horloge()
 	time_t heure_de_wallis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Wallis"); //Wallis et Futuna
 
 	/* Principauté de Monaco */
-	time_t heure_a_monaco = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Monaco
+	time_t heure_a_monaco = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Monaco"); //Monaco
 
 	/* Royaume d'Espagne */
 	time_t heure_a_madrid = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madrid
