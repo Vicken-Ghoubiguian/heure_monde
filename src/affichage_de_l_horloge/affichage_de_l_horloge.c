@@ -49,6 +49,12 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Canary", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Luxembourg", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Brussels", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Lisbon", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Azores", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Madeira", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Amsterdam", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Berlin", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Busingen", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -77,9 +83,9 @@ void affichage_de_l_horloge()
 	time_t heure_aux_iles_canaries = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Canary"); //îles Canaries
 
 	/* République portugaise */
-	time_t heure_a_lisbonne = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Lisbonne
-	time_t heure_aux_acores = temps_utc - ((1 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Açores
-	time_t heure_a_madere = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Madère
+	time_t heure_a_lisbonne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Lisbon"); //Lisbonne
+	time_t heure_aux_acores = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Azores"); //Açores
+	time_t heure_a_madere = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Madeira"); //Madère
 
 	/* Grand-Duché de Luxembourg */
 	time_t heure_au_luxembourg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Luxembourg"); //Luxembourg
@@ -88,15 +94,15 @@ void affichage_de_l_horloge()
 	time_t heure_a_bruxelles = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Brussels"); //Bruxelles
 
 	/* Royaume des Pays-Bas */
-	time_t heure_d_amsterdam = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Amsterdam
+	time_t heure_d_amsterdam = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Amsterdam"); //Amsterdam
 	time_t heure_d_aruba = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Aruba"); //Aruba
 	time_t heure_de_kralendijk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Kralendijk"); //Kralendijk
 	time_t heure_de_curacao = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Curacao"); //Curaçao
 	time_t heure_a_lower_princes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Lower_Princes"); //Lower Princes
 
 	/* République fédérale d'Allemagne */
-	time_t heure_de_berlin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Berlin
-	time_t heure_de_busingen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Busingen
+	time_t heure_de_berlin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Berlin"); //Berlin
+	time_t heure_de_busingen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Busingen"); //Busingen
 
 	/* Royaume de Danemark */
 	time_t heure_a_copenhague = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Copenhague
