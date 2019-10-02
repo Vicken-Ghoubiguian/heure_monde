@@ -55,6 +55,11 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Amsterdam", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Berlin", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Busingen", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Oslo", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Arctic/Longyearbyen", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Stockholm", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Helsinki", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Mariehamn", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -113,15 +118,15 @@ void affichage_de_l_horloge()
 	time_t heure_a_danmarkshavn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Danmarkshavn"); //Danmarkshavn
 
 	/* Royaume de Norvège */
-	time_t heure_a_oslo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Oslo
-	time_t heure_a_longyearbyen = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Longyearbyen
+	time_t heure_a_oslo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Oslo"); //Oslo
+	time_t heure_a_longyearbyen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Arctic/Longyearbyen"); //Longyearbyen
 
 	/* Royaume de Suède */
-	time_t heure_a_stockholm = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Stockholm
+	time_t heure_a_stockholm = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Stockholm"); //Stockholm
 
 	/* République de Finlande */
-	time_t heure_a_helsinki = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Helsinki
-	time_t heure_a_mariehamn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Mariehamn
+	time_t heure_a_helsinki = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Helsinki"); //Helsinki
+	time_t heure_a_mariehamn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Mariehamn"); //Mariehamn
 
 	/* République d'Islande */
 	time_t heure_a_reykjavik = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Reykjavik"); //Reykjavik
