@@ -60,6 +60,8 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Stockholm", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Helsinki", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Mariehamn", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Copenhagen", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Faroe", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -110,8 +112,8 @@ void affichage_de_l_horloge()
 	time_t heure_de_busingen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Busingen"); //Busingen
 
 	/* Royaume de Danemark */
-	time_t heure_a_copenhague = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Copenhague
-	time_t heure_aux_iles_feroes = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); // Iles Féroé
+	time_t heure_a_copenhague = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Copenhagen"); //Copenhague
+	time_t heure_aux_iles_feroes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Faroe"); // Iles Féroé
 	time_t heure_a_scoresbysund = temps_utc - ((1 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Scoresbysund
 	time_t heure_a_godthab = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600)); //Godthab
 	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Thule
