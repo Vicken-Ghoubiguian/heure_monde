@@ -80,6 +80,10 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Skopje", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Ljubljana", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zagreb", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Sarajevo", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Podgorica", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Belgrade", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tirane", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -200,16 +204,16 @@ void affichage_de_l_horloge()
 	time_t heure_a_zagreb = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zagreb"); //Zagreb
 
 	/* Bosnie-Herzégovine */
-	time_t heure_a_sarajevo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sarajevo
+	time_t heure_a_sarajevo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Sarajevo"); //Sarajevo
 
 	/* Monténégro */
-	time_t heure_a_podgorica = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Podgorica
+	time_t heure_a_podgorica = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Podgorica"); //Podgorica
 
 	/* République de Serbie */
-	time_t heure_a_belgrade = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Belgrade
+	time_t heure_a_belgrade = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Belgrade"); //Belgrade
 
 	/* République d'Albanie */
-	time_t heure_a_tirane = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tirane
+	time_t heure_a_tirane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Tirane"); //Tirane
 
 	/* République de Biélorussie */
 	time_t heure_a_minsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Minsk"); //Minsk
