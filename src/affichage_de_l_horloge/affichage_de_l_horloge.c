@@ -64,6 +64,13 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Atlantic/Faroe", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("America/Godthab", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("America/Scoresbysund", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Warsaw", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vilnius", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Riga", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tallinn", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Rome", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vatican", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/San_Marino", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -136,25 +143,25 @@ void affichage_de_l_horloge()
 	time_t heure_a_reykjavik = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Reykjavik"); //Reykjavik
 
 	/* République de Pologne */
-	time_t heure_a_varsovie = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Varsovie
+	time_t heure_a_varsovie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Warsaw"); //Varsovie
 
 	/* République de Lituanie */
-	time_t heure_a_vilnius = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vilnius
+	time_t heure_a_vilnius = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vilnius"); //Vilnius
 
 	/* République de Lettonie */
-	time_t heure_a_riga = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Riga
+	time_t heure_a_riga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Riga"); //Riga
 
 	/* République d’Estonie */
-	time_t heure_a_tallinn = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tallinn
+	time_t heure_a_tallinn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Tallinn"); //Tallinn
 
 	/* République italienne */
-	time_t heure_de_rome = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Rome
+	time_t heure_de_rome = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Rome"); //Rome
 
 	/* État de la Cité du Vatican */
-	time_t heure_du_vatican = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vatican
+	time_t heure_du_vatican = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vatican"); //Vatican
 
 	/* République de Saint-Marin */
-	time_t heure_a_saint_marin = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Saint-Marin
+	time_t heure_a_saint_marin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/San_Marino"); //Saint-Marin
 
 	/* République d'Autriche */
 	time_t heure_de_vienne = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vienne
