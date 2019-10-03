@@ -71,6 +71,10 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Rome", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vatican", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/San_Marino", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vienna", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Budapest", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Prague", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Bratislava", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -164,16 +168,16 @@ void affichage_de_l_horloge()
 	time_t heure_a_saint_marin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/San_Marino"); //Saint-Marin
 
 	/* République d'Autriche */
-	time_t heure_de_vienne = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vienne
+	time_t heure_de_vienne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vienna"); //Vienne
 
 	/* Hongrie */
-	time_t heure_a_budapest = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Budapest
+	time_t heure_a_budapest = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Budapest"); //Budapest
 
 	/* République tchèque */
-	time_t heure_a_prague = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Prague
+	time_t heure_a_prague = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Prague"); //Prague
 
 	/* République slovaque */
-	time_t heure_a_bratislava = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bratislava
+	time_t heure_a_bratislava = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Bratislava"); //Bratislava
 
 	/* Roumanie */
 	time_t heure_a_bucarest = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bucarest
