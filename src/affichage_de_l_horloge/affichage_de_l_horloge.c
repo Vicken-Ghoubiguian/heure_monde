@@ -75,6 +75,11 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Budapest", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Prague", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Bratislava", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Bucharest", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Sofia", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Skopje", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Ljubljana", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zagreb", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -180,19 +185,19 @@ void affichage_de_l_horloge()
 	time_t heure_a_bratislava = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Bratislava"); //Bratislava
 
 	/* Roumanie */
-	time_t heure_a_bucarest = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Bucarest
+	time_t heure_a_bucarest = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Bucharest"); //Bucarest
 
 	/* République de Bulgarie */
-	time_t heure_a_sofia = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sofia
+	time_t heure_a_sofia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Sofia"); //Sofia
 
 	/* République de Macédoine du Nord */
-	time_t heure_a_skopje = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Skopje
+	time_t heure_a_skopje = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Skopje"); //Skopje
 
 	/* République de Slovénie */
-	time_t heure_a_ljubljana = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Ljubljana
+	time_t heure_a_ljubljana = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Ljubljana"); //Ljubljana
 
 	/* République de Croatie */
-	time_t heure_a_zagreb = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zagreb
+	time_t heure_a_zagreb = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zagreb"); //Zagreb
 
 	/* Bosnie-Herzégovine */
 	time_t heure_a_sarajevo = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Sarajevo
