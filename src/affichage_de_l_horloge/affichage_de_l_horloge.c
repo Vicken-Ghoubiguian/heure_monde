@@ -87,6 +87,12 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Kiev", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Uzhgorod", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zaporozhye", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zurich", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Malta", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Andorra", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vaduz", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Athens", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Asia/Nicosia", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -362,22 +368,22 @@ void affichage_de_l_horloge()
 	time_t heure_au_guatemala = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guatemala"); //Guatemala
 
 	/* Confédération suisse */
-	time_t heure_zurich = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zurich
+	time_t heure_zurich = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zurich"); //Zurich
 
 	/* République de Malte */
-	time_t heure_malte = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Malte
+	time_t heure_malte = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Malta"); //Malte
 
 	/* Principauté d'Andorre */
-	time_t heure_andorre = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Andorre
+	time_t heure_andorre = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Andorra"); //Andorre
 
 	/* Principauté de Liechtenstein */
-	time_t heure_vaduz = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Vaduz
+	time_t heure_vaduz = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vaduz"); //Vaduz
 
 	/* République hellénique */
-	time_t heure_d_athenes = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Athènes
+	time_t heure_d_athenes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Athens"); //Athènes
 
 	/* République de Chypre */
-	time_t heure_de_nicosia = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Nicosie
+	time_t heure_de_nicosia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Nicosia"); //Nicosie
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
