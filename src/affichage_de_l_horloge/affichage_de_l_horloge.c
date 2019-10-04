@@ -93,6 +93,7 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vaduz", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Athens", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Asia/Nicosia", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Dublin", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -401,7 +402,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_chagos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Chagos"); //Territoire britannique de l'océan Indien
 
 	/* République d'Irlande */
-	time_t heure_a_dublin = temps_utc + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Dublin
+	time_t heure_a_dublin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Dublin"); //Dublin
 
 	/* île de Man */
 	time_t heure_a_l_ile_de_man = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Île de Man
