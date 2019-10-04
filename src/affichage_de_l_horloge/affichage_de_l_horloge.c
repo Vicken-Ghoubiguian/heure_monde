@@ -84,6 +84,9 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Podgorica", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Belgrade", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tirane", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Kiev", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Uzhgorod", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zaporozhye", temps_utc);
 
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
@@ -219,9 +222,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_minsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Minsk"); //Minsk
 
 	/* Ukraine */
-	time_t heure_a_kiev = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Kiev
-	time_t heure_a_uzhgorod = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Uzhgorod
-	time_t heure_a_zaporozhye = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Zaporozhye
+	time_t heure_a_kiev = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kiev"); //Kiev
+	time_t heure_a_uzhgorod = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Uzhgorod"); //Uzhgorod
+	time_t heure_a_zaporozhye = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zaporozhye"); //Zaporozhye
+	time_t heure_a_simferopol = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Simferopol"); //Simferopol
 
 	/* République de Moldavie */
 	time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Chisinau
@@ -1030,6 +1034,7 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_kiev, "Kiev");
 	calcul_et_affichage_horaire(heure_a_uzhgorod, "Uzhgorod");
 	calcul_et_affichage_horaire(heure_a_zaporozhye, "Zaporozhye");
+	calcul_et_affichage_horaire(heure_a_simferopol, "Simferopol");
 
 	printf("\n");
 	printf("République de Moldavie:\n");
