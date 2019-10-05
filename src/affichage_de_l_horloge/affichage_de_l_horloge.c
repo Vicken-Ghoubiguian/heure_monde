@@ -98,6 +98,14 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc);
+
+	/**/
+	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Auckland", temps_utc);
+	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Chatham", temps_utc);
+	application_du_changement_d_heure_pour_la_nouvelle_zelande("Antarctica/McMurdo", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -279,7 +287,7 @@ void affichage_de_l_horloge()
 	time_t heure_pour_la_base_antarctique_de_davis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Davis"); //Base antarctique de Davis
 	time_t heure_pour_la_base_antarctique_de_dumontdurville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/DumontDUrville"); //Base antarctique de Dumont-d'Urville
 	time_t heure_pour_la_base_antarctique_de_mawson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Mawson"); //Base antarctique de Mawson
-	time_t heure_pour_la_base_antarctique_de_mcmurdo = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Base antarctique de McMurdo 
+	time_t heure_pour_la_base_antarctique_de_mcmurdo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/McMurdo"); //Base antarctique de McMurdo 
 	time_t heure_pour_la_base_antarctique_de_palmer = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Palmer"); //Base antarctique de Palmer
 	time_t heure_pour_la_base_antarctique_de_rothera = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Rothera"); //Base antarctique de Rothera
 	time_t heure_pour_la_base_antarctique_de_syowa = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Syowa"); //Base antarctique de Syowa	
@@ -628,8 +636,8 @@ void affichage_de_l_horloge()
 	time_t heure_harare = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Harare"); //Harare
 
 	/* Nouvelle-Zélande */
-	time_t heure_a_auckland = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //Auckland
-	time_t heure_a_chatham = temps_utc + (45 * 60) + ((12 * 3600) + (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600)); //île Chatham
+	time_t heure_a_auckland = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Auckland"); //Auckland
+	time_t heure_a_chatham = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Chatham"); //île Chatham
 	time_t heure_a_fakaofo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Fakaofo"); //Fakaofo
 
 	/* îles Cook */

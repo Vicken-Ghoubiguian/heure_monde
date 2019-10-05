@@ -327,10 +327,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Auckland") == 0)
 	{
 		//Calcul de l'heure et de la date à Auckland et stockage de celui-ci dans la variable heure_a_auckland
-                time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600));
+                //time_t heure_a_auckland = temps_utc + ((13 * 3600) - (application_du_changement_d_heure_pour_la_nouvelle_zelande(temps_utc) * 3600));
 
 		//L'heure et la date d'Auckland en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_auckland, "Auckland");
+		//return calcul_et_renvoie_horaire(heure_a_auckland, "Auckland");
+		return "";
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Sydney"...
         else if(strcmp(nom_du_fuseau_horaire,"Sydney") == 0)
