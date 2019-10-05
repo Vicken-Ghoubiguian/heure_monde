@@ -198,23 +198,26 @@ int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant)
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour la base antarctique de Troll
-int application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t temps_courant)
+void application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone correspondante à la base antarctique de Troll
+	time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Troll");
+
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 1, 0, 2);
-	time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 9);
+	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 1, 0, 2);
+	time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 3, 0, 9);
 
 	//
-	if(temps_courant >= ete && temps_courant <= hiver)
+	if(temps_courant_pour_la_timezone_donnee >= ete && temps_courant_pour_la_timezone_donnee <= hiver)
 	{
-		//On retourne 2
-		return 2;
+		//L'indicateur d'application de l'heure d'été est mis à 2 (l'heure d'été est en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Antarctica/Troll", 7200);
 	}
 	//Sinon...
 	else
 	{
-		//On retourne 0
-		return 0;
+		//L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Antarctica/Troll", 0);
 	}
 }
 
@@ -260,24 +263,27 @@ int application_du_changement_d_heure_pour_l_australie(time_t temps_courant)
 	}
 }
 
-//Cette fonction permet d'appliquer le changement d'heure pour le cas particulier de Lord Howe (en Australie)
-int application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_t temps_courant)
+//Cette fonction permet d'appliquer le changement d'heure pour l'île Lord Howe
+void application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone correspondante à l'île Lord Howe
+	time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lord_Howe");
+
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 9);
-        time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 2);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 2, 0, 9);
+        time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 3, 0, 2);
 
         //
-        if(hiver <= temps_courant && temps_courant < ete)
+        if(hiver <= temps_courant_pour_la_timezone_donnee && temps_courant_pour_la_timezone_donnee < ete)
         {
-		//On retourne 0
-                return 0;
+		//L'indicateur d'application de l'heure d'été est mis à 0
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Australia/Lord_Howe", 0);
         }
         //Sinon...
         else
         {
-                //On retourne 1800 (nombre de secondes correspondant à l'application du changement d'heure pour lord howe, ce qui correspond à 30 minutes)
-                return 1800;
+                //L'indicateur d'application de l'heure d'été est mis à 1800
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Australia/Lord_Howe", 1800);
         }
 }
 

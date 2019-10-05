@@ -95,6 +95,9 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Asia/Nicosia", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Dublin", temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -281,7 +284,7 @@ void affichage_de_l_horloge()
 	time_t heure_pour_la_base_antarctique_de_rothera = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Rothera"); //Base antarctique de Rothera
 	time_t heure_pour_la_base_antarctique_de_syowa = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Syowa"); //Base antarctique de Syowa	
 	time_t heure_pour_la_base_antarctique_de_vostok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Vostok"); //Base antarctique de Vostok
-	time_t heure_pour_la_base_antarctique_de_troll = temps_utc + (application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc) * 3600); //Base antarctique de Troll
+	time_t heure_pour_la_base_antarctique_de_troll = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Troll"); //Base antarctique de Troll
 
 	/* États-Unis d'Amérique */
         time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
@@ -428,7 +431,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_lindeman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lindeman"); //Lindeman
 	time_t heure_a_melbourne = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Melbourne
 	time_t heure_a_eucla = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Eucla"); //Eucla
-	time_t heure_a_lord_howe = temps_utc + (30 * 60) + ((10 * 3600) + application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc)); //Lord Howe
+	time_t heure_a_lord_howe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lord_Howe"); //Lord Howe
 	time_t heure_a_perth = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Perth"); //Perth
 	time_t heure_aux_cocos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Cocos"); //Cocos
 	time_t heure_a_l_ile_christmas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Christmas"); //Christmas
