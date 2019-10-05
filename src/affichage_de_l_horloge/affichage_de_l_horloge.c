@@ -94,6 +94,8 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Athens", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Asia/Nicosia", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Dublin", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Chisinau", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tiraspol", temps_utc);
 
 	/**/
 	application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc);
@@ -246,8 +248,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_simferopol = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Simferopol"); //Simferopol
 
 	/* République de Moldavie */
-	time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Chisinau
-	time_t heure_a_tiraspol = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Tiraspol
+	time_t heure_a_chisinau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Chisinau"); //Chisinau
+	time_t heure_a_tiraspol = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Tiraspol"); //Tiraspol
 
 	/* Commonwealth des Bahamas */
 	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
