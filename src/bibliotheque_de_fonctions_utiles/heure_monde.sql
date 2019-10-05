@@ -54,6 +54,7 @@ INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rappor
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("America/Montserrat", -14400, 0);
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Pacific/Pitcairn", -28800, 0);
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Indian/Chagos", 21600, 0);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Europe/Gibraltar", 3600, 0);
 
 -- Antarctique --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Antarctica/Casey", 28800, 0);

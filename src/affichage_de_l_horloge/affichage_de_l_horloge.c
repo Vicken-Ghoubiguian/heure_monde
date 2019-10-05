@@ -96,6 +96,7 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Dublin", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Chisinau", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tiraspol", temps_utc);
+	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Gibraltar", temps_utc);
 
 	/**/
 	application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc);
@@ -406,7 +407,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_tortola = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tortola"); //Tortola
 	time_t heure_a_st_helena = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/St_Helena"); //St Hélène
 	time_t heure_a_stanley = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Stanley"); //Stanley
-	time_t heure_a_gibraltar = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600); //Gibraltar
+	time_t heure_a_gibraltar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Gibraltar"); //Gibraltar
 	time_t heure_a_anguilla = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Anguilla"); //Anguilla
 	time_t heure_a_south_georgia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/South_Georgia"); //Géorgie du Sud-et-les îles Sandwich du Sud
 	time_t heure_a_cayman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cayman"); //Îles Caïmans
