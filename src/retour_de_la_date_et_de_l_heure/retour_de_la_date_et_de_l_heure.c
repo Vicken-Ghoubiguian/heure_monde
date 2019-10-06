@@ -346,28 +346,32 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Santiago") == 0)
         {
 		//Calcul de l'heure et de la date à Santiago du Chili et stockage de celui-ci dans la variable heure_santiago_chili
-                time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600));
+                //time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600));
 
 		//L'heure et la date de Santiago du Chili en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_santiago_chili, "Santiago du Chili");
+		//return calcul_et_renvoie_horaire(heure_santiago_chili, "Santiago du Chili");
+		return "";
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Punta_Arenas"...
 	else if(strcmp(nom_du_fuseau_horaire,"Punta_Arenas") == 0)
 	{
 		//Calcul de l'heure et de la date à Punta Arenas et stockage de celui-ci dans la variable heure_a_punta_arenas
-		time_t heure_a_punta_arenas = temps_utc - (3 * 3600);
+		//time_t heure_a_punta_arenas = temps_utc - (3 * 3600);
 
 		//L'heure et la date de Punta Arenas en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_punta_arenas, "Punta Arenas");
+		//return calcul_et_renvoie_horaire(heure_a_punta_arenas, "Punta Arenas");
+		return "";
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Easter"...
 	else if(strcmp(nom_du_fuseau_horaire,"Easter") == 0)
 	{
 		//Calcul de l'heure et de la date sur l'île de Pâques et stockage de celui-ci dans la variable heure_
-                time_t heure_ile_de_paques = temps_utc - ((6 * 3600)  - (application_du_changement_d_heure_pour_le_chili(temps_utc) * 3600));
+                //time_t heure_ile_de_paques = temps_utc - ((6 * 3600)  - (application_du_changement_d_heure_pour_le_chili(temps_utc) * 3600));
 
 		//L'heure et la date sur l'île de Pâcques en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_ile_de_paques, "Ile de Pâques");
+		//return calcul_et_renvoie_horaire(heure_ile_de_paques, "Ile de Pâques");
+
+		return "";
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Johannesburg"...
 	else if(strcmp(nom_du_fuseau_horaire,"Johannesburg") == 0)

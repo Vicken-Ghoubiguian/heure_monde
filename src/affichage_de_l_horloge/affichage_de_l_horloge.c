@@ -109,6 +109,10 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Chatham", temps_utc);
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Antarctica/McMurdo", temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_le_chili("America/Santiago", temps_utc);
+	application_du_changement_d_heure_pour_le_chili("Pacific/Easter", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -473,9 +477,9 @@ void affichage_de_l_horloge()
 	time_t heure_a_noronha = temps_utc - (2 * 3600); //Noronha
 
 	/* République du Chili */
-        time_t heure_santiago_chili = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_chili(temps_utc)  * 3600)); //Santiago du Chili
-	time_t heure_a_punta_arenas = temps_utc - (3 * 3600); //Punta Arenas
-	time_t heure_ile_de_paques = temps_utc - ((6 * 3600)  - (application_du_changement_d_heure_pour_le_chili(temps_utc) * 3600)); //Ile de Pâques
+        time_t heure_santiago_chili = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Santiago"); //Santiago du Chili
+	time_t heure_a_punta_arenas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Punta_Arenas"); //Punta Arenas
+	time_t heure_ile_de_paques = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Easter"); //Ile de Pâques
 
 	/* République du Paraguay */
 	time_t heure_a_asuncion = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_paraguay(temps_utc) * 3600)); //Asuncion

@@ -37,7 +37,7 @@ int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_co
 int application_du_changement_d_heure_pour_l_amerique_du_nord(time_t temps_courant);
 
 //Cette fonction permet d'appliquer le changement d'heure pour le Chili
-int application_du_changement_d_heure_pour_le_chili(time_t temps_courant);
+void application_du_changement_d_heure_pour_le_chili(char* nom_de_la_timezone, time_t temps_courant);
 
 //Cette fonction permet d'appliquer le changement d'heure pour la Nouvelle Zelande
 void application_du_changement_d_heure_pour_la_nouvelle_zelande(char* nom_de_la_timezone, time_t temps_utc);

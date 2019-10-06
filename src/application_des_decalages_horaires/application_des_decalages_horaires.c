@@ -312,23 +312,26 @@ void application_du_changement_d_heure_pour_la_nouvelle_zelande(char* nom_de_la_
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour le Chili
-int application_du_changement_d_heure_pour_le_chili(time_t temps_courant)
+void application_du_changement_d_heure_pour_le_chili(char* nom_de_la_timezone, time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone donnée
+        time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee(nom_de_la_timezone);
+
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_changement_d_heure_d_ete_pour_le_chili(temps_courant);
-	time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 2, 0, 3);
+	time_t ete = date_du_changement_d_heure_d_ete_pour_le_chili(temps_courant_pour_la_timezone_donnee);
+	time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 2, 2, 0, 3);
 
 	//
-        if(hiver <= temps_courant && temps_courant < ete)
+        if(hiver <= temps_courant_pour_la_timezone_donnee && temps_courant_pour_la_timezone_donnee < ete)
         {
-                //On retourne 0
-                return 0;
+                //L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(nom_de_la_timezone, 0);
         }
         //Sinon...
         else
         {
-                //On retourne 1
-                return 1;
+                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete(nom_de_la_timezone, 3600);
         }
 }
 
