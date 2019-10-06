@@ -113,6 +113,9 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_le_chili("America/Santiago", temps_utc);
 	application_du_changement_d_heure_pour_le_chili("Pacific/Easter", temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_les_samoa(temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -456,7 +459,7 @@ void affichage_de_l_horloge()
 	time_t heure_aux_fidji = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_les_fidji(temps_utc) * 3600)); //Fidji
 
 	/* État indépendant des Samoa */
-	time_t heure_a_apia = temps_utc + ((13 * 3600) + (application_du_changement_d_heure_pour_les_samoa(temps_utc) * 3600));
+	time_t heure_a_apia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Apia");
 
 	/* République fédérative du Brésil */
 	time_t heure_a_sao_paulo = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Sao Paulo

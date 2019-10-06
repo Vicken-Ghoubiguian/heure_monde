@@ -222,23 +222,26 @@ void application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t 
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour les Samoa
-int application_du_changement_d_heure_pour_les_samoa(time_t temps_courant)
+void application_du_changement_d_heure_pour_les_samoa(time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone correspondante aux Samoa
+        time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Apia");
+
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 4, 0, 8);
-	time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 3);
+	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 4, 0, 8);
+	time_t hiver = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 3, 0, 3);
 
 	//
-        if(hiver <= temps_courant && temps_courant < ete)
+        if(hiver <= temps_courant_pour_la_timezone_donnee && temps_courant_pour_la_timezone_donnee < ete)
         {
-                //On retourne 0
-                return 0;
+                //L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Pacific/Apia", 0);
         }
         //Sinon...
         else
         {
-                //On retourne 1
-                return 1;
+                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Pacific/Apia", 3600);
         }
 }
 

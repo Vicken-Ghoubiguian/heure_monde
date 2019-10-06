@@ -52,7 +52,7 @@ int application_du_changement_d_heure_pour_l_australie(time_t temps_courant);
 void application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour les Samoa
-int application_du_changement_d_heure_pour_les_samoa(time_t temps_courant);
+void application_du_changement_d_heure_pour_les_samoa(time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour la base antarctique de Troll
 void application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t temps_utc);
