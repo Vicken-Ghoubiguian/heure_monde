@@ -22,7 +22,7 @@ int application_du_changement_d_heure_pour_la_palestine(time_t temps_courant);
 int application_du_changement_d_heure_pour_le_liban(time_t temps_courant);
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Iran
-int application_du_changement_d_heure_pour_l_iran(time_t temps_courant);
+void application_du_changement_d_heure_pour_l_iran(time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour la Jordanie
 int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant);

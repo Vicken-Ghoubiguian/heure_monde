@@ -122,6 +122,9 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_la_syrie(temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_l_iran(temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -739,7 +742,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_baghdad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Baghdad"); //Baghdad
 
 	/* République islamique d'Iran */
-	time_t heure_a_teheran = temps_utc + (30 * 60) + ((3 * 3600) + (application_du_changement_d_heure_pour_l_iran(temps_utc) * 3600)); //Téhéran
+	time_t heure_a_teheran = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tehran"); //Téhéran
 
 	/* État du Qatar */
 	time_t heure_au_qatar = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Qatar"); //Qatar
