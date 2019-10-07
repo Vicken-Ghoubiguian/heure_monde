@@ -116,6 +116,9 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_les_samoa(temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_le_paraguay(temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -485,7 +488,7 @@ void affichage_de_l_horloge()
 	time_t heure_ile_de_paques = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Easter"); //Ile de Pâques
 
 	/* République du Paraguay */
-	time_t heure_a_asuncion = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_paraguay(temps_utc) * 3600)); //Asuncion
+	time_t heure_a_asuncion = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Asuncion"); //Asuncion
 
 	/* Royaume du Maroc */
 	time_t heure_a_casablanca = temps_utc + (1 * 3600); //Casablanca

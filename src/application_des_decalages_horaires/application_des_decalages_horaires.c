@@ -177,23 +177,26 @@ int application_du_changement_d_heure_pour_la_jordanie(time_t temps_courant)
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour le Paraguay
-int application_du_changement_d_heure_pour_le_paraguay(time_t temps_courant)
+void application_du_changement_d_heure_pour_le_paraguay(time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone correspondante au Paraguay
+	time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Asuncion");
+
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 0, 0, 9);
-        time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 4, 0, 0, 2);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 0, 0, 9);
+        time_t hiver = date_du_n_ieme_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 4, 0, 0, 2);
 
         //
-        if(hiver <= temps_courant && temps_courant < ete)
+        if(hiver <= temps_courant_pour_la_timezone_donnee && temps_courant_pour_la_timezone_donnee < ete)
         {
-                //On retourne 0
-                return 0;
+               	//L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("America/Asuncion", 0);
         }
         //Sinon...
         else
         {
-                //On retourne 1
-                return 1;
+                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("America/Asuncion", 3600);
         }
 }
 

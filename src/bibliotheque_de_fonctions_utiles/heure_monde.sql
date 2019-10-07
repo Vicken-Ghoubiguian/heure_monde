@@ -8,6 +8,9 @@ CREATE TABLE IF NOT EXISTS table_des_decalages_horaires(
 
 -- Insertion des décalages horaires relatives à chaque timezone --
 
+-- République du Paraguay --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("America/Asuncion", -14400, 0);
+
 -- État indépendant des Samoa --
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Pacific/Apia", 46800, 0);
 
