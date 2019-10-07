@@ -10,7 +10,7 @@ int application_du_changement_d_heure_pour_les_fidji(time_t temps_courant);
 int application_du_changement_d_heure_pour_le_bresil(time_t temps_courant);
 
 //Cette fonction permet d'appliquer le changement d'heure pour la Syrie
-int application_du_changement_d_heure_pour_la_syrie(time_t temps_courant);
+void application_du_changement_d_heure_pour_la_syrie(time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour Israel
 int application_du_changement_d_heure_pour_israel(time_t temps_courant);
