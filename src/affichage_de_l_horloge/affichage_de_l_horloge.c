@@ -126,6 +126,9 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_iran(temps_utc);
 
 	/**/
+	application_du_changement_d_heure_pour_les_fidji(temps_utc);
+
+	/**/
 	application_du_changement_d_heure_pour_l_australie("Australia/Sydney", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Currie", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Hobart", temps_utc);
@@ -473,7 +476,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_l_ile_norfolk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Norfolk"); //Île Norfolk
 
 	/* République des Fidji */
-	time_t heure_aux_fidji = temps_utc + ((12 * 3600) + (application_du_changement_d_heure_pour_les_fidji(temps_utc) * 3600)); //Fidji
+	time_t heure_aux_fidji = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Fiji"); //Fidji
 
 	/* État indépendant des Samoa */
 	time_t heure_a_apia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Apia");

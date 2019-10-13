@@ -9,23 +9,26 @@
 #include "application_des_decalages_horaires.h"
 
 //Cette fonction permet d'appliquer le changement d'heure pour les Fidji
-int application_du_changement_d_heure_pour_les_fidji(time_t temps_courant)
+void application_du_changement_d_heure_pour_les_fidji(time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone correspondante aux Fidji
+        time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Fiji");
+
         //On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 10);
-	time_t hiver = date_du_changement_d_heure_d_hiver_pour_les_fidji(temps_courant);
+        time_t ete = date_du_premier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 3, 0, 10);
+	time_t hiver = date_du_changement_d_heure_d_hiver_pour_les_fidji(temps_courant_pour_la_timezone_donnee);
 
         //
-        if(hiver <= temps_courant && temps_courant < ete)
+        if(hiver <= temps_courant_pour_la_timezone_donnee && temps_courant_pour_la_timezone_donnee < ete)
         {
-                //On retourne 0
-                return 0;
+                //L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Pacific/Fiji", 0);
         }
         //Sinon...
         else
         {
-                //On retourne 1
-                return 1;
+                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Asia/Tehran", 3600);
         }
 }
 
@@ -69,7 +72,7 @@ void application_du_changement_d_heure_pour_la_syrie(time_t temps_utc)
         //Sinon...
         else
         {
-                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
+                //L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
                 mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Asia/Damascus", 0);
         }
 }
@@ -150,7 +153,7 @@ void application_du_changement_d_heure_pour_l_iran(time_t temps_utc)
         //
         if(temps_courant_pour_la_timezone_donnee >= ete && temps_courant_pour_la_timezone_donnee <= hiver)
         {
-                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été n'est pas en vigueur pour le moment)
+                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
                 mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Asia/Tehran", 3600);
         }
         //Sinon...
