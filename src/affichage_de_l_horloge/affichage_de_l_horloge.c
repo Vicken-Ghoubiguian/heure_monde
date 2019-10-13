@@ -125,6 +125,14 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_l_iran(temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_l_australie("Australia/Sydney", temps_utc);
+	application_du_changement_d_heure_pour_l_australie("Australia/Currie", temps_utc);
+	application_du_changement_d_heure_pour_l_australie("Australia/Hobart", temps_utc);
+	application_du_changement_d_heure_pour_l_australie("Australia/Melbourne", temps_utc);
+	application_du_changement_d_heure_pour_l_australie("Australia/Adelaide", temps_utc);
+	application_du_changement_d_heure_pour_l_australie("Australia/Broken_Hill", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -447,16 +455,16 @@ void affichage_de_l_horloge()
 	time_t heure_de_niue = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Niue"); //Niue
 
 	/* Commonwealth d'Australie */
-        time_t heure_a_sydney = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Sydney
+        time_t heure_a_sydney = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Sydney"); //Sydney
 	time_t heure_a_macquarie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Macquarie"); //Macquarie
-	time_t heure_a_adelaide = temps_utc + (30 * 60) + ((9 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Adelaide
-	time_t heure_a_broken_hill = temps_utc + (30 * 60) + ((10 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Broken Hill
+	time_t heure_a_adelaide = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Adelaide"); //Adelaide
+	time_t heure_a_broken_hill = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Broken_Hill"); //Broken Hill
 	time_t heure_a_darwin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Darwin"); //Darwin
 	time_t heure_a_brisbane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Brisbane"); //Brisbane
-	time_t heure_a_curie = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Curie
-	time_t heure_a_hobart = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Hobart
+	time_t heure_a_curie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Currie"); //Curie
+	time_t heure_a_hobart = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Hobart"); //Hobart
 	time_t heure_a_lindeman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lindeman"); //Lindeman
-	time_t heure_a_melbourne = temps_utc + ((10 * 3600) + (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600)); //Melbourne
+	time_t heure_a_melbourne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Melbourne"); //Melbourne
 	time_t heure_a_eucla = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Eucla"); //Eucla
 	time_t heure_a_lord_howe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lord_Howe"); //Lord Howe
 	time_t heure_a_perth = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Perth"); //Perth

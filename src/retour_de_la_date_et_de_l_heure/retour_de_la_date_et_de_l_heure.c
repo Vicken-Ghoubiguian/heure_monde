@@ -337,10 +337,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Sydney") == 0)
         {
 		//Calcul de l'heure et de la date à Sydney et stockage de celui-ci dans la variable heure_a_sydney
-                time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600));
+                //time_t heure_a_sydney = temps_utc + ((11 * 3600) - (application_du_changement_d_heure_pour_l_australie(temps_utc) * 3600));
 
 		//L'heure et la date de Sydney en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_sydney, "Sydney");
+		//return calcul_et_renvoie_horaire(heure_a_sydney, "Sydney");
+		return "";
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Santiago"...
         else if(strcmp(nom_du_fuseau_horaire,"Santiago") == 0)
