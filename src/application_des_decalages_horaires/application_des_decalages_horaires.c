@@ -99,23 +99,26 @@ int application_du_changement_d_heure_pour_la_palestine(time_t temps_courant)
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour Israel
-int application_du_changement_d_heure_pour_israel(time_t temps_courant)
+void application_du_changement_d_heure_pour_israel(time_t temps_utc)
 {
+	//On calcul le temps courant hypothétique pour la timezone correspondante à Israël
+        time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Jerusalem");
+
 	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-        time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 5, 2);
-        time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 9);
+        time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 2, 5, 2);
+        time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant_pour_la_timezone_donnee, 3, 0, 9);
 
         //
-        if(temps_courant >= ete && temps_courant <= hiver)
+        if(temps_courant_pour_la_timezone_donnee >= ete && temps_courant_pour_la_timezone_donnee <= hiver)
         {
-                //On retourne 1
-                return 1;
+                //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Asia/Jerusalem", 3600);
         }
         //Sinon...
         else
         {
-                //On retourne 0
-                return 0;
+                //L'indicateur d'application de l'heure d'été est mis à 0 (l'heure d'été n'est pas en vigueur pour le moment)
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Asia/Jerusalem", 0);
         }
 }
 

@@ -136,6 +136,9 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_australie("Australia/Adelaide", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Broken_Hill", temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_israel(temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -737,7 +740,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_damas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Damascus"); //Damas
 
 	/* État d'Israël */
-	time_t heure_a_jerusalem = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_israel(temps_utc) * 3600)); //Jerusalem
+	time_t heure_a_jerusalem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Jerusalem"); //Jerusalem
 
 	/* État de Palestine */
 	time_t heure_a_gaza = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_palestine(temps_utc) * 3600)); //Gaza
