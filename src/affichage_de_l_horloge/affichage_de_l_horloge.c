@@ -139,6 +139,9 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_israel(temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_le_liban(temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -750,7 +753,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_amman = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_jordanie(temps_utc) * 3600)); //Amman
 
 	/* République libanaise */
-	time_t heure_a_beyrouth = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_le_liban(temps_utc) * 3600)); //Beyrouth
+	time_t heure_a_beyrouth = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Beirut"); //Beyrouth
 
 	/* République d'Irak */
 	time_t heure_a_baghdad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Baghdad"); //Baghdad
