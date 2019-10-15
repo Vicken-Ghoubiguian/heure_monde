@@ -492,21 +492,21 @@ void affichage_de_l_horloge()
 
 	/* République fédérative du Brésil */
 	time_t heure_a_sao_paulo = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Sao Paulo
-	time_t heure_a_araguaina = temps_utc - (3 * 3600); //Araguaina
-	time_t heure_a_bahia = temps_utc - (3 * 3600); //Bahia
-	time_t heure_a_belem = temps_utc - (3 * 3600); //Belem
-	time_t heure_a_fortaleza = temps_utc - (3 * 3600); //Fortaleza
-	time_t heure_a_maceio = temps_utc - (3 * 3600); //Maceio
-	time_t heure_a_recife = temps_utc - (3 * 3600); //Recife
-	time_t heure_a_santarem = temps_utc - (3 * 3600); //Santarem
-	time_t heure_a_boa_vista = temps_utc - (4 * 3600); //Boa Vista
+	time_t heure_a_araguaina = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Araguaina"); //Araguaina
+	time_t heure_a_bahia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Bahia"); //Bahia
+	time_t heure_a_belem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Belem"); //Belem
+	time_t heure_a_fortaleza = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Fortaleza"); //Fortaleza
+	time_t heure_a_maceio = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Maceio"); //Maceio
+	time_t heure_a_recife = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Recife"); //Recife
+	time_t heure_a_santarem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Santarem"); //Santarem
+	time_t heure_a_boa_vista = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Boa_Vista"); //Boa Vista
 	time_t heure_a_campo_grande = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Campo Grande
 	time_t heure_a_cuiaba = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Cuiaba
-	time_t heure_a_manaus = temps_utc - (4 * 3600); //Manaus
-	time_t heure_a_porto_velho = temps_utc - (4 * 3600); //Porto Velho
-	time_t heure_a_eirunepe = temps_utc - (5 * 3600); //Eirunepe
-	time_t heure_a_rio_branco = temps_utc - (5 * 3600); //Rio Branco
-	time_t heure_a_noronha = temps_utc - (2 * 3600); //Noronha
+	time_t heure_a_manaus = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Manaus"); //Manaus
+	time_t heure_a_porto_velho = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Porto_Velho"); //Porto Velho
+	time_t heure_a_eirunepe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Eirunepe"); //Eirunepe
+	time_t heure_a_rio_branco = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Rio_Branco"); //Rio Branco
+	time_t heure_a_noronha = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Noronha"); //Noronha
 
 	/* République du Chili */
         time_t heure_santiago_chili = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Santiago"); //Santiago du Chili
