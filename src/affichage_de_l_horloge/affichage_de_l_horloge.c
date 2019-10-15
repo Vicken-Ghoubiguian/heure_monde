@@ -145,6 +145,11 @@ void affichage_de_l_horloge()
 	/**/
 	application_du_changement_d_heure_pour_la_jordanie(temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_le_bresil("America/Sao_Paulo", temps_utc);
+	application_du_changement_d_heure_pour_le_bresil("America/Cuiaba", temps_utc);
+	application_du_changement_d_heure_pour_le_bresil("America/Campo_Grande", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -491,7 +496,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_apia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Apia");
 
 	/* République fédérative du Brésil */
-	time_t heure_a_sao_paulo = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Sao Paulo
+	time_t heure_a_sao_paulo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Sao_Paulo"); //Sao Paulo
 	time_t heure_a_araguaina = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Araguaina"); //Araguaina
 	time_t heure_a_bahia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Bahia"); //Bahia
 	time_t heure_a_belem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Belem"); //Belem
@@ -500,8 +505,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_recife = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Recife"); //Recife
 	time_t heure_a_santarem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Santarem"); //Santarem
 	time_t heure_a_boa_vista = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Boa_Vista"); //Boa Vista
-	time_t heure_a_campo_grande = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Campo Grande
-	time_t heure_a_cuiaba = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_le_bresil(temps_utc)  * 3600)); //Cuiaba
+	time_t heure_a_campo_grande = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Campo_Grande"); //Campo Grande
+	time_t heure_a_cuiaba = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cuiaba"); //Cuiaba
 	time_t heure_a_manaus = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Manaus"); //Manaus
 	time_t heure_a_porto_velho = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Porto_Velho"); //Porto Velho
 	time_t heure_a_eirunepe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Eirunepe"); //Eirunepe
