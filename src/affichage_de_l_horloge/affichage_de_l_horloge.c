@@ -150,6 +150,10 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_le_bresil("America/Cuiaba", temps_utc);
 	application_du_changement_d_heure_pour_le_bresil("America/Campo_Grande", temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_la_palestine("Asia/Hebron", temps_utc);
+	application_du_changement_d_heure_pour_la_palestine("Asia/Gaza", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -754,8 +758,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_jerusalem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Jerusalem"); //Jerusalem
 
 	/* État de Palestine */
-	time_t heure_a_gaza = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_palestine(temps_utc) * 3600)); //Gaza
-	time_t heure_a_hebron = temps_utc + ((2 * 3600) + (application_du_changement_d_heure_pour_la_palestine(temps_utc) * 3600)); //Hebron
+	time_t heure_a_gaza = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Gaza"); //Gaza
+	time_t heure_a_hebron = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Hebron"); //Hebron
 
 	/* Royaume hachémite de Jordanie */
 	time_t heure_a_amman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Amman"); //Amman

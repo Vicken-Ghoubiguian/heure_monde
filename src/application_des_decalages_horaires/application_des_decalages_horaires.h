@@ -16,7 +16,7 @@ void application_du_changement_d_heure_pour_la_syrie(time_t temps_utc);
 void application_du_changement_d_heure_pour_israel(time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour la Palestine
-int application_du_changement_d_heure_pour_la_palestine(time_t temps_courant);
+void application_du_changement_d_heure_pour_la_palestine(char* nom_de_la_timezone, time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour le Liban
 void application_du_changement_d_heure_pour_le_liban(time_t temps_utc);
