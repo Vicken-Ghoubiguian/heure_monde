@@ -41,7 +41,7 @@ void affichage_de_l_horloge()
 	/* Définition de la variable temps_utc et initialisation de celle-ci au temps utc sous forme de timestamp */
 	time_t temps_utc = retour_du_temps_utc_sous_forme_de_timestamp();
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Europe continentale */
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Paris", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Madrid", temps_utc);
@@ -98,37 +98,37 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tiraspol", temps_utc);
 	application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Gibraltar", temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la base antarctique de Troll */
 	application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Île Lord Howe */
 	application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle Zélande */
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Auckland", temps_utc);
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Chatham", temps_utc);
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Antarctica/McMurdo", temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour le Chili */
 	application_du_changement_d_heure_pour_le_chili("America/Santiago", temps_utc);
 	application_du_changement_d_heure_pour_le_chili("Pacific/Easter", temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour les Samoa */
 	application_du_changement_d_heure_pour_les_samoa(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour le Paraguay */
 	application_du_changement_d_heure_pour_le_paraguay(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Syrie */
 	application_du_changement_d_heure_pour_la_syrie(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Iran */
 	application_du_changement_d_heure_pour_l_iran(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour les Fidji */
 	application_du_changement_d_heure_pour_les_fidji(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Australie */
 	application_du_changement_d_heure_pour_l_australie("Australia/Sydney", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Currie", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Hobart", temps_utc);
@@ -136,25 +136,25 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_australie("Australia/Adelaide", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Broken_Hill", temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour Israël */
 	application_du_changement_d_heure_pour_israel(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour le Liban */
 	application_du_changement_d_heure_pour_le_liban(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Jordanie */
 	application_du_changement_d_heure_pour_la_jordanie(temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour le Brésil */
 	application_du_changement_d_heure_pour_le_bresil("America/Sao_Paulo", temps_utc);
 	application_du_changement_d_heure_pour_le_bresil("America/Cuiaba", temps_utc);
 	application_du_changement_d_heure_pour_le_bresil("America/Campo_Grande", temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non pour la Palestine */
 	application_du_changement_d_heure_pour_la_palestine("Asia/Hebron", temps_utc);
 	application_du_changement_d_heure_pour_la_palestine("Asia/Gaza", temps_utc);
 
-	/**/
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Grande Bretagne */
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/London", temps_utc);
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Isle_of_Man", temps_utc);
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Jersey", temps_utc);
