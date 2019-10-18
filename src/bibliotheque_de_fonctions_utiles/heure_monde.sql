@@ -102,6 +102,10 @@ INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rappor
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Australia/Lord_Howe", 37800, 0);
 
 -- Royaume-Uni de Grande-Bretagne et d'Irlande du Nord --
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Europe/London", 0, 0);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Europe/Isle_of_Man", 0, 0);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Europe/Jersey", 0, 0);
+INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Europe/Guernsey", 0, 0);
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("America/Tortola", -14400, 0);
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("Atlantic/Stanley", -10800, 0);
 INSERT INTO table_des_decalages_horaires(nom_de_la_timezone, decalage_par_rapport_a_UTC, indicateur_d_application_de_l_heure_d_ete) VALUES("America/Anguilla", -14400, 0);

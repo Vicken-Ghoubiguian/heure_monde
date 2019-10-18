@@ -43,7 +43,7 @@ void application_du_changement_d_heure_pour_le_chili(char* nom_de_la_timezone, t
 void application_du_changement_d_heure_pour_la_nouvelle_zelande(char* nom_de_la_timezone, time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour la Grande Bretagne
-int application_du_changement_d_heure_pour_la_grande_bretagne(time_t temps_courant);
+void application_du_changement_d_heure_pour_la_grande_bretagne(char* nom_de_la_timezone, time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Australie
 void application_du_changement_d_heure_pour_l_australie(char* nom_de_la_timezone, time_t temps_utc);

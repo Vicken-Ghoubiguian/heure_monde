@@ -154,6 +154,12 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_la_palestine("Asia/Hebron", temps_utc);
 	application_du_changement_d_heure_pour_la_palestine("Asia/Gaza", temps_utc);
 
+	/**/
+	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/London", temps_utc);
+	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Isle_of_Man", temps_utc);
+	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Jersey", temps_utc);
+	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Guernsey", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -446,7 +452,7 @@ void affichage_de_l_horloge()
 	time_t heure_de_nicosia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Nicosia"); //Nicosie
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
-	time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Londres
+	time_t heure_de_londres = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/London"); //Londres
 	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
 	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
 	time_t heure_a_tortola = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tortola"); //Tortola
@@ -464,13 +470,13 @@ void affichage_de_l_horloge()
 	time_t heure_a_dublin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Dublin"); //Dublin
 
 	/* île de Man */
-	time_t heure_a_l_ile_de_man = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Île de Man
+	time_t heure_a_l_ile_de_man = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Isle_of_Man"); //Île de Man
 
 	/* Jersey */
-	time_t heure_a_jersey = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Jersey
+	time_t heure_a_jersey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Jersey"); //Jersey
 
 	/* Guernsey */
-	time_t heure_a_gernsey = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600); //Guernsey	
+	time_t heure_a_gernsey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Guernsey"); //Guernsey	
 
 	/* Niue */
 	time_t heure_de_niue = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Niue"); //Niue

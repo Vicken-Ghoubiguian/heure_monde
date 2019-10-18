@@ -255,10 +255,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/London") == 0)
         {
 		//Calcul de l'heure et de la date à Londres et stockage de celui-ci dans la variable heure_de_londres
-                time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600);
+                //time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600);
 
 		//L'heure et la date de Londres en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_de_londres, "Europe/London");
+		//return calcul_et_renvoie_horaire(heure_de_londres, "Europe/London");
+		return "";
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Chisinau"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Chisinau") == 0)
