@@ -160,6 +160,63 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Jersey", temps_utc);
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Guernsey", temps_utc);
 
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord */
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Miquelon", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Thule", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Nassau", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Port-au-Prince", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Havana", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("Atlantic/Bermuda", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Grand_Turk", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Toronto", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Pangnirtung", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Thunder_Bay", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Nipigon", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Iqaluit", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Winnipeg", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Resolute", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Rankin_Inlet", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Rainy_River", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Whitehorse", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Vancouver", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Dawson", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/St_Johns", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Moncton", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Halifax", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Goose_Bay", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Glace_Bay", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Inuvik", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Edmonton", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Cambridge_Bay", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Yellowknife", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/New_York", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Los_Angeles", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Juneau", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Yakutat", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Menominee", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Chicago", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Boise", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Denver", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Anchorage", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Detroit", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Metlakatla", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Sitka", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Nome", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Adak", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Kentucky/Louisville", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Kentucky/Monticello", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Winamac", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Vincennes", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Vevay", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Petersburg", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Marengo", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Indianapolis", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/North_Dakota/New_Salem", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/North_Dakota/Center", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/North_Dakota/Beulah", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Tell_City", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Knox", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
@@ -173,7 +230,7 @@ void affichage_de_l_horloge()
 	time_t heure_de_tahiti = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Tahiti"); //Tahiti
 	time_t heure_de_gambier = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Gambier"); //Gambier
 	time_t heure_a_marquesas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Marquesas"); //îles Marquises
-	time_t heure_de_miquelon = temps_utc - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Miquelon
+	time_t heure_de_miquelon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Miquelon"); //Miquelon
 	time_t heure_de_st_barthelemy = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Barthelemy"); //St Barthélemy
 	time_t heure_de_la_martinique = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Martinique"); //La Martinique
 	time_t heure_de_wallis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Wallis"); //Wallis et Futuna
@@ -213,7 +270,7 @@ void affichage_de_l_horloge()
 	time_t heure_aux_iles_feroes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Faroe"); // Iles Féroé
 	time_t heure_a_scoresbysund = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Scoresbysund"); //Scoresbysund
 	time_t heure_a_godthab = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Godthab"); //Godthab
-	time_t heure_a_thule = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Thule
+	time_t heure_a_thule = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Thule"); //Thule
 	time_t heure_a_danmarkshavn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Danmarkshavn"); //Danmarkshavn
 
 	/* Royaume de Norvège */
@@ -304,7 +361,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_tiraspol = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Tiraspol"); //Tiraspol
 
 	/* Commonwealth des Bahamas */
-	time_t heure_a_nassau = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nassau
+	time_t heure_a_nassau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Nassau"); //Nassau
 
 	/* République du Suriname */
 	time_t heure_a_paramaribo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Paramaribo"); //Paramaribo
@@ -331,10 +388,10 @@ void affichage_de_l_horloge()
 	time_t heure_a_st_domingue = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Santo_Domingo"); //St Domingue
 
 	/* République d'Haïti */
-	time_t heure_a_port_au_prince = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Port-au-Prince
+	time_t heure_a_port_au_prince = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Port-au-Prince"); //Port-au-Prince
 
 	/* République de Cuba */
-	time_t heure_a_la_havane = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //La Havane
+	time_t heure_a_la_havane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Havana"); //La Havane
 
 	/* Antarctique */
 	time_t heure_pour_la_base_antarctique_de_casey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Casey"); //Base antarctique de Casey
@@ -349,36 +406,36 @@ void affichage_de_l_horloge()
 	time_t heure_pour_la_base_antarctique_de_troll = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Troll"); //Base antarctique de Troll
 
 	/* États-Unis d'Amérique */
-        time_t heure_los_angeles = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Los Angeles
-        time_t heure_de_nyc = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //New York City
+        time_t heure_los_angeles = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Los_Angeles"); //Los Angeles
+        time_t heure_de_nyc = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/New_York"); //New York City
         time_t heure_de_phoenix = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Phoenix"); //Phoenix
 	time_t heure_a_honolulu = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Honolulu"); //Honolulu
 	time_t heure_a_johnston = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Johnston"); //Johnston
-	time_t heure_a_juneau = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Juneau
-	time_t heure_a_yakutat = temps_utc  - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yakutat
-	time_t heure_a_menominee = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Menominee
-	time_t heure_a_chicago = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Chicago
-	time_t heure_a_boise = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Boise
-	time_t heure_a_denver = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Denvers
-	time_t heure_a_anchorage = temps_utc - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Anchorage
-	time_t heure_a_detroit = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Detroit
-	time_t heure_a_metlakatla = temps_utc - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Metlakatla
-	time_t heure_a_sitka = temps_utc - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Sitka
-	time_t heure_a_nome = temps_utc - ((9 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nome
-	time_t heure_a_adak = temps_utc - ((10 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Adak
-	time_t heure_a_kentucky_louiseville = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Kentucky Louiseville
-	time_t heure_a_kentucky_monticello = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Kentucky Monticello
-	time_t heure_a_indiana_winamac = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Winamac
-	time_t heure_a_indiana_vincennes = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Vincennes
-	time_t heure_a_indiana_vevay = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Vevay
-	time_t heure_a_indiana_petersburg = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Petersburg
-	time_t heure_a_indiana_marengo = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Marengo
-	time_t heure_a_indiana_indianapolis = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Indianapolis
-	time_t heure_a_north_dakota_new_salem = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota New Salem
-	time_t heure_a_north_dakota_center = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Center
-	time_t heure_a_north_dakota_beulah = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //North Dakota Beulah
-	time_t heure_a_indiana_tell_city = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Tell City
-	time_t heure_a_indiana_knox = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Indiana Knox
+	time_t heure_a_juneau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Juneau"); //Juneau
+	time_t heure_a_yakutat = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Yakutat"); //Yakutat
+	time_t heure_a_menominee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Menominee"); //Menominee
+	time_t heure_a_chicago = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Chicago"); //Chicago
+	time_t heure_a_boise = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Boise"); //Boise
+	time_t heure_a_denver = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Denver"); //Denvers
+	time_t heure_a_anchorage = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Anchorage"); //Anchorage
+	time_t heure_a_detroit = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Detroit"); //Detroit
+	time_t heure_a_metlakatla = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Metlakatla"); //Metlakatla
+	time_t heure_a_sitka = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Sitka"); //Sitka
+	time_t heure_a_nome = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Nome"); //Nome
+	time_t heure_a_adak = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Adak"); //Adak
+	time_t heure_a_kentucky_louiseville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Kentucky/Louisville"); //Kentucky Louiseville
+	time_t heure_a_kentucky_monticello = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Kentucky/Monticello"); //Kentucky Monticello
+	time_t heure_a_indiana_winamac = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Winamac"); //Indiana Winamac
+	time_t heure_a_indiana_vincennes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Vincennes"); //Indiana Vincennes
+	time_t heure_a_indiana_vevay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Vevay"); //Indiana Vevay
+	time_t heure_a_indiana_petersburg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Petersburg"); //Indiana Petersburg
+	time_t heure_a_indiana_marengo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Marengo"); //Indiana Marengo
+	time_t heure_a_indiana_indianapolis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Indianapolis"); //Indiana Indianapolis
+	time_t heure_a_north_dakota_new_salem = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/North_Dakota/New_Salem"); //North Dakota New Salem
+	time_t heure_a_north_dakota_center = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/North_Dakota/Center"); //North Dakota Center
+	time_t heure_a_north_dakota_beulah = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/North_Dakota/Beulah"); //North Dakota Beulah
+	time_t heure_a_indiana_tell_city = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Tell_City"); //Indiana Tell City
+	time_t heure_a_indiana_knox = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Indiana/Knox"); //Indiana Knox
 	time_t heure_a_st_thomas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Thomas"); //îles Vierges des États-Unis
 	time_t heure_a_pago_pago = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Pago_Pago"); //Samoa américaines
 	time_t heure_a_guam = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Guam"); //Guam
@@ -386,34 +443,34 @@ void affichage_de_l_horloge()
 	time_t heure_a_midway = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Midway"); //Midway + Îles mineures éloignées des États-Unis
 
 	/* Dominion du Canada */
-	time_t heure_de_toronto = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Toronto
+	time_t heure_de_toronto = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Toronto"); //Toronto
 	time_t heure_d_atikokan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Atikokan"); //Atikokan
-	time_t heure_de_pangnirtung = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Pangnirtung
-	time_t heure_de_thunder_bay = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Thunder Bay
-	time_t heure_de_nipigon = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Nipigon
-	time_t heure_d_iqaluit = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Iqaluit
-	time_t heure_de_winnipeg = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Winnipeg
+	time_t heure_de_pangnirtung = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Pangnirtung"); //Pangnirtung
+	time_t heure_de_thunder_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Thunder_Bay"); //Thunder Bay
+	time_t heure_de_nipigon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Nipigon"); //Nipigon
+	time_t heure_d_iqaluit = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Iqaluit"); //Iqaluit
+	time_t heure_de_winnipeg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Winnipeg"); //Winnipeg
 	time_t heure_de_swift_current = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Swift_Current"); //Swift Current
-	time_t heure_de_resolute = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Resolute
+	time_t heure_de_resolute = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Resolute"); //Resolute
 	time_t heure_de_regina = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Regina"); //Regina
-	time_t heure_de_rankin_inlet = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Rankin Inlet
-	time_t heure_de_rainy_river = temps_utc - ((6 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Rainy River
-	time_t heure_de_whitehorse = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Whitehorse
-	time_t heure_de_vancouver = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Vancouver
-	time_t heure_de_dawson = temps_utc - ((8 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Dawson
-	time_t heure_de_st_johns = temps_utc - (30 * 60) - ((3 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //St Johns
+	time_t heure_de_rankin_inlet = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Rankin_Inlet"); //Rankin Inlet
+	time_t heure_de_rainy_river = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Rainy_River"); //Rainy River
+	time_t heure_de_whitehorse = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Whitehorse"); //Whitehorse
+	time_t heure_de_vancouver = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Vancouver"); //Vancouver
+	time_t heure_de_dawson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Dawson"); //Dawson
+	time_t heure_de_st_johns = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Johns"); //St Johns
 	time_t heure_de_blanc_sablon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Blanc-Sablon"); //Blanc-Sablon
-	time_t heure_de_moncton = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Moncton
-	time_t heure_d_halifax = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Halifax
-	time_t heure_de_goose_bay = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Goose Bay
-	time_t heure_de_glace_bay = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Glace Bay
-	time_t heure_d_inuvik = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Inuvik
+	time_t heure_de_moncton = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Moncton"); //Moncton
+	time_t heure_d_halifax = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Halifax"); //Halifax
+	time_t heure_de_goose_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Goose_Bay"); //Goose Bay
+	time_t heure_de_glace_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Glace_Bay"); //Glace Bay
+	time_t heure_d_inuvik = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Inuvik"); //Inuvik
 	time_t heure_de_fort_nelson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Fort_Nelson"); //Fort Nelson
-	time_t heure_d_edmonton = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Edmonton
+	time_t heure_d_edmonton = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Edmonton"); //Edmonton
 	time_t heure_de_dawson_creek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Dawson_Creek"); //Dawson Creek
 	time_t heure_de_creston = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Creston"); //Creston
-	time_t heure_de_cambridge_bay = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Cambridge Bay
-	time_t heure_d_yellowknife = temps_utc - ((7 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Yellowknife
+	time_t heure_de_cambridge_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cambridge_Bay"); //Cambridge Bay
+	time_t heure_d_yellowknife = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Yellowknife"); //Yellowknife
 
 	/* République du Nicaragua */
 	time_t heure_managua = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Managua"); //Managua
@@ -453,8 +510,8 @@ void affichage_de_l_horloge()
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 	time_t heure_de_londres = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/London"); //Londres
-	time_t heure_aux_bermudes = temps_utc - ((4 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Bermudes
-	time_t heure_a_grand_turk = temps_utc - ((5 * 3600) - (application_du_changement_d_heure_pour_l_amerique_du_nord(temps_utc) * 3600)); //Grand Turk
+	time_t heure_aux_bermudes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Bermuda"); //Bermudes
+	time_t heure_a_grand_turk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Grand_Turk"); //Grand Turk
 	time_t heure_a_tortola = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tortola"); //Tortola
 	time_t heure_a_st_helena = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/St_Helena"); //St Hélène
 	time_t heure_a_stanley = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Stanley"); //Stanley
