@@ -508,157 +508,157 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_au_belize, "Belize");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Bogota"...
-	else if(strcmp(nom_du_fuseau_horaire,"Bogota") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/Bogota") == 0)
 	{
 		//Calcul de l'heure et de la date à Bogota et stockage de celui-ci dans la variable heure_a_bogota
-                time_t heure_a_bogota = temps_utc - (5 * 3600);
+                time_t heure_a_bogota = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Bogota");;
 
 		//L'heure et la date de Bogota en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_bogota, "Bogota");
+		return calcul_et_renvoie_horaire(heure_a_bogota, "America/Bogota");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Caracas"...
-	else if(strcmp(nom_du_fuseau_horaire,"Caracas") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/Caracas") == 0)
 	{
 		//Calcul de l'heure et de la date à Caracas et stockage de celui-ci dans la variable heure_caracas
-                time_t heure_a_caracas = temps_utc - (4 * 3600);
+                time_t heure_a_caracas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Caracas");
 
 		//L'heure et la date de Caracas en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_caracas, "Caracas");
+		return calcul_et_renvoie_horaire(heure_a_caracas, "America/Caracas");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Guayaquil"...
-	else if(strcmp(nom_du_fuseau_horaire,"Guayaquil") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/Guayaquil") == 0)
 	{
 		//Calcul de l'heure et de la date à Guayaquil et stockage de celui-ci dans la variable heure_a_guayaquil
-                time_t heure_a_guayaquil = temps_utc - (5 * 3600);
+                time_t heure_a_guayaquil = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guayaquil");
 
 		//L'heure et la date de Guayaquil en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_guayaquil, "Guayaquil");
+		return calcul_et_renvoie_horaire(heure_a_guayaquil, "America/Guayaquil");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Galapagos"...
-	else if(strcmp(nom_du_fuseau_horaire,"Galapagos") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Galapagos") == 0)
 	{
 		//Calcul de l'heure et de la date à Galapagos et stockage de celui-ci dans la variable heure_a_galapagos
-                time_t heure_a_galapagos = temps_utc - (6 * 3600);
+                time_t heure_a_galapagos = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Galapagos");
 
 		//L'heure et la date de Galapagos en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_galapagos, "Galapagos");
+		return calcul_et_renvoie_horaire(heure_a_galapagos, "Pacific/Galapagos");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "La Paz"...
-	else if(strcmp(nom_du_fuseau_horaire,"La_Paz") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"America/La_Paz") == 0)
 	{
 		//Calcul de l'heure et de la date à La Paz et stockage de celui-ci dans la variable heure_a_la_paz
-                time_t heure_a_la_paz = temps_utc - (4 * 3600);
+                time_t heure_a_la_paz = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/La_Paz");
 
 		//L'heure et la date de La Paz en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_la_paz, "La Paz");
+		return calcul_et_renvoie_horaire(heure_a_la_paz, "America/La_Paz");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antananarivo"...
-        else if(strcmp(nom_du_fuseau_horaire,"Antananarivo") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Indian/Antananarivo") == 0)
         {
 		//Calcul de l'heure et de la date à Antananarivo et stockage de celui-ci dans la variable heure_antananarivo
-                time_t heure_antananarivo = temps_utc + (3 * 3600);
+                time_t heure_antananarivo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Antananarivo");;
 
 		//L'heure et la date de Antananarivo en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_antananarivo, "Antananarivo");
+		return calcul_et_renvoie_horaire(heure_antananarivo, "Indian/Antananarivo");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Windhoek"...
-        else if(strcmp(nom_du_fuseau_horaire,"Windhoek") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Africa/Windhoek") == 0)
         {
 		//Calcul de l'heure et de la date à Windhoek et stockage de celui-ci dans la variable heure_windhoek
-                time_t heure_windhoek = temps_utc + (2 * 3600);
+                time_t heure_windhoek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Windhoek");
 
 		//L'heure et la date de Windhoek en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_windhoek, "Windhoek");
+		return calcul_et_renvoie_horaire(heure_windhoek, "Africa/Windhoek");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Lima"...
-        else if(strcmp(nom_du_fuseau_horaire,"Lima") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"America/Lima") == 0)
         {
 		//Calcul de l'heure et de la date à Lima et stockage de celui-ci dans la variable heure_lima
-                time_t heure_lima = temps_utc - (5 * 3600);
+                time_t heure_lima = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Lima");
 
 		//L'heure et la date de Lima en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_lima, "Lima");
+		return calcul_et_renvoie_horaire(heure_lima, "America/Lima");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Bangkok"...
-	else if(strcmp(nom_du_fuseau_horaire,"Bangkok") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Bangkok") == 0)
 	{
 		//Calcul de l'heure et de la date à Bangkok et stockage de celui-ci dans la variable heure_a_bangkok
-		time_t heure_a_bangkok = temps_utc + (7 * 3600);
+		time_t heure_a_bangkok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bangkok");
 
 		//L'heure et la date de Bangkok Ville en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_bangkok, "Bangkok");
+		return calcul_et_renvoie_horaire(heure_a_bangkok, "Asia/Bangkok");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Ho_Chi_Minh"...
-	else if(strcmp(nom_du_fuseau_horaire,"Ho_Chi_Minh") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Ho_Chi_Minh") == 0)
 	{
 		//Calcul de l'heure et de la date à Hô Chi Minh Ville et stockage de celui-ci dans la variable heure_a_ho_chi_minh_ville
-                time_t heure_a_ho_chi_minh_ville = temps_utc + (7 * 3600);
+                time_t heure_a_ho_chi_minh_ville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Ho_Chi_Minh");
 
 		//L'heure et la date de Hô Chi Minh Ville en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_ho_chi_minh_ville, "Hô Chi Minh Ville");
+		return calcul_et_renvoie_horaire(heure_a_ho_chi_minh_ville, "Asia/Ho_Chi_Minh");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pyongyang"...
-	else if(strcmp(nom_du_fuseau_horaire,"Pyongyang") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Pyongyang") == 0)
 	{
 		//Calcul de l'heure et de la date à Pyongyang et stockage de celui-ci dans la variable heure_pyongyang
-                time_t heure_pyongyang = temps_utc + (9 * 3600);
+                time_t heure_pyongyang = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Pyongyang");
 
 		//L'heure et la date de Pyongyang en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_pyongyang, "Pyongyang");
+		return calcul_et_renvoie_horaire(heure_pyongyang, "Asia/Pyongyang");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Seoul"...
-        else if(strcmp(nom_du_fuseau_horaire,"Seoul") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Asia/Seoul") == 0)
         {
 		//Calcul de l'heure et de la date à Seoul et stockage de celui-ci dans la variable heure_seoul
-                time_t heure_seoul = temps_utc + (9 * 3600);
+                time_t heure_seoul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Seoul");
 
 		//L'heure et la date de Seoul en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_seoul, "Seoul");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tokyo"...
-        else if(strcmp(nom_du_fuseau_horaire,"Tokyo") == 0)
+        else if(strcmp(nom_du_fuseau_horaire,"Asia/Tokyo") == 0)
         {
 		//Calcul de l'heure et de la date à Tokyo et stockage de celui-ci dans la variable heure_tokyo
-                time_t heure_tokyo = temps_utc + (9 * 3600);
+                time_t heure_tokyo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tokyo");
 
 		//L'heure et la date de Tokyo en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_tokyo, "Tokyo");
+		return calcul_et_renvoie_horaire(heure_tokyo, "Asia/Tokyo");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pekin"...
-	else if(strcmp(nom_du_fuseau_horaire,"Pekin") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Shanghai") == 0)
         {
 		//Calcul de l'heure et de la date à Pekin et stockage de celui-ci dans la variable heure_pekin
-                time_t heure_pekin = temps_utc + (8 * 3600);
+                time_t heure_pekin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Shanghai");
 
 		//L'heure et la date de Pekin en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_pekin, "Pekin");
+		return calcul_et_renvoie_horaire(heure_pekin, "Asia/Shanghai");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Manille"...
-	else if(strcmp(nom_du_fuseau_horaire,"Manille") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Manila") == 0)
 	{
 		//Calcul de l'heure et de la date à Manille et stockage de celui-ci dans la variable heure_a_manille
-                time_t heure_a_manille = temps_utc + (8 * 3600);
+                time_t heure_a_manille = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Manila");
 
 		//L'heure et la date de Manille en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_manille, "Manille");
+		return calcul_et_renvoie_horaire(heure_a_manille, "Asia/Manila");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Urumqi"...
-	else if(strcmp(nom_du_fuseau_horaire,"Urumqi") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Urumqi") == 0)
 	{
 		//Calcul de l'heure et de la date à Urumqi et stockage de celui-ci dans la variable heure_a_urumqi
-                time_t heure_a_urumqi = temps_utc + (6 * 3600);
+                time_t heure_a_urumqi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Urumqi");
 
 		//L'heure et la date d'Urumqi en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_urumqi, "Urumqi");
+		return calcul_et_renvoie_horaire(heure_a_urumqi, "Asia/Urumqi");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kaliningrad"...
-	else if(strcmp(nom_du_fuseau_horaire,"Kaliningrad") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Kaliningrad") == 0)
 	{
 		//Calcul de l'heure et de la date à Kaliningrad et stockage de celui-ci dans la variable heure_kaliningrad
-                time_t heure_kaliningrad = temps_utc + (2 * 3600);
+                time_t heure_kaliningrad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kaliningrad");
 
 		//L'heure et la date de Kaliningrad en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_kaliningrad, "Kaliningrad");
+		return calcul_et_renvoie_horaire(heure_kaliningrad, "Europe/Kaliningrad");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Samara"...
 	else if(strcmp(nom_du_fuseau_horaire,"Samara") == 0)
