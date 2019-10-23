@@ -417,27 +417,6 @@ void application_du_changement_d_heure_pour_la_grande_bretagne(char* nom_de_la_t
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Europe continentale
-int application_du_changement_d_heure_pour_l_europe_continentale(time_t temps_courant)
-{
-	//On calcul l'horaire de changement de l'heure d'été et de changement de l'heure d'hiver, et on stocke ces valeurs dans des variables de type time_t (timestamp) pour procéder aux calculs
-	time_t ete = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 3, 0, 2);
-	time_t hiver = date_du_dernier_jour_de_la_semaine_donne_du_mois_donne(temps_courant, 2, 0, 9);
-
-	//
-	if(temps_courant >= ete && temps_courant <= hiver)
-	{
-		//On retourne 1
-		return 1;
-	}
-	//Sinon...
-	else
-	{
-		//On retourne 0
-		return 0;
-	}
-}
-
-//Cette fonction permet d'appliquer le changement d'heure pour l'Europe continentale
 void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de_la_timezone, time_t temps_utc)
 {
 	//On calcul le temps courant hypothétique pour la timezone donnée
