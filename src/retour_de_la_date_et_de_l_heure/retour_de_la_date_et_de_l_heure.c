@@ -118,8 +118,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Monaco"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Monaco") == 0)
         {
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc);
+
                 //
-                time_t heure_a_monaco = temps_utc + (1 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+                time_t heure_a_monaco = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Monaco");
 
                 //L'heure et la date de Monaco en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_monaco, "Europe/Monaco");
@@ -323,8 +326,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Chisinau"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Chisinau") == 0)
         {
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Chisinau", temps_utc);
+
                 //Calcul de l'heure et de la date à Chisinau et stockage de celui-ci dans la variable heure_a_chisinau
-                time_t heure_a_chisinau = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+                time_t heure_a_chisinau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Chisinau");
 
                 //L'heure et la date de Chisinau en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_chisinau, "Europe/Chisinau");
@@ -341,8 +347,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kiev"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Kiev") == 0)
         {
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Kiev", temps_utc);
+
                 //Calcul de l'heure et de la date à Kiev et stockage de celui-ci dans la variable heure_a_kiev
-                time_t heure_a_kiev = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+                time_t heure_a_kiev = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kiev");
 
                 //L'heure et la date de Kiev en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_kiev, "Europe/Kiev");
@@ -350,8 +359,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Uzhgorod"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Uzhgorod") == 0)
         {
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Uzhgorod", temps_utc);
+
                 //Calcul de l'heure et de la date à Uzhgorod et stockage de celui-ci dans la variable heure_a_uzhgorod
-                time_t heure_a_uzhgorod = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+                time_t heure_a_uzhgorod = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Uzhgorod");
 
                 //L'heure et la date de Uzhgorod en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_uzhgorod, "Europe/Uzhgorod");
@@ -359,8 +371,11 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Zaporozhye"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Zaporozhye") == 0)
         {
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zaporozhye", temps_utc);
+
                 //Calcul de l'heure et de la date à Zaporozhye et stockage de celui-ci dans la variable heure_a_zaporozhye
-                time_t heure_a_zaporozhye = temps_utc + (2 * 3600) + (application_du_changement_d_heure_pour_l_europe_continentale(temps_utc) * 3600);
+                time_t heure_a_zaporozhye = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zaporozhye");
 
                 //L'heure et la date de Uzhgorod en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_zaporozhye, "Europe/Zaporozhye");
