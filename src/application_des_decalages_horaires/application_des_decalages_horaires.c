@@ -417,7 +417,7 @@ void application_du_changement_d_heure_pour_la_grande_bretagne(char* nom_de_la_t
 }
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Europe continentale
-void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de_la_timezone, time_t temps_utc)
+void application_du_changement_d_heure_pour_l_europe_continentale(char* nom_de_la_timezone, time_t temps_utc)
 {
 	//On calcul le temps courant hypothétique pour la timezone donnée
 	time_t temps_courant_pour_la_timezone_donnee = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee(nom_de_la_timezone);

@@ -47,7 +47,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	if(strcmp(nom_du_fuseau_horaire,"Europe/Paris") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Paris", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Paris", temps_utc);
 
 		//
 		time_t heure_de_paris = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Paris");
@@ -59,7 +59,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Berlin") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Berlin", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Berlin", temps_utc);
 
 		//
 		time_t heure_de_berlin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Berlin");
@@ -71,7 +71,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Busingen") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Busingen", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Busingen", temps_utc);
 
                 //
                 time_t heure_de_busingen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Busingen");
@@ -83,7 +83,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Rome") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Rome", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Rome", temps_utc);
 
                 //
                 time_t heure_de_rome = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Rome");
@@ -95,7 +95,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/San_Marino") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/San_Marino", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/San_Marino", temps_utc);
 
                 //
                 time_t heure_a_saint_marin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/San_Marino");
@@ -107,7 +107,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vatican") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vatican", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Vatican", temps_utc);
 
                 //
                 time_t heure_du_vatican = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vatican");
@@ -119,7 +119,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Monaco") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Monaco", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Monaco", temps_utc);
 
                 //
                 time_t heure_a_monaco = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Monaco");
@@ -131,7 +131,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Luxembourg") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Luxembourg", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Luxembourg", temps_utc);
 
                 //
                 time_t heure_au_luxembourg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Luxembourg");
@@ -143,7 +143,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Brussels") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Brussels", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Brussels", temps_utc);
 
                 //
                 time_t heure_a_bruxelles = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Brussels");
@@ -155,7 +155,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Helsinki") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Helsinki", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Helsinki", temps_utc);
 
                 //
                 time_t heure_a_helsinki = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Helsinki");
@@ -167,7 +167,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Stockholm") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Stockholm", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Stockholm", temps_utc);
 
                 //
                 time_t heure_a_stockholm = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Stockholm");
@@ -179,7 +179,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Oslo") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Oslo", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Oslo", temps_utc);
 
                 //
                 time_t heure_a_oslo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Oslo");
@@ -191,7 +191,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Arctic/Longyearbyen") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Arctic/Longyearbyen", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Arctic/Longyearbyen", temps_utc);
 
                 //
                 time_t heure_a_longyearbyen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Arctic/Longyearbyen");
@@ -212,7 +212,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vilnius") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vilnius", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Vilnius", temps_utc);
 
                 //
                 time_t heure_a_vilnius = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vilnius");
@@ -224,7 +224,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Riga") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Riga", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Riga", temps_utc);
 
                 //
                 time_t heure_a_riga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Riga");
@@ -236,7 +236,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Tallinn") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Tallinn", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Tallinn", temps_utc);
 
                 //
                 time_t heure_a_tallinn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Tallinn");
@@ -248,7 +248,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Warsaw") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Warsaw", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Warsaw", temps_utc);
 
                 //
                 time_t heure_a_varsovie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Warsaw");
@@ -260,7 +260,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Athens") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Athens", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Athens", temps_utc);
 
 		//Calcul de l'heure et de la date à Athènes et stockage de celui-ci dans la variable heure_d_athenes
 		time_t heure_d_athenes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Athens");
@@ -327,7 +327,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Chisinau") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Chisinau", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Chisinau", temps_utc);
 
                 //Calcul de l'heure et de la date à Chisinau et stockage de celui-ci dans la variable heure_a_chisinau
                 time_t heure_a_chisinau = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Chisinau");
@@ -348,7 +348,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Kiev") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Kiev", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Kiev", temps_utc);
 
                 //Calcul de l'heure et de la date à Kiev et stockage de celui-ci dans la variable heure_a_kiev
                 time_t heure_a_kiev = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kiev");
@@ -360,7 +360,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Uzhgorod") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Uzhgorod", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Uzhgorod", temps_utc);
 
                 //Calcul de l'heure et de la date à Uzhgorod et stockage de celui-ci dans la variable heure_a_uzhgorod
                 time_t heure_a_uzhgorod = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Uzhgorod");
@@ -372,7 +372,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Zaporozhye") == 0)
         {
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zaporozhye", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Zaporozhye", temps_utc);
 
                 //Calcul de l'heure et de la date à Zaporozhye et stockage de celui-ci dans la variable heure_a_zaporozhye
                 time_t heure_a_zaporozhye = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zaporozhye");
@@ -1026,7 +1026,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Zurich") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Zurich", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Zurich", temps_utc);
 
 		//Calcul de l'heure et de la date à Zurich et stockage de celui-ci dans la variable heure_zurich
                 time_t heure_zurich = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zurich");
@@ -1038,7 +1038,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Andorra") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Andorra", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Andorra", temps_utc);
 
 		//Calcul de l'heure et de la date à Andorre et stockage de celui-ci dans la variable heure_andorre
                 time_t heure_andorre = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Andorra");
@@ -1050,7 +1050,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Vaduz") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Vaduz", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Vaduz", temps_utc);
 
 		//Calcul de l'heure et de la date à Vaduz et stockage de celui-ci dans la variable heure_vaduz
                 time_t heure_vaduz = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Vaduz");
@@ -1062,7 +1062,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Malta") == 0)
 	{
 		//
-		application_du_changement_d_heure_pour_l_europe_continentale_R("Europe/Malta", temps_utc);
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Malta", temps_utc);
 
 		//Calcul de l'heure et de la date à Malte et stockage de celui-ci dans la variable heure_malte
                 time_t heure_malte = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Malta");

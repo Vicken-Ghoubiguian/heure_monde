@@ -55,6 +55,6 @@ void application_du_changement_d_heure_pour_les_samoa(time_t temps_utc);
 void application_du_changement_d_heure_pour_la_base_antarctique_de_troll(time_t temps_utc);
 
 //Cette fonction permet d'appliquer le changement d'heure pour l'Europe continentale
-void application_du_changement_d_heure_pour_l_europe_continentale_R(char* nom_de_la_timezone, time_t temps_utc);
+void application_du_changement_d_heure_pour_l_europe_continentale(char* nom_de_la_timezone, time_t temps_utc);
 
 #endif
