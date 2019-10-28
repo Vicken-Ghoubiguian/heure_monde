@@ -587,8 +587,8 @@ void affichage_de_l_horloge()
 	time_t heure_a_asuncion = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Asuncion"); //Asuncion
 
 	/* Royaume du Maroc */
-	time_t heure_a_casablanca = temps_utc + (1 * 3600); //Casablanca
-	time_t heure_a_laayoune = temps_utc + (1 * 3600); //Laayoune
+	time_t heure_a_casablanca = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Casablanca"); //Casablanca
+	time_t heure_a_laayoune = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/El_Aaiun"); //Laayoune
 
 	/* République algérienne démocratique et populaire */
 	time_t heure_a_alger = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Algiers"); //Alger
