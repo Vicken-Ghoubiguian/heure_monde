@@ -25,17 +25,15 @@
 
 	UTC étant la notation officielle pour "Universel Temps Coordonné": échelle de temps adoptée comme base du temps civil international par la majorité des pays du globe (wikipedia).
 
-	Donc:
+	Voici le principe de l'algorithme:
 
-	-> heure_pour_fuseau_horaire_quelquonque = temps_utc_courant_en_temps_reel + (nombre_de_minutes_de_decalage_entre_l_utc_et_le_fuseau_horaire_quelquonque * nombre_de_secondes_dans_une_minute) + ((nombre_d_heure_de_decalage_entre_l_utc_et_le_fuseau_horaire_quelquonque * nombre_de_secondes_dans_une_heure) + (application_du_changement_d_heure_pour_le_fuseau_horaire_quelquonque * nombre_de_secondes_dans_une_heure))
+        1) On calcule le temps courant UTC sous forme de timestamp (c'est-à-dire le nombre de secondes écoulées depuis le 1er janvier 1970 à minuit UTC précise),
 
-	Avec:
+        2) On applique le changement d'heure pour le fuseau horaire quelconque si celui-ci applique l'heure d'été,
 
-	-> nombre_de_secondes_dans_une_heure = 3600 (une heure étant composée de 3600 secondes),
+        3) On calcule le temps courant en additionnant le temps UTC par le décalage horaire (en secondes) par rapport à l'UTC pour le fuseau horaire quelconque
 
-	-> nombre_de_secondes_dans_une_minute = 60 (une minute étant composée de 60 secondes).
-
-	application_du_changement_d_heure_pour_le_fuseau_horaire_quelquonque est une fonction qui applique, pour le fuseau zone_quelquonque/fuseau_horaire_quelquonque, le changement d'heure (d'hiver à été et réciproquement) selon les régles établies par le pays, ou la zone géographique, dans lequel est situé le fuseau zone_quelquonque/fuseau_horaire_quelquonque.
+        4) Le temps courant pour le fuseau horaire quelconque est affiché.
 */
 char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(char* nom_du_fuseau_horaire)
 {
