@@ -374,6 +374,8 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 return calcul_et_renvoie_horaire(heure_a_reykjavik, "Atlantic/Reykjavik");
         }
 
+	/* République de Lituanie */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vilnius"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vilnius") == 0)
         {
@@ -386,6 +388,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Vilnius en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_vilnius, "Europe/Vilnius");
         }
+
+	/* République de Lettonie */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Riga"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Riga") == 0)
         {
@@ -398,6 +403,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Riga en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_riga, "Europe/Riga");
         }
+
+	/* République d’Estonie */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tallinn"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Tallinn") == 0)
         {
@@ -410,6 +418,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Tallinn en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_tallinn, "Europe/Tallinn");
         }
+
+	/* République de Pologne */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Varsovie"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Warsaw") == 0)
         {
@@ -422,6 +433,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Varsovie en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_varsovie, "Europe/Warsaw");
         }
+
+	/* République hellénique */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Athènes"...
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Athens") == 0)
 	{
@@ -434,6 +448,8 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date d'Athènes en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_d_athenes, "Europe/Athens");
 	}
+
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Los_Angeles"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/Los_Angeles") == 0)
 	{
