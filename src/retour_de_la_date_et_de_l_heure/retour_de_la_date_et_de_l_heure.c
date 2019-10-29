@@ -505,7 +505,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//return calcul_et_renvoie_horaire(heure_de_londres, "Europe/London");
 		return "";
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Chisinau"...
+
+	/* République de Moldavie */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Chisinau"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Chisinau") == 0)
         {
 		//
@@ -517,6 +520,21 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Chisinau en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_chisinau, "Europe/Chisinau");
         }
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Tiraspol"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Tiraspol") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Tiraspol", temps_utc);
+
+		//
+		time_t heure_a_tiraspol = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Tiraspol");
+
+		//L'heure et la date de Tiraspol en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_tiraspol, "Europe/Tiraspol");
+	}
+
+	/* République de Biélorussie */
+	
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Minsk"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Minsk") == 0)
         {
@@ -526,6 +544,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Minsk en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_minsk, "Europe/Minsk");
         }
+
+	/* Ukraine */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kiev"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Kiev") == 0)
         {
@@ -562,6 +583,17 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Uzhgorod en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_zaporozhye, "Europe/Zaporozhye");
         }
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Simferopol"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Simferopol") == 0)
+	{
+		//
+		time_t heure_a_simferopol = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Simferopol");
+
+		//L'heure et la date de Simferopol en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_simferopol, "Europe/Simferopol");
+	}
+	
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Moscou"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Moscow") == 0)
         {
