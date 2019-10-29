@@ -41,6 +41,8 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	/* Définition de la variable temps_utc et initialisation de celle-ci au temps utc sous forme de timestamp */
         time_t temps_utc = retour_du_temps_utc_sous_forme_de_timestamp();
 
+	/* République française */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Paris"...
 	if(strcmp(nom_du_fuseau_horaire,"Europe/Paris") == 0)
 	{
@@ -53,6 +55,129 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Paris en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_paris, "Europe/Paris");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Cayenne"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Cayenne") == 0)
+	{
+		//
+		time_t heure_de_cayenne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cayenne");
+
+		//L'heure et la date de Cayenne en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_cayenne, "Cayenne");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Indian/Reunion"...
+	else if(strcmp(nom_du_fuseau_horaire,"Indian/Reunion") == 0)
+	{
+		//
+		time_t heure_de_la_reunion = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Reunion");
+
+		//L'heure et la date de la Reunion en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_la_reunion, "La Reunion");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Guadeloupe"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Guadeloupe") == 0)
+	{
+		//
+		time_t heure_de_la_guadeloupe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guadeloupe");
+
+		//L'heure et la date de la Guadeloupe en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_la_guadeloupe, "La guadeloupe");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Noumea"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Noumea") == 0)
+	{
+		//
+		time_t heure_de_noumea = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Noumea");
+
+		//L'heure et la date de Nouméa en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_noumea, "Nouméa");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Indian/Mayotte"...
+	else if(strcmp(nom_du_fuseau_horaire,"Indian/Mayotte") == 0)
+	{
+		//
+		time_t heure_de_mayotte = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Mayotte");
+
+		//L'heure et la date de Mayotte en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_mayotte, "Mayotte");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Indian/Kerguelen"...
+	else if(strcmp(nom_du_fuseau_horaire,"Indian/Kerguelen") == 0)
+	{
+		//
+		time_t heure_des_iles_kerguelen = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Indian/Kerguelen");
+
+		//L'heure et la date des îles Kerguelen en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_des_iles_kerguelen, "îles Kerguelen");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Tahiti"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Tahiti") == 0)
+	{
+		//
+		time_t heure_de_tahiti = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Tahiti");
+
+		//L'heure et la date pour Tahiti en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_tahiti, "Pacific/Tahiti");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Gambier"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Gambier") == 0)
+	{
+		//
+		time_t heure_de_gambier = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Gambier");
+
+		//L'heure et la date pour Gambier en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_gambier, "Pacific/Gambier");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Marquesas"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Marquesas") == 0)
+	{
+		//
+		time_t heure_a_marquesas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Marquesas");
+
+		//L'heure et la date pour Marquesas en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_marquesas, "Pacific/Marquesas");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Miquelon"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Miquelon") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Miquelon", temps_utc);
+
+		//
+		time_t heure_de_miquelon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Miquelon");
+
+		//L'heure et la date pour Miquelon en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_miquelon, "America/Miquelon");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/St_Barthelemy"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/St_Barthelemy") == 0)
+	{
+		//
+		time_t heure_de_st_barthelemy = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Barthelemy");
+
+		//L'heure et la date pour St Barthelemy en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_st_barthelemy, "America/St_Barthelemy");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Martinique"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Martinique") == 0)
+	{
+		//
+		time_t heure_de_la_martinique = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Martinique");
+	
+		//L'heure et la date pour la Martinique en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_la_martinique, "America/Martinique");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Wallis"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Wallis") == 0)
+	{
+		//
+		time_t heure_de_wallis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Wallis");
+
+		//L'heure et la date pour Wallis et Futuna en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_wallis, "Pacific/Wallis");
+	}
+
+	/* République fédérale d'Allemagne */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Berlin"...
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Berlin") == 0)
 	{
@@ -77,6 +202,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Busingen en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_de_busingen, "Europe/Busingen");
         }
+
+	/* République italienne */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Rome"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Rome") == 0)
         {
@@ -89,6 +217,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Rome en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_de_rome, "Europe/Rome");
         }
+
+	/* République de Saint-Marin */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Saint_Marin"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/San_Marino") == 0)
         {
@@ -101,6 +232,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Saint Marin en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_saint_marin, "Europe/San_Marino");
         }
+
+	/* État de la Cité du Vatican */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vatican"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vatican") == 0)
         {
@@ -113,6 +247,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Vatican en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_du_vatican, "Europe/Vatican");
         }
+
+	/* Principauté de Monaco */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Monaco"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Monaco") == 0)
         {
@@ -125,6 +262,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Monaco en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_monaco, "Europe/Monaco");
         }
+
+	/* Grand-Duché de Luxembourg */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Luxembourg"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Luxembourg") == 0)
         {
@@ -137,6 +277,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Luxembourg en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_au_luxembourg, "Europe/Luxembourg");
         }
+
+	/* Royaume de Belgique */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Bruxelles"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Brussels") == 0)
         {
@@ -149,7 +292,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Bruxelles en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_bruxelles, "Europe/Brussels");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Helsinki"...
+
+	/* République de Finlande */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Helsinki"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Helsinki") == 0)
         {
 		//
@@ -161,6 +307,21 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Helsinki en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_helsinki, "Europe/Helsinki");
         }
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Mariehamn"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Mariehamn") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Mariehamn", temps_utc);
+
+		//
+		time_t heure_a_mariehamn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Mariehamn");
+
+		//L'heure et la date de Mariehamn en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_mariehamn, "Europe/Mariehamn");
+	}
+
+	/* Royaume de Suède */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Stockholm"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Stockholm") == 0)
         {
@@ -173,6 +334,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Helsinki en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_stockholm, "Europe/Stockholm");
         }
+
+	/* Royaume de Norvège */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Oslo"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Oslo") == 0)
         {
@@ -197,6 +361,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Longyearbyen en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_longyearbyen, "Arctic/Longyearbyen");
         }
+
+	/* République d'Islande */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Reykjavik"...
         else if(strcmp(nom_du_fuseau_horaire,"Atlantic/Reykjavik") == 0)
         {
@@ -206,6 +373,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Reykjavik en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_reykjavik, "Atlantic/Reykjavik");
         }
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vilnius"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vilnius") == 0)
         {
