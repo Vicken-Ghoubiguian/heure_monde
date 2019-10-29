@@ -636,6 +636,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Sydney en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_sydney, "Sydney");
         }
+
+	/* République du Chili */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Santiago"...
         else if(strcmp(nom_du_fuseau_horaire,"America/Santiago") == 0)
         {
@@ -669,6 +672,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date sur l'île de Pâcques en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_ile_de_paques, "Ile de Pâques");
 	}
+
+	/* République d'Afrique du Sud */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Johannesburg"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Johannesburg") == 0)
         {
@@ -678,6 +684,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Johannesburg en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_johannesburg, "Johannesburg");
         }
+
+	/* République du Soudan */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Khartoum"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Khartoum") == 0)
 	{
@@ -687,6 +696,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Khartoum en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_khartoum, "Khartoum");
 	}
+
+	/* République du Soudan du Sud */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Djouba"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Juba") == 0)
 	{
@@ -696,6 +708,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Djouba en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_djouba, "Djouba");
 	}
+
+	/* République algérienne démocratique et populaire */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Alger"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Algiers") == 0)
 	{
@@ -705,6 +720,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date d'Alger en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_alger, "Africa/Algiers");
 	}
+
+	/* République du Kenya */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Nairobi"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Nairobi") == 0)
 	{
@@ -714,6 +732,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Nairobi en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_nairobi, "Africa/Nairobi");
 	}
+
+	/* République unie de Tanzanie */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Dar_es_Salam"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Dar_es_Salaam") == 0)
 	{
@@ -723,6 +744,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Dar es Salam en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_dar_es_salam, "Africa/Dar_es_Salaam");
 	}
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Buenos_Aires"...
         else if(strcmp(nom_du_fuseau_horaire,"America/Argentina/Buenos_Aires") == 0)
         {
