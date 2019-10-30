@@ -183,30 +183,17 @@ time_t date_du_changement_d_heure_d_hiver_pour_l_iran(time_t aujourdhui)
 	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
         struct tm *date_tm;
         time_t date_timestamp;
-	int jour_dans_le_mois_pour_application_du_changement_d_heure;
+	//int jour_dans_le_mois_pour_application_du_changement_d_heure;
 	int annee_courante;
 
         //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
         date_tm = gmtime(&aujourdhui);
 
-	//
+	//Calcul de l'année courante (année de l'exécution de l'API)
 	annee_courante = date_tm->tm_year + 1900;
 
-	//
-	if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante) || est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(annee_courante))
-	{
-		//
-		jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
-	}
-	//Sinon...
-	else
-	{
-		//
-		jour_dans_le_mois_pour_application_du_changement_d_heure = 22;
-	}
-
         //la structure date_tm est modifiée pour correspondre au 22 (tm_mday) septembre (tm_mon) à 0 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
-        date_tm->tm_mday = jour_dans_le_mois_pour_application_du_changement_d_heure;
+        date_tm->tm_mday = retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran(annee_courante);
         date_tm->tm_mon = 8;
         date_tm->tm_hour = 0;
         date_tm->tm_min = 0;
@@ -225,7 +212,7 @@ time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui)
 	//Déclaration des variables necessaires au calcul de l'horaire de changement d'heure d'hiver
         struct tm *date_tm;
         time_t date_timestamp;
-	int jour_dans_le_mois_pour_application_du_changement_d_heure;
+	//int jour_dans_le_mois_pour_application_du_changement_d_heure;
         int annee_courante;
 
         //la valeur contenue dans la variable aujourdhui (passée en paramétre) est convertie de timestamp (type time_t) en structure tm (struct tm) grace à la fonction localtime
@@ -235,7 +222,7 @@ time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui)
         annee_courante = date_tm->tm_year + 1900;
 
         //
-        if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante) || est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(annee_courante))
+        /*if(est_une_annee_bissextile_selon_le_calendrier_persan(annee_courante) || est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(annee_courante))
         {
                 //
                 jour_dans_le_mois_pour_application_du_changement_d_heure = 21;
@@ -245,10 +232,10 @@ time_t date_du_changement_d_heure_d_ete_pour_l_iran(time_t aujourdhui)
         {
                 //
                 jour_dans_le_mois_pour_application_du_changement_d_heure = 22;
-        }
+        }*/
 
         //la structure date_tm est modifiée pour correspondre au 1er (tm_mday) mars (tm_mon) à 0 heures (tm_hour) 0 minutes (tm_min) et 0 secondes (tm_sec)
-        date_tm->tm_mday = jour_dans_le_mois_pour_application_du_changement_d_heure;
+        date_tm->tm_mday = retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran(annee_courante);
         date_tm->tm_mon = 2;
         date_tm->tm_hour = 0;
         date_tm->tm_min = 0;

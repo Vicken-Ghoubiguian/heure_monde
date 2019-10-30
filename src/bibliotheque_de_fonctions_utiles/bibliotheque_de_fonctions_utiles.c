@@ -56,67 +56,48 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 
 }
 
-//Cette fonction détermine si une année passée en paramétre est une année bissextile selon le calendrier persan
+//Cette fonction permet de retourner le numéro du jour du mois pour le changement d'heure en Iran
 /*
+	Petite explication sur le fonctionnement du calendrier persan:
 
-Petite explication: dans le calendrier persan (en vigueur en République islamique d'Iran et en République islamique d'Afghanistan), une année jalali (pas grégorien mais jalali) 
+	-> le calendrier persan est le calendrier en vigueur en République islamique d'Iran et en République islamique d'Afghanistan,
 
-est bissextile si et seulement si le reste de la division de cette année par 33 est égal à 1 OU 5 OU 9 OU 13 OU 17 OU 22 OU 33.
+	-> l'ère jalali commence à l'année 622, c'est-à-dire l'année de l'Hégire (le départ de Mahomet de La Mecque à Médine),
 
+	-> La premiére année de l'ère jalali est l'an 1, et pas l'an 0 qui n'existe tout simplement pas.
 */
-int est_une_annee_bissextile_selon_le_calendrier_persan(int annee)
+int retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran(int annee)
 {
-	//Déclaration des variables locales utilisées dans la fonction est_une_annee_bissextile_selon_le_calendrier_persan
-	int annee_jalali;
-	int hegire = 622;
-
-	//
-	annee_jalali = (annee - 622) + 1;
-
-	//Si le reste de la division de l'année passée en paramétre (convertie en année jalali) par 33 est égal à 1 OU 5 OU 9 OU 13 OU 17 OU 22 OU 26 OU 30 alors...
-	if((annee_jalali % 33 == 1) || (annee_jalali % 33 == 5) || (annee_jalali % 33 == 9) || (annee_jalali % 33 == 13) || (annee_jalali % 33 == 17) || (annee_jalali % 33 == 22) || (annee_jalali % 33 == 26) || (annee_jalali % 33 == 30))
-	{
-
-		//On retourne 1
-		return 1;
-
-	}
-	//Sinon...
-	else
-	{
-
-		//On retourne 0
-		return 0;
-
-	}
-
-}
-
-//
-int est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan(int annee)
-{
-	//Déclaration des variables locales utilisées dans la fonction est_une_annee_qui_va_par_paire_de_quatre_selon_le_calendrier_persan
+	//Déclaration des variables locales utilisées dans la fonction retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran
         int annee_jalali;
         int hegire = 622;
 
-        //
+        //Calcul de l'année jalali (année en cours dans le calendrier persan
         annee_jalali = (annee - 622) + 1;
 
-	//
-	if(annee_jalali % 4 == 3)
+	//On entre dans cette instruction conditionnelle qui permet de déterminer 
+	/*
+		Petite explication: 
+
+		->
+
+		->
+		
+		Note: une année jalali (une année selon le calendrier persan) est bissextile si et seulement si le reste de la division de cette année par 33 est égal à 1 OU 5 OU 9 OU 13 OU 17 OU 22 OU 33.
+	*/
+	if(
+	   ((annee_jalali % 33 == 1) || (annee_jalali % 33 == 5) || (annee_jalali % 33 == 9) || (annee_jalali % 33 == 13) || (annee_jalali % 33 == 17) || (annee_jalali % 33 == 22) || (annee_jalali % 33 == 26) || (annee_jalali % 33 == 30)) ||
+	   (annee_jalali % 4 == 3)
+	)
 	{
-
-		//On retourne 1
-		return 1;
-
+		//On retourne 21
+		return 21;
 	}
 	//Sinon...
 	else
 	{
-
-		//On retourne 0
-		return 0;
-
+		//On retourne 22
+		return 22;
 	}
 }
 
