@@ -64,7 +64,15 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 
 	-> l'ère jalali commence à l'année 622, c'est-à-dire l'année de l'Hégire (le départ de Mahomet de La Mecque à Médine),
 
-	-> La premiére année de l'ère jalali est l'an 1, et pas l'an 0 qui n'existe tout simplement pas.
+	-> L'année de départ de l'ère jalali est l'an 1, et pas l'an 0 qui n'existe tout simplement pas.
+
+	Retour sur la fonction courante: selon le calendrier persan, le passage à l'heure d'été se fait le 1er farvardin à 00:00 et se termine le 30 shahrivar à 00:00.
+
+	Deux points de précision:
+
+	-> 
+
+	-> 
 */
 int retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran(int annee)
 {
@@ -79,9 +87,11 @@ int retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran(int 
 	/*
 		Petite explication: 
 
-		->
+		-> si l'année (jalali, bien entendu) est bissextile selon le calendrier persan,
 
-		->
+		OU
+
+		-> si l'année va comme paire de 4.
 		
 		Note: une année jalali (une année selon le calendrier persan) est bissextile si et seulement si le reste de la division de cette année par 33 est égal à 1 OU 5 OU 9 OU 13 OU 17 OU 22 OU 33.
 	*/
