@@ -70,9 +70,9 @@ time_t retour_du_temps_utc_sous_forme_de_timestamp()
 
 	Deux points de précision:
 
-	-> 
+	-> Selon des régles propres au calendrier persan, le 1er farvardin correspond soit au 21 mars soit au 22 mars dans le calendrier grégorien,
 
-	-> 
+	-> Selon des régles propres au calendrier persan, le 30 shahrivar correspond soit au 21 septembre soit au 22 septembre dans le calendrier grégorien.
 */
 int retour_du_numero_du_jour_du_mois_pour_le_changement_d_heure_pour_l_iran(int annee)
 {
