@@ -320,6 +320,78 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_a_mariehamn, "Europe/Mariehamn");
 	}
 
+	/* Royaume de Danemark */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Copenhagen"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Copenhagen") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Copenhagen", temps_utc);
+
+		//
+		time_t heure_a_copenhague = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Copenhagen");
+
+		//L'heure et la date de Copenhague en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_copenhague, "Europe/Copenhagen");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Atlantic/Faroe"...
+	else if(strcmp(nom_du_fuseau_horaire,"Atlantic/Faroe") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Atlantic/Faroe", temps_utc);
+
+		//
+		time_t heure_aux_iles_feroes = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Faroe");
+
+		//L'heure et la date des Iles Féroé en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_aux_iles_feroes, "Atlantic/Faroe");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Scoresbysund"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Scoresbysund") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("America/Scoresbysund", temps_utc);
+
+		//
+		time_t heure_a_scoresbysund = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Scoresbysund");
+
+		//L'heure et la date de Scoresbysund en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_scoresbysund, "America/Scoresbysund");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Godthab"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Godthab") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("America/Godthab", temps_utc);
+
+		//
+		time_t heure_a_godthab = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Godthab");
+
+		//L'heure et la date de Godthab en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_godthab, "America/Godthab");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Thule"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Thule") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Thule", temps_utc);
+
+		//
+		time_t heure_a_thule = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Thule");
+
+		//L'heure et la date de Thule en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_thule, "America/Thule");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Danmarkshavn"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Danmarkshavn") == 0)
+	{
+		//
+		time_t heure_a_danmarkshavn = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Danmarkshavn");
+
+		//L'heure et la date de Danmarkshavn en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_danmarkshavn, "America/Danmarkshavn");
+	}
+
 	/* Royaume de Suède */
 
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Stockholm"...
