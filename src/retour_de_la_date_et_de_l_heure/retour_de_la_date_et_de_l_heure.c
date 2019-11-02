@@ -593,25 +593,227 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_a_simferopol, "Europe/Simferopol");
 	}
 	
+	/* Fédération de Russie */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Moscou"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Moscow"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Moscow") == 0)
         {
 		//Calcul de l'heure et de la date à Moscou et stockage de celui-ci dans la variable heure_moscou
                 time_t heure_moscou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Moscow");
 
 		//L'heure et la date de Moscou en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_moscou, "Moscou");
+		return calcul_et_renvoie_horaire(heure_moscou, "Europe/Moscow");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vladivostok"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Vladivostok"...
         else if(strcmp(nom_du_fuseau_horaire,"Asia/Vladivostok") == 0)
         {
 		//Calcul de l'heure et de la date à Vladivostok et stockage de celui-ci dans la variable heure_vladivostok
                 time_t heure_vladivostok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Vladivostok");
 
 		//L'heure et la date de Vladivostok en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_vladivostok, "Vladivostok");
+		return calcul_et_renvoie_horaire(heure_vladivostok, "Asia/Vladivostok");
         }
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Kaliningrad"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Kaliningrad") == 0)
+	{
+		//Calcul de l'heure et de la date à Kaliningrad et stockage de celui-ci dans la variable heure_kaliningrad
+		time_t heure_kaliningrad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kaliningrad");
+
+		//L'heure et la date de Kaliningrad en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_kaliningrad, "Europe/Kaliningrad");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Samara"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Samara") == 0)
+	{
+		//Calcul de l'heure et de la date à Samara et stockage de celui-ci dans la variable heure_samara
+		time_t heure_samara = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Samara");
+
+		//L'heure et la date de Samara en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_samara, "Europe/Samara");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Volgograd"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Volgograd") == 0)
+	{
+		//Calcul de l'heure et de la date à Volgograd et stockage de celui-ci dans la variable heure_volgograd
+		time_t heure_volgograd = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Volgograd");
+
+		//L'heure et la date de Volgograd en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_volgograd, "Europe/Volgograd");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Saratov"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Saratov") == 0)
+	{
+		//Calcul de l'heure et de la date à Saratov et stockage de celui-ci dans la variable heure_saratov
+		time_t heure_saratov = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Saratov");
+
+		//L'heure et la date de Saratov en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_saratov, "Europe/Saratov");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Ulyanovsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Ulyanovsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Oulianovsk et stockage de celui-ci dans la variable heure_oulianovsk
+		time_t heure_oulianovsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Ulyanovsk");
+
+		//L'heure et la date d'Oulianovsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_oulianovsk, "Europe/Ulyanovsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Astrakhan"...
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Astrakhan") == 0)
+	{
+		//Calcul de l'heure et de la date à Astrakhan et stockage de celui-ci dans la variable heure_astrakhan
+		time_t heure_astrakhan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Astrakhan");
+
+		//L'heure et la date d'Astrakhan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_astrakhan, "Europe/Astrakhan");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Anadyr"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Anadyr") == 0)
+	{
+		//Calcul de l'heure et de la date à Anadyr et stockage de celui-ci dans la variable heure_anadyr
+		time_t heure_anadyr = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Anadyr");
+
+		//L'heure et la date d'Anadyr en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_anadyr, "Asia/Anadyr");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Sakhalin"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Sakhalin") == 0)
+	{
+		//Calcul de l'heure et de la date à Sakhalin et stockage de celui-ci dans la variable heure_sakhalin
+		time_t heure_sakhalin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Sakhalin");
+
+		//L'heure et la date de Sakhalin en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_sakhalin, "Asia/Sakhalin");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Omsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Omsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Omsk et stockage de celui-ci dans la variable heure_omsk
+		time_t heure_omsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Omsk");
+
+		//L'heure et la date d'Omsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_omsk, "Asia/Omsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Chita"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Chita") == 0)
+	{
+		//Calcul de l'heure et de la date à Omsk et stockage de celui-ci dans la variable heure_tchita
+		time_t heure_tchita = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Chita");
+
+		//L'heure et la date de Tchita en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_tchita, "Asia/Chita");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Tomsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Tomsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Tomsk et stockage de celui-ci dans la variable heure_tomsk
+		time_t heure_tomsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tomsk");
+
+		//L'heure et la date de Tomsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_tomsk, "Asia/Tomsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Barnaul"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Barnaul") == 0)
+	{
+		//Calcul de l'heure et de la date à Barnaoul et stockage de celui-ci dans la variable heure_barnaoul
+		time_t heure_barnaoul = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Barnaul");
+
+		//L'heure et la date de Barnaoul en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_barnaoul, "Asia/Barnaul");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Magadan"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Magadan") == 0)
+	{
+		//Calcul de l'heure et de la date à Magadan et stockage de celui-ci dans la variable heure_magadan
+		time_t heure_magadan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Magadan");
+
+		//L'heure et la date de Magadan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_magadan, "Asia/Magadan");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Yekaterinburg"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Yekaterinburg") == 0)
+	{
+		//Calcul de l'heure et de la date à Iekaterinbourg et stockage de celui-ci dans la variable heure_iekaterinbourg
+		time_t heure_iekaterinbourg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yekaterinburg");
+
+		//L'heure et la date de Iekaterinbourg en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_iekaterinbourg, "Asia/Yekaterinburg");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Yakutsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Yakutsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Yakoutsk et stockage de celui-ci dans la variable heure_yakoutsk
+		time_t heure_yakoutsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yakutsk");
+
+		//L'heure et la date de Yakoutsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_yakoutsk, "Asia/Yakutsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Irkutsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Irkutsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Irkoutsk et stockage de celui-ci dans la variable heure_irkoutsk
+		time_t heure_irkoutsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Irkutsk");
+
+		//L'heure et la date de Irkoutsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_irkoutsk, "Asia/Irkutsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Khandyga"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Khandyga") == 0)
+	{
+		//Calcul de l'heure et de la date à Khandyga et stockage de celui-ci dans la variable heure_khandyga
+		time_t heure_khandyga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Khandyga");
+
+		//L'heure et la date de Khandyga en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_khandyga, "Asia/Khandyga");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Novokuznetsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Novokuznetsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Novokuznetsk et stockage de celui-ci dans la variable heure_novokouznetsk
+		time_t heure_novokouznetsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Novokuznetsk");
+
+		//L'heure et la date de Novokuznetsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_novokouznetsk, "Asia/Novokuznetsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Novosibirsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Novosibirsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Novosibirsk et stockage de celui-ci dans la variable heure_nobossibirsk
+		time_t heure_nobossibirsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Novosibirsk");
+
+		//L'heure et la date de Novosibirsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_nobossibirsk, "Asia/Novosibirsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Krasnoyarsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Krasnoyarsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Krasnoyarsk et stockage de celui-ci dans la variable heure_krasnoyarsk
+		time_t heure_krasnoyarsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Krasnoyarsk");
+
+		//L'heure et la date de Krasnoyarsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_krasnoyarsk, "Asia/Krasnoyarsk");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Ust-Nera"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Ust-Nera") == 0)
+	{
+		//Calcul de l'heure et de la date à Oust-Nera et stockage de celui-ci dans la variable heure_oust_nera
+                time_t heure_oust_nera = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Ust-Nera");
+
+		//L'heure et la date de Oust-Nera en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_oust_nera, "Asia/Ust-Nera");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Srednekolymsk"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Srednekolymsk") == 0)
+	{
+		//Calcul de l'heure et de la date à Srednekolymsk et stockage de celui-ci dans la variable heure_srednekolymsk
+		time_t heure_srednekolymsk = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Srednekolymsk");
+
+		//L'heure et la date de Srednekolymsk en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_srednekolymsk, "Asia/Srednekolymsk");
+	}
+
+	/* Nouvelle-Zélande */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Auckland"...
 	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Auckland") == 0)
 	{
@@ -624,6 +826,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date d'Auckland en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_auckland, "Auckland");
 	}
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Sydney"...
         else if(strcmp(nom_du_fuseau_horaire,"Australia/Sydney") == 0)
         {
@@ -880,6 +1083,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Lima en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_lima, "America/Lima");
         }
+
+	/* Royaume de Thaïlande */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Bangkok"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Bangkok") == 0)
 	{
@@ -889,6 +1095,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Bangkok Ville en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_bangkok, "Asia/Bangkok");
 	}
+
+	/* République socialiste du Viêt Nam */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Ho_Chi_Minh"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Ho_Chi_Minh") == 0)
 	{
@@ -898,6 +1107,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Hô Chi Minh Ville en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_ho_chi_minh_ville, "Asia/Ho_Chi_Minh");
 	}
+
+	/* République populaire démocratique de Corée */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pyongyang"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Pyongyang") == 0)
 	{
@@ -907,6 +1119,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Pyongyang en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_pyongyang, "Asia/Pyongyang");
 	}
+
+	/* République de Corée */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Seoul"...
         else if(strcmp(nom_du_fuseau_horaire,"Asia/Seoul") == 0)
         {
@@ -916,6 +1131,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Seoul en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_seoul, "Seoul");
         }
+
+	/* Empire du Japon */
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tokyo"...
         else if(strcmp(nom_du_fuseau_horaire,"Asia/Tokyo") == 0)
         {
@@ -925,16 +1143,31 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Tokyo en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_tokyo, "Asia/Tokyo");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pekin"...
+
+	/* République populaire de Chine */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Shanghai"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Shanghai") == 0)
         {
-		//Calcul de l'heure et de la date à Pekin et stockage de celui-ci dans la variable heure_pekin
-                time_t heure_pekin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Shanghai");
+		//Calcul de l'heure et de la date à Shanghai et stockage de celui-ci dans la variable heure_shanghai
+                time_t heure_shanghai = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Shanghai");
 
-		//L'heure et la date de Pekin en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_pekin, "Asia/Shanghai");
+		//L'heure et la date de Shanghai en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_shanghai, "Asia/Shanghai");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Manille"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Urumqi"...
+        else if(strcmp(nom_du_fuseau_horaire,"Asia/Urumqi") == 0)
+        {
+                //Calcul de l'heure et de la date à Urumqi et stockage de celui-ci dans la variable heure_a_urumqi
+                time_t heure_a_urumqi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Urumqi");
+
+                //L'heure et la date d'Urumqi en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_a_urumqi, "Asia/Urumqi");
+        }
+
+	/* République des Philippines */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Manila"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Manila") == 0)
 	{
 		//Calcul de l'heure et de la date à Manille et stockage de celui-ci dans la variable heure_a_manille
@@ -943,214 +1176,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Manille en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_manille, "Asia/Manila");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Urumqi"...
-	else if(strcmp(nom_du_fuseau_horaire,"Asia/Urumqi") == 0)
-	{
-		//Calcul de l'heure et de la date à Urumqi et stockage de celui-ci dans la variable heure_a_urumqi
-                time_t heure_a_urumqi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Urumqi");
+	
+	/* République arabe d'Égypte */
 
-		//L'heure et la date d'Urumqi en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_urumqi, "Asia/Urumqi");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kaliningrad"...
-	else if(strcmp(nom_du_fuseau_horaire,"Europe/Kaliningrad") == 0)
-	{
-		//Calcul de l'heure et de la date à Kaliningrad et stockage de celui-ci dans la variable heure_kaliningrad
-                time_t heure_kaliningrad = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Kaliningrad");
-
-		//L'heure et la date de Kaliningrad en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_kaliningrad, "Europe/Kaliningrad");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Samara"...
-	else if(strcmp(nom_du_fuseau_horaire,"Samara") == 0)
-	{
-		//Calcul de l'heure et de la date à Samara et stockage de celui-ci dans la variable heure_kaliningrad
-                time_t heure_samara = temps_utc + (4 * 3600);
-
-		//L'heure et la date de Samara en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_samara, "Samara");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Volgograd"...
-	else if(strcmp(nom_du_fuseau_horaire,"Volgograd") == 0)
-	{
-		//Calcul de l'heure et de la date à Samara et stockage de celui-ci dans la variable heure_volgograd
-                time_t heure_volgograd = temps_utc + (4 * 3600);
-
-		//L'heure et la date de Volgograd en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_volgograd, "Volgograd");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Saratov"...
-	else if(strcmp(nom_du_fuseau_horaire,"Saratov") == 0)
-	{
-		//Calcul de l'heure et de la date à Saratov et stockage de celui-ci dans la variable heure_saratov
-                time_t heure_saratov = temps_utc + (4 * 3600);
-
-		//L'heure et la date de Saratov en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_saratov, "Saratov");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Oulianovsk"...
-        else if(strcmp(nom_du_fuseau_horaire,"Oulianovsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Oulianovsk et stockage de celui-ci dans la variable heure_oulianovsk
-                time_t heure_oulianovsk = temps_utc + (4 * 3600);
-
-		//L'heure et la date de Saratov en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_oulianovsk, "Oulianovsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Astrakhan"...
-	else if(strcmp(nom_du_fuseau_horaire,"Astrakhan") == 0)
-	{
-		//Calcul de l'heure et de la date à Astrakhan et stockage de celui-ci dans la variable heure_astrakhan
-                time_t heure_astrakhan = temps_utc + (4 * 3600);
-
-		//L'heure et la date d'Astrakhan en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_astrakhan, "Astrakhan");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Anadyr"...
-	else if(strcmp(nom_du_fuseau_horaire,"Anadyr") == 0)
-	{
-		//Calcul de l'heure et de la date à Anadyr et stockage de celui-ci dans la variable heure_anadyr
-                time_t heure_anadyr = temps_utc + (12 * 3600);
-
-		//L'heure et la date d'Anadyr en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_anadyr, "Anadyr");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Sakhalin"...
-	else if(strcmp(nom_du_fuseau_horaire,"Sakhalin") == 0)
-	{
-		//Calcul de l'heure et de la date à Sakhalin et stockage de celui-ci dans la variable heure_sakhalin
-                time_t heure_sakhalin = temps_utc + (11 * 3600);
-
-		//L'heure et la date de Sakhalin en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_sakhalin, "Sakhalin");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Omsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Omsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Omsk et stockage de celui-ci dans la variable heure_omsk
-                time_t heure_omsk = temps_utc + (6 * 3600);
-
-		//L'heure et la date d'Omsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_omsk, "Omsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tchita"...
-	else if(strcmp(nom_du_fuseau_horaire,"Tchita") == 0)
-	{
-		//Calcul de l'heure et de la date à Tchita et stockage de celui-ci dans la variable heure_tchita
-                time_t heure_tchita = temps_utc + (9 * 3600);
-
-		//L'heure et la date de Tchita en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_tchita, "Tchita");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tomsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Tomsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Tomsk et stockage de celui-ci dans la variable heure_tomsk
-                time_t heure_tomsk = temps_utc + (7 * 3600);
-
-		//L'heure et la date de Tomsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_tomsk, "Tomsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Barnaoul"...
-	else if(strcmp(nom_du_fuseau_horaire,"Barnaoul") == 0)
-	{
-		//Calcul de l'heure et de la date à Barnaoul et stockage de celui-ci dans la variable heure_barnaoul
-                time_t heure_barnaoul = temps_utc + (7 * 3600);
-
-		//L'heure et la date de Barnaoul en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_barnaoul, "Barnaoul");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Magadan"...
-	else if(strcmp(nom_du_fuseau_horaire,"Magadan") == 0)
-	{
-		//Calcul de l'heure et de la date à Magadan et stockage de celui-ci dans la variable heure_magadan
-                time_t heure_magadan = temps_utc + (11 * 3600);
-
-		//L'heure et la date de Magadan en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_magadan, "Magadan");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Iekaterinbourg"...
-	else if(strcmp(nom_du_fuseau_horaire,"Iekaterinbourg") == 0)
-	{
-		//Calcul de l'heure et de la date à Iekaterinbourg et stockage de celui-ci dans la variable heure_iekaterinbourg
-                time_t heure_iekaterinbourg = temps_utc + (5 * 3600);
-
-		//L'heure et la date d'Iekaterinbourg en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_iekaterinbourg, "Iekaterinbourg");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Yakoutsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Yakoutsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Yakoutsk et stockage de celui-ci dans la variable heure_yakoutsk
-                time_t heure_yakoutsk = temps_utc + (9 * 3600);
-
-		//L'heure et la date d'Yakoutsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_yakoutsk, "Yakoutsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Irkoutsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Irkoutsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Irkoutsk et stockage de celui-ci dans la variable heure_irkoutsk
-                time_t heure_irkoutsk = temps_utc + (8 * 3600);
-
-		//L'heure et la date d'Irkoutsk en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_irkoutsk, "Irkoutsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Khandyga"...
-	else if(strcmp(nom_du_fuseau_horaire,"Khandyga") == 0)
-	{
-		//Calcul de l'heure et de la date à Khandyga et stockage de celui-ci dans la variable heure_khandyga
-               	time_t heure_khandyga = temps_utc + (9 * 3600);
-
-		//L'heure et la date de Khandyga en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_khandyga, "Khandyga");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Novokouznetsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Novokouznetsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Novokouznetsk et stockage de celui-ci dans la variable heure_novokouznetsk
-                time_t heure_novokouznetsk = temps_utc + (7 * 3600);
-
-		//L'heure et la date de Novokouznetsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_novokouznetsk, "Novokouznetsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Nobossibirsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Nobossibirsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Nobossibirsk et stockage de celui-ci dans la variable heure_nobossibirsk
-                time_t heure_nobossibirsk = temps_utc + (7 * 3600);
-
-		//L'heure et la date de Nobossibirsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_nobossibirsk, "Nobossibirsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Krasnoyarsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Krasnoyarsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Krasnoyarsk et stockage de celui-ci dans la variable heure_krasnoyarsk
-                time_t heure_krasnoyarsk = temps_utc + (7 * 3600);
-
-		//L'heure et la date de Krasnoyarsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_krasnoyarsk, "Krasnoyarsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Oust-Nera"...
-	else if(strcmp(nom_du_fuseau_horaire,"Oust-Nera") == 0)
-	{
-		//Calcul de l'heure et de la date à Oust-Nera et stockage de celui-ci dans la variable heure_oust_nera
-                time_t heure_oust_nera = temps_utc + (10 * 3600);
-
-		//L'heure et la date d'Oust-Nera en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_oust_nera, "Oust-Nera");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Srednekolymsk"...
-	else if(strcmp(nom_du_fuseau_horaire,"Srednekolymsk") == 0)
-	{
-		//Calcul de l'heure et de la date à Srednekolymsk et stockage de celui-ci dans la variable heure_srednekolymsk
-                time_t heure_srednekolymsk = temps_utc + (11 * 3600);
-
-		//L'heure et la date de Srednekolymsk en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_srednekolymsk, "Srednekolymsk");
-	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Le_Caire"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Africa/Cairo"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Cairo") == 0)
 	{
 		//Calcul de l'heure et de la date au Caire et stockage de celui-ci dans la variable heure_le_caire
@@ -1159,7 +1188,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date au Caire en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_le_caire, "Africa/Cairo");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Aden"...
+
+	/* République du Yémen */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Aden"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Aden") == 0)
 	{
 		//Calcul de l'heure et de la date à Aden et stockage de celui-ci dans la variable heure_a_aden
@@ -1168,7 +1200,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Aden en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_aden, "Asia/Aden");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Koweit"...
+
+	/* État du Koweït */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Kuwait"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Kuwait") == 0)
 	{
 		//Calcul de l'heure et de la date au Koweit et stockage de celui-ci dans la variable heure_au_koweit
@@ -1177,7 +1212,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date au Koweit en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_koweit, "Asia/Kuwait");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Addis-Abeba"...
+
+	/* République démocratique fédérale d’Éthiopie */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Africa/Addis_Ababa"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Addis_Ababa") == 0)
 	{
 		//Calcul de l'heure et de la date à Addis-Abeba et stockage de celui-ci dans la variable heure_a_addis-abeba
@@ -1186,6 +1224,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Addis-Abeba en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_addis_abeba, "Africa/Addis_Ababa");
 	}
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Brazzaville"...
 	else if(strcmp(nom_du_fuseau_horaire,"Africa/Brazzaville") == 0)
 	{

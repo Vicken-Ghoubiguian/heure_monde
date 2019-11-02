@@ -911,7 +911,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_thimphou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Thimphu"); //Thimphou
 
 	/* République populaire de Chine */
-        time_t heure_shanghai = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Shanghai"); //Pekin
+        time_t heure_shanghai = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Shanghai"); //Shanghai
 	time_t heure_a_urumqi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Urumqi"); //Urumqi
 
 	/* Région administrative spéciale de Macao de la République populaire de Chine */
