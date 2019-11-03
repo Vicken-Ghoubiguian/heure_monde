@@ -558,24 +558,29 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Ottawa en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_toronto, "America/Toronto");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Phoenix"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Phoenix"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/Phoenix") == 0)
 	{
 		//Calcul de l'heure et de la date à Phoenix et stockage de celui-ci dans la variable heure_de_phoenix
-                time_t heure_de_phoenix = temps_utc - (7 * 3600); //Phoenix
+                time_t heure_de_phoenix = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Phoenix");
 
 		//L'heure et la date de Phoenix en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_phoenix, "America/Phoenix");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Londres"...
+
+	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/London"...
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/London") == 0)
         {
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Grande-Bretagne
+		application_du_changement_d_heure_pour_la_grande_bretagne("Europe/London", temps_utc);
+
 		//Calcul de l'heure et de la date à Londres et stockage de celui-ci dans la variable heure_de_londres
-                //time_t heure_de_londres = temps_utc + (application_du_changement_d_heure_pour_la_grande_bretagne(temps_utc) * 3600);
+                time_t heure_de_londres = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/London");
 
 		//L'heure et la date de Londres en temps réel est retournée
-		//return calcul_et_renvoie_horaire(heure_de_londres, "Europe/London");
-		return "";
+		return calcul_et_renvoie_horaire(heure_de_londres, "Europe/London");
         }
 
 	/* République de Moldavie */
@@ -1045,7 +1050,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Guatemala") == 0)
 	{
 		//Calcul de l'heure et de la date au Guatemala et stockage de celui-ci dans la variable heure_au_guatemala
-                time_t heure_au_guatemala = temps_utc - (6 * 3600);
+                time_t heure_au_guatemala = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Guatemala");
 
 		//L'heure et la date au Guatemala en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_guatemala, "Guatemala");
@@ -1054,7 +1059,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Costa_Rica") == 0)
 	{
 		//Calcul de l'heure et de la date au Costa Rica et stockage de celui-ci dans la variable heure_au_costa_rica
-                time_t heure_au_costa_rica = temps_utc - (6 * 3600);
+                time_t heure_au_costa_rica = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Costa_Rica");
 
 		//L'heure et la date du Costa Rica en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_costa_rica, "Costa Rica");
@@ -1063,7 +1068,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Tegucigalpa") == 0)
 	{
 		//Calcul de l'heure et de la date à Tegucigalpa et stockage de celui-ci dans la variable heure_au_honduras
-                time_t heure_au_honduras = temps_utc - (6 * 3600);
+                time_t heure_au_honduras = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tegucigalpa");
 
 		//L'heure et la date du Honduras en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_honduras, "Tegucigalpa");
@@ -1072,7 +1077,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Panama") == 0)
 	{
 		//Calcul de l'heure et de la date au Panama et stockage de celui-ci dans la variable heure_au_panama
-                time_t heure_au_panama = temps_utc - (5 * 3600);
+                time_t heure_au_panama = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Panama");
 
 		//L'heure et la date au Panama en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_panama, "Panama");
@@ -1081,7 +1086,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"El_Salvador") == 0)
 	{
 		//Calcul de l'heure et de la date au Panama et stockage de celui-ci dans la variable heure_d_el_salvador
-                time_t heure_d_el_salvador = temps_utc - (6 * 3600);
+                time_t heure_d_el_salvador = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/El_Salvador");
 
 		//L'heure et la date a El Salvador en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_d_el_salvador, "El Salvador");
@@ -1090,7 +1095,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Belize") == 0)
 	{
 		//Calcul de l'heure et de la date au Belize et stockage de celui-ci dans la variable heure_au_belize
-                time_t heure_au_belize = temps_utc - (6 * 3600);
+                time_t heure_au_belize = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Belize");
 
 		//L'heure et la date au Belize en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_au_belize, "Belize");
@@ -1483,20 +1488,24 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Managua en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_managua, "America/Managua");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Brunei"...
-	else if(strcmp(nom_du_fuseau_horaire,"Brunei") == 0)
+
+	/* Negara Brunei Darussalam */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Brunei"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Brunei") == 0)
 	{
 		//Calcul de l'heure et de la date à Brunei et stockage de celui-ci dans la variable heure_brunei
-                time_t heure_brunei = temps_utc + (8 * 3600);
+                time_t heure_brunei = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Brunei");
 
 		//L'heure et la date à Brunei en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_brunei, "Brunei");
+		return calcul_et_renvoie_horaire(heure_brunei, "Asia/Brunei");
 	}
+
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Erevan"...
 	else if(strcmp(nom_du_fuseau_horaire,"Erevan") == 0)
 	{
 		//Calcul de l'heure et de la date à Erevan et stockage de celui-ci dans la variable heure_erevan
-                time_t heure_erevan = temps_utc + (4 * 3600);
+                time_t heure_erevan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yerevan");
 
 		//L'heure et la date à Erevan en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_erevan, "Erevan");
@@ -1505,7 +1514,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Tbilissi") == 0)
 	{
 		//Calcul de l'heure et de la date à Tbilissi et stockage de celui-ci dans la variable heure_a_tbilissi
-		time_t heure_a_tbilissi = temps_utc + (4 * 3600);
+		time_t heure_a_tbilissi = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tbilisi");
 
 		//L'heure et la date à Tbilissi en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_tbilissi, "Tbilissi");
@@ -1514,7 +1523,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Bakou") == 0)
 	{
 		//Calcul de l'heure et de la date à Bakou et stockage de celui-ci dans la variable heure_a_bakou
-		time_t heure_a_bakou = temps_utc + (4 * 3600);
+		time_t heure_a_bakou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Baku");
 
 		//L'heure et la date à Bakou en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_bakou, "Bakou");
@@ -1523,7 +1532,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Mogadiscio") == 0)
 	{
 		//Calcul de l'heure et de la date à Mogadiscio et stockage de celui-ci dans la variable heure_a_mogadiscio
-		time_t heure_a_mogadiscio = temps_utc + (3 * 3600);
+		time_t heure_a_mogadiscio = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Mogadishu");
 
 		//L'heure et la date à Mogadiscio en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_mogadiscio, "Mogadiscio");
@@ -1532,75 +1541,96 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 	else if(strcmp(nom_du_fuseau_horaire,"Hovd") == 0)
 	{
 		//Calcul de l'heure et de la date à Hovd et stockage de celui-ci dans la variable heure_a_hovd
-                time_t heure_a_hovd = temps_utc + (7 * 3600);
+                time_t heure_a_hovd = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Hovd");
 
 		//L'heure et la date à Hovd en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_hovd, "Hovd");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tapei"...
-	else if(strcmp(nom_du_fuseau_horaire,"Tapei") == 0)
+
+	/* République de Chine (Taiwan) */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Taipei"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Taipei") == 0)
 	{
 		//Calcul de l'heure et de la date à Tapei et stockage de celui-ci dans la variable heure_a_tapei
-                time_t heure_a_tapei = temps_utc + (8 * 3600);
+                time_t heure_a_tapei = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Taipei");
 
 		//L'heure et la date à Tapei en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_tapei, "Tapei");
+		return calcul_et_renvoie_horaire(heure_a_tapei, "Asia/Taipei");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Macao"...
-	else if(strcmp(nom_du_fuseau_horaire,"Macao") == 0)
+
+	/* Région administrative spéciale de Macao de la République populaire de Chine */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Macau"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Macau") == 0)
 	{
 		//Calcul de l'heure et de la date à Macao et stockage de celui-ci dans la variable heure_a_macao
-                time_t heure_a_macao = temps_utc + (8 * 3600);
+                time_t heure_a_macao = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Macau");
 
 		//L'heure et la date à Macao en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_macao, "Macao");
+		return calcul_et_renvoie_horaire(heure_a_macao, "Asia/Macau");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tachkent"...
-	else if(strcmp(nom_du_fuseau_horaire,"Tachkent") == 0)
+
+	/* République d'Ouzbékistan */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Tashkent"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Tashkent") == 0)
 	{
 		//Calcul de l'heure et de la date à Tachkent et stockage de celui-ci dans la variable heure_a_tachkent
-                time_t heure_a_tachkent = temps_utc + (5 * 3600);
+                time_t heure_a_tachkent = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tashkent");
 
 		//L'heure et la date à Tachkent en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_tachkent, "Tachkent");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Samarkand"...
-        else if(strcmp(nom_du_fuseau_horaire,"Samarkand") == 0)
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Samarkand"...
+        else if(strcmp(nom_du_fuseau_horaire,"Asia/Samarkand") == 0)
         {
                 //Calcul de l'heure et de la date à Samarkand et stockage de celui-ci dans la variable heure_a_samarkand
-                time_t heure_a_samarkand = temps_utc + (5 * 3600);
+                time_t heure_a_samarkand = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Samarkand");
 
                 //L'heure et la date à Samarkand en temps réel est retournée
-                return calcul_et_renvoie_horaire(heure_a_samarkand, "Samarkand");
+                return calcul_et_renvoie_horaire(heure_a_samarkand, "Asia/Samarkand");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Dushanbe"...
-	else if(strcmp(nom_du_fuseau_horaire,"Dushanbe") == 0)
+
+	/* République du Tadjikistan */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Dushanbe"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Dushanbe") == 0)
 	{
 		//Calcul de l'heure et de la date à Douchanbé et stockage de celui-ci dans la variable heure_a_douchanbe
-                time_t heure_a_douchanbe = temps_utc + (5 * 3600);
+                time_t heure_a_douchanbe = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Dushanbe");
 
 		//L'heure et la date à Douchanbé en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_douchanbe, "Dushanbe");
+		return calcul_et_renvoie_horaire(heure_a_douchanbe, "Asia/Dushanbe");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Thimphou"...
-	else if(strcmp(nom_du_fuseau_horaire,"Thimphou") == 0)
+
+	/* Royaume du Bhoutan */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Thimphu"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Thimphu") == 0)
 	{
 		//Calcul de l'heure et de la date à Thimphou et stockage de celui-ci dans la variable heure_a_thimphou
-                time_t heure_a_thimphou = temps_utc + (6 * 3600);
+              	time_t heure_a_thimphou = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Thimphu");
 
 		//L'heure et la date à Thimphou en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_thimphou, "Bhoutan");
+		return calcul_et_renvoie_horaire(heure_a_thimphou, "Asia/Thimphu");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Bichkek"...
-	else if(strcmp(nom_du_fuseau_horaire,"Bichkek") == 0)
+
+	/* République kirghize */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Bishkek"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Bishkek") == 0)
 	{
 		//Calcul de l'heure et de la date à Bichkek et stockage de celui-ci dans la variable heure_a_bichkek
-                time_t heure_a_bichkek = temps_utc + (6 * 3600);
+                time_t heure_a_bichkek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Bishkek");
 
 		//L'heure et la date à Bichkek en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_bichkek, "Bichkek");
+		return calcul_et_renvoie_horaire(heure_a_bichkek, "Asia/Bishkek");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Katmandou"...
+
+	/* République démocratique fédérale du Népal */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Kathmandu"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Kathmandu") == 0)
 	{
 		//Calcul de l'heure et de la date à Katmandou et stockage de celui-ci dans la variable heure_a_katmandou
@@ -1609,7 +1639,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Katmandou en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_katmandou, "Asia/Kathmandu");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kaboul"...
+
+	/* République islamique d'Afghanistan */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Kabul"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Kabul") == 0)
 	{
 		//Calcul de l'heure et de la date à Kaboul et stockage de celui-ci dans la variable heure_a_kaboul
@@ -1618,7 +1651,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Kaboul en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_kaboul, "Asia/Kabul");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Singapour"...
+
+	/* République de Singapour */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Singapore"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Singapore") == 0)
 	{
 		//Calcul de l'heure et de la date à Singapour et stockage de celui-ci dans la variable heure_a_singapour
@@ -1627,7 +1663,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Singapour en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_singapour, "Asia/Singapore");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Hong_Kong"...
+
+	/* Région administrative spéciale de Hong Kong de la République populaire de Chine */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Hong_Kong"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Hong_Kong") == 0)
 	{
 		//Calcul de l'heure et de la date à Hong Kong et stockage de celui-ci dans la variable heure_a_hong_kong
@@ -1636,6 +1675,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date à Hong Kong en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_hong_kong, "Asia/Hong_Kong");
 	}
+
 	//Sinon...
 	else
 	{
