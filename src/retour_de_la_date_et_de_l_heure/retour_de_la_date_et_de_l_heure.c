@@ -521,8 +521,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_d_athenes, "Europe/Athens");
 	}
 
+	/* États-Unis d'Amérique */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Los_Angeles"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Los_Angeles"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/Los_Angeles") == 0)
 	{
 		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
@@ -534,7 +535,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Los Angeles en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_los_angeles, "America/Los Angeles");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "New_York"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/New_York"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/New_York") == 0)
 	{
 		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord   
@@ -546,18 +547,6 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de New York City en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_nyc, "America/New_York");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Ottawa"...
-	else if(strcmp(nom_du_fuseau_horaire,"America/Toronto") == 0)
-	{
-		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
-                application_du_changement_d_heure_pour_l_amerique_du_nord("America/Toronto", temps_utc);
-
-		//Calcul de l'heure et de la date à Ottawa et stockage de celui-ci dans la variable heure_d_ottawa
-                time_t heure_de_toronto = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Toronto");
-
-		//L'heure et la date de Ottawa en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_de_toronto, "America/Toronto");
-	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Phoenix"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/Phoenix") == 0)
 	{
@@ -567,6 +556,21 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Phoenix en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_phoenix, "America/Phoenix");
 	}
+
+	/* Dominion du Canada */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Toronto"...
+        else if(strcmp(nom_du_fuseau_horaire,"America/Toronto") == 0)
+        {
+                //Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+                application_du_changement_d_heure_pour_l_amerique_du_nord("America/Toronto", temps_utc);
+
+                //Calcul de l'heure et de la date à Ottawa et stockage de celui-ci dans la variable heure_d_ottawa
+                time_t heure_de_toronto = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Toronto");
+
+                //L'heure et la date de Ottawa en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_de_toronto, "America/Toronto");
+        }
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 
