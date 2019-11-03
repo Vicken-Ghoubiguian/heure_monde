@@ -102,7 +102,7 @@ void affichage_de_l_horloge()
 	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Île Lord Howe */
 	application_du_changement_d_heure_pour_le_cas_particulier_de_lord_howe(temps_utc);
 
-	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle Zélande */
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle-Zélande */
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Auckland", temps_utc);
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Chatham", temps_utc);
 	application_du_changement_d_heure_pour_la_nouvelle_zelande("Antarctica/McMurdo", temps_utc);

@@ -886,17 +886,29 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* Nouvelle-Zélande */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Auckland"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Auckland"...
 	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Auckland") == 0)
 	{
-		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle Zélande
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle-Zélande
         	application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Auckland", temps_utc);
 
 		//Calcul de l'heure et de la date à Auckland et stockage de celui-ci dans la variable heure_a_auckland
                 time_t heure_a_auckland = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Auckland");
 
 		//L'heure et la date d'Auckland en temps réel est retournée
-		return calcul_et_renvoie_horaire(heure_a_auckland, "Auckland");
+		return calcul_et_renvoie_horaire(heure_a_auckland, "Pacific/Auckland");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Chatham"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Chatham") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle-Zélande
+		application_du_changement_d_heure_pour_la_nouvelle_zelande("Pacific/Chatham", temps_utc);
+
+		//Calcul de l'heure et de la date à l'île Chatham et stockage de celui-ci dans la variable heure_a_chatham
+		time_t heure_a_chatham = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Chatham");
+
+		//L'heure et la date de l'île Chatham en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_chatham, "Pacific/Chatham");
 	}
 
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Sydney"...
