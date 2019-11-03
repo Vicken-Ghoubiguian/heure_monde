@@ -152,7 +152,7 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_la_palestine("Asia/Hebron", temps_utc);
 	application_du_changement_d_heure_pour_la_palestine("Asia/Gaza", temps_utc);
 
-	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Grande Bretagne */
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Grande-Bretagne */
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/London", temps_utc);
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Isle_of_Man", temps_utc);
 	application_du_changement_d_heure_pour_la_grande_bretagne("Europe/Jersey", temps_utc);
