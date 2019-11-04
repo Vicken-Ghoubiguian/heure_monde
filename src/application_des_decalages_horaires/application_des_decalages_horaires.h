@@ -3,6 +3,9 @@
 
 #include <time.h>
 
+//Cette fonction permet d'appliquer le changement d'heure pour le Mexique
+void application_du_changement_d_heure_pour_le_mexique(char* nom_de_la_timezone, time_t temps_utc);
+
 //Cette fonction permet d'appliquer le changement d'heure pour les Fidji 
 void application_du_changement_d_heure_pour_les_fidji(time_t temps_utc);
 
