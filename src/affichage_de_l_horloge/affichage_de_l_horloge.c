@@ -215,6 +215,17 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Tell_City", temps_utc);
 	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Indiana/Knox", temps_utc);
 
+	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord */
+	application_du_changement_d_heure_pour_le_mexique("America/Mexico_City", temps_utc);
+	application_du_changement_d_heure_pour_le_mexique("America/Monterrey", temps_utc);
+	application_du_changement_d_heure_pour_le_mexique("America/Chihuahua", temps_utc);
+	application_du_changement_d_heure_pour_le_mexique("America/Mazatlan", temps_utc);
+	application_du_changement_d_heure_pour_le_mexique("America/Merida", temps_utc);
+	application_du_changement_d_heure_pour_le_mexique("America/Bahia_Banderas", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Ojinaga", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Tijuana", temps_utc);
+	application_du_changement_d_heure_pour_l_amerique_du_nord("America/Matamoros", temps_utc);
+
 	/* Calcul des horaires de différents villes du monde et affectation de la valeur calculée à une variable correspondante */
 
 	/* République française */
