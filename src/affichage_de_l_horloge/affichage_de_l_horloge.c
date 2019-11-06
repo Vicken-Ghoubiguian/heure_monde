@@ -481,6 +481,19 @@ void affichage_de_l_horloge()
 	time_t heure_de_cambridge_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cambridge_Bay"); //Cambridge Bay
 	time_t heure_d_yellowknife = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Yellowknife"); //Yellowknife
 
+	/* États-Unis mexicains */
+	time_t heure_de_mexico_city = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Mexico_City"); //Mexico City
+	time_t heure_de_monterrey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Monterrey"); //Monterrey
+	time_t heure_de_cancun = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cancun"); //Cancun
+	time_t heure_de_chihuahua = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Chihuahua"); //Chihuahua
+	time_t heure_de_hermosillo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Hermosillo"); //Hermosillo
+	time_t heure_de_mazatlan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Mazatlan"); //Mazatlan
+	time_t heure_d_ojinaga = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Ojinaga"); //Ojinaga
+	time_t heure_de_tijuana = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Tijuana"); //Tijuana
+	time_t heure_de_merida = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Merida"); //Merida
+	time_t heure_de_matamoros = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Matamoros"); //Matamoros
+	time_t heure_de_bahia_banderas = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Bahia_Banderas"); //Bahia Banderas
+
 	/* République du Nicaragua */
 	time_t heure_managua = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Managua"); //Managua
 
