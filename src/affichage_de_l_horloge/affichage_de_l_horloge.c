@@ -1366,6 +1366,19 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_d_yellowknife, "Yellowknife");
 
 	printf("\n");
+	calcul_et_affichage_horaire(heure_de_mexico_city, "Mexico City");
+	calcul_et_affichage_horaire(heure_de_monterrey, "Monterrey");
+	calcul_et_affichage_horaire(heure_de_cancun, "Cancun");
+	calcul_et_affichage_horaire(heure_de_chihuahua, "Chihuahua");
+	calcul_et_affichage_horaire(heure_de_hermosillo, "Hermosillo");
+	calcul_et_affichage_horaire(heure_de_mazatlan, "Mazatlan");
+	calcul_et_affichage_horaire(heure_d_ojinaga, "Ojinaga");
+	calcul_et_affichage_horaire(heure_de_tijuana, "Tijuana");
+	calcul_et_affichage_horaire(heure_de_merida, "Merida");
+	calcul_et_affichage_horaire(heure_de_matamoros, "Matamoros");
+	calcul_et_affichage_horaire(heure_de_bahia_banderas, "Bahia Banderas");
+
+	printf("\n");
 	printf("République du Guatemala:\n");
 	calcul_et_affichage_horaire(heure_au_guatemala, "Guatemala");
 
