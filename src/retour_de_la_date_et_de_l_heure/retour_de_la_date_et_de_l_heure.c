@@ -521,6 +521,33 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_d_athenes, "Europe/Athens");
 	}
 
+	/* République d'Arménie */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Yerevan"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Yerevan") == 0)
+	{
+		//Calcul de l'heure et de la date à Erevan et stockage de celui-ci dans la variable heure_erevan
+		time_t heure_erevan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Yerevan");
+
+		//L'heure et la date de Erevan en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_erevan, "Asia/Yerevan");
+	}
+
+	/* République islamique d'Iran */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Téhéran"...
+	else if(strcmp(nom_du_fuseau_horaire,"Asia/Tehran") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_iran(temps_utc);
+
+		//Calcul de l'heure et de la date à Téhéran et stockage de celui-ci dans la variable heure_a_teheran
+		time_t heure_a_teheran = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Asia/Tehran");
+
+		//L'heure et la date de Téhéran en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_teheran, "Asia/Tehran");
+	}
+
 	/* États-Unis d'Amérique */
 
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Los_Angeles"...
