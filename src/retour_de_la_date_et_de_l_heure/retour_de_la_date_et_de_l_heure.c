@@ -178,7 +178,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République fédérale d'Allemagne */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Berlin"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Berlin"...
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Berlin") == 0)
 	{
 		//
@@ -190,7 +190,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Berlin en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_berlin, "Europe/Berlin");
 	}
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Busingen"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Busingen"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Busingen") == 0)
         {
 		//
@@ -205,7 +205,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République italienne */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Rome"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Rome"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Rome") == 0)
         {
 		//
@@ -220,7 +220,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République de Saint-Marin */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Saint_Marin"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "San_Marino"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/San_Marino") == 0)
         {
 		//
@@ -235,7 +235,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* État de la Cité du Vatican */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vatican"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Vatican"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vatican") == 0)
         {
 		//
@@ -248,9 +248,48 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 return calcul_et_renvoie_horaire(heure_du_vatican, "Europe/Vatican");
         }
 
+	/* Royaume d'Espagne */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Madrid"
+	else if(strcmp(nom_du_fuseau_horaire,"Europe/Madrid") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Europe/Madrid", temps_utc);
+
+		//
+		time_t heure_a_madrid = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Madrid");
+
+		//L'heure et la date de Madrid en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_madrid, "Europe/Madrid");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Africa/Ceuta"
+	else if(strcmp(nom_du_fuseau_horaire,"Africa/Ceuta") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Africa/Ceuta", temps_utc);
+
+		//
+		time_t heure_a_ceuta = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Africa/Ceuta");
+
+		//L'heure et la date de Ceuta en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_ceuta, "Africa/Ceuta");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Atlantic/Canary"
+	else if(strcmp(nom_du_fuseau_horaire,"Atlantic/Canary") == 0)
+	{
+		//
+		application_du_changement_d_heure_pour_l_europe_continentale("Atlantic/Canary", temps_utc);
+
+		//
+		time_t heure_aux_iles_canaries = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Atlantic/Canary");
+
+		//L'heure et la date des îles Canaries en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_aux_iles_canaries, "Atlantic/Canary");
+	}
+
 	/* Principauté de Monaco */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Monaco"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Monaco"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Monaco") == 0)
         {
 		//
