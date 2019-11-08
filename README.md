@@ -90,3 +90,5 @@ Cet API repose sur le systéme actuel de calcul de l'heure et de la date courant
 Seulement ce systéme n'est pas immuable et peut être sujette à modification en fonction des législations du pays rattaché le ou les fuseaux horaires concernés.
 
 Pour rester à l'affût d'éventuelles modifications par rapport aux fuseaux horaires (introduction, modification ou suppression du changement d'heure par exemple), referez-vous à ce site internet: https://time.is/about
+
+Plus spécialement, la rubrique qui la plus intéressante est celle-ci: https://time.is/time_zone_news
