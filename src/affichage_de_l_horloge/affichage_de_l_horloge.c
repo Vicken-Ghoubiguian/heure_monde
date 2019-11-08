@@ -133,6 +133,7 @@ void affichage_de_l_horloge()
 	application_du_changement_d_heure_pour_l_australie("Australia/Melbourne", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Adelaide", temps_utc);
 	application_du_changement_d_heure_pour_l_australie("Australia/Broken_Hill", temps_utc);
+	application_du_changement_d_heure_pour_l_australie("Pacific/Norfolk", temps_utc);
 
 	/* Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour Israël */
 	application_du_changement_d_heure_pour_israel(temps_utc);
