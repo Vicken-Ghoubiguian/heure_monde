@@ -82,3 +82,11 @@ Pour cela éffectuer la commande suivante tout de suite après la commande de cr
 sqlite> .read heure_monde.sql
 
 A part cela, cette API peut être intégrée dans n'importe quel projet développé en C.
+
+Petite précision sur sa maintenance:
+
+Cet API repose sur le systéme actuel de calcul de l'heure et de la date courante pour tous les fuseaux horaires.
+
+Seulement ce systéme n'est pas immuable et peut être sujette à modification en fonction des législations du pays rattaché le ou les fuseaux horaires concernés.
+
+Pour rester à l'affût d'éventuelles modifications par rapport aux fuseaux horaires (introduction, modification ou suppression du changement d'heure par exemple), referez-vous à ce site internet: https://time.is/about
