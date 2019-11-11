@@ -52,7 +52,7 @@ void application_du_changement_d_heure_pour_les_fidji(time_t temps_utc)
         else
         {
                 //L'indicateur d'application de l'heure d'été est mis à 1 (l'heure d'été est en vigueur pour le moment)
-                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Asia/Tehran", 3600);
+                mise_a_jour_de_l_indicateur_d_application_de_l_heure_d_ete("Pacific/Fiji", 3600);
         }
 }
 
