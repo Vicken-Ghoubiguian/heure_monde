@@ -673,6 +673,63 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Ottawa en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_de_toronto, "America/Toronto");
         }
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Atikokan"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Atikokan") == 0)
+	{
+		//Calcul de l'heure et de la date à Atikokan et stockage de celui-ci dans la variable heure_d_atikokan
+                time_t heure_d_atikokan = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Atikokan");
+
+                //L'heure et la date d'Atikokan en temps réel est retournée
+                return calcul_et_renvoie_horaire(heure_d_atikokan, "America/Atikokan");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Pangnirtung"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Pangnirtung") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Pangnirtung", temps_utc);
+
+		//Calcul de l'heure et de la date à Pangnirtung et stockage de celui-ci dans la variable heure_de_pangnirtung
+		time_t heure_de_pangnirtung = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Pangnirtung");
+
+		//L'heure et la date de Pangnirtung en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_pangnirtung, "America/Pangnirtung");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Thunder_Bay"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Thunder_Bay") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Thunder_Bay", temps_utc);
+
+		//Calcul de l'heure et de la date à Thunder_Bay et stockage de celui-ci dans la variable heure_de_thunder_bay
+		time_t heure_de_thunder_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Thunder_Bay");
+
+		//L'heure et la date de Thunder_Bay en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_thunder_bay, "America/Thunder_Bay");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Nipigon"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Nipigon") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Nipigon", temps_utc);
+
+		//Calcul de l'heure et de la date à Nipigon et stockage de celui-ci dans la variable heure_de_nipigon
+		time_t heure_de_nipigon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Nipigon");
+
+		//L'heure et la date de Nipigon en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_nipigon, "America/Nipigon");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Iqaluit"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Iqaluit") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Iqaluit", temps_utc);
+
+		//Calcul de l'heure et de la date à Iqaluit et stockage de celui-ci dans la variable heure_d_iqaluit
+		time_t heure_d_iqaluit = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Iqaluit");
+
+		//L'heure et la date d'Iqaluit en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_d_iqaluit, "America/Iqaluit");
+	}
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 
