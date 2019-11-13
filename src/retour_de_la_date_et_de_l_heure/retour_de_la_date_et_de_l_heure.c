@@ -730,6 +730,72 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date d'Iqaluit en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_d_iqaluit, "America/Iqaluit");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Winnipeg"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Winnipeg") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Winnipeg", temps_utc);
+
+		//Calcul de l'heure et de la date à Winnipeg et stockage de celui-ci dans la variable heure_de_winnipeg
+		time_t heure_de_winnipeg = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Winnipeg");
+
+		//L'heure et la date de Winnipeg en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_winnipeg, "America/Winnipeg");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Swift_Current"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Swift_Current") == 0)
+	{
+		//Calcul de l'heure et de la date à Swift Current et stockage de celui-ci dans la variable heure_de_swift_current
+		time_t heure_de_swift_current = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Swift_Current");
+
+		//L'heure et la date de Swift Current en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_swift_current, "America/Swift_Current");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Resolute"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Resolute") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Resolute", temps_utc);
+
+		//Calcul de l'heure et de la date à Resolute et stockage de celui-ci dans la variable heure_de_resolute
+		time_t heure_de_resolute = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Resolute");
+
+		//L'heure et la date de Resolute en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_resolute, "America/Resolute");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Regina"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Regina") == 0)
+	{
+		//Calcul de l'heure et de la date à Regina et stockage de celui-ci dans la variable heure_de_regina
+		time_t heure_de_regina = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Regina");
+
+		//L'heure et la date de Regina en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_regina, "America/Regina");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Rankin_Inlet"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Rankin_Inlet") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Rankin_Inlet", temps_utc);
+
+		//Calcul de l'heure et de la date à Rankin Inlet et stockage de celui-ci dans la variable heure_de_rankin_inlet
+		time_t heure_de_rankin_inlet = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Rankin_Inlet");
+
+		//L'heure et la date de Rankin Inlet en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_rankin_inlet, "America/Rankin_Inlet");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Rainy_River"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Rainy_River") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Rainy_River", temps_utc);
+
+		//Calcul de l'heure et de la date à Rainy River et stockage de celui-ci dans la variable heure_de_rainy_river
+		time_t heure_de_rainy_river = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Rainy_River");
+
+		//L'heure et la date de Rainy river en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_rainy_river, "America/Rainy_River");
+	}
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 
