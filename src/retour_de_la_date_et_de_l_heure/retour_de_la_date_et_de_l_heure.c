@@ -796,6 +796,63 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Rainy river en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_rainy_river, "America/Rainy_River");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Whitehorse"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Whitehorse") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Whitehorse", temps_utc);
+
+		//Calcul de l'heure et de la date à Whitehorse et stockage de celui-ci dans la variable heure_de_whitehorse
+		time_t heure_de_whitehorse = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Whitehorse");
+
+		//L'heure et la date de Whitehorse en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_whitehorse, "America/Whitehorse");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Vancouver"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Vancouver") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Vancouver", temps_utc);
+
+		//Calcul de l'heure et de la date à Vancouver et stockage de celui-ci dans la variable heure_de_vancouver
+		time_t heure_de_vancouver = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Vancouver");
+
+		//L'heure et la date de Vancouver en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_vancouver, "America/Vancouver");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Dawson"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Dawson") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Dawson", temps_utc);
+
+		//Calcul de l'heure et de la date à Dawson et stockage de celui-ci dans la variable heure_de_dawson
+		time_t heure_de_dawson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Dawson");
+
+		//L'heure et la date de Dawson en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_dawson, "America/Dawson");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/St_Johns"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/St_Johns") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/St_Johns", temps_utc);
+
+		//Calcul de l'heure et de la date à St Johns et stockage de celui-ci dans la variable heure_de_st_johns
+		time_t heure_de_st_johns = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/St_Johns");
+
+		//L'heure et la date de St Johns en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_st_johns, "America/St_Johns");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Blanc-Sablon"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Blanc-Sablon") == 0)
+	{
+		//Calcul de l'heure et de la date à Blanc Sablon et stockage de celui-ci dans la variable heure_de_blanc_sablon
+		time_t heure_de_blanc_sablon = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Blanc-Sablon");
+
+		//L'heure et la date de Blanc Sablon en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_blanc_sablon, "America/Blanc-Sablon");
+	}
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 
