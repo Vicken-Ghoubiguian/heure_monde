@@ -901,6 +901,39 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Glace Bay en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_glace_bay, "America/Glace_Bay");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Inuvik"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Inuvik") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Inuvik", temps_utc);
+
+		//Calcul de l'heure et de la date à Inuvik et stockage de celui-ci dans la variable heure_d_inuvik
+		time_t heure_d_inuvik = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Inuvik");
+
+		//L'heure et la date d'Inuvik en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_d_inuvik, "America/Inuvik");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Fort_Nelson"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Fort_Nelson") == 0)
+	{
+		//Calcul de l'heure et de la date à Fort Nelson et stockage de celui-ci dans la variable heure_de_fort_nelson
+		time_t heure_de_fort_nelson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Fort_Nelson");
+
+		//L'heure et la date de Fort_Nelson en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_fort_nelson, "America/Fort_Nelson");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Edmonton"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Edmonton") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Edmonton", temps_utc);
+
+		//Calcul de l'heure et de la date à Edmonton et stockage de celui-ci dans la variable heure_d_edmonton
+		time_t heure_d_edmonton = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Edmonton");
+
+		//L'heure et la date d'Edmonton en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_d_edmonton, "America/Edmonton");
+	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Creston"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/Creston") == 0)
 	{
