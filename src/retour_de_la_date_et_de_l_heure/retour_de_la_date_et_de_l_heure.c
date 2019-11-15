@@ -853,6 +853,54 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Blanc Sablon en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_blanc_sablon, "America/Blanc-Sablon");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Moncton"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Moncton") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Moncton", temps_utc);
+
+		//Calcul de l'heure et de la date à Moncton et stockage de celui-ci dans la variable heure_de_moncton
+		time_t heure_de_moncton = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Moncton");
+
+		//L'heure et la date de Moncton en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_moncton, "America/Moncton");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Halifax"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Halifax") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Halifax", temps_utc);
+
+		//Calcul de l'heure et de la date à Halifax et stockage de celui-ci dans la variable heure_d_halifax
+		time_t heure_d_halifax = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Halifax");
+
+		//L'heure et la date de Halifax en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_d_halifax, "America/Halifax");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Goose_Bay"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Goose_Bay") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Goose_Bay", temps_utc);
+
+		//Calcul de l'heure et de la date à Goose Bay et stockage de celui-ci dans la variable heure_de_goose_bay
+		time_t heure_de_goose_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Goose_Bay");
+
+		//L'heure et la date de Goose Bay en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_goose_bay, "America/Goose_Bay");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Glace_Bay"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Glace_Bay") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Glace_Bay", temps_utc);
+
+		//Calcul de l'heure et de la date à Glace Bay et stockage de celui-ci dans la variable heure_de_glace_bay
+		time_t heure_de_glace_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Glace_Bay");
+
+		//L'heure et la date de Glace Bay en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_glace_bay, "America/Glace_Bay");
+	}
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 
