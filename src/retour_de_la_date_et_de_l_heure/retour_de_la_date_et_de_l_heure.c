@@ -901,6 +901,39 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Glace Bay en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_glace_bay, "America/Glace_Bay");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Creston"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Creston") == 0)
+	{
+		//Calcul de l'heure et de la date à Creston et stockage de celui-ci dans la variable heure_de_creston
+		time_t heure_de_creston = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Creston");
+
+		//L'heure et la date de Creston en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_creston, "America/Creston");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Cambridge_Bay"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Cambridge_Bay") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Cambridge_Bay", temps_utc);
+
+		//Calcul de l'heure et de la date à Cambridge Bay et stockage de celui-ci dans la variable heure_de_cambridge_bay
+		time_t heure_de_cambridge_bay = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Cambridge_Bay");
+
+		//L'heure et la date de Cambridge Bay en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_cambridge_bay, "America/Cambridge_Bay");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Yellowknife"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Yellowknife") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Yellowknife", temps_utc);
+
+		//Calcul de l'heure et de la date à Yellowknife et stockage de celui-ci dans la variable heure_d_yellowknife
+		time_t heure_d_yellowknife = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Yellowknife");
+
+		//L'heure et la date de Yellowknife en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_d_yellowknife, "America/Yellowknife");
+	}
 
 	/* Royaume-Uni de Grande-Bretagne et d'Irlande du Nord */
 
