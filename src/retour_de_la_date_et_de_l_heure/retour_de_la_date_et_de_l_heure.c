@@ -1373,13 +1373,34 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_a_brisbane, "Australia/Brisbane");
 	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Currie"...
-	else if((strcmp(nom_du_fuseau_horaire,"Australia/Currie") == 0)
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Currie") == 0)
 	{
 		//Calcul de l'heure et de la date à Currie et stockage de celui-ci dans la variable heure_a_curie
 		time_t heure_a_currie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Currie");
 
 		//L'heure et la date de Currie en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_currie, "Australia/Currie");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Hobart"...
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Hobart") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Australie
+		application_du_changement_d_heure_pour_l_australie("Australia/Hobart", temps_utc);
+
+		//Calcul de l'heure et de la date à Hobart et stockage de celui-ci dans la variable heure_a_hobart
+		time_t heure_a_hobart = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Hobart");
+
+		//L'heure et la date de Hobart en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_hobart, "Australia/Hobart");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Lindeman"...
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Lindeman") == 0)
+	{
+		//Calcul de l'heure et de la date à Lindeman et stockage de celui-ci dans la variable heure_a_lindeman
+		time_t heure_a_lindeman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lindeman");
+
+		//L'heure et la date de Lindeman en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_lindeman, "Australia/Lindeman");
 	}
 
 	/* République du Chili */
