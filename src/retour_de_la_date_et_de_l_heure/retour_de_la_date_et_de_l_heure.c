@@ -1316,7 +1316,9 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		return calcul_et_renvoie_horaire(heure_a_chatham, "Pacific/Chatham");
 	}
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Sydney"...
+	/* Commonwealth d'Australie */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Sydney"...
         else if(strcmp(nom_du_fuseau_horaire,"Australia/Sydney") == 0)
         {
 		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Australie
@@ -1328,6 +1330,57 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Sydney en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_sydney, "Sydney");
         }
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Adelaide"...
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Adelaide") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Australie 
+		application_du_changement_d_heure_pour_l_australie("Australia/Adelaide", temps_utc);
+
+		//Calcul de l'heure et de la date à Adelaide et stockage de celui-ci dans la variable heure_a_adelaide
+		time_t heure_a_adelaide = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Adelaide");
+
+		//L'heure et la date d'Adelaide en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_adelaide, "Australia/Adelaide");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Broken_Hill"...
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Broken_Hill") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Australie
+		application_du_changement_d_heure_pour_l_australie("Australia/Broken_Hill", temps_utc);
+
+		//Calcul de l'heure et de la date à Broken Hill et stockage de celui-ci dans la variable heure_a_broken_hill
+		time_t heure_a_broken_hill = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Broken_Hill");
+
+		//L'heure et la date de Broken Hill en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_broken_hill, "Australia/Broken_Hill");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Darwin"...
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Darwin") == 0)
+	{
+		//Calcul de l'heure et de la date à Darwin et stockage de celui-ci dans la variable heure_a_darwin
+		time_t heure_a_darwin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Darwin");
+
+		//L'heure et la date de Darwin en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_darwin, "Australia/Darwin");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Brisbane"...
+	else if(strcmp(nom_du_fuseau_horaire,"Australia/Brisbane") == 0)
+	{
+		//Calcul de l'heure et de la date à Brisbane et stockage de celui-ci dans la variable heure_a_brisbane
+		time_t heure_a_brisbane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Brisbane");
+
+		//L'heure et la date de Brisbane en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_brisbane, "Australia/Brisbane");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Australia/Currie"...
+	else if((strcmp(nom_du_fuseau_horaire,"Australia/Currie") == 0)
+	{
+		//Calcul de l'heure et de la date à Currie et stockage de celui-ci dans la variable heure_a_curie
+		time_t heure_a_currie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Currie");
+
+		//L'heure et la date de Currie en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_currie, "Australia/Currie");
+	}
 
 	/* République du Chili */
 

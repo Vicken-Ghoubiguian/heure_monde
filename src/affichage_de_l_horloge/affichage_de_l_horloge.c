@@ -568,7 +568,7 @@ void affichage_de_l_horloge()
 	time_t heure_a_broken_hill = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Broken_Hill"); //Broken Hill
 	time_t heure_a_darwin = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Darwin"); //Darwin
 	time_t heure_a_brisbane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Brisbane"); //Brisbane
-	time_t heure_a_curie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Currie"); //Curie
+	time_t heure_a_currie = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Currie"); //Currie
 	time_t heure_a_hobart = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Hobart"); //Hobart
 	time_t heure_a_lindeman = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Lindeman"); //Lindeman
 	time_t heure_a_melbourne = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Australia/Melbourne"); //Melbourne
@@ -1445,7 +1445,7 @@ void affichage_de_l_horloge()
 	calcul_et_affichage_horaire(heure_a_broken_hill, "Broken Hill");
 	calcul_et_affichage_horaire(heure_a_darwin, "Darwin");
 	calcul_et_affichage_horaire(heure_a_brisbane, "Brisbane");
-	calcul_et_affichage_horaire(heure_a_curie, "Curie");
+	calcul_et_affichage_horaire(heure_a_currie, "Currie");
 	calcul_et_affichage_horaire(heure_a_hobart, "Hobart");
 	calcul_et_affichage_horaire(heure_a_lindeman, "Lindeman");
 	calcul_et_affichage_horaire(heure_a_melbourne, "Melbourne");
