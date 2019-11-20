@@ -610,10 +610,10 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République islamique d'Iran */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Téhéran"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Asia/Tehran"...
 	else if(strcmp(nom_du_fuseau_horaire,"Asia/Tehran") == 0)
 	{
-		//
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Iran
 		application_du_changement_d_heure_pour_l_iran(temps_utc);
 
 		//Calcul de l'heure et de la date à Téhéran et stockage de celui-ci dans la variable heure_a_teheran
@@ -622,6 +622,69 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de Téhéran en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_teheran, "Asia/Tehran");
 	}
+
+	/* Antarctique */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Casey"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Casey") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Casey et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_casey
+		time_t heure_pour_la_base_antarctique_de_casey = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Casey");
+
+		//L'heure et la date de la date à la base antarctique de Casey en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_casey, "Antarctica/Casey");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Davis"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Davis") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Davis et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_davis
+		time_t heure_pour_la_base_antarctique_de_davis = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Davis");
+
+		//L'heure et la date de la date à la base antarctique de Davis en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_davis, "Antarctica/Davis");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/DumontDUrville"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/DumontDUrville") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de DumontDUrville et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_dumontdurville
+		time_t heure_pour_la_base_antarctique_de_dumontdurville = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/DumontDUrville");
+
+		//L'heure et la date de la date à la base antarctique de DumontDUrville en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_dumontdurville, "Antarctica/DumontDUrville");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Mawson"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Mawson") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Mawson et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_mawson
+		time_t heure_pour_la_base_antarctique_de_mawson = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Mawson");
+
+		//L'heure et la date de la date à la base antarctique de Mawson en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_mawson, "Antarctica/Mawson");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Palmer"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Palmer") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Palmer et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_palmer
+		time_t heure_pour_la_base_antarctique_de_palmer = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Palmer");
+
+		//L'heure et la date de la date à la base antarctique de Palmer en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_palmer, "Antarctica/Palmer");
+	}
+
+	/* République de Cuba */
+	
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Havana"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Havana") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour l'Amérique du Nord
+		application_du_changement_d_heure_pour_l_amerique_du_nord("America/Havana", temps_utc);
+
+		//Calcul de l'heure et de la date à La Havane et stockage de celui-ci dans la variable heure_a_la_havane
+		time_t heure_a_la_havane = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Havana");
+
+		//L'heure et la date de La Havane en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_la_havane, "America/Havana");
+	}	
 
 	/* États-Unis d'Amérique */
 
