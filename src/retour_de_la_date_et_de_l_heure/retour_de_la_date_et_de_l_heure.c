@@ -661,6 +661,18 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de la date à la base antarctique de Mawson en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_mawson, "Antarctica/Mawson");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/McMurdo"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/McMurdo") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la Nouvelle-Zélande
+		application_du_changement_d_heure_pour_la_nouvelle_zelande("Antarctica/McMurdo", temps_utc);
+
+		//Calcul de l'heure et de la date à la base antarctique de McMurdo et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_mcmurdo
+		time_t heure_pour_la_base_antarctique_de_mcmurdo = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/McMurdo");
+
+		//L'heure et la date de la date à la base antarctique de McMurdo en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_mcmurdo, "Antarctica/McMurdo");
+	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Palmer"...
 	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Palmer") == 0)
 	{
