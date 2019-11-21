@@ -1096,7 +1096,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République de Biélorussie */
 	
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Minsk"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Minsk"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Minsk") == 0)
         {
                 //Calcul de l'heure et de la date à Minsk et stockage de celui-ci dans la variable heure_a_minsk
@@ -1108,7 +1108,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* Ukraine */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Kiev"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Kiev"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Kiev") == 0)
         {
 		//
@@ -1120,7 +1120,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Kiev en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_kiev, "Europe/Kiev");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Uzhgorod"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Uzhgorod"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Uzhgorod") == 0)
         {
 		//
@@ -1132,7 +1132,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Uzhgorod en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_uzhgorod, "Europe/Uzhgorod");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Zaporozhye"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Zaporozhye"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Zaporozhye") == 0)
         {
 		//
@@ -1141,7 +1141,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //Calcul de l'heure et de la date à Zaporozhye et stockage de celui-ci dans la variable heure_a_zaporozhye
                 time_t heure_a_zaporozhye = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Europe/Zaporozhye");
 
-                //L'heure et la date de Uzhgorod en temps réel est retournée
+                //L'heure et la date de Zaporozhye en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_zaporozhye, "Europe/Zaporozhye");
         }
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Simferopol"...
@@ -1398,6 +1398,57 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 		//L'heure et la date de l'île Chatham en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_a_chatham, "Pacific/Chatham");
+	}
+
+	/* État des Tuvalu */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Funafuti"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Funafuti") == 0)
+	{
+		//Calcul de l'heure et de la date aux Tuvalu et stockage de celui-ci dans la variable heure_a_funafuti
+		time_t heure_a_funafuti = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Funafuti");
+
+		//L'heure et la date des Tuvalu en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_funafuti, "Pacific/Funafuti");
+	}
+
+	/* République des Fidji */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Fiji"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Fiji") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour les Fidji
+		application_du_changement_d_heure_pour_les_fidji(temps_utc);
+
+		//Calcul de l'heure et de la date aux Fidji et stockage de celui-ci dans la variable heure_aux_fidji
+		time_t heure_aux_fidji = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Fiji");
+
+		//L'heure et la date des Fidji en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_aux_fidji, "Pacific/Fiji");
+	}
+
+	/* Royaume de Tonga */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Tongatapu"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Tongatapu") == 0)
+	{
+		//Calcul de l'heure et de la date aux Tonga et stockage de celui-ci dans la variable heure_a_togatapu
+		time_t heure_a_togatapu = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Tongatapu");
+
+		//L'heure et la date des Tonga en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_togatapu, "Pacific/Tongatapu");
+	}
+
+	/* État indépendant des Samoa */
+
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Pacific/Apia"...
+	else if(strcmp(nom_du_fuseau_horaire,"Pacific/Apia") == 0)
+	{
+		//Calcul de l'heure et de la date aux Samoa et stockage de celui-ci dans la variable heure_a_apia
+		time_t heure_a_apia = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Pacific/Apia");
+
+		//L'heure et la date des Samoa en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_a_apia, "Pacific/Apia");
 	}
 
 	/* Commonwealth d'Australie */
