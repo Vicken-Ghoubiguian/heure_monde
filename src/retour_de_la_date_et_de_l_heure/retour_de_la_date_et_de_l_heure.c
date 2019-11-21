@@ -1009,6 +1009,15 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date d'Edmonton en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_d_edmonton, "America/Edmonton");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Dawson_Creek"...
+	else if(strcmp(nom_du_fuseau_horaire,"America/Dawson_Creek") == 0)
+	{
+		//Calcul de l'heure et de la date à Dawson Creek et stockage de celui-ci dans la variable heure_de_dawson_creek
+		time_t heure_de_dawson_creek = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("America/Dawson_Creek");
+
+		//L'heure et la date de Dawson Creek en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_de_dawson_creek, "America/Dawson_Creek");
+	}
 	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "America/Creston"...
 	else if(strcmp(nom_du_fuseau_horaire,"America/Creston") == 0)
 	{
