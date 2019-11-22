@@ -43,7 +43,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République française */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Paris"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Paris"...
 	if(strcmp(nom_du_fuseau_horaire,"Europe/Paris") == 0)
 	{
 		//
@@ -220,7 +220,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République de Saint-Marin */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "San_Marino"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/San_Marino"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/San_Marino") == 0)
         {
 		//
@@ -304,7 +304,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* Grand-Duché de Luxembourg */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Luxembourg"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Luxembourg"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Luxembourg") == 0)
         {
 		//
@@ -319,7 +319,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* Royaume de Belgique */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Bruxelles"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Brussels"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Brussels") == 0)
         {
 		//
@@ -433,7 +433,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* Royaume de Suède */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Stockholm"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Stockholm"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Stockholm") == 0)
         {
 		//
@@ -448,7 +448,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* Royaume de Norvège */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Oslo"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Oslo"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Oslo") == 0)
         {
 		//
@@ -460,7 +460,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
                 //L'heure et la date de Oslo en temps réel est retournée
                 return calcul_et_renvoie_horaire(heure_a_oslo, "Europe/Oslo");
         }
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Longyearbyen"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Arctic/Longyearbyen"...
         else if(strcmp(nom_du_fuseau_horaire,"Arctic/Longyearbyen") == 0)
         {
 		//
@@ -475,7 +475,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République d'Islande */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Reykjavik"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Atlantic/Reykjavik"...
         else if(strcmp(nom_du_fuseau_horaire,"Atlantic/Reykjavik") == 0)
         {
                 //
@@ -487,7 +487,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République de Lituanie */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Vilnius"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Vilnius"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Vilnius") == 0)
         {
 		//
@@ -502,7 +502,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République de Lettonie */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Riga"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Riga"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Riga") == 0)
         {
 		//
@@ -517,7 +517,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République d’Estonie */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Tallinn"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Tallinn"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Tallinn") == 0)
         {
 		//
@@ -532,7 +532,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République de Pologne */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Varsovie"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Warsaw"...
         else if(strcmp(nom_du_fuseau_horaire,"Europe/Warsaw") == 0)
         {
 		//
@@ -547,7 +547,7 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 
 	/* République hellénique */
 
-	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Athènes"...
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Europe/Athens"...
 	else if(strcmp(nom_du_fuseau_horaire,"Europe/Athens") == 0)
 	{
 		//
