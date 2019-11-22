@@ -682,6 +682,45 @@ char* retour_de_l_heure_et_de_la_date_pour_un_fuseau_horaire_determine_et_connu(
 		//L'heure et la date de la date à la base antarctique de Palmer en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_palmer, "Antarctica/Palmer");
 	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Rothera"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Rothera") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Rothera et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_rothera
+		time_t heure_pour_la_base_antarctique_de_rothera = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Rothera");
+
+		//L'heure et la date de la date à la base antarctique de Rothera en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_rothera, "Antarctica/Rothera");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Syowa"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Syowa") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Syowa et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_syowa
+		time_t heure_pour_la_base_antarctique_de_syowa = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Syowa");
+
+		//L'heure et la date de la date à la base antarctique de Syowa en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_syowa, "Antarctica/Syowa");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Vostok"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Vostok") == 0)
+	{
+		//Calcul de l'heure et de la date à la base antarctique de Vostok et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_vostok
+		time_t heure_pour_la_base_antarctique_de_vostok = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Vostok");
+
+		//L'heure et la date de la date à la base antarctique de Vostok en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_vostok, "Antarctica/Vostok");
+	}
+	//Si la valeur contenue dans la chaine de caractéres nom_du_fuseau_horaire est égale à "Antarctica/Troll"...
+	else if(strcmp(nom_du_fuseau_horaire,"Antarctica/Troll") == 0)
+	{
+		//Vérification de l'application de l'heure d'été ou non, puis application ou non de ce dernier, pour la base antarctique de Troll
+		application_du_changement_d_heure_pour_la_base_antarctique_de_troll(temps_utc);
+
+		//Calcul de l'heure et de la date à la base antarctique de Troll et stockage de celui-ci dans la variable heure_pour_la_base_antarctique_de_troll
+		time_t heure_pour_la_base_antarctique_de_troll = temps_utc + recuperation_du_decalage_horaire_pour_une_timezone_donnee("Antarctica/Troll");
+
+		//L'heure et la date de la date à la base antarctique de Troll en temps réel est retournée
+		return calcul_et_renvoie_horaire(heure_pour_la_base_antarctique_de_troll, "Antarctica/Troll");
+	}
 
 	/* République de Cuba */
 	
