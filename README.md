@@ -1,6 +1,6 @@
 # heure_monde
 
-API écrite en C pour le calcul et l'affichage de l'heure et de la date pour tous les fuseaux horaires du monde en temps reel.
+API de calcul et d'affichage de l'heure courante et de la date courante pour tous les fuseaux horaires du monde entier en temps réel.
 
 Deux fonctions permettent d'integrer l'API, ou de l'utiliser: affichage_de_l_horloge et retour_de_la_date_et_de_l_heure.
 
